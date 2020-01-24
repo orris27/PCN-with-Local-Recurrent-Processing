@@ -25,7 +25,7 @@ class PcConvBp(nn.Module):
         self.FBconv = nn.ConvTranspose2d(outchan, inchan, kernel_size, stride, padding, bias=bias)
         self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1,outchan,1,1))])
         self.relu = nn.ReLU(inplace=True)
-        self.cls = cls
+        self.cls = cls # e.g.: 5
         self.bypass = nn.Conv2d(inchan, outchan, kernel_size=1, stride=1, bias=False)
 
     def forward(self, x):

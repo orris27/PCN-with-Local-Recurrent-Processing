@@ -1,3 +1,4 @@
+log/
 # Compiled python modules.
 *.pyc
 
