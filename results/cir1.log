@@ -1,0 +1,218 @@
+
+Training Setting: batchsize=128 | epoch=0 | lr=1.0e-02 | circles=1 
+Training: Epoch=0 | Loss: 1.320 |  Acc: 53.324% (26662/50000) | best acc: 0.000
+Testing: Epoch=0 | Loss: 1.039 |  Acc: 61.270% (6127/10000) | best_acc: 0.000
+
+Training Setting: batchsize=128 | epoch=1 | lr=1.0e-02 | circles=1 
+Training: Epoch=1 | Loss: 0.811 |  Acc: 71.514% (35757/50000) | best acc: 61.270
+Testing: Epoch=1 | Loss: 0.761 |  Acc: 73.830% (7383/10000) | best_acc: 61.270
+
+Training Setting: batchsize=128 | epoch=2 | lr=1.0e-02 | circles=1 
+Training: Epoch=2 | Loss: 0.642 |  Acc: 77.714% (38857/50000) | best acc: 73.830
+Testing: Epoch=2 | Loss: 0.679 |  Acc: 76.610% (7661/10000) | best_acc: 73.830
+
+Training Setting: batchsize=128 | epoch=3 | lr=1.0e-02 | circles=1 
+Training: Epoch=3 | Loss: 0.543 |  Acc: 81.366% (40683/50000) | best acc: 76.610
+Testing: Epoch=3 | Loss: 0.568 |  Acc: 80.410% (8041/10000) | best_acc: 76.610
+
+Training Setting: batchsize=128 | epoch=4 | lr=1.0e-02 | circles=1 
+Training: Epoch=4 | Loss: 0.464 |  Acc: 84.086% (42043/50000) | best acc: 80.410
+Testing: Epoch=4 | Loss: 0.651 |  Acc: 78.660% (7866/10000) | best_acc: 80.410
+
+Training Setting: batchsize=128 | epoch=5 | lr=1.0e-02 | circles=1 
+Training: Epoch=5 | Loss: 0.421 |  Acc: 85.554% (42777/50000) | best acc: 80.410
+Testing: Epoch=5 | Loss: 0.459 |  Acc: 84.730% (8473/10000) | best_acc: 80.410
+
+Training Setting: batchsize=128 | epoch=6 | lr=1.0e-02 | circles=1 
+Training: Epoch=6 | Loss: 0.379 |  Acc: 86.816% (43408/50000) | best acc: 84.730
+Testing: Epoch=6 | Loss: 0.454 |  Acc: 84.840% (8484/10000) | best_acc: 84.730
+
+Training Setting: batchsize=128 | epoch=7 | lr=1.0e-02 | circles=1 
+Training: Epoch=7 | Loss: 0.348 |  Acc: 87.942% (43971/50000) | best acc: 84.840
+Testing: Epoch=7 | Loss: 0.492 |  Acc: 83.920% (8392/10000) | best_acc: 84.840
+
+Training Setting: batchsize=128 | epoch=8 | lr=1.0e-02 | circles=1 
+Training: Epoch=8 | Loss: 0.322 |  Acc: 88.884% (44442/50000) | best acc: 84.840
+Testing: Epoch=8 | Loss: 0.377 |  Acc: 87.220% (8722/10000) | best_acc: 84.840
+
+Training Setting: batchsize=128 | epoch=9 | lr=1.0e-02 | circles=1 
+Training: Epoch=9 | Loss: 0.295 |  Acc: 90.016% (45008/50000) | best acc: 87.220
+Testing: Epoch=9 | Loss: 0.380 |  Acc: 87.260% (8726/10000) | best_acc: 87.220
+
+Training Setting: batchsize=128 | epoch=10 | lr=1.0e-02 | circles=1 
+Training: Epoch=10 | Loss: 0.279 |  Acc: 90.308% (45154/50000) | best acc: 87.260
+Testing: Epoch=10 | Loss: 0.381 |  Acc: 87.330% (8733/10000) | best_acc: 87.260
+
+Training Setting: batchsize=128 | epoch=11 | lr=1.0e-02 | circles=1 
+Training: Epoch=11 | Loss: 0.257 |  Acc: 91.272% (45636/50000) | best acc: 87.330
+Testing: Epoch=11 | Loss: 0.372 |  Acc: 87.710% (8771/10000) | best_acc: 87.330
+
+Training Setting: batchsize=128 | epoch=12 | lr=1.0e-02 | circles=1 
+Training: Epoch=12 | Loss: 0.247 |  Acc: 91.556% (45778/50000) | best acc: 87.710
+Testing: Epoch=12 | Loss: 0.350 |  Acc: 88.730% (8873/10000) | best_acc: 87.710
+
+Training Setting: batchsize=128 | epoch=13 | lr=1.0e-02 | circles=1 
+Training: Epoch=13 | Loss: 0.230 |  Acc: 92.216% (46108/50000) | best acc: 88.730
+Testing: Epoch=13 | Loss: 0.364 |  Acc: 88.220% (8822/10000) | best_acc: 88.730
+
+Training Setting: batchsize=128 | epoch=14 | lr=1.0e-02 | circles=1 
+Training: Epoch=14 | Loss: 0.220 |  Acc: 92.422% (46211/50000) | best acc: 88.730
+Testing: Epoch=14 | Loss: 0.355 |  Acc: 88.680% (8868/10000) | best_acc: 88.730
+
+Training Setting: batchsize=128 | epoch=15 | lr=1.0e-02 | circles=1 
+Training: Epoch=15 | Loss: 0.205 |  Acc: 93.022% (46511/50000) | best acc: 88.730
+Testing: Epoch=15 | Loss: 0.327 |  Acc: 89.700% (8970/10000) | best_acc: 88.730
+
+Training Setting: batchsize=128 | epoch=16 | lr=1.0e-02 | circles=1 
+Training: Epoch=16 | Loss: 0.199 |  Acc: 93.264% (46632/50000) | best acc: 89.700
+Testing: Epoch=16 | Loss: 0.395 |  Acc: 87.570% (8757/10000) | best_acc: 89.700
+
+Training Setting: batchsize=128 | epoch=17 | lr=1.0e-02 | circles=1 
+Training: Epoch=17 | Loss: 0.188 |  Acc: 93.566% (46783/50000) | best acc: 89.700
+Testing: Epoch=17 | Loss: 0.355 |  Acc: 88.630% (8863/10000) | best_acc: 89.700
+
+Training Setting: batchsize=128 | epoch=18 | lr=1.0e-02 | circles=1 
+Training: Epoch=18 | Loss: 0.176 |  Acc: 93.924% (46962/50000) | best acc: 89.700
+Testing: Epoch=18 | Loss: 0.336 |  Acc: 89.340% (8934/10000) | best_acc: 89.700
+
+Training Setting: batchsize=128 | epoch=19 | lr=1.0e-02 | circles=1 
+Training: Epoch=19 | Loss: 0.171 |  Acc: 94.222% (47111/50000) | best acc: 89.700
+Testing: Epoch=19 | Loss: 0.329 |  Acc: 89.230% (8923/10000) | best_acc: 89.700
+
+Training Setting: batchsize=128 | epoch=20 | lr=1.0e-02 | circles=1 
+Training: Epoch=20 | Loss: 0.162 |  Acc: 94.516% (47258/50000) | best acc: 89.700
+Testing: Epoch=20 | Loss: 0.373 |  Acc: 88.070% (8807/10000) | best_acc: 89.700
+
+Training Setting: batchsize=128 | epoch=21 | lr=1.0e-02 | circles=1 
+Training: Epoch=21 | Loss: 0.159 |  Acc: 94.586% (47293/50000) | best acc: 89.700
+Testing: Epoch=21 | Loss: 0.339 |  Acc: 88.920% (8892/10000) | best_acc: 89.700
+
+Training Setting: batchsize=128 | epoch=22 | lr=1.0e-02 | circles=1 
+Training: Epoch=22 | Loss: 0.149 |  Acc: 94.922% (47461/50000) | best acc: 89.700
+Testing: Epoch=22 | Loss: 0.336 |  Acc: 89.430% (8943/10000) | best_acc: 89.700
+
+Training Setting: batchsize=128 | epoch=23 | lr=1.0e-02 | circles=1 
+
+
+
+
+==> Preparing data..
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+
+Epoch: 0
+ [================================================================>]  Step: 1s67ms | Tot: 1m15s | Loss: 1.320 | Acc: 53.324% (26662/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 9s767ms | Loss: 1.039 | Acc: 61.270% (6127/10000) 1000/1000 
+Saving..
+
+Epoch: 1
+ [================================================================>]  Step: 123ms | Tot: 1m14s | Loss: 0.811 | Acc: 71.514% (35757/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 9s876ms | Loss: 0.761 | Acc: 73.830% (7383/10000) 1000/1000 
+Saving..
+
+Epoch: 2
+ [================================================================>]  Step: 122ms | Tot: 1m14s | Loss: 0.642 | Acc: 77.714% (38857/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 9s943ms | Loss: 0.679 | Acc: 76.610% (7661/10000) 1000/1000 
+Saving..
+
+Epoch: 3
+ [================================================================>]  Step: 123ms | Tot: 1m14s | Loss: 0.543 | Acc: 81.366% (40683/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 9s772ms | Loss: 0.568 | Acc: 80.410% (8041/10000) 1000/1000 
+Saving..
+
+Epoch: 4
+ [================================================================>]  Step: 122ms | Tot: 1m14s | Loss: 0.464 | Acc: 84.086% (42043/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 9s856ms | Loss: 0.651 | Acc: 78.660% (7866/10000) 1000/1000 
+
+Epoch: 5
+ [================================================================>]  Step: 122ms | Tot: 1m14s | Loss: 0.421 | Acc: 85.554% (42777/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 9s871ms | Loss: 0.459 | Acc: 84.730% (8473/10000) 1000/1000 
+Saving..
+
+Epoch: 6
+ [================================================================>]  Step: 123ms | Tot: 1m14s | Loss: 0.379 | Acc: 86.816% (43408/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 9s967ms | Loss: 0.454 | Acc: 84.840% (8484/10000) 1000/1000 
+Saving..
+
+Epoch: 7
+ [================================================================>]  Step: 123ms | Tot: 1m14s | Loss: 0.348 | Acc: 87.942% (43971/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 9s985ms | Loss: 0.492 | Acc: 83.920% (8392/10000) 1000/1000 
+
+Epoch: 8
+ [================================================================>]  Step: 122ms | Tot: 1m14s | Loss: 0.322 | Acc: 88.884% (44442/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 10s15ms | Loss: 0.377 | Acc: 87.220% (8722/10000) 1000/1000 
+Saving..
+
+Epoch: 9
+ [================================================================>]  Step: 123ms | Tot: 1m14s | Loss: 0.295 | Acc: 90.016% (45008/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 10s171ms | Loss: 0.380 | Acc: 87.260% (8726/10000) 1000/1000 
+Saving..
+
+Epoch: 10
+ [================================================================>]  Step: 124ms | Tot: 1m14s | Loss: 0.279 | Acc: 90.308% (45154/50000) 391/391 
+ [================================================================>]  Step: 11ms | Tot: 9s854ms | Loss: 0.381 | Acc: 87.330% (8733/10000) 1000/1000 
+Saving..
+
+Epoch: 11
+ [================================================================>]  Step: 122ms | Tot: 1m14s | Loss: 0.257 | Acc: 91.272% (45636/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 9s958ms | Loss: 0.372 | Acc: 87.710% (8771/10000) 1000/1000 
+Saving..
+
+Epoch: 12
+ [================================================================>]  Step: 124ms | Tot: 1m14s | Loss: 0.247 | Acc: 91.556% (45778/50000) 391/391 
+ [================================================================>]  Step: 9ms | Tot: 10s930ms | Loss: 0.350 | Acc: 88.730% (8873/10000) 1000/1000 
+Saving..
+
+Epoch: 13
+ [================================================================>]  Step: 123ms | Tot: 1m14s | Loss: 0.230 | Acc: 92.216% (46108/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 10s931ms | Loss: 0.364 | Acc: 88.220% (8822/10000) 1000/1000 
+
+Epoch: 14
+ [================================================================>]  Step: 122ms | Tot: 1m14s | Loss: 0.220 | Acc: 92.422% (46211/50000) 391/391 
+ [================================================================>]  Step: 9ms | Tot: 10s286ms | Loss: 0.355 | Acc: 88.680% (8868/10000) 1000/1000 
+
+Epoch: 15
+ [================================================================>]  Step: 123ms | Tot: 1m14s | Loss: 0.205 | Acc: 93.022% (46511/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 10s878ms | Loss: 0.327 | Acc: 89.700% (8970/10000) 1000/1000 
+Saving..
+
+Epoch: 16
+ [================================================================>]  Step: 123ms | Tot: 1m14s | Loss: 0.199 | Acc: 93.264% (46632/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 10s117ms | Loss: 0.395 | Acc: 87.570% (8757/10000) 1000/1000 
+
+Epoch: 17
+ [================================================================>]  Step: 121ms | Tot: 1m14s | Loss: 0.188 | Acc: 93.566% (46783/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 10s1ms | Loss: 0.355 | Acc: 88.630% (8863/10000) 1000/1000 
+
+Epoch: 18
+ [================================================================>]  Step: 121ms | Tot: 1m14s | Loss: 0.176 | Acc: 93.924% (46962/50000) 391/391 
+ [================================================================>]  Step: 13ms | Tot: 10s68ms | Loss: 0.336 | Acc: 89.340% (8934/10000) 1000/1000 
+
+Epoch: 19
+ [================================================================>]  Step: 122ms | Tot: 1m14s | Loss: 0.171 | Acc: 94.222% (47111/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 10s23ms | Loss: 0.329 | Acc: 89.230% (8923/10000) 1000/1000 
+
+Epoch: 20
+ [================================================================>]  Step: 122ms | Tot: 1m14s | Loss: 0.162 | Acc: 94.516% (47258/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 10s414ms | Loss: 0.373 | Acc: 88.070% (8807/10000) 1000/1000 
+
+Epoch: 21
+ [================================================================>]  Step: 123ms | Tot: 1m14s | Loss: 0.159 | Acc: 94.586% (47293/50000) 391/391 
+ [================================================================>]  Step: 9ms | Tot: 10s151ms | Loss: 0.339 | Acc: 88.920% (8892/10000) 1000/1000 
+
+Epoch: 22
+ [================================================================>]  Step: 122ms | Tot: 1m14s | Loss: 0.149 | Acc: 94.922% (47461/50000) 391/391 
+ [================================================================>]  Step: 8ms | Tot: 10s261ms | Loss: 0.336 | Acc: 89.430% (8943/10000) 1000/1000 
+
+Epoch: 23
+Traceback (most recent call last):
+  File "main_cifar.py", line 163, in <module>
+    main_cifar()
+  File "main_cifar.py", line 159, in main_cifar
+    train(epoch)
+  File "main_cifar.py", line 97, in train
+    train_loss += to_python_float(loss.data)
+  File "main_cifar.py", line 72, in to_python_float
+    return t.item()
+KeyboardInterrupt

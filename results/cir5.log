@@ -1,0 +1,97 @@
+circles = 5
+Training Setting: batchsize=128 | epoch=0 | lr=1.0e-02 
+Training: Epoch=0 | Loss: 1.615 |  Acc: 42.366% (21183/50000) | best acc: 0.000
+Testing: Epoch=0 | Loss: 1.459 |  Acc: 48.510% (4851/10000) | best_acc: 0.000
+
+Training Setting: batchsize=128 | epoch=1 | lr=1.0e-02 
+Training: Epoch=1 | Loss: 0.907 |  Acc: 67.968% (33984/50000) | best acc: 48.510
+Testing: Epoch=1 | Loss: 1.179 |  Acc: 61.550% (6155/10000) | best_acc: 48.510
+
+Training Setting: batchsize=128 | epoch=2 | lr=1.0e-02 
+Training: Epoch=2 | Loss: 0.690 |  Acc: 76.176% (38088/50000) | best acc: 61.550
+Testing: Epoch=2 | Loss: 0.902 |  Acc: 70.530% (7053/10000) | best_acc: 61.550
+
+Training Setting: batchsize=128 | epoch=3 | lr=1.0e-02 
+Training: Epoch=3 | Loss: 0.578 |  Acc: 80.150% (40075/50000) | best acc: 70.530
+Testing: Epoch=3 | Loss: 0.629 |  Acc: 78.730% (7873/10000) | best_acc: 70.530
+
+Training Setting: batchsize=128 | epoch=4 | lr=1.0e-02 
+Training: Epoch=4 | Loss: 0.502 |  Acc: 82.720% (41360/50000) | best acc: 78.730
+Testing: Epoch=4 | Loss: 0.794 |  Acc: 74.930% (7493/10000) | best_acc: 78.730
+
+Training Setting: batchsize=128 | epoch=5 | lr=1.0e-02 
+Training: Epoch=5 | Loss: 0.452 |  Acc: 84.634% (42317/50000) | best acc: 78.730
+Testing: Epoch=5 | Loss: 0.526 |  Acc: 81.980% (8198/10000) | best_acc: 78.730
+
+Training Setting: batchsize=128 | epoch=6 | lr=1.0e-02 
+Training: Epoch=6 | Loss: 0.409 |  Acc: 85.838% (42919/50000) | best acc: 81.980
+Testing: Epoch=6 | Loss: 0.497 |  Acc: 83.530% (8353/10000) | best_acc: 81.980
+
+Training Setting: batchsize=128 | epoch=7 | lr=1.0e-02 
+Training: Epoch=7 | Loss: 0.372 |  Acc: 87.278% (43639/50000) | best acc: 83.530
+Testing: Epoch=7 | Loss: 0.488 |  Acc: 83.750% (8375/10000) | best_acc: 83.530
+
+Training Setting: batchsize=128 | epoch=8 | lr=1.0e-02 
+Training: Epoch=8 | Loss: 0.345 |  Acc: 88.352% (44176/50000) | best acc: 83.750
+Testing: Epoch=8 | Loss: 0.476 |  Acc: 83.820% (8382/10000) | best_acc: 83.750
+
+Training Setting: batchsize=128 | epoch=9 | lr=1.0e-02 
+
+
+
+
+
+
+
+==> Preparing data..
+Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ../../datasets/torchvision/cifar-10-python.tar.gz
+170500096it [00:01, 92435028.26it/s]                   
+Extracting ../../datasets/torchvision/cifar-10-python.tar.gz to ../../datasets/torchvision
+Files already downloaded and verified
+==> Building model..
+
+Epoch: 0
+ [================================================================>]  Step: 1s457ms | Tot: 4m3s | Loss: 1.615 | Acc: 42.366% (21183/50000) 391/391 
+ [================================================================>]  Step: 28ms | Tot: 29s21ms | Loss: 1.459 | Acc: 48.510% (4851/10000) 1000/1000 
+Saving..
+
+Epoch: 1
+ [================================================================>]  Step: 410ms | Tot: 4m6s | Loss: 0.907 | Acc: 67.968% (33984/50000) 391/391 
+ [================================================================>]  Step: 28ms | Tot: 29s23ms | Loss: 1.179 | Acc: 61.550% (6155/10000) 1000/1000 
+Saving..
+
+Epoch: 2
+ [================================================================>]  Step: 408ms | Tot: 4m6s | Loss: 0.690 | Acc: 76.176% (38088/50000) 391/391 
+ [================================================================>]  Step: 27ms | Tot: 29s76ms | Loss: 0.902 | Acc: 70.530% (7053/10000) 1000/1000 
+Saving..
+
+Epoch: 3
+ [================================================================>]  Step: 407ms | Tot: 4m5s | Loss: 0.578 | Acc: 80.150% (40075/50000) 391/391 
+ [================================================================>]  Step: 27ms | Tot: 28s904ms | Loss: 0.629 | Acc: 78.730% (7873/10000) 1000/1000 
+Saving..
+
+Epoch: 4
+ [================================================================>]  Step: 407ms | Tot: 4m5s | Loss: 0.502 | Acc: 82.720% (41360/50000) 391/391 
+ [================================================================>]  Step: 28ms | Tot: 28s955ms | Loss: 0.794 | Acc: 74.930% (7493/10000) 1000/1000 
+
+Epoch: 5
+ [================================================================>]  Step: 407ms | Tot: 4m5s | Loss: 0.452 | Acc: 84.634% (42317/50000) 391/391 
+ [================================================================>]  Step: 28ms | Tot: 28s890ms | Loss: 0.526 | Acc: 81.980% (8198/10000) 1000/1000 
+Saving..
+
+Epoch: 6
+ [================================================================>]  Step: 405ms | Tot: 4m5s | Loss: 0.409 | Acc: 85.838% (42919/50000) 391/391 
+ [================================================================>]  Step: 27ms | Tot: 28s904ms | Loss: 0.497 | Acc: 83.530% (8353/10000) 1000/1000 
+Saving..
+
+Epoch: 7
+ [================================================================>]  Step: 406ms | Tot: 4m5s | Loss: 0.372 | Acc: 87.278% (43639/50000) 391/391 
+ [================================================================>]  Step: 27ms | Tot: 28s922ms | Loss: 0.488 | Acc: 83.750% (8375/10000) 1000/1000 
+Saving..
+
+Epoch: 8
+ [================================================================>]  Step: 404ms | Tot: 4m4s | Loss: 0.345 | Acc: 88.352% (44176/50000) 391/391 
+ [================================================================>]  Step: 28ms | Tot: 28s727ms | Loss: 0.476 | Acc: 83.820% (8382/10000) 1000/1000 
+Saving..
+
+Epoch: 9
