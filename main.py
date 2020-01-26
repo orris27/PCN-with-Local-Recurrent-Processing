@@ -54,6 +54,8 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=2)
         testset = torchvision.datasets.CIFAR10(root=data_dir, train=False, download=True, transform=transform_test)
         testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=2)
+
+        num_classes = 10
     elif dataset_name == 'cifar100':
         print('Dataset: CIFAR100')
         transform_train = transforms.Compose([
@@ -68,6 +70,8 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=2)
         testset = torchvision.datasets.CIFAR100(root=data_dir, train=False, download=True, transform=transform_test)
         testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=2)
+
+        num_classes = 100
     else:
         raise ValueError('dataset_name: [cifar10|cifar100]')
     
@@ -76,13 +80,13 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     
     if backend == 'modelA':
         from modelA import PredNetBpD
-        model = PredNetBpD(num_classes=10,cls=circles,Tied=Tied)
+        model = PredNetBpD(num_classes=num_classes,cls=circles,Tied=Tied)
     elif backend == 'modelB':
         from modelB import PredNetBpD
-        model = PredNetBpD(num_classes=10,cls=circles,Tied=Tied)
+        model = PredNetBpD(num_classes=num_classes,cls=circles,Tied=Tied)
     elif backend == 'modelC':
         from modelC import PredNetBpD
-        model = PredNetBpD(num_classes=10,cls=circles,Tied=Tied)
+        model = PredNetBpD(num_classes=num_classes,cls=circles,Tied=Tied)
     else:
         raise ValueError('backend: [modelA|modelB|modelC]')
 
@@ -116,14 +120,15 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         corrects = np.zeros(100) # allocate large space 
         totals = np.zeros(100)
         
-        training_setting = 'backend=%s | batch_size=%d | epoch=%d | lr=%.1e | circles=%d ' % (backend, batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
+        training_setting = 'backend=%s | dataset=%s | batch_size=%d | epoch=%d | lr=%.1e | circles=%d ' % (backend, dataset_name, batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
-            if use_cuda:
-                inputs, targets = inputs.cuda(), targets.cuda()
+            #if use_cuda:
+            #    inputs, targets = inputs.cuda(), targets.cuda()
+            inputs, targets = inputs.cuda(), targets.cuda()
             optimizer.zero_grad()
-            inputs, targets = Variable(inputs), Variable(targets)
+            #inputs, targets = Variable(inputs), Variable(targets)
             outputs = model(inputs)
 
             #loss = criterion(outputs, targets)
