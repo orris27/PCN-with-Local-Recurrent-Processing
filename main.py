@@ -111,8 +111,10 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
 
                 acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
       
-            progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %s%%'
-                % (train_loss/(batch_idx+1), acc_str))
+            if batch_idx % 20 == 0:
+                print('Batch: %d | Loss: %.3f | Acc: %s%%'%(batch_idx, train_loss/(batch_idx+1), acc_str))
+            #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %s%%'
+            #    % (train_loss/(batch_idx+1), acc_str))
             #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
             #    % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))
 
@@ -156,8 +158,12 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
 
                     acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
           
-                progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %s%%'
-                    % (test_loss/(batch_idx+1), acc_str))
+                #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %s%%'
+                #    % (test_loss/(batch_idx+1), acc_str))
+
+                if batch_idx % 20 == 0:
+                    print('Batch: %d | Loss: %.3f | Acc: %s%%'%(batch_idx, test_loss/(batch_idx+1), acc_str))
+
 
                 #progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
                 #    % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
@@ -167,7 +173,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         for j in range(len(outputs)):
             acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
 
-        statstr = 'Training: Epoch=%d | Loss: %.3f |  Acc: %s%% ' \
+        statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %s%% ' \
                   % (epoch, test_loss/(batch_idx+1), acc_str)
 
         #statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %.3f%% (%d/%d) | best_acc: %.3f' \
