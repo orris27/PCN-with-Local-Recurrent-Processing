@@ -57,12 +57,15 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     
     if backend == 'modelA':
         from modelA import PredNetBpD
-        model = PredNetBpD(num_classes=100,cls=circles,Tied=Tied)
+        model = PredNetBpD(num_classes=10,cls=circles,Tied=Tied)
     elif backend == 'modelB':
         from modelB import PredNetBpD
-        model = PredNetBpD(num_classes=100,cls=circles,Tied=Tied)
+        model = PredNetBpD(num_classes=10,cls=circles,Tied=Tied)
+    elif backend == 'modelC':
+        from modelC import PredNetBpD
+        model = PredNetBpD(num_classes=10,cls=circles,Tied=Tied)
     else:
-        raise ValueError('backend: [modelA|modelB]')
+        raise ValueError('backend: [modelA|modelB|modelC]')
 
     print(model)
        
@@ -221,7 +224,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--circles', type=int, default=1)
-    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB'])
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC'])
     args = parser.parse_args()
     main_cifar(args)
 

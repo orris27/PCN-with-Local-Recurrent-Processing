@@ -58,7 +58,7 @@ class PredNetBpD(nn.Module):
             self.PcConvs = nn.ModuleList()
             for i in range(self.nlays):
                 self.PcConvs.append(PcConvBp(self.ics[i], self.ocs[i], cls=self.cls))
-                self.classifiers.append(ClassifierModule(self.ocs[i], 10))
+                self.classifiers.append(ClassifierModule(self.ocs[i], num_classes))
                 
                 
         else:
@@ -66,10 +66,10 @@ class PredNetBpD(nn.Module):
             self.PcConvs = nn.ModuleList([PcConvBpTied(self.ics[i], self.ocs[i], cls=self.cls) for i in range(self.nlays)])
         self.BNs = nn.ModuleList([nn.BatchNorm2d(self.ics[i]) for i in range(self.nlays)])
         # Linear layer
-        self.linear = nn.Linear(self.ocs[-1], num_classes)
+        #self.linear = nn.Linear(self.ocs[-1], num_classes)
         self.maxpool2d = nn.MaxPool2d(kernel_size=2, stride=2)
-        self.relu = nn.ReLU(inplace=True)
-        self.BNend = nn.BatchNorm2d(self.ocs[-1])
+        #self.relu = nn.ReLU(inplace=True)
+        #self.BNend = nn.BatchNorm2d(self.ocs[-1])
 
 
 

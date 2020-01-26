@@ -25,18 +25,31 @@ class PcConvBp(nn.Module):
 
 
 class ClassifierModule(nn.Module):
-    def __init__(self, in_channel, num_classes, cls=0):
+    def __init__(self, in_channel_block, in_channel_clf, num_classes, cls=0):
         super(ClassifierModule, self).__init__()
         self.relu = nn.ReLU(inplace=True)
-        self.BN = nn.BatchNorm2d(in_channel)
-        self.linear = nn.Linear(in_channel, num_classes)
-        self.linear_bw = nn.Linear(num_classes, in_channel)
+        self.BN = nn.BatchNorm2d(in_channel_block)
+        self.linear = nn.Linear(in_channel_block + in_channel_clf, num_classes)
+        self.linear_bw = nn.Linear(num_classes, in_channel_block + in_channel_clf)
         self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1,num_classes))])
         self.cls = cls # e.g.: 5
 
-    def forward(self, x): # x (list)
-        out = F.avg_pool2d(self.relu(self.BN(x)), x.size(-1))
-        out = out.view(out.size(0), -1)
+    def forward(self, x_block, x_clf):
+        '''
+            x_block (4D Tensor): from block
+            x_clf (2D Tensor): from previous classifier
+
+        '''
+        out_block = F.avg_pool2d(self.relu(self.BN(x_block)), x_block.size(-1))
+        out_block = out_block.view(out_block.size(0), -1) # (batch_size, c_block)
+        
+        out_clf = x_clf # (batch_size, c_clf)
+
+        if x_clf is None:
+            out = out_block
+        else:
+            out = torch.cat([out_block, out_clf], dim=1)
+
         rep = self.linear(out) # representation
 
         b0 = F.relu(self.b0[0] + 1.0).expand_as(rep)
@@ -65,7 +78,10 @@ class PredNetBpD(nn.Module):
         self.PcConvs = nn.ModuleList()
         for i in range(self.nlays):
             self.PcConvs.append(PcConvBp(self.ics[i], self.ocs[i]))
-            self.classifiers.append(ClassifierModule(self.ocs[i], num_classes, cls=self.cls))
+            if i == 0:
+                self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=0, num_classes=num_classes, cls=self.cls))
+            else:
+                self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=num_classes, num_classes=num_classes, cls=self.cls))
                 
                 
         self.BNs = nn.ModuleList([nn.BatchNorm2d(self.ics[i]) for i in range(self.nlays)])
@@ -86,7 +102,11 @@ class PredNetBpD(nn.Module):
             if self.maxpool[i]:
                 x = self.maxpool2d(x)
 
-            res.append(self.classifiers[i](x))
+            if i == 0:
+                res.append(self.classifiers[i](x, None))
+            else:
+                res.append(self.classifiers[i](x, res[i-1]))
+
 
         # classifier                
         #out = F.avg_pool2d(self.relu(self.BNend(x)), x.size(-1))
