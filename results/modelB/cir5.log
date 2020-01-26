@@ -1,0 +1,1115 @@
+
+Training Setting: backend=modelB | batch_size=128 | epoch=0 | lr=1.0e-02 | circles=5 
+Training: Epoch=0 | Loss: nan |  Acc: 9.992,10.026,10.010,10.018,10.032,10.006,10.032,10.006,% 
+Testing: Epoch=0 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=1 | lr=1.0e-02 | circles=5 
+Training: Epoch=1 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=1 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=2 | lr=1.0e-02 | circles=5 
+Training: Epoch=2 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=2 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=3 | lr=1.0e-02 | circles=5 
+Training: Epoch=3 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=3 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=4 | lr=1.0e-02 | circles=5 
+Training: Epoch=4 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=4 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=5 | lr=1.0e-02 | circles=5 
+Training: Epoch=5 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=5 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=6 | lr=1.0e-02 | circles=5 
+Training: Epoch=6 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=6 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=7 | lr=1.0e-02 | circles=5 
+Training: Epoch=7 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=7 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=8 | lr=1.0e-02 | circles=5 
+Training: Epoch=8 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=8 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=9 | lr=1.0e-02 | circles=5 
+Training: Epoch=9 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=9 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=10 | lr=1.0e-02 | circles=5 
+Training: Epoch=10 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=10 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=11 | lr=1.0e-02 | circles=5 
+Training: Epoch=11 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+Testing: Epoch=11 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+Training Setting: backend=modelB | batch_size=128 | epoch=12 | lr=1.0e-02 | circles=5 
+Training: Epoch=12 | Loss: nan |  Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,% 
+
+
+==> Preparing data..
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+PredNetBpD(
+  (classifiers): ModuleList(
+    (0): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=64, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=64, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (1): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=64, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=64, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (2): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=128, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=128, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (3): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=128, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=128, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (4): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=256, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=256, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (5): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=256, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=256, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (6): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=512, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=512, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (7): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=512, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=512, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+  )
+  (PcConvs): ModuleList(
+    (0): PcConvBp(
+      (FFconv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(64, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x64x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (1): PcConvBp(
+      (FFconv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x64x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (2): PcConvBp(
+      (FFconv): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x128x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (3): PcConvBp(
+      (FFconv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x128x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (4): PcConvBp(
+      (FFconv): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x256x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (5): PcConvBp(
+      (FFconv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x256x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (6): PcConvBp(
+      (FFconv): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x512x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (7): PcConvBp(
+      (FFconv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x512x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+  )
+  (BNs): ModuleList(
+    (0): BatchNorm2d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (linear): Linear(in_features=512, out_features=100, bias=True)
+  (maxpool2d): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (relu): ReLU(inplace=True)
+  (BNend): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
+
+Epoch: 0
+Batch: 0 | Loss: 35.027 | Acc: 7.812,13.281,3.906,10.156,13.281,7.812,14.844,9.375,%
+Batch: 20 | Loss: nan | Acc: 9.784,10.417,10.119,10.268,10.528,10.045,10.528,10.045,%
+Batch: 40 | Loss: nan | Acc: 9.604,9.928,9.775,9.851,9.985,9.737,9.985,9.737,%
+Batch: 60 | Loss: nan | Acc: 9.541,9.759,9.657,9.708,9.798,9.631,9.798,9.631,%
+Batch: 80 | Loss: nan | Acc: 9.578,9.742,9.664,9.703,9.770,9.645,9.770,9.645,%
+Batch: 100 | Loss: nan | Acc: 9.777,9.909,9.847,9.878,9.932,9.831,9.932,9.831,%
+Batch: 120 | Loss: nan | Acc: 9.743,9.853,9.801,9.827,9.872,9.788,9.872,9.788,%
+Batch: 140 | Loss: nan | Acc: 9.807,9.901,9.857,9.879,9.918,9.846,9.918,9.846,%
+Batch: 160 | Loss: nan | Acc: 9.943,10.025,9.986,10.006,10.040,9.977,10.040,9.977,%
+Batch: 180 | Loss: nan | Acc: 9.936,10.009,9.975,9.992,10.022,9.966,10.022,9.966,%
+Batch: 200 | Loss: nan | Acc: 10.012,10.079,10.047,10.063,10.090,10.040,10.090,10.040,%
+Batch: 220 | Loss: nan | Acc: 10.086,10.146,10.117,10.132,10.156,10.110,10.156,10.110,%
+Batch: 240 | Loss: nan | Acc: 10.069,10.124,10.098,10.111,10.134,10.091,10.134,10.091,%
+Batch: 260 | Loss: nan | Acc: 10.075,10.126,10.102,10.114,10.135,10.096,10.135,10.096,%
+Batch: 280 | Loss: nan | Acc: 10.056,10.103,10.081,10.092,10.112,10.076,10.112,10.076,%
+Batch: 300 | Loss: nan | Acc: 9.982,10.026,10.006,10.016,10.034,10.001,10.034,10.001,%
+Batch: 320 | Loss: nan | Acc: 9.971,10.013,9.993,10.003,10.020,9.988,10.020,9.988,%
+Batch: 340 | Loss: nan | Acc: 9.996,10.035,10.016,10.026,10.042,10.012,10.042,10.012,%
+Batch: 360 | Loss: nan | Acc: 10.026,10.063,10.046,10.055,10.070,10.042,10.070,10.042,%
+Batch: 380 | Loss: nan | Acc: 10.000,10.035,10.019,10.027,10.041,10.015,10.041,10.015,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 1
+Batch: 0 | Loss: nan | Acc: 6.250,6.250,6.250,6.250,6.250,6.250,6.250,6.250,%
+Batch: 20 | Loss: nan | Acc: 10.454,10.454,10.454,10.454,10.454,10.454,10.454,10.454,%
+Batch: 40 | Loss: nan | Acc: 10.595,10.595,10.595,10.595,10.595,10.595,10.595,10.595,%
+Batch: 60 | Loss: nan | Acc: 10.681,10.681,10.681,10.681,10.681,10.681,10.681,10.681,%
+Batch: 80 | Loss: nan | Acc: 10.571,10.571,10.571,10.571,10.571,10.571,10.571,10.571,%
+Batch: 100 | Loss: nan | Acc: 10.481,10.481,10.481,10.481,10.481,10.481,10.481,10.481,%
+Batch: 120 | Loss: nan | Acc: 10.285,10.285,10.285,10.285,10.285,10.285,10.285,10.285,%
+Batch: 140 | Loss: nan | Acc: 10.289,10.289,10.289,10.289,10.289,10.289,10.289,10.289,%
+Batch: 160 | Loss: nan | Acc: 10.258,10.258,10.258,10.258,10.258,10.258,10.258,10.258,%
+Batch: 180 | Loss: nan | Acc: 10.217,10.217,10.217,10.217,10.217,10.217,10.217,10.217,%
+Batch: 200 | Loss: nan | Acc: 10.277,10.277,10.277,10.277,10.277,10.277,10.277,10.277,%
+Batch: 220 | Loss: nan | Acc: 10.227,10.227,10.227,10.227,10.227,10.227,10.227,10.227,%
+Batch: 240 | Loss: nan | Acc: 10.147,10.147,10.147,10.147,10.147,10.147,10.147,10.147,%
+Batch: 260 | Loss: nan | Acc: 10.102,10.102,10.102,10.102,10.102,10.102,10.102,10.102,%
+Batch: 280 | Loss: nan | Acc: 10.120,10.120,10.120,10.120,10.120,10.120,10.120,10.120,%
+Batch: 300 | Loss: nan | Acc: 10.045,10.045,10.045,10.045,10.045,10.045,10.045,10.045,%
+Batch: 320 | Loss: nan | Acc: 10.027,10.027,10.027,10.027,10.027,10.027,10.027,10.027,%
+Batch: 340 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 360 | Loss: nan | Acc: 9.992,9.992,9.992,9.992,9.992,9.992,9.992,9.992,%
+Batch: 380 | Loss: nan | Acc: 9.978,9.978,9.978,9.978,9.978,9.978,9.978,9.978,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 2
+Batch: 0 | Loss: nan | Acc: 11.719,11.719,11.719,11.719,11.719,11.719,11.719,11.719,%
+Batch: 20 | Loss: nan | Acc: 9.933,9.933,9.933,9.933,9.933,9.933,9.933,9.933,%
+Batch: 40 | Loss: nan | Acc: 10.366,10.366,10.366,10.366,10.366,10.366,10.366,10.366,%
+Batch: 60 | Loss: nan | Acc: 10.323,10.323,10.323,10.323,10.323,10.323,10.323,10.323,%
+Batch: 80 | Loss: nan | Acc: 10.503,10.503,10.503,10.503,10.503,10.503,10.503,10.503,%
+Batch: 100 | Loss: nan | Acc: 10.241,10.241,10.241,10.241,10.241,10.241,10.241,10.241,%
+Batch: 120 | Loss: nan | Acc: 10.182,10.182,10.182,10.182,10.182,10.182,10.182,10.182,%
+Batch: 140 | Loss: nan | Acc: 10.195,10.195,10.195,10.195,10.195,10.195,10.195,10.195,%
+Batch: 160 | Loss: nan | Acc: 10.151,10.151,10.151,10.151,10.151,10.151,10.151,10.151,%
+Batch: 180 | Loss: nan | Acc: 10.143,10.143,10.143,10.143,10.143,10.143,10.143,10.143,%
+Batch: 200 | Loss: nan | Acc: 10.071,10.071,10.071,10.071,10.071,10.071,10.071,10.071,%
+Batch: 220 | Loss: nan | Acc: 10.064,10.064,10.064,10.064,10.064,10.064,10.064,10.064,%
+Batch: 240 | Loss: nan | Acc: 10.023,10.023,10.023,10.023,10.023,10.023,10.023,10.023,%
+Batch: 260 | Loss: nan | Acc: 10.028,10.028,10.028,10.028,10.028,10.028,10.028,10.028,%
+Batch: 280 | Loss: nan | Acc: 9.956,9.956,9.956,9.956,9.956,9.956,9.956,9.956,%
+Batch: 300 | Loss: nan | Acc: 10.003,10.003,10.003,10.003,10.003,10.003,10.003,10.003,%
+Batch: 320 | Loss: nan | Acc: 9.947,9.947,9.947,9.947,9.947,9.947,9.947,9.947,%
+Batch: 340 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 360 | Loss: nan | Acc: 9.966,9.966,9.966,9.966,9.966,9.966,9.966,9.966,%
+Batch: 380 | Loss: nan | Acc: 9.998,9.998,9.998,9.998,9.998,9.998,9.998,9.998,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 3
+Batch: 0 | Loss: nan | Acc: 12.500,12.500,12.500,12.500,12.500,12.500,12.500,12.500,%
+Batch: 20 | Loss: nan | Acc: 8.891,8.891,8.891,8.891,8.891,8.891,8.891,8.891,%
+Batch: 40 | Loss: nan | Acc: 8.937,8.937,8.937,8.937,8.937,8.937,8.937,8.937,%
+Batch: 60 | Loss: nan | Acc: 9.401,9.401,9.401,9.401,9.401,9.401,9.401,9.401,%
+Batch: 80 | Loss: nan | Acc: 9.693,9.693,9.693,9.693,9.693,9.693,9.693,9.693,%
+Batch: 100 | Loss: nan | Acc: 9.723,9.723,9.723,9.723,9.723,9.723,9.723,9.723,%
+Batch: 120 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 140 | Loss: nan | Acc: 9.901,9.901,9.901,9.901,9.901,9.901,9.901,9.901,%
+Batch: 160 | Loss: nan | Acc: 9.914,9.914,9.914,9.914,9.914,9.914,9.914,9.914,%
+Batch: 180 | Loss: nan | Acc: 9.906,9.906,9.906,9.906,9.906,9.906,9.906,9.906,%
+Batch: 200 | Loss: nan | Acc: 9.849,9.849,9.849,9.849,9.849,9.849,9.849,9.849,%
+Batch: 220 | Loss: nan | Acc: 9.881,9.881,9.881,9.881,9.881,9.881,9.881,9.881,%
+Batch: 240 | Loss: nan | Acc: 9.858,9.858,9.858,9.858,9.858,9.858,9.858,9.858,%
+Batch: 260 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+Batch: 280 | Loss: nan | Acc: 9.923,9.923,9.923,9.923,9.923,9.923,9.923,9.923,%
+Batch: 300 | Loss: nan | Acc: 9.933,9.933,9.933,9.933,9.933,9.933,9.933,9.933,%
+Batch: 320 | Loss: nan | Acc: 9.959,9.959,9.959,9.959,9.959,9.959,9.959,9.959,%
+Batch: 340 | Loss: nan | Acc: 9.978,9.978,9.978,9.978,9.978,9.978,9.978,9.978,%
+Batch: 360 | Loss: nan | Acc: 10.013,10.013,10.013,10.013,10.013,10.013,10.013,10.013,%
+Batch: 380 | Loss: nan | Acc: 10.013,10.013,10.013,10.013,10.013,10.013,10.013,10.013,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 4
+Batch: 0 | Loss: nan | Acc: 5.469,5.469,5.469,5.469,5.469,5.469,5.469,5.469,%
+Batch: 20 | Loss: nan | Acc: 9.487,9.487,9.487,9.487,9.487,9.487,9.487,9.487,%
+Batch: 40 | Loss: nan | Acc: 9.718,9.718,9.718,9.718,9.718,9.718,9.718,9.718,%
+Batch: 60 | Loss: nan | Acc: 9.618,9.618,9.618,9.618,9.618,9.618,9.618,9.618,%
+Batch: 80 | Loss: nan | Acc: 9.645,9.645,9.645,9.645,9.645,9.645,9.645,9.645,%
+Batch: 100 | Loss: nan | Acc: 9.568,9.568,9.568,9.568,9.568,9.568,9.568,9.568,%
+Batch: 120 | Loss: nan | Acc: 9.711,9.711,9.711,9.711,9.711,9.711,9.711,9.711,%
+Batch: 140 | Loss: nan | Acc: 9.846,9.846,9.846,9.846,9.846,9.846,9.846,9.846,%
+Batch: 160 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 180 | Loss: nan | Acc: 9.940,9.940,9.940,9.940,9.940,9.940,9.940,9.940,%
+Batch: 200 | Loss: nan | Acc: 9.970,9.970,9.970,9.970,9.970,9.970,9.970,9.970,%
+Batch: 220 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 240 | Loss: nan | Acc: 10.001,10.001,10.001,10.001,10.001,10.001,10.001,10.001,%
+Batch: 260 | Loss: nan | Acc: 10.028,10.028,10.028,10.028,10.028,10.028,10.028,10.028,%
+Batch: 280 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 300 | Loss: nan | Acc: 9.985,9.985,9.985,9.985,9.985,9.985,9.985,9.985,%
+Batch: 320 | Loss: nan | Acc: 10.005,10.005,10.005,10.005,10.005,10.005,10.005,10.005,%
+Batch: 340 | Loss: nan | Acc: 9.994,9.994,9.994,9.994,9.994,9.994,9.994,9.994,%
+Batch: 360 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 380 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 5
+Batch: 0 | Loss: nan | Acc: 14.844,14.844,14.844,14.844,14.844,14.844,14.844,14.844,%
+Batch: 20 | Loss: nan | Acc: 10.193,10.193,10.193,10.193,10.193,10.193,10.193,10.193,%
+Batch: 40 | Loss: nan | Acc: 10.880,10.880,10.880,10.880,10.880,10.880,10.880,10.880,%
+Batch: 60 | Loss: nan | Acc: 10.720,10.720,10.720,10.720,10.720,10.720,10.720,10.720,%
+Batch: 80 | Loss: nan | Acc: 10.590,10.590,10.590,10.590,10.590,10.590,10.590,10.590,%
+Batch: 100 | Loss: nan | Acc: 10.373,10.373,10.373,10.373,10.373,10.373,10.373,10.373,%
+Batch: 120 | Loss: nan | Acc: 10.292,10.292,10.292,10.292,10.292,10.292,10.292,10.292,%
+Batch: 140 | Loss: nan | Acc: 10.162,10.162,10.162,10.162,10.162,10.162,10.162,10.162,%
+Batch: 160 | Loss: nan | Acc: 10.079,10.079,10.079,10.079,10.079,10.079,10.079,10.079,%
+Batch: 180 | Loss: nan | Acc: 10.139,10.139,10.139,10.139,10.139,10.139,10.139,10.139,%
+Batch: 200 | Loss: nan | Acc: 10.040,10.040,10.040,10.040,10.040,10.040,10.040,10.040,%
+Batch: 220 | Loss: nan | Acc: 10.036,10.036,10.036,10.036,10.036,10.036,10.036,10.036,%
+Batch: 240 | Loss: nan | Acc: 10.072,10.072,10.072,10.072,10.072,10.072,10.072,10.072,%
+Batch: 260 | Loss: nan | Acc: 10.054,10.054,10.054,10.054,10.054,10.054,10.054,10.054,%
+Batch: 280 | Loss: nan | Acc: 10.031,10.031,10.031,10.031,10.031,10.031,10.031,10.031,%
+Batch: 300 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 320 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 340 | Loss: nan | Acc: 9.943,9.943,9.943,9.943,9.943,9.943,9.943,9.943,%
+Batch: 360 | Loss: nan | Acc: 9.992,9.992,9.992,9.992,9.992,9.992,9.992,9.992,%
+Batch: 380 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 6
+Batch: 0 | Loss: nan | Acc: 13.281,13.281,13.281,13.281,13.281,13.281,13.281,13.281,%
+Batch: 20 | Loss: nan | Acc: 10.268,10.268,10.268,10.268,10.268,10.268,10.268,10.268,%
+Batch: 40 | Loss: nan | Acc: 9.851,9.851,9.851,9.851,9.851,9.851,9.851,9.851,%
+Batch: 60 | Loss: nan | Acc: 9.836,9.836,9.836,9.836,9.836,9.836,9.836,9.836,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 9.971,9.971,9.971,9.971,9.971,9.971,9.971,9.971,%
+Batch: 120 | Loss: nan | Acc: 9.769,9.769,9.769,9.769,9.769,9.769,9.769,9.769,%
+Batch: 140 | Loss: nan | Acc: 9.840,9.840,9.840,9.840,9.840,9.840,9.840,9.840,%
+Batch: 160 | Loss: nan | Acc: 9.690,9.690,9.690,9.690,9.690,9.690,9.690,9.690,%
+Batch: 180 | Loss: nan | Acc: 9.824,9.824,9.824,9.824,9.824,9.824,9.824,9.824,%
+Batch: 200 | Loss: nan | Acc: 9.888,9.888,9.888,9.888,9.888,9.888,9.888,9.888,%
+Batch: 220 | Loss: nan | Acc: 9.831,9.831,9.831,9.831,9.831,9.831,9.831,9.831,%
+Batch: 240 | Loss: nan | Acc: 9.796,9.796,9.796,9.796,9.796,9.796,9.796,9.796,%
+Batch: 260 | Loss: nan | Acc: 9.899,9.899,9.899,9.899,9.899,9.899,9.899,9.899,%
+Batch: 280 | Loss: nan | Acc: 9.934,9.934,9.934,9.934,9.934,9.934,9.934,9.934,%
+Batch: 300 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 320 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 340 | Loss: nan | Acc: 10.030,10.030,10.030,10.030,10.030,10.030,10.030,10.030,%
+Batch: 360 | Loss: nan | Acc: 10.013,10.013,10.013,10.013,10.013,10.013,10.013,10.013,%
+Batch: 380 | Loss: nan | Acc: 10.002,10.002,10.002,10.002,10.002,10.002,10.002,10.002,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 7
+Batch: 0 | Loss: nan | Acc: 9.375,9.375,9.375,9.375,9.375,9.375,9.375,9.375,%
+Batch: 20 | Loss: nan | Acc: 10.342,10.342,10.342,10.342,10.342,10.342,10.342,10.342,%
+Batch: 40 | Loss: nan | Acc: 10.175,10.175,10.175,10.175,10.175,10.175,10.175,10.175,%
+Batch: 60 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 80 | Loss: nan | Acc: 9.934,9.934,9.934,9.934,9.934,9.934,9.934,9.934,%
+Batch: 100 | Loss: nan | Acc: 9.955,9.955,9.955,9.955,9.955,9.955,9.955,9.955,%
+Batch: 120 | Loss: nan | Acc: 9.898,9.898,9.898,9.898,9.898,9.898,9.898,9.898,%
+Batch: 140 | Loss: nan | Acc: 10.140,10.140,10.140,10.140,10.140,10.140,10.140,10.140,%
+Batch: 160 | Loss: nan | Acc: 10.093,10.093,10.093,10.093,10.093,10.093,10.093,10.093,%
+Batch: 180 | Loss: nan | Acc: 10.161,10.161,10.161,10.161,10.161,10.161,10.161,10.161,%
+Batch: 200 | Loss: nan | Acc: 10.129,10.129,10.129,10.129,10.129,10.129,10.129,10.129,%
+Batch: 220 | Loss: nan | Acc: 10.163,10.163,10.163,10.163,10.163,10.163,10.163,10.163,%
+Batch: 240 | Loss: nan | Acc: 10.069,10.069,10.069,10.069,10.069,10.069,10.069,10.069,%
+Batch: 260 | Loss: nan | Acc: 10.072,10.072,10.072,10.072,10.072,10.072,10.072,10.072,%
+Batch: 280 | Loss: nan | Acc: 10.012,10.012,10.012,10.012,10.012,10.012,10.012,10.012,%
+Batch: 300 | Loss: nan | Acc: 10.032,10.032,10.032,10.032,10.032,10.032,10.032,10.032,%
+Batch: 320 | Loss: nan | Acc: 9.986,9.986,9.986,9.986,9.986,9.986,9.986,9.986,%
+Batch: 340 | Loss: nan | Acc: 9.950,9.950,9.950,9.950,9.950,9.950,9.950,9.950,%
+Batch: 360 | Loss: nan | Acc: 9.931,9.931,9.931,9.931,9.931,9.931,9.931,9.931,%
+Batch: 380 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 8
+Batch: 0 | Loss: nan | Acc: 8.594,8.594,8.594,8.594,8.594,8.594,8.594,8.594,%
+Batch: 20 | Loss: nan | Acc: 10.305,10.305,10.305,10.305,10.305,10.305,10.305,10.305,%
+Batch: 40 | Loss: nan | Acc: 9.985,9.985,9.985,9.985,9.985,9.985,9.985,9.985,%
+Batch: 60 | Loss: nan | Acc: 9.977,9.977,9.977,9.977,9.977,9.977,9.977,9.977,%
+Batch: 80 | Loss: nan | Acc: 9.828,9.828,9.828,9.828,9.828,9.828,9.828,9.828,%
+Batch: 100 | Loss: nan | Acc: 9.978,9.978,9.978,9.978,9.978,9.978,9.978,9.978,%
+Batch: 120 | Loss: nan | Acc: 10.072,10.072,10.072,10.072,10.072,10.072,10.072,10.072,%
+Batch: 140 | Loss: nan | Acc: 10.162,10.162,10.162,10.162,10.162,10.162,10.162,10.162,%
+Batch: 160 | Loss: nan | Acc: 10.122,10.122,10.122,10.122,10.122,10.122,10.122,10.122,%
+Batch: 180 | Loss: nan | Acc: 10.143,10.143,10.143,10.143,10.143,10.143,10.143,10.143,%
+Batch: 200 | Loss: nan | Acc: 10.090,10.090,10.090,10.090,10.090,10.090,10.090,10.090,%
+Batch: 220 | Loss: nan | Acc: 9.972,9.972,9.972,9.972,9.972,9.972,9.972,9.972,%
+Batch: 240 | Loss: nan | Acc: 10.010,10.010,10.010,10.010,10.010,10.010,10.010,10.010,%
+Batch: 260 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 280 | Loss: nan | Acc: 9.892,9.892,9.892,9.892,9.892,9.892,9.892,9.892,%
+Batch: 300 | Loss: nan | Acc: 9.946,9.946,9.946,9.946,9.946,9.946,9.946,9.946,%
+Batch: 320 | Loss: nan | Acc: 9.947,9.947,9.947,9.947,9.947,9.947,9.947,9.947,%
+Batch: 340 | Loss: nan | Acc: 9.904,9.904,9.904,9.904,9.904,9.904,9.904,9.904,%
+Batch: 360 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 380 | Loss: nan | Acc: 9.988,9.988,9.988,9.988,9.988,9.988,9.988,9.988,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 9
+Batch: 0 | Loss: nan | Acc: 13.281,13.281,13.281,13.281,13.281,13.281,13.281,13.281,%
+Batch: 20 | Loss: nan | Acc: 10.193,10.193,10.193,10.193,10.193,10.193,10.193,10.193,%
+Batch: 40 | Loss: nan | Acc: 10.575,10.575,10.575,10.575,10.575,10.575,10.575,10.575,%
+Batch: 60 | Loss: nan | Acc: 10.207,10.207,10.207,10.207,10.207,10.207,10.207,10.207,%
+Batch: 80 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 100 | Loss: nan | Acc: 10.179,10.179,10.179,10.179,10.179,10.179,10.179,10.179,%
+Batch: 120 | Loss: nan | Acc: 10.272,10.272,10.272,10.272,10.272,10.272,10.272,10.272,%
+Batch: 140 | Loss: nan | Acc: 10.201,10.201,10.201,10.201,10.201,10.201,10.201,10.201,%
+Batch: 160 | Loss: nan | Acc: 10.258,10.258,10.258,10.258,10.258,10.258,10.258,10.258,%
+Batch: 180 | Loss: nan | Acc: 10.143,10.143,10.143,10.143,10.143,10.143,10.143,10.143,%
+Batch: 200 | Loss: nan | Acc: 9.946,9.946,9.946,9.946,9.946,9.946,9.946,9.946,%
+Batch: 220 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 240 | Loss: nan | Acc: 9.923,9.923,9.923,9.923,9.923,9.923,9.923,9.923,%
+Batch: 260 | Loss: nan | Acc: 9.929,9.929,9.929,9.929,9.929,9.929,9.929,9.929,%
+Batch: 280 | Loss: nan | Acc: 9.942,9.942,9.942,9.942,9.942,9.942,9.942,9.942,%
+Batch: 300 | Loss: nan | Acc: 9.977,9.977,9.977,9.977,9.977,9.977,9.977,9.977,%
+Batch: 320 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 340 | Loss: nan | Acc: 9.934,9.934,9.934,9.934,9.934,9.934,9.934,9.934,%
+Batch: 360 | Loss: nan | Acc: 9.940,9.940,9.940,9.940,9.940,9.940,9.940,9.940,%
+Batch: 380 | Loss: nan | Acc: 9.986,9.986,9.986,9.986,9.986,9.986,9.986,9.986,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 10
+Batch: 0 | Loss: nan | Acc: 10.938,10.938,10.938,10.938,10.938,10.938,10.938,10.938,%
+Batch: 20 | Loss: nan | Acc: 10.603,10.603,10.603,10.603,10.603,10.603,10.603,10.603,%
+Batch: 40 | Loss: nan | Acc: 10.633,10.633,10.633,10.633,10.633,10.633,10.633,10.633,%
+Batch: 60 | Loss: nan | Acc: 10.464,10.464,10.464,10.464,10.464,10.464,10.464,10.464,%
+Batch: 80 | Loss: nan | Acc: 10.253,10.253,10.253,10.253,10.253,10.253,10.253,10.253,%
+Batch: 100 | Loss: nan | Acc: 10.295,10.295,10.295,10.295,10.295,10.295,10.295,10.295,%
+Batch: 120 | Loss: nan | Acc: 10.066,10.066,10.066,10.066,10.066,10.066,10.066,10.066,%
+Batch: 140 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 160 | Loss: nan | Acc: 9.996,9.996,9.996,9.996,9.996,9.996,9.996,9.996,%
+Batch: 180 | Loss: nan | Acc: 9.992,9.992,9.992,9.992,9.992,9.992,9.992,9.992,%
+Batch: 200 | Loss: nan | Acc: 10.028,10.028,10.028,10.028,10.028,10.028,10.028,10.028,%
+Batch: 220 | Loss: nan | Acc: 10.040,10.040,10.040,10.040,10.040,10.040,10.040,10.040,%
+Batch: 240 | Loss: nan | Acc: 10.023,10.023,10.023,10.023,10.023,10.023,10.023,10.023,%
+Batch: 260 | Loss: nan | Acc: 9.989,9.989,9.989,9.989,9.989,9.989,9.989,9.989,%
+Batch: 280 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 300 | Loss: nan | Acc: 9.949,9.949,9.949,9.949,9.949,9.949,9.949,9.949,%
+Batch: 320 | Loss: nan | Acc: 9.996,9.996,9.996,9.996,9.996,9.996,9.996,9.996,%
+Batch: 340 | Loss: nan | Acc: 9.989,9.989,9.989,9.989,9.989,9.989,9.989,9.989,%
+Batch: 360 | Loss: nan | Acc: 9.994,9.994,9.994,9.994,9.994,9.994,9.994,9.994,%
+Batch: 380 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 11
+Batch: 0 | Loss: nan | Acc: 8.594,8.594,8.594,8.594,8.594,8.594,8.594,8.594,%
+Batch: 20 | Loss: nan | Acc: 9.896,9.896,9.896,9.896,9.896,9.896,9.896,9.896,%
+Batch: 40 | Loss: nan | Acc: 10.099,10.099,10.099,10.099,10.099,10.099,10.099,10.099,%
+Batch: 60 | Loss: nan | Acc: 10.003,10.003,10.003,10.003,10.003,10.003,10.003,10.003,%
+Batch: 80 | Loss: nan | Acc: 9.886,9.886,9.886,9.886,9.886,9.886,9.886,9.886,%
+Batch: 100 | Loss: nan | Acc: 9.978,9.978,9.978,9.978,9.978,9.978,9.978,9.978,%
+Batch: 120 | Loss: nan | Acc: 9.743,9.743,9.743,9.743,9.743,9.743,9.743,9.743,%
+Batch: 140 | Loss: nan | Acc: 9.840,9.840,9.840,9.840,9.840,9.840,9.840,9.840,%
+Batch: 160 | Loss: nan | Acc: 9.870,9.870,9.870,9.870,9.870,9.870,9.870,9.870,%
+Batch: 180 | Loss: nan | Acc: 9.820,9.820,9.820,9.820,9.820,9.820,9.820,9.820,%
+Batch: 200 | Loss: nan | Acc: 9.915,9.915,9.915,9.915,9.915,9.915,9.915,9.915,%
+Batch: 220 | Loss: nan | Acc: 9.948,9.948,9.948,9.948,9.948,9.948,9.948,9.948,%
+Batch: 240 | Loss: nan | Acc: 9.991,9.991,9.991,9.991,9.991,9.991,9.991,9.991,%
+Batch: 260 | Loss: nan | Acc: 10.001,10.001,10.001,10.001,10.001,10.001,10.001,10.001,%
+Batch: 280 | Loss: nan | Acc: 10.053,10.053,10.053,10.053,10.053,10.053,10.053,10.053,%
+Batch: 300 | Loss: nan | Acc: 10.013,10.013,10.013,10.013,10.013,10.013,10.013,10.013,%
+Batch: 320 | Loss: nan | Acc: 10.039,10.039,10.039,10.039,10.039,10.039,10.039,10.039,%
+Batch: 340 | Loss: nan | Acc: 10.014,10.014,10.014,10.014,10.014,10.014,10.014,10.014,%
+Batch: 360 | Loss: nan | Acc: 10.033,10.033,10.033,10.033,10.033,10.033,10.033,10.033,%
+Batch: 380 | Loss: nan | Acc: 10.019,10.019,10.019,10.019,10.019,10.019,10.019,10.019,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Batch: 280 | Loss: nan | Acc: 9.964,9.964,9.964,9.964,9.964,9.964,9.964,9.964,%
+Batch: 300 | Loss: nan | Acc: 9.967,9.967,9.967,9.967,9.967,9.967,9.967,9.967,%
+Batch: 320 | Loss: nan | Acc: 9.969,9.969,9.969,9.969,9.969,9.969,9.969,9.969,%
+Batch: 340 | Loss: nan | Acc: 9.853,9.853,9.853,9.853,9.853,9.853,9.853,9.853,%
+Batch: 360 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 380 | Loss: nan | Acc: 9.843,9.843,9.843,9.843,9.843,9.843,9.843,9.843,%
+Batch: 400 | Loss: nan | Acc: 9.726,9.726,9.726,9.726,9.726,9.726,9.726,9.726,%
+Batch: 420 | Loss: nan | Acc: 9.810,9.810,9.810,9.810,9.810,9.810,9.810,9.810,%
+Batch: 440 | Loss: nan | Acc: 9.887,9.887,9.887,9.887,9.887,9.887,9.887,9.887,%
+Batch: 460 | Loss: nan | Acc: 9.913,9.913,9.913,9.913,9.913,9.913,9.913,9.913,%
+Batch: 480 | Loss: nan | Acc: 9.834,9.834,9.834,9.834,9.834,9.834,9.834,9.834,%
+Batch: 500 | Loss: nan | Acc: 9.741,9.741,9.741,9.741,9.741,9.741,9.741,9.741,%
+Batch: 520 | Loss: nan | Acc: 9.770,9.770,9.770,9.770,9.770,9.770,9.770,9.770,%
+Batch: 540 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 560 | Loss: nan | Acc: 9.893,9.893,9.893,9.893,9.893,9.893,9.893,9.893,%
+Batch: 580 | Loss: nan | Acc: 9.897,9.897,9.897,9.897,9.897,9.897,9.897,9.897,%
+Batch: 600 | Loss: nan | Acc: 9.817,9.817,9.817,9.817,9.817,9.817,9.817,9.817,%
+Batch: 620 | Loss: nan | Acc: 9.871,9.871,9.871,9.871,9.871,9.871,9.871,9.871,%
+Batch: 640 | Loss: nan | Acc: 9.953,9.953,9.953,9.953,9.953,9.953,9.953,9.953,%
+Batch: 660 | Loss: nan | Acc: 9.939,9.939,9.939,9.939,9.939,9.939,9.939,9.939,%
+Batch: 680 | Loss: nan | Acc: 10.029,10.029,10.029,10.029,10.029,10.029,10.029,10.029,%
+Batch: 700 | Loss: nan | Acc: 10.043,10.043,10.043,10.043,10.043,10.043,10.043,10.043,%
+Batch: 720 | Loss: nan | Acc: 10.111,10.111,10.111,10.111,10.111,10.111,10.111,10.111,%
+Batch: 740 | Loss: nan | Acc: 9.987,9.987,9.987,9.987,9.987,9.987,9.987,9.987,%
+Batch: 760 | Loss: nan | Acc: 9.974,9.974,9.974,9.974,9.974,9.974,9.974,9.974,%
+Batch: 780 | Loss: nan | Acc: 10.026,10.026,10.026,10.026,10.026,10.026,10.026,10.026,%
+Batch: 800 | Loss: nan | Acc: 10.087,10.087,10.087,10.087,10.087,10.087,10.087,10.087,%
+Batch: 820 | Loss: nan | Acc: 10.049,10.049,10.049,10.049,10.049,10.049,10.049,10.049,%
+Batch: 840 | Loss: nan | Acc: 9.976,9.976,9.976,9.976,9.976,9.976,9.976,9.976,%
+Batch: 860 | Loss: nan | Acc: 9.930,9.930,9.930,9.930,9.930,9.930,9.930,9.930,%
+Batch: 880 | Loss: nan | Acc: 9.841,9.841,9.841,9.841,9.841,9.841,9.841,9.841,%
+Batch: 900 | Loss: nan | Acc: 9.922,9.922,9.922,9.922,9.922,9.922,9.922,9.922,%
+Batch: 920 | Loss: nan | Acc: 9.957,9.957,9.957,9.957,9.957,9.957,9.957,9.957,%
+Batch: 940 | Loss: nan | Acc: 9.872,9.872,9.872,9.872,9.872,9.872,9.872,9.872,%
+Batch: 960 | Loss: nan | Acc: 9.938,9.938,9.938,9.938,9.938,9.938,9.938,9.938,%
+Batch: 980 | Loss: nan | Acc: 9.908,9.908,9.908,9.908,9.908,9.908,9.908,9.908,%
+
+Epoch: 12
+Batch: 0 | Loss: nan | Acc: 11.719,11.719,11.719,11.719,11.719,11.719,11.719,11.719,%
+Batch: 20 | Loss: nan | Acc: 9.747,9.747,9.747,9.747,9.747,9.747,9.747,9.747,%
+Batch: 40 | Loss: nan | Acc: 9.851,9.851,9.851,9.851,9.851,9.851,9.851,9.851,%
+Batch: 60 | Loss: nan | Acc: 9.772,9.772,9.772,9.772,9.772,9.772,9.772,9.772,%
+Batch: 80 | Loss: nan | Acc: 9.626,9.626,9.626,9.626,9.626,9.626,9.626,9.626,%
+Batch: 100 | Loss: nan | Acc: 9.607,9.607,9.607,9.607,9.607,9.607,9.607,9.607,%
+Batch: 120 | Loss: nan | Acc: 9.659,9.659,9.659,9.659,9.659,9.659,9.659,9.659,%
+Batch: 140 | Loss: nan | Acc: 9.713,9.713,9.713,9.713,9.713,9.713,9.713,9.713,%
+Batch: 160 | Loss: nan | Acc: 9.724,9.724,9.724,9.724,9.724,9.724,9.724,9.724,%
+Batch: 180 | Loss: nan | Acc: 9.733,9.733,9.733,9.733,9.733,9.733,9.733,9.733,%
+Batch: 200 | Loss: nan | Acc: 9.795,9.795,9.795,9.795,9.795,9.795,9.795,9.795,%
+Batch: 220 | Loss: nan | Acc: 9.902,9.902,9.902,9.902,9.902,9.902,9.902,9.902,%
+Batch: 240 | Loss: nan | Acc: 9.933,9.933,9.933,9.933,9.933,9.933,9.933,9.933,%
+Batch: 260 | Loss: nan | Acc: 9.926,9.926,9.926,9.926,9.926,9.926,9.926,9.926,%
+Batch: 280 | Loss: nan | Acc: 9.959,9.959,9.959,9.959,9.959,9.959,9.959,9.959,%
+Batch: 300 | Loss: nan | Acc: 9.980,9.980,9.980,9.980,9.980,9.980,9.980,9.980,%
+Batch: 320 | Loss: nan | Acc: 10.020,10.020,10.020,10.020,10.020,10.020,10.020,10.020,%
+Batch: 340 | Loss: nan | Acc: 10.058,10.058,10.058,10.058,10.058,10.058,10.058,10.058,%
+Batch: 360 | Loss: nan | Acc: 10.052,10.052,10.052,10.052,10.052,10.052,10.052,10.052,%
+Batch: 380 | Loss: nan | Acc: 10.031,10.031,10.031,10.031,10.031,10.031,10.031,10.031,%
+Batch: 0 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 20 | Loss: nan | Acc: 10.000,10.000,10.000,10.000,10.000,10.000,10.000,10.000,%
+Batch: 40 | Loss: nan | Acc: 11.220,11.220,11.220,11.220,11.220,11.220,11.220,11.220,%
+Batch: 60 | Loss: nan | Acc: 10.984,10.984,10.984,10.984,10.984,10.984,10.984,10.984,%
+Batch: 80 | Loss: nan | Acc: 9.877,9.877,9.877,9.877,9.877,9.877,9.877,9.877,%
+Batch: 100 | Loss: nan | Acc: 10.297,10.297,10.297,10.297,10.297,10.297,10.297,10.297,%
+Batch: 120 | Loss: nan | Acc: 10.744,10.744,10.744,10.744,10.744,10.744,10.744,10.744,%
+Batch: 140 | Loss: nan | Acc: 10.142,10.142,10.142,10.142,10.142,10.142,10.142,10.142,%
+Batch: 160 | Loss: nan | Acc: 9.689,9.689,9.689,9.689,9.689,9.689,9.689,9.689,%
+Batch: 180 | Loss: nan | Acc: 9.945,9.945,9.945,9.945,9.945,9.945,9.945,9.945,%
+Batch: 200 | Loss: nan | Acc: 9.751,9.751,9.751,9.751,9.751,9.751,9.751,9.751,%
+Batch: 220 | Loss: nan | Acc: 9.910,9.910,9.910,9.910,9.910,9.910,9.910,9.910,%
+Batch: 240 | Loss: nan | Acc: 10.041,10.041,10.041,10.041,10.041,10.041,10.041,10.041,%
+Batch: 260 | Loss: nan | Acc: 9.962,9.962,9.962,9.962,9.962,9.962,9.962,9.962,%
+Traceback (most recent call last):
+  File "main.py", line 226, in <module>
+    main_cifar(args)
+  File "main.py", line 218, in main_cifar
+    test(epoch)
+  File "main.py", line 156, in test
+    outputs = model(inputs)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/parallel/data_parallel.py", line 150, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/content/PCN-with-Local-Recurrent-Processing/modelB.py", line 89, in forward
+    res.append(self.classifiers[i](x))
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/content/PCN-with-Local-Recurrent-Processing/modelB.py", line 44, in forward
+    rep = self.linear(self.relu(out - self.linear_bw(rep))) * b0 + rep
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/functional.py", line 1370, in linear
+    ret = torch.addmm(bias, input, weight.t())
+KeyboardInterrupt

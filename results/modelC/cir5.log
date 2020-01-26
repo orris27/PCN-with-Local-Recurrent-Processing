@@ -1,0 +1,171 @@
+
+
+Training Setting: backend=modelC | batch_size=128 | epoch=0 | lr=1.0e-02 | circles=5 
+
+
+
+==> Preparing data..
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+PredNetBpD(
+  (classifiers): ModuleList(
+    (0): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=64, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=64, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (1): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=74, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=74, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (2): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=138, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=138, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (3): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=138, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=138, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (4): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=266, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=266, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (5): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=266, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=266, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (6): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=522, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=522, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+    (7): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (BN): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=522, out_features=10, bias=True)
+      (linear_bw): Linear(in_features=10, out_features=522, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x10])
+    )
+  )
+  (PcConvs): ModuleList(
+    (0): PcConvBp(
+      (FFconv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(64, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x64x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (1): PcConvBp(
+      (FFconv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x64x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (2): PcConvBp(
+      (FFconv): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x128x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (3): PcConvBp(
+      (FFconv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x128x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (4): PcConvBp(
+      (FFconv): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x256x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (5): PcConvBp(
+      (FFconv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x256x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (6): PcConvBp(
+      (FFconv): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x512x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (7): PcConvBp(
+      (FFconv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (FBconv): ConvTranspose2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x512x1x1])
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+  )
+  (BNs): ModuleList(
+    (0): BatchNorm2d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (maxpool2d): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+
+Epoch: 0
+Batch: 0 | Loss: 38.062 | Acc: 5.469,12.500,8.594,11.719,9.375,11.719,15.625,7.031,%
+Batch: 20 | Loss: nan | Acc: 10.603,10.640,10.751,11.049,10.900,11.049,10.938,10.565,%
+Batch: 40 | Loss: nan | Acc: 10.423,10.442,10.499,10.652,10.575,10.652,10.595,10.404,%
+Batch: 60 | Loss: nan | Acc: 10.182,10.195,10.233,10.336,10.284,10.336,10.297,10.169,%
+Batch: 80 | Loss: nan | Acc: 10.301,10.311,10.340,10.417,10.378,10.417,10.388,10.291,%
+Batch: 100 | Loss: nan | Acc: 10.087,10.094,10.118,10.179,10.149,10.179,10.156,10.079,%
+Batch: 120 | Loss: nan | Acc: 9.988,9.995,10.014,10.066,10.040,10.066,10.046,9.982,%
+Batch: 140 | Loss: nan | Acc: 9.935,9.940,9.957,10.001,9.979,10.001,9.984,9.929,%
+Traceback (most recent call last):
+  File "main.py", line 229, in <module>
+    main_cifar(args)
+  File "main.py", line 220, in main_cifar
+    train(epoch)
+  File "main.py", line 108, in train
+    outputs = model(inputs)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/parallel/data_parallel.py", line 150, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/content/PCN-with-Local-Recurrent-Processing/modelC.py", line 108, in forward
+    res.append(self.classifiers[i](x, res[i-1]))
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 541, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/content/PCN-with-Local-Recurrent-Processing/modelC.py", line 55, in forward
+    b0 = F.relu(self.b0[0] + 1.0).expand_as(rep)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/functional.py", line 914, in relu
+    result = torch.relu(input)
+KeyboardInterrupt
