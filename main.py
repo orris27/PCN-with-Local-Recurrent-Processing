@@ -9,7 +9,6 @@ import torch.backends.cudnn as cudnn
 import torchvision
 import torchvision.transforms as transforms
 import argparse
-from multi_prednet import *
 from utils import progress_bar
 from torch.autograd import Variable
 
@@ -19,6 +18,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     start_epoch = 0  # start from epoch 0 or last checkpoint epoch
     batch_size = args.batch_size
     circles = args.circles
+    backend = args.backend
     root = './'
     rep = 1
     lr = 0.01
@@ -54,7 +54,17 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     
     # Model
     print('==> Building model..')
-    model = PredNetBpD(num_classes=100,cls=circles,Tied=Tied)
+    
+    if backend == 'modelA':
+        from modelA import PredNetBpD
+        model = PredNetBpD(num_classes=100,cls=circles,Tied=Tied)
+    elif backend == 'modelB':
+        from modelB import PredNetBpD
+        model = PredNetBpD(num_classes=100,cls=circles,Tied=Tied)
+    else:
+        raise ValueError('backend: [modelA|modelB]')
+
+    print(model)
        
     
     # Define objective function
@@ -84,7 +94,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         corrects = np.zeros(100) # allocate large space 
         totals = np.zeros(100)
         
-        training_setting = 'batch_size=%d | epoch=%d | lr=%.1e | circles=%d ' % (batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
+        training_setting = 'backend=%s | batch_size=%d | epoch=%d | lr=%.1e | circles=%d ' % (backend, batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
@@ -211,6 +221,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--circles', type=int, default=1)
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB'])
     args = parser.parse_args()
     main_cifar(args)
 
