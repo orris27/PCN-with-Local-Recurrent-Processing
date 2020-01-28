@@ -124,7 +124,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         corrects = np.zeros(100) # allocate large space 
         totals = np.zeros(100)
         
-        training_setting = 'backend=%s | dataset=%s | batch_size=%d | epoch=%d | lr=%.1e | circles=%d ' % (backend, dataset_name, batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
+        training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d ' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
