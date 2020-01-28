@@ -56,7 +56,8 @@ class ClassifierModule(nn.Module):
 
         b0 = F.relu(self.b0[0] + 1.0).expand_as(rep)
         if self.adaptive is True and self.training is False:
-            print('No feedback')
+            #print('No feedback')
+            pass
         else:
             for _ in range(self.cls):
                 rep = self.linear(self.relu(out - self.linear_bw(rep))) * b0 + rep
