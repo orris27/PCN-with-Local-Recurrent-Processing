@@ -20,6 +20,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     circles = args.circles
     backend = args.backend
     dataset_name = args.dataset_name
+    adaptive = args.adaptive
     root = './'
     rep = 1
     lr = 0.01
@@ -86,7 +87,10 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         model = PredNetBpD(num_classes=num_classes,cls=circles,Tied=Tied)
     elif backend == 'modelC':
         from modelC import PredNetBpD
-        model = PredNetBpD(num_classes=num_classes,cls=circles,Tied=Tied)
+        if adaptive == 1:
+            model = PredNetBpD(num_classes=num_classes,cls=circles, adaptive=True)
+        else:
+            model = PredNetBpD(num_classes=num_classes,cls=circles)
     else:
         raise ValueError('backend: [modelA|modelB|modelC]')
 
@@ -248,6 +252,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--circles', type=int, default=1)
+    parser.add_argument('--adaptive', type=int, default=0)
     parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
