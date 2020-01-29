@@ -71,7 +71,15 @@ class ClassifierModule(nn.Module):
 
 ''' Architecture PredNetBpD '''
 class PredNetBpD(nn.Module):
-    def __init__(self, num_classes=10, cls=0, dropout=1.0, adaptive = False):
+    def __init__(self, num_classes=10, cls=0, dropout=1.0, adaptive = False, avg=False):
+        '''
+            adaptive(bool): 
+                True: Training with feedback, Testing without feedback
+                False: Training with feedback, Testing with feedback
+            avg(bool):
+                True: feed the outputs from clf_i to clf_{i+1}
+                False: feed the average outputs from clf_0, clf_1, ..., clf_i to clf_{i+1}
+        '''
         super().__init__()
         self.ics = [3,  64, 64, 128, 128, 256, 256, 512] # input chanels
         self.ocs = [64, 64, 128, 128, 256, 256, 512, 512] # output chanels
@@ -81,6 +89,7 @@ class PredNetBpD(nn.Module):
         self.adaptive = adaptive # True: training adopts feedback, but testing not; False: both training and testing uses feedbacks
         self.classifiers = nn.ModuleList()
         self.dropout = dropout
+        self.avg = avg
 
         # construct PC layers
         # Unlike PCN v1, we do not have a tied version here. We may or may not incorporate a tied version in the future.
@@ -117,11 +126,17 @@ class PredNetBpD(nn.Module):
                 if len(res) == 0:
                     res.append(self.classifiers[len(res)](x, None))
                 else:
-                    res.append(self.classifiers[len(res)](x, res[-1]))
+                    if self.avg is True:
+                        res.append(self.classifiers[len(res)](x, sum(res) / len(res)))
+                    else:
+                        res.append(self.classifiers[len(res)](x, res[-1]))
 
                 x = self.maxpool2d(x)
 
-        res.append(self.classifiers[len(res)](x, res[-1]))
+        if self.avg is True:
+            res.append(self.classifiers[len(res)](x, sum(res) / len(res)))
+        else:
+            res.append(self.classifiers[len(res)](x, res[-1]))
 
         # classifier                
         #out = F.avg_pool2d(self.relu(self.BNend(x)), x.size(-1))

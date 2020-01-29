@@ -22,6 +22,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     adaptive = args.adaptive
     max_epoch = args.max_epoch
     dropout = args.dropout
+    avg = args.avg
     root = './'
     rep = 1
     lr = 0.01
@@ -88,10 +89,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         model = PredNetBpD(num_classes=num_classes,cls=circles,Tied=Tied)
     elif backend == 'modelC':
         from modelC import PredNetBpD
-        if adaptive == 1:
-            model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=True)
-        else:
-            model = PredNetBpD(num_classes=num_classes,cls=circles)
+        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=bool(adaptive), avg=bool(avg))
     else:
         raise ValueError('backend: [modelA|modelB|modelC]')
 
@@ -256,6 +254,7 @@ if __name__ == '__main__':
     parser.add_argument('--adaptive', type=int, default=0)
     parser.add_argument('--max_epoch', type=int, default=300)
     parser.add_argument('--dropout', type=float, default=1.0)
+    parser.add_argument('--avg', type=int, default=0)
     parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
