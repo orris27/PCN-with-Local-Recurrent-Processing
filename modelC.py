@@ -85,11 +85,13 @@ class PredNetBpD(nn.Module):
         self.PcConvs = nn.ModuleList()
         for i in range(self.nlays):
             self.PcConvs.append(PcConvBp(self.ics[i], self.ocs[i]))
-            if i == 0:
-                self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=0, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls))
-            else:
-                self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls))
+            if self.maxpool[i] is True:
+                if len(self.classifiers) == 0:
+                    self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=0, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls))
+                else:
+                    self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls))
                 
+        self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls))
                 
         self.BNs = nn.ModuleList([nn.BatchNorm2d(self.ics[i]) for i in range(self.nlays)])
         # Linear layer
@@ -107,13 +109,16 @@ class PredNetBpD(nn.Module):
             x = self.BNs[i](x)
             x = self.PcConvs[i](x)  # ReLU + Conv
             if self.maxpool[i]:
+
+                # add classifier
+                if len(res) == 0:
+                    res.append(self.classifiers[len(res)](x, None))
+                else:
+                    res.append(self.classifiers[len(res)](x, res[-1]))
+
                 x = self.maxpool2d(x)
 
-            if i == 0:
-                res.append(self.classifiers[i](x, None))
-            else:
-                res.append(self.classifiers[i](x, res[i-1]))
-
+        res.append(self.classifiers[len(res)](x, res[-1]))
 
         # classifier                
         #out = F.avg_pool2d(self.relu(self.BNend(x)), x.size(-1))

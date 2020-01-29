@@ -253,7 +253,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--circles', type=int, default=1)
     parser.add_argument('--adaptive', type=int, default=0)
-    parser.add_argument('--max_epoch', type=int, default=100)
+    parser.add_argument('--max_epoch', type=int, default=300)
     parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
