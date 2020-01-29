@@ -15,12 +15,12 @@ from torch.autograd import Variable
 def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     use_cuda = True # torch.cuda.is_available()
     best_acc = 0  # best test accuracy
-    start_epoch = 0  # start from epoch 0 or last checkpoint epoch
     batch_size = args.batch_size
     circles = args.circles
     backend = args.backend
     dataset_name = args.dataset_name
     adaptive = args.adaptive
+    max_epoch = args.max_epoch
     root = './'
     rep = 1
     lr = 0.01
@@ -241,7 +241,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
             param_group['lr'] /= 10
 
     
-    for epoch in range(start_epoch, start_epoch+300):
+    for epoch in range(max_epoch):
         statfile = open(logpath+'training_stats_'+modelname+'.txt', 'a+')
         if epoch==150 or epoch==225 or epoch == 262:
             decrease_learning_rate()       
@@ -253,6 +253,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--circles', type=int, default=1)
     parser.add_argument('--adaptive', type=int, default=0)
+    parser.add_argument('--max_epoch', type=int, default=100)
     parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
