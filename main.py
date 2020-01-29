@@ -21,6 +21,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     dataset_name = args.dataset_name
     adaptive = args.adaptive
     max_epoch = args.max_epoch
+    dropout = args.dropout
     root = './'
     rep = 1
     lr = 0.01
@@ -88,7 +89,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     elif backend == 'modelC':
         from modelC import PredNetBpD
         if adaptive == 1:
-            model = PredNetBpD(num_classes=num_classes,cls=circles, adaptive=True)
+            model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=True)
         else:
             model = PredNetBpD(num_classes=num_classes,cls=circles)
     else:
@@ -124,7 +125,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         corrects = np.zeros(100) # allocate large space 
         totals = np.zeros(100)
         
-        training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d ' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
+        training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d | dropout=%.2f' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles, dropout)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
@@ -254,6 +255,7 @@ if __name__ == '__main__':
     parser.add_argument('--circles', type=int, default=1)
     parser.add_argument('--adaptive', type=int, default=0)
     parser.add_argument('--max_epoch', type=int, default=300)
+    parser.add_argument('--dropout', type=float, default=1.0)
     parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()

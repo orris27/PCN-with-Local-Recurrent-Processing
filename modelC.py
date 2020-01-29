@@ -25,7 +25,7 @@ class PcConvBp(nn.Module):
 
 
 class ClassifierModule(nn.Module):
-    def __init__(self, in_channel_block, in_channel_clf, num_classes, adaptive, cls=0):
+    def __init__(self, in_channel_block, in_channel_clf, num_classes, adaptive, cls, dropout):
         super(ClassifierModule, self).__init__()
         self.relu = nn.ReLU(inplace=True)
         self.BN = nn.BatchNorm2d(in_channel_block)
@@ -34,6 +34,7 @@ class ClassifierModule(nn.Module):
         self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1,num_classes))])
         self.cls = cls # e.g.: 5
         self.adaptive = adaptive
+        self.dropout = dropout
     
 
     def forward(self, x_block, x_clf):
@@ -59,8 +60,9 @@ class ClassifierModule(nn.Module):
             #print('No feedback')
             pass
         else:
-            for _ in range(self.cls):
-                rep = self.linear(self.relu(out - self.linear_bw(rep))) * b0 + rep
+            if torch.distributions.Bernoulli(torch.tensor(self.dropout)).sample() == 1:
+                for _ in range(self.cls):
+                    rep = self.linear(self.relu(out - self.linear_bw(rep))) * b0 + rep
 
         # no bypass
 
@@ -69,7 +71,7 @@ class ClassifierModule(nn.Module):
 
 ''' Architecture PredNetBpD '''
 class PredNetBpD(nn.Module):
-    def __init__(self, num_classes=10, cls=0, adaptive = False):
+    def __init__(self, num_classes=10, cls=0, dropout=1.0, adaptive = False):
         super().__init__()
         self.ics = [3,  64, 64, 128, 128, 256, 256, 512] # input chanels
         self.ocs = [64, 64, 128, 128, 256, 256, 512, 512] # output chanels
@@ -78,6 +80,7 @@ class PredNetBpD(nn.Module):
         self.nlays = len(self.ics)
         self.adaptive = adaptive # True: training adopts feedback, but testing not; False: both training and testing uses feedbacks
         self.classifiers = nn.ModuleList()
+        self.dropout = dropout
 
         # construct PC layers
         # Unlike PCN v1, we do not have a tied version here. We may or may not incorporate a tied version in the future.
@@ -87,11 +90,11 @@ class PredNetBpD(nn.Module):
             self.PcConvs.append(PcConvBp(self.ics[i], self.ocs[i]))
             if self.maxpool[i] is True:
                 if len(self.classifiers) == 0:
-                    self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=0, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls))
+                    self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=0, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
                 else:
-                    self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls))
+                    self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
                 
-        self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls))
+        self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
                 
         self.BNs = nn.ModuleList([nn.BatchNorm2d(self.ics[i]) for i in range(self.nlays)])
         # Linear layer
