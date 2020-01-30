@@ -251,8 +251,6 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                 model.requires_grad_(False)
                 for clf in model.classifiers:
                     clf.requires_grad_(True)
-            for name, weight in model.named_parameters():
-                print(name, weight.requires_grad)
         train(epoch)
         test(epoch)
 
