@@ -245,13 +245,14 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         if epoch==150 or epoch==225 or epoch == 262:
             decrease_learning_rate()       
         if step_all != 0 and step_clf != 0:
+            for name, weight in model.named_parameters():
+                print(name, weight.requires_grad)
             if epoch % (step_all + step_clf) < step_all:
-                for name, weight in model.named_parameters():
-                    print(name, weight.requires_grad)
                 model.requires_grad_(True)
             else:
                 model.requires_grad_(False)
-                model.classifiers.requires_grad(True)
+                for clf in model.classifiers:
+                    clf.requires_grad(True)
         train(epoch)
         test(epoch)
 
