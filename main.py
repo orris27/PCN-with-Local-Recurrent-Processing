@@ -104,7 +104,6 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     # Parallel computing
     if use_cuda:
         model.cuda()
-        model = torch.nn.DataParallel(model, device_ids=range(gpunum))
         cudnn.benchmark = True
     
     # item() is a recent addition, so this helps with backward compatibility.
@@ -247,6 +246,8 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
             decrease_learning_rate()       
         if step_all != 0 and step_clf != 0:
             if epoch % (step_all + step_clf) < step_all:
+                for name, weight in model.named_parameters():
+                    print(name, weight.requires_grad)
                 model.requires_grad_(True)
             else:
                 model.requires_grad_(False)
