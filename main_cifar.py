@@ -12,14 +12,15 @@ from prednet import *
 from utils import progress_bar
 from torch.autograd import Variable
 
-def main_cifar(model='PredNetBpD', circles=5, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
+def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     use_cuda = True # torch.cuda.is_available()
     best_acc = 0  # best test accuracy
     start_epoch = 0  # start from epoch 0 or last checkpoint epoch
-    batchsize = 128
+    batch_size = args.batch_size
     root = './'
     rep = 1
     lr = 0.01
+    circles = args.circles
     
     models = {'PredNetBpD':PredNetBpD}
     modelname = model+'_'+str(circles)+'CLS_'+str(nesterov)+'Nes_'+str(weightDecay)+'WD_'+str(Tied)+'TIED_'+str(rep)+'REP'
@@ -47,13 +48,15 @@ def main_cifar(model='PredNetBpD', circles=5, gpunum=1, Tied=False, weightDecay=
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),])
     data_dir = '../../datasets/torchvision'
     trainset = torchvision.datasets.CIFAR10(root=data_dir, train=True, download=False, transform=transform_train)
-    trainloader = torch.utils.data.DataLoader(trainset, batch_size=batchsize, shuffle=True, num_workers=2)
+    trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=2)
     testset = torchvision.datasets.CIFAR10(root=data_dir, train=False, download=False, transform=transform_test)
     testloader = torch.utils.data.DataLoader(testset, batch_size=10, shuffle=False, num_workers=2)
     
     # Model
     print('==> Building model..')
     net = models[model](num_classes=100,cls=circles,Tied=Tied)
+
+    print(net)
        
     
     # Define objective function
@@ -81,7 +84,7 @@ def main_cifar(model='PredNetBpD', circles=5, gpunum=1, Tied=False, weightDecay=
         correct = 0
         total = 0
         
-        training_setting = 'batchsize=%d | epoch=%d | lr=%.1e ' % (batchsize, epoch, optimizer.param_groups[0]['lr'])
+        training_setting = 'batch_size=%d | epoch=%d | lr=%.1e | circles=%d' % (batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
@@ -160,4 +163,8 @@ def main_cifar(model='PredNetBpD', circles=5, gpunum=1, Tied=False, weightDecay=
         test(epoch)
 
 if __name__ == '__main__':
-    main_cifar()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--circles', type=int, default=1)
+    parser.add_argument('--batch_size', type=int, default=128)
+    args = parser.parse_args()
+    main_cifar(args)
