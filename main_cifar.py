@@ -84,7 +84,7 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
         correct = 0
         total = 0
         
-        training_setting = 'batch_size=%d | epoch=%d | lr=%.1e | circles=%d' % (batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
+        training_setting = 'PCN origin | batch_size=%d | epoch=%d | lr=%.1e | circles=%d' % (batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
