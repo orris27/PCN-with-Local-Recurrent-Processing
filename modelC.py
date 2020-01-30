@@ -104,6 +104,7 @@ class PredNetBpD(nn.Module):
                     self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
                 
         self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
+        # 128, 266, 522
                 
         self.BNs = nn.ModuleList([nn.BatchNorm2d(self.ics[i]) for i in range(self.nlays)])
         # Linear layer
