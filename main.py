@@ -19,14 +19,17 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     circles = args.circles
     backend = args.backend
     dataset_name = args.dataset_name
-    adaptive = args.adaptive
+    adaptive = bool(args.adaptive)
     max_epoch = args.max_epoch
     dropout = args.dropout
-    avg = args.avg
+    avg = bool(args.avg)
     step_all, step_clf = args.step_all, args.step_clf
+    vanilla = bool(args.vanilla)
     root = './'
     rep = 1
     lr = 0.01
+
+    assert vanilla is False or circles == 0 # "vanilla is True and circles != 0" is not valid
     
     modelname = 'PredNetBpD' +'_'+str(circles)+'CLS_'+str(nesterov)+'Nes_'+str(weightDecay)+'WD_'+str(Tied)+'TIED_'+str(rep)+'REP'
     
@@ -90,7 +93,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         model = PredNetBpD(num_classes=num_classes,cls=circles,Tied=Tied)
     elif backend == 'modelC':
         from modelC import PredNetBpD
-        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=bool(adaptive), avg=bool(avg))
+        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, avg=avg, vanilla=vanilla)
     else:
         raise ValueError('backend: [modelA|modelB|modelC]')
 
@@ -123,7 +126,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         corrects = np.zeros(100) # allocate large space 
         totals = np.zeros(100)
         
-        training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d | dropout=%.2f | avg=%d' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles, dropout, avg)
+        training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d | dropout=%.2f | avg=%d | step_all=%d | step_clf=%d' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles, dropout, avg, step_all, step_clf)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
@@ -246,8 +249,10 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
             decrease_learning_rate()       
         if step_all != 0 and step_clf != 0:
             if epoch % (step_all + step_clf) < step_all:
+                print('Train all parameters')
                 model.requires_grad_(True)
             else:
+                print('Train classifier parameters')
                 model.requires_grad_(False)
                 for clf in model.classifiers:
                     clf.requires_grad_(True)
@@ -264,6 +269,7 @@ if __name__ == '__main__':
     parser.add_argument('--avg', type=int, default=0)
     parser.add_argument('--step_all', type=int, default=0) # 15
     parser.add_argument('--step_clf', type=int, default=0) # 10
+    parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
     parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()

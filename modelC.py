@@ -25,9 +25,10 @@ class ClassifierModule(nn.Module):
         self.relu = nn.ReLU(inplace=True)
         self.BN = nn.BatchNorm2d(in_channel_block)
         self.linear = nn.Linear(in_channel_block + in_channel_clf, num_classes)
-        self.linear_bw = nn.Linear(num_classes, in_channel_block + in_channel_clf)
-        self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1,num_classes))])
         self.cls = cls # e.g.: 5
+        if self.cls != 0:
+            self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1,num_classes))])
+            self.linear_bw = nn.Linear(num_classes, in_channel_block + in_channel_clf)
         self.adaptive = adaptive
         self.dropout = dropout
     
@@ -40,7 +41,6 @@ class ClassifierModule(nn.Module):
         '''
         out_block = F.avg_pool2d(self.relu(self.BN(x_block)), x_block.size(-1))
         out_block = out_block.view(out_block.size(0), -1) # (batch_size, c_block)
-        
         out_clf = x_clf # (batch_size, c_clf)
 
         if x_clf is None:
@@ -50,12 +50,12 @@ class ClassifierModule(nn.Module):
 
         rep = self.linear(out) # representation
 
-        b0 = F.relu(self.b0[0] + 1.0).expand_as(rep)
-        if self.adaptive is True and self.training is False:
+        if self.cls == 0 or (self.adaptive is True and self.training is False):
             #print('No feedback')
             pass
         else:
             if torch.distributions.Bernoulli(torch.tensor(self.dropout)).sample() == 1:
+                b0 = F.relu(self.b0[0] + 1.0).expand_as(rep)
                 for _ in range(self.cls):
                     rep = self.linear(self.relu(out - self.linear_bw(rep))) * b0 + rep
 
@@ -66,7 +66,7 @@ class ClassifierModule(nn.Module):
 
 ''' Architecture PredNetBpD '''
 class PredNetBpD(nn.Module):
-    def __init__(self, num_classes=10, cls=0, dropout=1.0, adaptive = False, avg=False):
+    def __init__(self, num_classes=10, cls=0, dropout=1.0, adaptive = False, avg=False, vanilla=False):
         '''
             adaptive(bool): 
                 True: Training with feedback, Testing without feedback
@@ -85,6 +85,7 @@ class PredNetBpD(nn.Module):
         self.classifiers = nn.ModuleList()
         self.dropout = dropout
         self.avg = avg
+        self.vanilla = vanilla
 
         # construct PC layers
         # Unlike PCN v1, we do not have a tied version here. We may or may not incorporate a tied version in the future.
@@ -93,12 +94,15 @@ class PredNetBpD(nn.Module):
         for i in range(self.nlays):
             self.PcConvs.append(PcConvBp(self.ics[i], self.ocs[i]))
             if self.maxpool[i] is True:
-                if len(self.classifiers) == 0:
+                if self.vanilla is True or len(self.classifiers) == 0:
                     self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=0, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
                 else:
                     self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
                 
-        self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
+        if self.vanilla is True:
+            self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=0, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
+        else:
+            self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
         # 128, 266, 522
                 
         self.BNs = nn.ModuleList([nn.BatchNorm2d(self.ics[i]) for i in range(self.nlays)])
@@ -119,7 +123,7 @@ class PredNetBpD(nn.Module):
             if self.maxpool[i]:
 
                 # add classifier
-                if len(res) == 0:
+                if self.vanilla is True or len(res) == 0:
                     res.append(self.classifiers[len(res)](x, None))
                 else:
                     if self.avg is True:
@@ -129,10 +133,13 @@ class PredNetBpD(nn.Module):
 
                 x = self.maxpool2d(x)
 
-        if self.avg is True:
-            res.append(self.classifiers[len(res)](x, sum(res) / len(res)))
+        if self.vanilla is True:
+            res.append(self.classifiers[len(res)](x, None))
         else:
-            res.append(self.classifiers[len(res)](x, res[-1]))
+            if self.avg is True:
+                res.append(self.classifiers[len(res)](x, sum(res) / len(res)))
+            else:
+                res.append(self.classifiers[len(res)](x, res[-1]))
 
         # classifier                
         #out = F.avg_pool2d(self.relu(self.BNend(x)), x.size(-1))
