@@ -23,6 +23,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     max_epoch = args.max_epoch
     dropout = args.dropout
     avg = args.avg
+    step_all, step_clf = args.step_all, args.step_clf
     root = './'
     rep = 1
     lr = 0.01
@@ -244,6 +245,12 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         statfile = open(logpath+'training_stats_'+modelname+'.txt', 'a+')
         if epoch==150 or epoch==225 or epoch == 262:
             decrease_learning_rate()       
+        if step_all != 0 and step_clf != 0:
+            if epoch % (step_all + step_clf) < step_all:
+                model.requires_grad_(True)
+            else:
+                model.requires_grad_(False)
+                model.classifiers.requires_grad(True)
         train(epoch)
         test(epoch)
 
@@ -255,6 +262,8 @@ if __name__ == '__main__':
     parser.add_argument('--max_epoch', type=int, default=300)
     parser.add_argument('--dropout', type=float, default=1.0)
     parser.add_argument('--avg', type=int, default=0)
+    parser.add_argument('--step_all', type=int, default=0) # 15
+    parser.add_argument('--step_clf', type=int, default=0) # 10
     parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
