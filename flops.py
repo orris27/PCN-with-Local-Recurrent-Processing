@@ -1,7 +1,6 @@
 import numpy as np
 import torch
 import torch.nn as nn
-from modelC import PredNetBpD
 
 # ------------------------------------------------------------------ # 
 class FConv2d(nn.Conv2d):
@@ -46,14 +45,30 @@ nn.Linear = FLinear
 device = torch.device('cpu')
 x = torch.randn(1, 3, 32, 32).to(device) # dummy inputs
 
+# PCN
+print('PCN')
 for circles in [0, 1, 2]:
     print('circles:', circles)
-    model = PredNetBpD(num_classes=10, cls=circles, dropout=1.0, adaptive=True, avg=False)
-    print(model)
+    from prednet import PredNetBpD
+    model = PredNetBpD(num_classes=10, cls=circles)
 
     params = sum([w.numel() for name, w in model.named_parameters()])
     y_predicted = model.forward(x)
 
     flops = count_flops(model)
     print('flops: %f | params: %d' % (flops, params))
+
+
+# Ours
+#print('Ours')
+#for circles in [0, 1, 2]:
+#    print('circles:', circles)
+#    from modelC import PredNetBpD
+#    model = PredNetBpD(num_classes=10, cls=circles, dropout=1.0, adaptive=True, avg=False)
+#
+#    params = sum([w.numel() for name, w in model.named_parameters()])
+#    y_predicted = model.forward(x)
+#
+#    flops = count_flops(model)
+#    print('flops: %f | params: %d' % (flops, params))
 
