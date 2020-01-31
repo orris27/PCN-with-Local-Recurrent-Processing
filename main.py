@@ -258,6 +258,9 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                     clf.requires_grad_(True)
         train(epoch)
         test(epoch)
+    os.makedirs('models/', exist_ok=True)
+    setting = '%s_%s_adaptive%d_circles%d_dropout%.2f_all%dclf%d_vanilla%d_ge%d' % (backend, dataset_name, adaptive, circles, dropout, step_all, step_clf, vanilla, ge)
+    torch.save(model, os.path.join('models', setting + '.pt'))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

@@ -9,7 +9,7 @@ In our model, "127,796,480 " in "127,796,480 + 2,560" means the flops with no fe
 | PCN         |                      |           |
 | circles=0   | 547,230,720          | 5,212,816 |
 | circles=1   | 1,039,733,760        | 9,898,192 |
-| circles=2   | 1,532.236,800        | 9,898,192 |
+| circles=2   | 1,532,236,800        | 9,898,192 |
 | Ours        |                      |           |
 | exit-1      | 127,796,480 + 2,560  | 128,026   |
 | exit-2      | 253,628,260 + 7,880  | 626,176   |
@@ -58,6 +58,7 @@ For PCN, "94.39 (94.77)" means the reported accuracy in paper is 94.39, while 94
 | T=1                                | 56.91 | 68.30 | 72.14 |
 | T=1 (val no fb)                    | 24.07 | 54.96 | 67.48 |
 | T=1 (val no fb, dp0.5)             | 47.17 | 67.26 | 72.37 |
+| T=1 (val no fb, dp0.5, ge)         | 47.49 | 67.09 | 73.48 |
 | T=1 (val no fb, dp0.5, all15clf10) | -     | -     | -     |
 | T=1 (val no fb, dp0.5, all35clf15) | 47.25 | 67.25 | 72.87 |
 | T=1 (val no fb, dp0.3)             | -     | -     | -     |
