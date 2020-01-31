@@ -2,6 +2,8 @@
 
 ### FLOPs
 
+In our model, "127,796,480 " in "127,796,480 + 2,560" means the flops with no feedbacks, while "2,560" means if we add 1 circles in our model, 2560 flops will be added to our model.
+
 | Classifiers | FLOPs                | params    |
 | ----------- | -------------------- | --------- |
 | PCN         |                      |           |
@@ -16,6 +18,8 @@
 
 
 ### CIFAR10
+
+For PCN, "94.39 (94.77)" means the reported accuracy in paper is 94.39, while 94.77 is the accuracy obtained by running their codes.
 
 | Setting                            | Acc1  | Acc2  | Acc3          |
 | ---------------------------------- | ----- | ----- | ------------- |
