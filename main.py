@@ -9,7 +9,7 @@ import torch.backends.cudnn as cudnn
 import torchvision
 import torchvision.transforms as transforms
 import argparse
-from utils import progress_bar
+#from utils import progress_bar
 from torch.autograd import Variable
 
 def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
