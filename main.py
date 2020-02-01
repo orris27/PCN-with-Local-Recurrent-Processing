@@ -261,7 +261,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
 
         statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %s%% | Adaptive Acc:%.3f%% | clf_exit: %s ' \
-                % (epoch, train_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str)
+                % (epoch, test_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str)
 
         #statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %.3f%% (%d/%d) | best_acc: %.3f' \
         #          % (epoch, test_loss/(batch_idx+1), 100.*correct/total, correct, total, best_acc)
