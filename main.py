@@ -2,13 +2,14 @@
 from __future__ import print_function
 import os
 import numpy as np
+import argparse
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.backends.cudnn as cudnn
 import torchvision
 import torchvision.transforms as transforms
-import argparse
+import torch.nn.functional as F
 #from utils import progress_bar
 from torch.autograd import Variable
 
@@ -20,6 +21,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     backend = args.backend
     dataset_name = args.dataset_name
     adaptive = bool(args.adaptive)
+    threshold = args.threshold
     max_epoch = args.max_epoch
     dropout = args.dropout
     step_all, step_clf = args.step_all, args.step_clf
@@ -125,6 +127,9 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         #total = 0
         corrects = np.zeros(100) # allocate large space 
         totals = np.zeros(100)
+        exit_count = np.zeros(100)
+        total_adaptive = 0
+        correct_adaptive = 0
         
         training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d | dropout=%.2f | step_all=%d | step_clf=%d | vanilla=%d | ge=%d' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles, dropout, step_all, step_clf, vanilla, ge)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
@@ -146,6 +151,8 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
             optimizer.step()
     
             train_loss += to_python_float(loss.data)
+
+            # multiple classifiers
             acc_str = ''
             for j in range(len(outputs)):
                 _, predicted = torch.max(outputs[j].data, 1)
@@ -153,9 +160,23 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                 corrects[j] += predicted.eq(targets.data).float().cpu().sum()
 
                 acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
+
+            # adaptive classifiers
+            predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
+            for i in range(targets.shape[0]):
+                for j in range(len(outputs)):
+                    confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
+                    if confidence > threshold or j + 1 == len(outputs):
+                        predicted_adaptive[i] = idx
+                        exit_count[j] += 1
+                        break
+            total_adaptive += targets.size(0)
+            correct_adaptive += predicted_adaptive.eq(targets.data).float().cpu().sum()
+            clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+
       
             if batch_idx % 20 == 0:
-                print('Batch: %d | Loss: %.3f | Acc: %s%%'%(batch_idx, train_loss/(batch_idx+1), acc_str))
+                print('Batch: %d | Loss: %.3f | Acc: %s%% | Adaptive Acc: %.3f%% | clf_exit: %s'%(batch_idx, train_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str))
             #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %s%%'
             #    % (train_loss/(batch_idx+1), acc_str))
             #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
@@ -165,8 +186,10 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         for j in range(len(outputs)):
             acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
 
-        statstr = 'Training: Epoch=%d | Loss: %.3f |  Acc: %s%% ' \
-                  % (epoch, train_loss/(batch_idx+1), acc_str)
+        clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+
+        statstr = 'Training: Epoch=%d | Loss: %.3f |  Acc: %s%% | Adaptive Acc:%.3f%% | clf_exit: %s ' \
+                % (epoch, train_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str)
         #statstr = 'Training: Epoch=%d | Loss: %.3f |  Acc: %.3f%% (%d/%d) | best acc: %.3f' \
         #          % (epoch, train_loss/(batch_idx+1), 100.*correct/total, correct, total, best_acc)
         statfile.write(statstr+'\n')
@@ -181,6 +204,9 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         #total = 0
         corrects = np.zeros(100) # allocate large space 
         totals = np.zeros(100)
+        exit_count = np.zeros(100)
+        total_adaptive = 0
+        correct_adaptive = 0
         with torch.no_grad():
             for batch_idx, (inputs, targets) in enumerate(testloader):
                 if use_cuda:
@@ -193,6 +219,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                     loss += criterion(outputs[j], targets)
             
                 test_loss += to_python_float(loss.data)
+                # multiple classifiers
                 acc_str = ''
                 for j in range(len(outputs)):
                     _, predicted = torch.max(outputs[j].data, 1)
@@ -200,12 +227,26 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                     corrects[j] += predicted.eq(targets.data).float().cpu().sum()
 
                     acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
-          
+
+                # adaptive classifiers
+                predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
+                for i in range(targets.shape[0]):
+                    for j in range(len(outputs)):
+                        confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
+                        if confidence > threshold or j + 1 == len(outputs):
+                            predicted_adaptive[i] = idx
+                            exit_count[j] += 1
+                            break
+                total_adaptive += targets.size(0)
+                correct_adaptive += predicted_adaptive.eq(targets.data).float().cpu().sum()
+                clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+
                 #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %s%%'
                 #    % (test_loss/(batch_idx+1), acc_str))
 
                 if batch_idx % 20 == 0:
-                    print('Batch: %d | Loss: %.3f | Acc: %s%%'%(batch_idx, test_loss/(batch_idx+1), acc_str))
+                    #print('Batch: %d | Loss: %.3f | Acc: %s%%'%(batch_idx, test_loss/(batch_idx+1), acc_str))
+                    print('Batch: %d | Loss: %.3f | Acc: %s%% | Adaptive Acc: %.3f%% | clf_exit: %s'%(batch_idx, train_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str))
 
 
                 #progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
@@ -216,8 +257,11 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         for j in range(len(outputs)):
             acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
 
-        statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %s%% ' \
-                  % (epoch, test_loss/(batch_idx+1), acc_str)
+
+        clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+
+        statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %s%% | Adaptive Acc:%.3f%% | clf_exit: %s ' \
+                % (epoch, train_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str)
 
         #statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %.3f%% (%d/%d) | best_acc: %.3f' \
         #          % (epoch, test_loss/(batch_idx+1), 100.*correct/total, correct, total, best_acc)
@@ -270,6 +314,7 @@ if __name__ == '__main__':
     parser.add_argument('--ge', type=int, default=0, help='gradient equilibrium')
     parser.add_argument('--max_epoch', type=int, default=300)
     parser.add_argument('--dropout', type=float, default=1.0)
+    parser.add_argument('--threshold', type=float, default=0.5)
     parser.add_argument('--step_all', type=int, default=0) # 15
     parser.add_argument('--step_clf', type=int, default=0) # 10
     parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
