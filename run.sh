@@ -1,13 +1,13 @@
 # 2 Feb | CIFAR100: PCN
-python main_cifar.py --batch_size 128 --circles 0 # T=0 PCN
-python main_cifar.py --batch_size 128 --circles 1 # T=1 PCN
-python main_cifar.py --batch_size 128 --circles 2 # T=1 PCN
+python main_cifar.py --batch_size 128 --circles 0 >> cir0.log # T=0 PCN
+python main_cifar.py --batch_size 128 --circles 1 >> cir1.log # T=1 PCN
+python main_cifar.py --batch_size 128 --circles 2 >> cir2.log # T=1 PCN
 # CIFAR100: vanilla
-python main.py --batch_size 128 --circles 0 --backend modelC --dataset_name cifar100 --max_epoch 300 --step_all 0 --step_clf 0 --vanilla 1 # vanilla
+python main.py --batch_size 128 --circles 0 --backend modelC --dataset_name cifar100 --max_epoch 300 --step_all 0 --step_clf 0 --vanilla 1 >> vanilla.log # vanilla
 # CIFAR100: vanilla + all35clf15
-python main.py --batch_size 128 --circles 0 --backend modelC --dataset_name cifar100 --max_epoch 300 --step_all 35 --step_clf 15 --vanilla 1 # vanilla
+python main.py --batch_size 128 --circles 0 --backend modelC --dataset_name cifar100 --max_epoch 300 --step_all 35 --step_clf 15 --vanilla 1 >> vanilla_all35clf15_cifar100.log # vanilla
 # CIFAR10: vanilla + all35clf15
-python main.py --batch_size 128 --circles 0 --backend modelC --dataset_name cifar10 --max_epoch 300 --step_all 35 --step_clf 15 --vanilla 1 # vanilla
+python main.py --batch_size 128 --circles 0 --backend modelC --dataset_name cifar10 --max_epoch 300 --step_all 35 --step_clf 15 --vanilla 1 >> vanilla_all35clf15_cifar10.log # vanilla
 
 
 # 1 Feb CIFAR100 + GE
