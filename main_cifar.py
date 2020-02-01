@@ -9,7 +9,7 @@ import torchvision
 import torchvision.transforms as transforms
 import argparse
 from prednet import *
-from utils import progress_bar
+#from utils import progress_bar
 from torch.autograd import Variable
 
 def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
@@ -102,8 +102,11 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
             total += targets.size(0)
             correct += predicted.eq(targets.data).float().cpu().sum()
   
-            progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
-                % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))
+            #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
+            #    % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))
+            if batch_idx % 20 == 0:
+                print(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
+                    % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))
         statstr = 'Training: Epoch=%d | Loss: %.3f |  Acc: %.3f%% (%d/%d) | best acc: %.3f' \
                   % (epoch, train_loss/(batch_idx+1), 100.*correct/total, correct, total, best_acc)
         statfile.write(statstr+'\n')
@@ -129,8 +132,11 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
                 total += targets.size(0)
                 correct += predicted.eq(targets.data).float().cpu().sum()
         
-                progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
-                    % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
+                #progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
+                #    % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
+                if batch_idx % 20 == 0:
+                    print(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
+                        % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
         statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %.3f%% (%d/%d) | best_acc: %.3f' \
                   % (epoch, test_loss/(batch_idx+1), 100.*correct/total, correct, total, best_acc)
         statfile.write(statstr+'\n')
