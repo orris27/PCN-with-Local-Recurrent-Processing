@@ -47,9 +47,9 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
         transforms.ToTensor(),
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),])
     data_dir = '../../datasets/torchvision'
-    trainset = torchvision.datasets.CIFAR10(root=data_dir, train=True, download=False, transform=transform_train)
+    trainset = torchvision.datasets.CIFAR100(root=data_dir, train=True, download=False, transform=transform_train)
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=2)
-    testset = torchvision.datasets.CIFAR10(root=data_dir, train=False, download=False, transform=transform_test)
+    testset = torchvision.datasets.CIFAR100(root=data_dir, train=False, download=False, transform=transform_test)
     testloader = torch.utils.data.DataLoader(testset, batch_size=10, shuffle=False, num_workers=2)
     
     # Model
@@ -84,7 +84,7 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
         correct = 0
         total = 0
         
-        training_setting = 'PCN origin | batch_size=%d | epoch=%d | lr=%.1e | circles=%d' % (batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
+        training_setting = 'PCN origin | batch_size=%d | epoch=%d | lr=%.1e | circles=%d | CIFAR100' % (batch_size, epoch, optimizer.param_groups[0]['lr'], circles)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
