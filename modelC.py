@@ -77,7 +77,7 @@ class ClassifierModule(nn.Module):
         rep = self.linear(out) # representation
 
         if self.cls == 0 or (self.adaptive is True and self.training is False):
-            #print('No feedback')
+            print('No feedback')
             pass
         else:
             if torch.distributions.Bernoulli(torch.tensor(self.dropout)).sample() == 1:
@@ -92,7 +92,7 @@ class ClassifierModule(nn.Module):
 
 ''' Architecture PredNetBpD '''
 class PredNetBpD(nn.Module):
-    def __init__(self, num_classes=10, cls=0, dropout=1.0, adaptive = False, vanilla=False, ge=False):
+    def __init__(self, num_classes=10, cls=0, dropout=1.0, adaptive=False, vanilla=False, ge=False, fb=None):
         '''
             adaptive(bool): 
                 True: Training with feedback, Testing without feedback
@@ -101,6 +101,9 @@ class PredNetBpD(nn.Module):
                 True: No inputs from the previous classifiers
                 False: Inputs from the previous classifiers
             ge(bool): Switch of Gradient Equilibrium
+            fb (str):
+                '1:1:1': open feedback for 3 classifiers
+                '0:1:1': close feedback for 1st classifier
         '''
         super().__init__()
         self.ics = [3,  64, 64, 128, 128, 256, 256, 512] # input chanels
@@ -139,6 +142,12 @@ class PredNetBpD(nn.Module):
         #self.relu = nn.ReLU(inplace=True)
         #self.BNend = nn.BatchNorm2d(self.ocs[-1])
 
+        if fb is not None:
+            fb_switch = list(map(bool, map(int, fb.split(':'))))
+            for idx, elm in enumerate(fb_switch):
+                if elm is False:
+                    self.classifiers[idx].cls = 0
+        
 
 
 

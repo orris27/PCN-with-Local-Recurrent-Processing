@@ -27,6 +27,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     step_all, step_clf = args.step_all, args.step_clf
     vanilla = bool(args.vanilla)
     ge = bool(args.ge)
+    fb = args.fb
     root = './'
     rep = 1
     lr = 0.01
@@ -95,7 +96,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         model = PredNetBpD(num_classes=num_classes,cls=circles,Tied=Tied)
     elif backend == 'modelC':
         from modelC import PredNetBpD
-        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge)
+        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     else:
         raise ValueError('backend: [modelA|modelB|modelC]')
 
@@ -315,6 +316,7 @@ if __name__ == '__main__':
     parser.add_argument('--max_epoch', type=int, default=300)
     parser.add_argument('--dropout', type=float, default=1.0)
     parser.add_argument('--threshold', type=float, default=0.5)
+    parser.add_argument('--fb', type=str, default='1:1:1')
     parser.add_argument('--step_all', type=int, default=0) # 15
     parser.add_argument('--step_clf', type=int, default=0) # 10
     parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
