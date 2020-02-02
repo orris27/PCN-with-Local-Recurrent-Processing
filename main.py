@@ -132,7 +132,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         total_adaptive = 0
         correct_adaptive = 0
         
-        training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d | dropout=%.2f | step_all=%d | step_clf=%d | vanilla=%d | ge=%d' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles, dropout, step_all, step_clf, vanilla, ge)
+        training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d | dropout=%.2f | step_all=%d | step_clf=%d | vanilla=%d | ge=%d | fb=%s' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles, dropout, step_all, step_clf, vanilla, ge, fb.replace(':', ''))
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
@@ -304,7 +304,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         train(epoch)
         test(epoch)
     os.makedirs('models/', exist_ok=True)
-    setting = '%s_%s_adaptive%d_circles%d_dropout%.2f_all%dclf%d_vanilla%d_ge%d' % (backend, dataset_name, adaptive, circles, dropout, step_all, step_clf, vanilla, ge)
+    setting = '%s_%s_adaptive%d_circles%d_dropout%.2f_all%dclf%d_vanilla%d_ge%d_fb%s' % (backend, dataset_name, adaptive, circles, dropout, step_all, step_clf, vanilla, ge, fb.replace(':', ''))
     torch.save(model, os.path.join('models', setting + '.pt'))
 
 if __name__ == '__main__':
