@@ -58,7 +58,6 @@ class ClassifierModule(nn.Module):
         if self.cls != 0:
             self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1,hidden_channel, 1, 1))])
             self.FBconv = nn.ConvTranspose2d(hidden_channel, in_channel_block + in_channel_clf, kernel_size=3, stride=1, padding=1, bias=False) 
-            #self.linear_bw = nn.Linear(num_classes, in_channel_block + in_channel_clf)
         self.adaptive = adaptive
         self.dropout = dropout
         self.bypass = nn.Conv2d(in_channel_block + in_channel_clf, hidden_channel, kernel_size=1, stride=1, bias=False)
@@ -125,7 +124,6 @@ class PredNetBpD(nn.Module):
 
         # construct PC layers
         # Unlike PCN v1, we do not have a tied version here. We may or may not incorporate a tied version in the future.
-        #self.PcConvs = nn.ModuleList([PcConvBp(self.ics[i], self.ocs[i], cls=self.cls) for i in range(self.nlays)])
         self.PcConvs = nn.ModuleList()
         for i in range(self.nlays):
             self.PcConvs.append(PcConvBp(self.ics[i], self.ocs[i]))
@@ -136,18 +134,10 @@ class PredNetBpD(nn.Module):
                 else:
                     self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=self.clf_h[len(self.classifiers) - 1], hidden_channel=self.clf_h[len(self.classifiers)], num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
                 
-        #if self.vanilla is True:
-        #    self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=0, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
-        #else:
-        #    self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
-        # 128, 266, 522
                 
         self.BNs = nn.ModuleList([nn.BatchNorm2d(self.ics[i]) for i in range(self.nlays)])
         # Linear layer
-        #self.linear = nn.Linear(self.ocs[-1], num_classes)
         self.maxpool2d = nn.MaxPool2d(kernel_size=2, stride=2)
-        #self.relu = nn.ReLU(inplace=True)
-        #self.BNend = nn.BatchNorm2d(self.ocs[-1])
 
         if fb is not None:
             fb_switch = list(map(bool, map(int, fb.split(':'))))
@@ -185,16 +175,5 @@ class PredNetBpD(nn.Module):
                 if self.maxpool[i] is True:
                     x = self.maxpool2d(x)
 
-        #clf_id = len(res)
-        #if self.vanilla is True:
-        #    res.append(self.classifiers[clf_id](x, None))
-        #else:
-        #    res.append(self.classifiers[clf_id](x, res[-1]))
-
-        # classifier                
-        #out = F.avg_pool2d(self.relu(self.BNend(x)), x.size(-1))
-        #out = out.view(out.size(0), -1)
-        #out = self.linear(out)
-        #return out
         return res
 
