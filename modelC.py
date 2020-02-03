@@ -123,16 +123,16 @@ class PredNetBpD(nn.Module):
         self.PcConvs = nn.ModuleList()
         for i in range(self.nlays):
             self.PcConvs.append(PcConvBp(self.ics[i], self.ocs[i]))
-            if self.maxpool[i] is True:
+            if self.maxpool[i] is True or i + 1 == self.nlays:
                 if self.vanilla is True or len(self.classifiers) == 0:
                     self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=0, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
                 else:
                     self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[i], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
                 
-        if self.vanilla is True:
-            self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=0, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
-        else:
-            self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
+        #if self.vanilla is True:
+        #    self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=0, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
+        #else:
+        #    self.classifiers.append(ClassifierModule(in_channel_block=self.ocs[-1], in_channel_clf=num_classes, num_classes=num_classes, adaptive=self.adaptive, cls=self.cls, dropout=self.dropout))
         # 128, 266, 522
                 
         self.BNs = nn.ModuleList([nn.BatchNorm2d(self.ics[i]) for i in range(self.nlays)])
