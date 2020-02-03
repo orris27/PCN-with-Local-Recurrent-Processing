@@ -77,7 +77,7 @@ class ClassifierModule(nn.Module):
         rep = self.linear(out) # representation
 
         if self.cls == 0 or (self.adaptive is True and self.training is False):
-            print('No feedback')
+            #print('No feedback')
             pass
         else:
             if torch.distributions.Bernoulli(torch.tensor(self.dropout)).sample() == 1:
