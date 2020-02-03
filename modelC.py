@@ -61,7 +61,7 @@ class ClassifierModule(nn.Module):
 
     def forward(self, x_block, x_clf):
         '''
-            x_block (4D Tensor): from block
+            x_block (4D Tensor): from block (2, 128, 32, 32),(2, 256, 16, 16), (2, 512, 8, 8)
             x_clf (2D Tensor): from previous classifier
 
         '''
