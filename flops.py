@@ -69,7 +69,7 @@ for num_classes in [10, 100]:
     print('num_classes:', num_classes)
     for circles in [0, 1, 2]:
         print('circles:', circles)
-        from modelD import PredNetBpD
+        from modelE import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=1.0, adaptive=True, vanilla=False, ge=0, fb='1:1:1')
 
         params = sum([w.numel() for name, w in model.named_parameters()])
