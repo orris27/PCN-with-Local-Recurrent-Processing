@@ -97,8 +97,12 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     elif backend == 'modelC':
         from modelC import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
+    
+    elif backend == 'modelD':
+        from modelD import PredNetBpD
+        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     else:
-        raise ValueError('backend: [modelA|modelB|modelC]')
+        raise ValueError('backend: [modelA|modelB|modelC|modelD]')
 
     print(model)
        
@@ -320,7 +324,7 @@ if __name__ == '__main__':
     parser.add_argument('--step_all', type=int, default=0) # 15
     parser.add_argument('--step_clf', type=int, default=0) # 10
     parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
-    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC'])
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelD'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
     main_cifar(args)
