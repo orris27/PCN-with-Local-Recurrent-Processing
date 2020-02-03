@@ -1,10 +1,10 @@
 # 3 Feb | cifar100 modelD
-python main.py --batch_size 128 --circles 1 --backend modelD --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir1_adaptive_dropout0.5_ge.log
-python main.py --batch_size 128 --circles 2 --backend modelD --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir2_adaptive_dropout0.5_ge.log
-python main.py --batch_size 128 --circles 3 --backend modelD --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir2_adaptive_dropout0.5_ge.log
-python main.py --batch_size 128 --circles 4 --backend modelD --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir2_adaptive_dropout0.5_ge.log
-python main.py --batch_size 128 --circles 5 --backend modelD --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir5_adaptive_dropout0.5_ge.log
-python main.py --batch_size 128 --circles 0 --backend modelD --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir0_adaptive_dropout0.5_ge.log
+python main.py --batch_size 128 --circles 1 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir1_adaptive_dropout0.5_ge.log
+python main.py --batch_size 128 --circles 2 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir2_adaptive_dropout0.5_ge.log
+python main.py --batch_size 128 --circles 3 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir2_adaptive_dropout0.5_ge.log
+python main.py --batch_size 128 --circles 4 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir2_adaptive_dropout0.5_ge.log
+python main.py --batch_size 128 --circles 5 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir5_adaptive_dropout0.5_ge.log
+python main.py --batch_size 128 --circles 0 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir0_adaptive_dropout0.5_ge.log
 
 # 3 Feb | CIFAR100 modelD
 #python main.py --batch_size 128 --circles 1 --backend modelD --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir1_adaptive_dropout0.5_ge.log
