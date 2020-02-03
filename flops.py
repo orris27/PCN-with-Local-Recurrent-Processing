@@ -46,29 +46,34 @@ device = torch.device('cpu')
 x = torch.randn(1, 3, 32, 32).to(device) # dummy inputs
 
 # PCN
-print('PCN')
-for circles in [0, 1, 2]:
-    print('circles:', circles)
-    from prednet import PredNetBpD
-    model = PredNetBpD(num_classes=10, cls=circles)
-
-    params = sum([w.numel() for name, w in model.named_parameters()])
-    y_predicted = model.forward(x)
-
-    flops = count_flops(model)
-    print('flops: %f | params: %d' % (flops, params))
-
-
-# Ours
-#print('Ours')
+#print('PCN')
 #for circles in [0, 1, 2]:
 #    print('circles:', circles)
-#    from modelC import PredNetBpD
-#    model = PredNetBpD(num_classes=10, cls=circles, dropout=1.0, adaptive=True, avg=False)
+#    from prednet import PredNetBpD
+#    model = PredNetBpD(num_classes=10, cls=circles)
 #
 #    params = sum([w.numel() for name, w in model.named_parameters()])
 #    y_predicted = model.forward(x)
 #
 #    flops = count_flops(model)
-#    print('flops: %f | params: %d' % (flops, params))
+#    print('flops: %d | params: %d' % (flops, params))
 
+
+# Ours
+print('Ours')
+f = []
+for num_classes in [10, 100]:
+    print('num_classes:', num_classes)
+    for circles in [0, 1, 2]:
+        print('circles:', circles)
+        from modelD import PredNetBpD
+        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=1.0, adaptive=True, vanilla=False, ge=0, fb='1:1:1')
+
+        params = sum([w.numel() for name, w in model.named_parameters()])
+        y_predicted = model.forward(x)
+
+        flops = count_flops(model)
+        f.append(flops)
+        print('flops: %d | params: %d' % (flops, params))
+    print(f[1] - f[0], f[2] - f[1])
+print(model)
