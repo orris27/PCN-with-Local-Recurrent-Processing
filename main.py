@@ -167,17 +167,23 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                 acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
 
             # adaptive classifiers
-            predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
-            for i in range(targets.shape[0]):
-                for j in range(len(outputs)):
-                    confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
-                    if confidence > threshold or j + 1 == len(outputs):
-                        predicted_adaptive[i] = idx
-                        exit_count[j] += 1
-                        break
-            total_adaptive += targets.size(0)
-            correct_adaptive += predicted_adaptive.eq(targets.data).float().cpu().sum()
-            clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+            if epoch + 1 == max_epoch:
+                predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
+                for i in range(targets.shape[0]):
+                    for j in range(len(outputs)):
+                        confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
+                        if confidence > threshold or j + 1 == len(outputs):
+                            predicted_adaptive[i] = idx
+                            exit_count[j] += 1
+                            break
+                total_adaptive += targets.size(0)
+                correct_adaptive += predicted_adaptive.eq(targets.data).float().cpu().sum()
+                clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+
+            else:
+                clf_exit_str = ''
+                correct_adaptive = 0
+                total_adaptive = 1e-5
 
       
             if batch_idx % 20 == 0:
@@ -234,17 +240,22 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                     acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
 
                 # adaptive classifiers
-                predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
-                for i in range(targets.shape[0]):
-                    for j in range(len(outputs)):
-                        confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
-                        if confidence > threshold or j + 1 == len(outputs):
-                            predicted_adaptive[i] = idx
-                            exit_count[j] += 1
-                            break
-                total_adaptive += targets.size(0)
-                correct_adaptive += predicted_adaptive.eq(targets.data).float().cpu().sum()
-                clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+                if epoch + 1 == max_epoch:
+                    predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
+                    for i in range(targets.shape[0]):
+                        for j in range(len(outputs)):
+                            confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
+                            if confidence > threshold or j + 1 == len(outputs):
+                                predicted_adaptive[i] = idx
+                                exit_count[j] += 1
+                                break
+                    total_adaptive += targets.size(0)
+                    correct_adaptive += predicted_adaptive.eq(targets.data).float().cpu().sum()
+                    clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+                else:
+                    clf_exit_str = ''
+                    correct_adaptive = 0
+                    total_adaptive = 1e-5
 
                 #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %s%%'
                 #    % (test_loss/(batch_idx+1), acc_str))
