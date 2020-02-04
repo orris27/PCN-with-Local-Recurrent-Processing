@@ -1,3 +1,1205 @@
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=0 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=0 | Loss: 12.000 |  Acc: 5.960,9.394,11.832,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=0 | Loss: 11.147 |  Acc: 8.600,13.650,16.350,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=1 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=1 | Loss: 10.217 |  Acc: 11.072,19.414,24.186,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=1 | Loss: 9.914 |  Acc: 13.190,20.190,26.300,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=2 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=2 | Loss: 9.121 |  Acc: 15.682,25.756,32.798,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=2 | Loss: 9.183 |  Acc: 15.020,24.660,33.590,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=3 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=3 | Loss: 8.363 |  Acc: 19.504,30.464,39.344,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=3 | Loss: 8.340 |  Acc: 19.970,30.650,40.500,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=4 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=4 | Loss: 7.797 |  Acc: 22.204,34.548,44.060,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=4 | Loss: 8.285 |  Acc: 18.600,31.280,41.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=5 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=5 | Loss: 7.370 |  Acc: 24.258,37.760,47.758,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=5 | Loss: 7.676 |  Acc: 22.310,36.820,47.230,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=6 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=6 | Loss: 7.012 |  Acc: 25.928,40.694,50.998,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=6 | Loss: 7.439 |  Acc: 22.450,38.190,48.530,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=7 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=7 | Loss: 6.736 |  Acc: 27.226,43.106,53.628,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=7 | Loss: 6.943 |  Acc: 25.460,42.320,51.790,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=8 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=8 | Loss: 6.501 |  Acc: 28.156,44.882,55.938,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=8 | Loss: 6.898 |  Acc: 25.780,42.940,53.190,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=9 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=9 | Loss: 6.293 |  Acc: 29.274,46.822,57.668,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=9 | Loss: 6.791 |  Acc: 25.850,44.550,53.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=10 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=10 | Loss: 6.134 |  Acc: 29.804,48.226,59.088,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=10 | Loss: 6.571 |  Acc: 27.430,45.100,55.670,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=11 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=11 | Loss: 5.960 |  Acc: 30.808,49.528,60.978,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=11 | Loss: 6.820 |  Acc: 26.180,44.020,54.430,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=12 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=12 | Loss: 5.811 |  Acc: 31.570,50.406,62.222,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=12 | Loss: 6.403 |  Acc: 29.080,47.320,57.440,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=13 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=13 | Loss: 5.703 |  Acc: 32.246,51.736,63.504,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=13 | Loss: 6.247 |  Acc: 29.050,48.580,58.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=14 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=14 | Loss: 5.587 |  Acc: 32.744,52.584,64.348,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=14 | Loss: 6.209 |  Acc: 29.930,49.420,59.260,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=15 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=15 | Loss: 5.459 |  Acc: 33.308,53.602,65.782,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=15 | Loss: 6.163 |  Acc: 30.160,49.020,59.710,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=16 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=16 | Loss: 5.358 |  Acc: 33.844,54.722,67.104,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=16 | Loss: 5.987 |  Acc: 30.830,51.200,60.320,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=17 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=17 | Loss: 5.268 |  Acc: 34.302,55.188,67.814,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=17 | Loss: 5.989 |  Acc: 30.920,50.810,61.170,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=18 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=18 | Loss: 5.185 |  Acc: 34.916,56.106,69.164,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=18 | Loss: 5.977 |  Acc: 31.850,51.380,60.310,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=19 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=19 | Loss: 5.113 |  Acc: 35.304,56.498,69.870,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=19 | Loss: 5.890 |  Acc: 31.590,51.690,61.740,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=20 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=20 | Loss: 5.004 |  Acc: 35.830,57.220,70.568,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=20 | Loss: 5.882 |  Acc: 31.730,51.960,61.970,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=21 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=21 | Loss: 4.949 |  Acc: 36.078,57.752,71.192,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=21 | Loss: 6.177 |  Acc: 30.200,49.420,60.010,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=22 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=22 | Loss: 4.883 |  Acc: 36.354,58.426,71.952,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=22 | Loss: 5.958 |  Acc: 31.260,51.910,61.990,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=23 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=23 | Loss: 4.811 |  Acc: 36.886,58.960,72.538,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=23 | Loss: 5.804 |  Acc: 31.690,52.870,63.090,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=24 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=24 | Loss: 4.753 |  Acc: 37.198,59.612,73.276,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=24 | Loss: 5.701 |  Acc: 33.740,54.330,62.490,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=25 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=25 | Loss: 4.682 |  Acc: 37.480,60.248,74.102,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=25 | Loss: 5.751 |  Acc: 33.440,53.090,63.150,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=26 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=26 | Loss: 4.648 |  Acc: 37.812,60.170,74.542,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=26 | Loss: 5.777 |  Acc: 32.930,52.420,63.930,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=27 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=27 | Loss: 4.589 |  Acc: 38.156,60.466,75.424,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=27 | Loss: 5.687 |  Acc: 33.560,53.530,64.210,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=28 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=28 | Loss: 4.566 |  Acc: 37.972,60.882,75.904,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=28 | Loss: 5.759 |  Acc: 33.190,52.990,63.330,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=29 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=29 | Loss: 4.489 |  Acc: 38.682,61.358,76.516,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=29 | Loss: 5.595 |  Acc: 34.540,54.790,64.220,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=30 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=30 | Loss: 4.463 |  Acc: 38.618,61.600,77.030,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=30 | Loss: 5.796 |  Acc: 34.450,53.540,63.430,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=31 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=31 | Loss: 4.430 |  Acc: 38.684,61.870,77.276,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=31 | Loss: 5.692 |  Acc: 34.540,53.690,63.790,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=32 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=32 | Loss: 4.371 |  Acc: 39.324,62.464,78.036,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=32 | Loss: 5.580 |  Acc: 35.180,55.100,64.420,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=33 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=33 | Loss: 4.340 |  Acc: 39.728,62.564,78.248,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=33 | Loss: 5.740 |  Acc: 34.180,53.410,63.940,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=34 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=34 | Loss: 4.300 |  Acc: 39.648,62.812,78.898,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=34 | Loss: 5.647 |  Acc: 34.590,55.050,64.480,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=35 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=35 | Loss: 4.234 |  Acc: 39.690,63.502,79.520,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=35 | Loss: 5.389 |  Acc: 36.900,55.920,66.140,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=36 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=36 | Loss: 4.208 |  Acc: 40.464,63.806,79.894,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=36 | Loss: 5.469 |  Acc: 35.720,55.630,65.440,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=37 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=37 | Loss: 4.200 |  Acc: 40.114,63.512,80.068,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=37 | Loss: 5.520 |  Acc: 36.010,55.960,65.480,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=38 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=38 | Loss: 4.157 |  Acc: 40.546,64.142,80.384,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=38 | Loss: 5.516 |  Acc: 35.540,56.070,65.480,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=39 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=39 | Loss: 4.128 |  Acc: 40.516,63.994,80.888,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=39 | Loss: 5.699 |  Acc: 34.540,54.220,63.880,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=40 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=40 | Loss: 4.070 |  Acc: 41.116,64.830,81.198,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=40 | Loss: 5.604 |  Acc: 35.490,55.370,63.980,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=41 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=41 | Loss: 4.074 |  Acc: 40.794,64.818,81.518,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=41 | Loss: 5.707 |  Acc: 35.130,54.830,65.200,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=42 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=42 | Loss: 4.053 |  Acc: 41.196,64.918,81.676,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=42 | Loss: 5.443 |  Acc: 37.180,56.340,64.960,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=43 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=43 | Loss: 3.993 |  Acc: 41.676,65.258,82.186,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=43 | Loss: 5.486 |  Acc: 36.400,56.890,65.840,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=44 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=44 | Loss: 4.008 |  Acc: 41.114,65.330,82.492,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=44 | Loss: 5.626 |  Acc: 35.480,55.400,63.950,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=45 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=45 | Loss: 3.960 |  Acc: 41.712,65.398,82.692,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=45 | Loss: 5.741 |  Acc: 35.030,54.240,64.970,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=46 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=46 | Loss: 3.933 |  Acc: 41.826,65.698,83.076,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=46 | Loss: 5.427 |  Acc: 37.100,57.400,65.710,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=47 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=47 | Loss: 3.933 |  Acc: 41.712,65.858,83.396,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=47 | Loss: 5.412 |  Acc: 37.110,58.220,65.160,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=48 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=48 | Loss: 3.895 |  Acc: 41.836,66.428,83.480,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=48 | Loss: 5.497 |  Acc: 37.360,56.830,65.130,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=49 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=49 | Loss: 3.884 |  Acc: 41.722,66.218,83.920,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=49 | Loss: 5.501 |  Acc: 35.880,57.070,65.660,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=50 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=50 | Loss: 3.848 |  Acc: 42.296,66.624,84.072,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=50 | Loss: 5.509 |  Acc: 36.930,56.890,65.410,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=51 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=51 | Loss: 3.836 |  Acc: 42.486,66.780,84.104,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=51 | Loss: 5.545 |  Acc: 38.170,56.390,64.430,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=52 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=52 | Loss: 3.809 |  Acc: 42.444,67.090,84.418,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=52 | Loss: 5.506 |  Acc: 36.580,57.000,66.080,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=53 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=53 | Loss: 3.818 |  Acc: 42.338,66.952,84.486,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=53 | Loss: 5.572 |  Acc: 37.540,56.980,64.510,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=54 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=54 | Loss: 3.782 |  Acc: 42.752,67.158,84.758,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=54 | Loss: 5.428 |  Acc: 37.590,57.200,65.570,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=55 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=55 | Loss: 3.767 |  Acc: 42.674,67.662,84.972,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=55 | Loss: 5.746 |  Acc: 35.520,55.120,63.950,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=56 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=56 | Loss: 3.778 |  Acc: 42.590,67.148,85.170,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=56 | Loss: 5.575 |  Acc: 37.260,57.390,64.660,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=57 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=57 | Loss: 3.727 |  Acc: 43.052,67.876,85.480,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=57 | Loss: 5.673 |  Acc: 36.640,56.980,64.270,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=58 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=58 | Loss: 3.715 |  Acc: 42.928,68.090,85.612,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=58 | Loss: 5.400 |  Acc: 37.420,57.140,66.170,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=59 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=59 | Loss: 3.722 |  Acc: 43.196,67.802,85.456,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=59 | Loss: 5.522 |  Acc: 35.990,57.340,65.240,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=60 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=60 | Loss: 3.694 |  Acc: 42.854,68.388,86.166,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=60 | Loss: 5.442 |  Acc: 37.790,57.910,65.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=61 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=61 | Loss: 3.664 |  Acc: 43.382,68.122,86.258,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=61 | Loss: 5.524 |  Acc: 37.960,56.840,65.000,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=62 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=62 | Loss: 3.631 |  Acc: 43.672,68.432,86.658,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=62 | Loss: 5.533 |  Acc: 36.610,58.250,65.600,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=63 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=63 | Loss: 3.640 |  Acc: 43.522,68.428,86.508,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=63 | Loss: 5.336 |  Acc: 37.950,58.760,66.820,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=64 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=64 | Loss: 3.638 |  Acc: 43.652,68.466,86.418,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=64 | Loss: 5.297 |  Acc: 39.030,59.110,67.450,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=65 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=65 | Loss: 3.604 |  Acc: 43.774,68.950,86.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=65 | Loss: 5.543 |  Acc: 37.730,57.200,65.690,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=66 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=66 | Loss: 3.582 |  Acc: 44.392,69.188,86.510,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=66 | Loss: 5.707 |  Acc: 36.430,56.230,65.080,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=67 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=67 | Loss: 3.608 |  Acc: 43.582,68.872,87.196,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=67 | Loss: 5.846 |  Acc: 35.120,56.180,64.690,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=68 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=68 | Loss: 3.560 |  Acc: 43.970,69.238,87.070,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=68 | Loss: 5.494 |  Acc: 37.550,59.230,66.230,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=69 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=69 | Loss: 3.573 |  Acc: 44.144,69.044,87.090,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=69 | Loss: 5.570 |  Acc: 37.510,58.350,65.310,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=70 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=70 | Loss: 3.559 |  Acc: 43.986,69.088,87.232,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=70 | Loss: 5.443 |  Acc: 37.910,59.090,65.950,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=71 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=71 | Loss: 3.538 |  Acc: 44.580,69.280,87.096,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=71 | Loss: 5.523 |  Acc: 37.070,57.930,65.220,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=72 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=72 | Loss: 3.544 |  Acc: 44.238,69.524,87.296,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=72 | Loss: 5.384 |  Acc: 38.540,58.420,65.960,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=73 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=73 | Loss: 3.535 |  Acc: 44.264,69.590,87.780,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=73 | Loss: 5.500 |  Acc: 37.750,57.480,66.430,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=74 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=74 | Loss: 3.503 |  Acc: 44.472,70.072,87.924,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=74 | Loss: 5.480 |  Acc: 37.940,59.350,65.490,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=75 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=75 | Loss: 3.491 |  Acc: 44.418,70.074,87.956,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=75 | Loss: 5.236 |  Acc: 39.320,60.470,66.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=76 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=76 | Loss: 3.501 |  Acc: 44.796,69.874,87.576,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=76 | Loss: 5.653 |  Acc: 37.170,57.580,65.230,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=77 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=77 | Loss: 3.484 |  Acc: 44.636,69.954,88.266,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=77 | Loss: 5.353 |  Acc: 39.330,59.510,65.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=78 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=78 | Loss: 3.475 |  Acc: 44.576,69.600,88.246,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=78 | Loss: 5.469 |  Acc: 38.090,58.380,65.260,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=79 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=79 | Loss: 3.482 |  Acc: 44.704,69.988,88.210,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=79 | Loss: 5.358 |  Acc: 40.060,59.700,66.270,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=80 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=80 | Loss: 3.452 |  Acc: 44.578,70.290,88.414,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=80 | Loss: 5.640 |  Acc: 36.580,57.540,64.830,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=81 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=81 | Loss: 3.448 |  Acc: 45.042,70.206,88.162,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=81 | Loss: 5.344 |  Acc: 39.020,58.660,66.300,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=82 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=82 | Loss: 3.441 |  Acc: 44.908,70.632,88.478,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=82 | Loss: 5.442 |  Acc: 38.090,59.160,65.540,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=83 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=83 | Loss: 3.447 |  Acc: 44.626,70.304,88.460,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=83 | Loss: 5.196 |  Acc: 40.690,61.440,66.340,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=84 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=84 | Loss: 3.429 |  Acc: 44.984,70.656,88.630,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=84 | Loss: 5.414 |  Acc: 38.940,60.060,66.050,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=85 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=85 | Loss: 3.443 |  Acc: 44.676,70.374,88.590,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=85 | Loss: 5.185 |  Acc: 40.140,61.050,66.570,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=86 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=86 | Loss: 3.426 |  Acc: 44.916,70.654,88.590,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=86 | Loss: 5.634 |  Acc: 37.390,57.850,65.610,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=87 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=87 | Loss: 3.384 |  Acc: 45.236,71.084,88.762,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=87 | Loss: 5.456 |  Acc: 38.650,58.590,65.750,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=88 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=88 | Loss: 3.400 |  Acc: 45.254,70.806,88.512,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=88 | Loss: 5.679 |  Acc: 38.220,57.430,65.970,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=89 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=89 | Loss: 3.405 |  Acc: 45.256,70.860,88.658,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=89 | Loss: 5.438 |  Acc: 39.190,59.170,65.830,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=90 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=90 | Loss: 3.345 |  Acc: 45.580,71.536,89.218,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=90 | Loss: 5.441 |  Acc: 39.460,59.920,65.610,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=91 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=91 | Loss: 3.390 |  Acc: 45.260,71.258,88.872,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=91 | Loss: 5.401 |  Acc: 39.560,59.790,65.970,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=92 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=92 | Loss: 3.374 |  Acc: 45.238,71.468,89.042,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=92 | Loss: 5.461 |  Acc: 38.400,59.340,66.640,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=93 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=93 | Loss: 3.383 |  Acc: 45.230,71.452,88.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=93 | Loss: 6.084 |  Acc: 35.170,55.990,64.060,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=94 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=94 | Loss: 3.344 |  Acc: 45.366,71.438,89.244,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=94 | Loss: 5.454 |  Acc: 38.700,58.750,66.370,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=95 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=95 | Loss: 3.342 |  Acc: 45.526,71.702,89.376,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=95 | Loss: 5.290 |  Acc: 40.180,61.050,66.740,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=96 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=96 | Loss: 3.335 |  Acc: 45.508,71.590,89.572,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=96 | Loss: 5.267 |  Acc: 39.520,59.940,67.650,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=97 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=97 | Loss: 3.343 |  Acc: 45.658,71.696,89.192,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=97 | Loss: 5.346 |  Acc: 39.860,60.120,67.040,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=98 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=98 | Loss: 3.311 |  Acc: 46.052,71.958,89.474,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=98 | Loss: 5.295 |  Acc: 39.720,60.500,67.320,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=99 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=99 | Loss: 3.347 |  Acc: 45.890,71.434,88.986,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=99 | Loss: 5.375 |  Acc: 39.280,60.190,66.560,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=100 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=100 | Loss: 3.337 |  Acc: 45.590,71.552,89.118,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=100 | Loss: 5.264 |  Acc: 39.910,61.480,66.470,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=101 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=101 | Loss: 3.302 |  Acc: 46.092,71.914,89.402,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=101 | Loss: 5.362 |  Acc: 38.380,59.260,67.200,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=102 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=102 | Loss: 3.311 |  Acc: 45.696,72.338,89.360,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=102 | Loss: 5.141 |  Acc: 40.610,60.770,67.180,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=103 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=103 | Loss: 3.289 |  Acc: 46.038,72.086,89.928,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=103 | Loss: 5.298 |  Acc: 40.670,61.260,67.000,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=104 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=104 | Loss: 3.284 |  Acc: 46.014,72.256,89.906,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=104 | Loss: 5.319 |  Acc: 39.050,60.850,66.530,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=105 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=105 | Loss: 3.280 |  Acc: 46.026,72.498,89.606,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=105 | Loss: 5.421 |  Acc: 40.280,59.050,65.970,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=106 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=106 | Loss: 3.288 |  Acc: 45.826,72.194,89.962,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=106 | Loss: 5.533 |  Acc: 40.030,58.780,66.140,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=107 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=107 | Loss: 3.287 |  Acc: 45.856,72.162,89.550,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=107 | Loss: 5.297 |  Acc: 40.000,60.200,66.210,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=108 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=108 | Loss: 3.241 |  Acc: 46.362,72.418,89.806,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=108 | Loss: 5.298 |  Acc: 40.810,60.860,66.730,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=109 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=109 | Loss: 3.292 |  Acc: 46.144,72.390,89.432,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=109 | Loss: 5.406 |  Acc: 39.500,60.170,66.740,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=110 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=110 | Loss: 3.266 |  Acc: 46.296,72.292,90.018,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=110 | Loss: 6.419 |  Acc: 35.720,54.550,60.810,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=111 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=111 | Loss: 3.244 |  Acc: 46.360,72.412,89.936,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=111 | Loss: 5.256 |  Acc: 40.080,61.090,66.220,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=112 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=112 | Loss: 3.262 |  Acc: 46.180,72.514,90.014,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=112 | Loss: 5.317 |  Acc: 39.950,61.070,66.720,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=113 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=113 | Loss: 3.268 |  Acc: 46.254,72.504,90.016,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=113 | Loss: 5.412 |  Acc: 40.010,59.770,66.070,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=114 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=114 | Loss: 3.260 |  Acc: 46.110,72.582,89.970,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=114 | Loss: 5.252 |  Acc: 40.550,61.200,66.950,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=115 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=115 | Loss: 3.234 |  Acc: 46.958,72.732,89.704,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=115 | Loss: 5.496 |  Acc: 39.660,58.480,65.740,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=116 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=116 | Loss: 3.244 |  Acc: 46.460,72.616,89.788,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=116 | Loss: 5.382 |  Acc: 40.710,60.520,65.750,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=117 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=117 | Loss: 3.230 |  Acc: 46.386,73.010,90.220,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=117 | Loss: 5.348 |  Acc: 40.270,59.580,65.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=118 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=118 | Loss: 3.230 |  Acc: 46.470,72.730,90.278,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=118 | Loss: 5.351 |  Acc: 40.420,60.730,66.570,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=119 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=119 | Loss: 3.217 |  Acc: 46.262,72.930,90.114,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=119 | Loss: 5.433 |  Acc: 39.650,60.210,66.420,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=120 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=120 | Loss: 3.240 |  Acc: 46.162,72.850,90.018,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=120 | Loss: 5.427 |  Acc: 39.700,60.090,66.400,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=121 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=121 | Loss: 3.198 |  Acc: 46.698,73.020,90.442,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=121 | Loss: 5.302 |  Acc: 40.880,60.590,66.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=122 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=122 | Loss: 3.221 |  Acc: 46.496,72.994,90.178,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=122 | Loss: 5.407 |  Acc: 40.300,60.600,65.830,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=123 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=123 | Loss: 3.200 |  Acc: 46.546,73.162,90.292,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=123 | Loss: 5.411 |  Acc: 40.470,59.570,66.160,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=124 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=124 | Loss: 3.200 |  Acc: 46.858,73.112,90.194,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=124 | Loss: 5.399 |  Acc: 39.890,60.040,66.180,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=125 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=125 | Loss: 3.202 |  Acc: 46.632,73.324,90.192,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=125 | Loss: 5.377 |  Acc: 38.940,60.720,67.660,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=126 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=126 | Loss: 3.187 |  Acc: 46.876,73.364,90.572,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=126 | Loss: 5.410 |  Acc: 39.010,60.110,66.480,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=127 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=127 | Loss: 3.185 |  Acc: 46.972,73.444,90.384,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=127 | Loss: 5.272 |  Acc: 41.280,61.430,66.700,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=128 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=128 | Loss: 3.182 |  Acc: 46.990,73.414,90.170,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=128 | Loss: 5.514 |  Acc: 40.500,59.770,65.530,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=129 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=129 | Loss: 3.196 |  Acc: 46.594,73.690,90.212,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=129 | Loss: 5.594 |  Acc: 37.640,58.870,66.370,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=130 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=130 | Loss: 3.167 |  Acc: 46.980,73.292,90.676,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=130 | Loss: 5.512 |  Acc: 38.750,59.890,65.710,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=131 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=131 | Loss: 3.179 |  Acc: 47.040,73.426,90.298,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=131 | Loss: 5.340 |  Acc: 40.910,60.600,66.210,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=132 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=132 | Loss: 3.167 |  Acc: 46.768,73.578,90.432,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=132 | Loss: 5.300 |  Acc: 40.550,61.110,67.010,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=133 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=133 | Loss: 3.169 |  Acc: 46.964,73.582,90.482,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=133 | Loss: 5.292 |  Acc: 40.110,60.820,67.050,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=134 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=134 | Loss: 3.177 |  Acc: 46.720,73.798,90.436,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=134 | Loss: 5.235 |  Acc: 41.480,61.780,67.510,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=135 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=135 | Loss: 3.149 |  Acc: 47.168,73.842,90.588,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=135 | Loss: 5.380 |  Acc: 39.920,60.810,66.820,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=136 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=136 | Loss: 3.156 |  Acc: 47.000,74.086,90.688,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=136 | Loss: 5.546 |  Acc: 39.650,59.840,65.480,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=137 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=137 | Loss: 3.161 |  Acc: 47.034,73.638,90.510,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=137 | Loss: 5.490 |  Acc: 40.500,60.790,66.110,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=138 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=138 | Loss: 3.150 |  Acc: 47.344,73.726,90.412,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=138 | Loss: 5.362 |  Acc: 40.810,60.730,66.940,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=139 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=139 | Loss: 3.165 |  Acc: 47.016,73.598,90.598,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=139 | Loss: 5.416 |  Acc: 40.810,60.190,65.600,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=140 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=140 | Loss: 3.119 |  Acc: 47.568,74.136,90.738,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=140 | Loss: 5.334 |  Acc: 41.630,61.660,66.220,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=141 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=141 | Loss: 3.158 |  Acc: 47.140,73.946,90.584,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=141 | Loss: 5.597 |  Acc: 40.990,59.900,64.210,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=142 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=142 | Loss: 3.135 |  Acc: 47.336,73.850,90.864,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=142 | Loss: 5.305 |  Acc: 41.230,60.950,66.060,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=143 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=143 | Loss: 3.151 |  Acc: 46.996,73.876,90.588,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=143 | Loss: 5.362 |  Acc: 40.470,61.060,66.240,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=144 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=144 | Loss: 3.138 |  Acc: 47.338,74.034,90.556,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=144 | Loss: 5.163 |  Acc: 41.810,61.790,67.400,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=145 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=145 | Loss: 3.114 |  Acc: 47.556,74.082,90.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=145 | Loss: 5.352 |  Acc: 39.930,60.570,66.270,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=146 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=146 | Loss: 3.123 |  Acc: 47.316,74.182,90.818,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=146 | Loss: 5.327 |  Acc: 40.200,60.910,67.320,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=147 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=147 | Loss: 3.143 |  Acc: 47.150,73.840,90.774,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=147 | Loss: 5.386 |  Acc: 41.090,60.730,66.520,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=148 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=148 | Loss: 3.104 |  Acc: 47.328,74.436,91.018,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=148 | Loss: 5.304 |  Acc: 41.490,62.070,66.870,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=149 | lr=1.0e-02 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=149 | Loss: 3.094 |  Acc: 47.598,74.372,90.904,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=149 | Loss: 5.241 |  Acc: 41.280,61.690,67.310,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=150 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=150 | Loss: 2.593 |  Acc: 51.204,80.688,96.980,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=150 | Loss: 4.650 |  Acc: 44.820,65.850,72.800,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=151 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=151 | Loss: 2.479 |  Acc: 51.428,81.856,98.678,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=151 | Loss: 4.627 |  Acc: 44.960,66.140,72.990,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=152 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=152 | Loss: 2.394 |  Acc: 52.432,82.848,99.006,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=152 | Loss: 4.636 |  Acc: 44.640,66.030,73.290,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=153 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=153 | Loss: 2.374 |  Acc: 52.596,82.838,99.128,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=153 | Loss: 4.660 |  Acc: 44.520,66.520,73.270,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=154 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=154 | Loss: 2.324 |  Acc: 52.964,83.600,99.342,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=154 | Loss: 4.660 |  Acc: 45.110,66.220,73.230,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=155 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=155 | Loss: 2.324 |  Acc: 53.108,83.486,99.414,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=155 | Loss: 4.679 |  Acc: 44.780,66.460,73.080,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=156 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=156 | Loss: 2.339 |  Acc: 52.656,83.784,99.462,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=156 | Loss: 4.661 |  Acc: 44.930,66.270,72.970,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=157 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=157 | Loss: 2.324 |  Acc: 52.734,83.810,99.488,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=157 | Loss: 4.661 |  Acc: 45.260,66.260,73.290,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=158 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=158 | Loss: 2.289 |  Acc: 53.022,84.248,99.518,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=158 | Loss: 4.689 |  Acc: 45.150,66.380,73.030,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=159 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=159 | Loss: 2.275 |  Acc: 53.358,84.250,99.504,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=159 | Loss: 4.673 |  Acc: 45.010,66.420,73.210,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=160 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=160 | Loss: 2.252 |  Acc: 53.638,84.258,99.570,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=160 | Loss: 4.671 |  Acc: 44.970,66.520,73.120,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=161 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=161 | Loss: 2.254 |  Acc: 53.660,84.572,99.590,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=161 | Loss: 4.682 |  Acc: 45.080,66.180,73.490,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=162 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=162 | Loss: 2.274 |  Acc: 53.338,84.094,99.658,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=162 | Loss: 4.687 |  Acc: 45.230,66.290,73.390,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=163 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=163 | Loss: 2.259 |  Acc: 53.090,84.602,99.598,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=163 | Loss: 4.701 |  Acc: 45.090,66.080,73.260,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=164 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=164 | Loss: 2.258 |  Acc: 53.086,84.936,99.690,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=164 | Loss: 4.670 |  Acc: 45.490,66.360,73.320,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=165 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=165 | Loss: 2.229 |  Acc: 53.648,84.668,99.658,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=165 | Loss: 4.660 |  Acc: 45.400,66.290,73.430,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=166 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=166 | Loss: 2.273 |  Acc: 53.458,84.196,99.708,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=166 | Loss: 4.672 |  Acc: 45.270,66.540,73.160,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=167 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=167 | Loss: 2.258 |  Acc: 53.228,84.746,99.654,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=167 | Loss: 4.686 |  Acc: 45.150,65.840,73.200,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=168 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=168 | Loss: 2.209 |  Acc: 54.018,85.268,99.702,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=168 | Loss: 4.678 |  Acc: 45.490,66.240,73.060,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=169 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=169 | Loss: 2.220 |  Acc: 53.678,85.302,99.716,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=169 | Loss: 4.693 |  Acc: 45.150,66.310,73.020,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=170 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=170 | Loss: 2.257 |  Acc: 53.212,84.752,99.688,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=170 | Loss: 4.652 |  Acc: 45.240,66.400,73.170,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=171 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=171 | Loss: 2.211 |  Acc: 53.930,84.826,99.680,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=171 | Loss: 4.659 |  Acc: 45.350,65.980,73.070,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=172 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=172 | Loss: 2.218 |  Acc: 53.724,85.184,99.698,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=172 | Loss: 4.655 |  Acc: 45.380,66.250,73.010,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=173 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=173 | Loss: 2.206 |  Acc: 53.378,85.416,99.696,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=173 | Loss: 4.712 |  Acc: 45.230,65.910,72.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=174 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=174 | Loss: 2.195 |  Acc: 54.038,85.480,99.734,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=174 | Loss: 4.658 |  Acc: 45.300,66.130,72.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=175 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=175 | Loss: 2.214 |  Acc: 53.466,85.320,99.702,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=175 | Loss: 4.663 |  Acc: 45.390,66.310,72.990,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=176 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=176 | Loss: 2.201 |  Acc: 53.824,85.462,99.768,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=176 | Loss: 4.671 |  Acc: 45.100,66.080,72.810,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=177 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=177 | Loss: 2.219 |  Acc: 53.540,85.500,99.710,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=177 | Loss: 4.660 |  Acc: 45.250,66.020,73.020,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=178 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=178 | Loss: 2.214 |  Acc: 53.890,85.148,99.730,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=178 | Loss: 4.653 |  Acc: 45.170,66.150,73.370,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=179 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=179 | Loss: 2.197 |  Acc: 53.684,85.698,99.734,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=179 | Loss: 4.638 |  Acc: 45.170,66.320,73.160,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=180 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=180 | Loss: 2.213 |  Acc: 53.804,85.144,99.736,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=180 | Loss: 4.653 |  Acc: 45.230,66.130,73.090,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=181 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=181 | Loss: 2.171 |  Acc: 54.290,85.672,99.714,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=181 | Loss: 4.622 |  Acc: 45.900,65.400,73.310,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=182 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=182 | Loss: 2.168 |  Acc: 54.128,86.050,99.752,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=182 | Loss: 4.649 |  Acc: 45.370,66.270,73.040,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=183 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=183 | Loss: 2.180 |  Acc: 54.034,85.874,99.754,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=183 | Loss: 4.661 |  Acc: 45.390,66.020,73.230,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=184 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=184 | Loss: 2.168 |  Acc: 54.068,86.260,99.708,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=184 | Loss: 4.654 |  Acc: 45.220,66.090,72.860,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=185 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=185 | Loss: 2.204 |  Acc: 53.684,85.752,99.742,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=185 | Loss: 4.615 |  Acc: 45.310,65.990,73.220,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=186 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=186 | Loss: 2.170 |  Acc: 54.156,85.726,99.768,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=186 | Loss: 4.611 |  Acc: 45.740,66.250,72.990,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=187 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=187 | Loss: 2.187 |  Acc: 53.946,85.566,99.770,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=187 | Loss: 4.621 |  Acc: 45.620,66.040,73.030,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=188 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=188 | Loss: 2.172 |  Acc: 54.354,85.872,99.710,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=188 | Loss: 4.634 |  Acc: 44.980,66.210,73.020,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=189 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=189 | Loss: 2.168 |  Acc: 54.168,85.862,99.766,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=189 | Loss: 4.616 |  Acc: 45.410,66.200,72.880,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=190 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=190 | Loss: 2.195 |  Acc: 53.476,86.082,99.744,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=190 | Loss: 4.637 |  Acc: 45.210,66.070,72.930,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=191 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=191 | Loss: 2.161 |  Acc: 54.290,85.824,99.706,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=191 | Loss: 4.614 |  Acc: 45.610,66.200,72.780,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=192 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=192 | Loss: 2.148 |  Acc: 54.672,86.022,99.786,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=192 | Loss: 4.613 |  Acc: 45.430,66.260,72.970,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=193 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=193 | Loss: 2.201 |  Acc: 53.484,86.090,99.698,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=193 | Loss: 4.582 |  Acc: 45.730,66.320,73.100,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=194 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=194 | Loss: 2.197 |  Acc: 53.630,85.968,99.748,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=194 | Loss: 4.629 |  Acc: 45.320,65.950,72.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=195 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=195 | Loss: 2.180 |  Acc: 53.876,85.926,99.750,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=195 | Loss: 4.603 |  Acc: 45.560,66.080,72.850,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=196 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=196 | Loss: 2.172 |  Acc: 54.196,85.874,99.742,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=196 | Loss: 4.567 |  Acc: 45.960,66.410,73.390,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=197 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=197 | Loss: 2.161 |  Acc: 54.104,86.396,99.768,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=197 | Loss: 4.613 |  Acc: 45.580,66.170,73.040,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=198 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=198 | Loss: 2.202 |  Acc: 53.578,85.452,99.766,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=198 | Loss: 4.584 |  Acc: 45.570,66.140,73.370,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=199 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=199 | Loss: 2.140 |  Acc: 54.386,86.136,99.726,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=199 | Loss: 4.631 |  Acc: 45.190,65.990,73.230,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=200 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=200 | Loss: 2.146 |  Acc: 54.566,85.984,99.754,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=200 | Loss: 4.572 |  Acc: 45.540,66.020,73.070,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=201 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=201 | Loss: 2.175 |  Acc: 53.948,85.966,99.746,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=201 | Loss: 4.572 |  Acc: 45.890,66.160,73.150,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=202 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=202 | Loss: 2.169 |  Acc: 53.990,86.206,99.742,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=202 | Loss: 4.587 |  Acc: 45.140,66.040,72.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=203 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=203 | Loss: 2.142 |  Acc: 54.304,86.602,99.768,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=203 | Loss: 4.607 |  Acc: 45.220,65.820,72.860,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=204 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=204 | Loss: 2.186 |  Acc: 53.916,85.424,99.778,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=204 | Loss: 4.565 |  Acc: 45.260,66.380,73.000,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=205 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=205 | Loss: 2.156 |  Acc: 54.328,86.220,99.748,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=205 | Loss: 4.605 |  Acc: 45.630,65.930,72.870,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=206 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=206 | Loss: 2.137 |  Acc: 54.298,86.824,99.724,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=206 | Loss: 4.597 |  Acc: 45.620,66.000,72.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=207 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=207 | Loss: 2.152 |  Acc: 54.358,86.232,99.732,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=207 | Loss: 4.582 |  Acc: 45.460,65.990,73.010,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=208 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=208 | Loss: 2.122 |  Acc: 54.950,86.352,99.724,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=208 | Loss: 4.596 |  Acc: 45.580,65.860,72.870,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=209 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=209 | Loss: 2.155 |  Acc: 54.340,86.346,99.706,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=209 | Loss: 4.533 |  Acc: 46.150,66.180,73.090,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=210 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=210 | Loss: 2.165 |  Acc: 54.276,85.996,99.736,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=210 | Loss: 4.562 |  Acc: 45.740,65.790,73.060,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=211 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=211 | Loss: 2.156 |  Acc: 54.336,86.032,99.748,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=211 | Loss: 4.574 |  Acc: 45.350,65.540,72.950,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=212 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=212 | Loss: 2.153 |  Acc: 54.312,86.414,99.754,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=212 | Loss: 4.574 |  Acc: 45.500,66.030,72.970,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=213 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=213 | Loss: 2.148 |  Acc: 54.430,86.040,99.732,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=213 | Loss: 4.554 |  Acc: 45.300,66.370,73.110,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=214 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=214 | Loss: 2.116 |  Acc: 54.746,86.768,99.722,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=214 | Loss: 4.583 |  Acc: 45.220,65.850,72.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=215 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=215 | Loss: 2.172 |  Acc: 54.002,86.150,99.724,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=215 | Loss: 4.573 |  Acc: 45.500,65.770,72.740,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=216 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=216 | Loss: 2.138 |  Acc: 54.558,86.524,99.684,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=216 | Loss: 4.591 |  Acc: 45.330,65.440,72.480,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=217 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=217 | Loss: 2.148 |  Acc: 54.244,86.660,99.748,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=217 | Loss: 4.534 |  Acc: 45.750,65.800,72.650,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=218 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=218 | Loss: 2.150 |  Acc: 54.148,86.508,99.710,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=218 | Loss: 4.542 |  Acc: 45.760,66.130,72.660,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=219 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=219 | Loss: 2.146 |  Acc: 54.680,86.138,99.704,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=219 | Loss: 4.588 |  Acc: 45.640,65.650,72.680,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=220 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=220 | Loss: 2.165 |  Acc: 54.108,86.484,99.706,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=220 | Loss: 4.582 |  Acc: 45.350,66.100,72.790,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=221 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=221 | Loss: 2.158 |  Acc: 54.146,86.408,99.710,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=221 | Loss: 4.561 |  Acc: 45.230,65.820,72.820,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=222 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=222 | Loss: 2.116 |  Acc: 54.942,86.492,99.730,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=222 | Loss: 4.587 |  Acc: 45.420,65.640,72.590,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=223 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=223 | Loss: 2.124 |  Acc: 54.454,86.844,99.712,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=223 | Loss: 4.544 |  Acc: 45.320,65.790,72.730,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=224 | lr=1.0e-03 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=224 | Loss: 2.141 |  Acc: 54.938,86.194,99.698,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=224 | Loss: 4.566 |  Acc: 45.520,65.580,72.480,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=225 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=225 | Loss: 2.077 |  Acc: 55.482,87.488,99.816,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=225 | Loss: 4.499 |  Acc: 45.980,66.420,72.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=226 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=226 | Loss: 2.029 |  Acc: 55.840,88.710,99.850,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=226 | Loss: 4.480 |  Acc: 45.890,66.520,72.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=227 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=227 | Loss: 2.031 |  Acc: 55.382,88.718,99.868,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=227 | Loss: 4.487 |  Acc: 46.120,66.290,72.840,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=228 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=228 | Loss: 2.055 |  Acc: 55.766,87.948,99.898,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=228 | Loss: 4.496 |  Acc: 46.030,66.300,72.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=229 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=229 | Loss: 2.053 |  Acc: 55.854,87.796,99.868,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=229 | Loss: 4.498 |  Acc: 46.030,66.220,72.830,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=230 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=230 | Loss: 2.029 |  Acc: 55.632,88.580,99.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=230 | Loss: 4.484 |  Acc: 46.080,66.450,72.800,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=231 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=231 | Loss: 2.032 |  Acc: 55.858,88.384,99.872,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=231 | Loss: 4.497 |  Acc: 46.260,66.300,73.030,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=232 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=232 | Loss: 2.012 |  Acc: 55.922,88.800,99.882,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=232 | Loss: 4.493 |  Acc: 46.080,66.330,72.870,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=233 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=233 | Loss: 1.990 |  Acc: 55.868,88.950,99.872,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=233 | Loss: 4.486 |  Acc: 46.400,66.320,72.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=234 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=234 | Loss: 2.038 |  Acc: 55.336,88.528,99.886,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=234 | Loss: 4.489 |  Acc: 46.370,66.270,73.080,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=235 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=235 | Loss: 1.975 |  Acc: 56.088,89.366,99.884,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=235 | Loss: 4.496 |  Acc: 46.360,66.460,72.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=236 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=236 | Loss: 2.015 |  Acc: 56.278,88.358,99.886,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=236 | Loss: 4.489 |  Acc: 46.230,66.520,72.880,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=237 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=237 | Loss: 1.974 |  Acc: 56.374,89.072,99.894,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=237 | Loss: 4.483 |  Acc: 46.270,66.460,72.880,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=238 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=238 | Loss: 2.025 |  Acc: 55.612,88.930,99.888,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=238 | Loss: 4.490 |  Acc: 46.350,66.530,73.190,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=239 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=239 | Loss: 2.029 |  Acc: 55.650,88.520,99.880,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=239 | Loss: 4.487 |  Acc: 46.250,66.510,73.200,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=240 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=240 | Loss: 2.025 |  Acc: 55.644,88.504,99.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=240 | Loss: 4.500 |  Acc: 46.100,66.330,72.880,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=241 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=241 | Loss: 2.033 |  Acc: 55.490,88.584,99.894,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=241 | Loss: 4.493 |  Acc: 46.370,66.580,73.060,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=242 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=242 | Loss: 1.969 |  Acc: 56.168,89.254,99.914,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=242 | Loss: 4.480 |  Acc: 46.230,66.540,73.070,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=243 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=243 | Loss: 2.042 |  Acc: 55.678,88.162,99.856,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=243 | Loss: 4.497 |  Acc: 46.090,66.360,72.950,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=244 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=244 | Loss: 2.012 |  Acc: 55.950,88.678,99.862,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=244 | Loss: 4.495 |  Acc: 46.140,66.740,73.130,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=245 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=245 | Loss: 2.010 |  Acc: 56.262,88.444,99.898,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=245 | Loss: 4.495 |  Acc: 45.960,66.530,73.120,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=246 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=246 | Loss: 2.041 |  Acc: 55.432,88.350,99.902,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=246 | Loss: 4.490 |  Acc: 46.160,66.470,72.850,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=247 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=247 | Loss: 2.032 |  Acc: 55.862,88.304,99.888,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=247 | Loss: 4.487 |  Acc: 46.230,66.510,72.950,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=248 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=248 | Loss: 2.021 |  Acc: 55.714,88.676,99.904,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=248 | Loss: 4.488 |  Acc: 45.910,66.510,73.000,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=249 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=249 | Loss: 2.026 |  Acc: 55.612,88.732,99.896,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=249 | Loss: 4.483 |  Acc: 46.110,66.640,72.820,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=250 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=250 | Loss: 2.021 |  Acc: 55.884,88.636,99.894,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=250 | Loss: 4.497 |  Acc: 46.030,66.400,72.980,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=251 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=251 | Loss: 2.025 |  Acc: 55.498,88.622,99.858,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=251 | Loss: 4.511 |  Acc: 46.230,66.490,73.080,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=252 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=252 | Loss: 2.045 |  Acc: 55.186,88.454,99.898,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=252 | Loss: 4.495 |  Acc: 46.170,66.410,73.010,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=253 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=253 | Loss: 2.021 |  Acc: 56.182,88.310,99.886,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=253 | Loss: 4.495 |  Acc: 46.080,66.420,72.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=254 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=254 | Loss: 2.015 |  Acc: 55.960,88.464,99.904,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=254 | Loss: 4.487 |  Acc: 46.230,66.550,73.050,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=255 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=255 | Loss: 2.042 |  Acc: 55.194,88.508,99.888,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=255 | Loss: 4.481 |  Acc: 46.390,66.420,73.170,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=256 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=256 | Loss: 2.053 |  Acc: 55.158,88.316,99.908,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=256 | Loss: 4.492 |  Acc: 46.120,66.570,72.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=257 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=257 | Loss: 2.007 |  Acc: 55.758,88.986,99.878,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=257 | Loss: 4.492 |  Acc: 46.200,66.580,72.970,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=258 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=258 | Loss: 1.999 |  Acc: 56.094,88.790,99.888,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=258 | Loss: 4.503 |  Acc: 46.260,66.570,73.060,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=259 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=259 | Loss: 2.067 |  Acc: 54.940,88.220,99.878,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=259 | Loss: 4.485 |  Acc: 46.220,66.690,72.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=260 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=260 | Loss: 2.042 |  Acc: 55.548,88.280,99.896,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=260 | Loss: 4.482 |  Acc: 46.280,66.620,73.040,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=261 | lr=1.0e-04 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=261 | Loss: 2.023 |  Acc: 55.416,88.594,99.902,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=261 | Loss: 4.490 |  Acc: 46.330,66.460,72.940,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=262 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=262 | Loss: 1.997 |  Acc: 56.408,88.660,99.896,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=262 | Loss: 4.494 |  Acc: 46.100,66.530,72.880,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=263 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=263 | Loss: 1.970 |  Acc: 56.488,88.910,99.908,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=263 | Loss: 4.487 |  Acc: 46.270,66.700,72.920,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=264 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=264 | Loss: 2.007 |  Acc: 55.932,88.790,99.896,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=264 | Loss: 4.497 |  Acc: 46.240,66.470,72.860,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=265 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=265 | Loss: 2.010 |  Acc: 55.918,88.750,99.902,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=265 | Loss: 4.486 |  Acc: 46.370,66.560,73.020,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=266 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=266 | Loss: 2.001 |  Acc: 55.782,89.294,99.892,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=266 | Loss: 4.490 |  Acc: 46.350,66.650,73.010,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=267 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=267 | Loss: 2.049 |  Acc: 55.288,88.488,99.886,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=267 | Loss: 4.500 |  Acc: 46.150,66.370,72.800,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=268 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=268 | Loss: 1.967 |  Acc: 56.716,88.966,99.870,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=268 | Loss: 4.484 |  Acc: 46.290,66.530,72.920,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=269 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=269 | Loss: 2.014 |  Acc: 55.732,88.736,99.898,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=269 | Loss: 4.492 |  Acc: 46.120,66.570,72.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=270 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=270 | Loss: 2.017 |  Acc: 55.564,89.014,99.908,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=270 | Loss: 4.495 |  Acc: 46.210,66.500,72.810,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=271 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=271 | Loss: 2.004 |  Acc: 55.822,88.850,99.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=271 | Loss: 4.487 |  Acc: 46.130,66.550,72.960,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=272 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=272 | Loss: 2.050 |  Acc: 55.334,88.392,99.898,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=272 | Loss: 4.490 |  Acc: 45.950,66.480,72.930,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=273 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=273 | Loss: 2.019 |  Acc: 55.488,89.172,99.894,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=273 | Loss: 4.490 |  Acc: 46.150,66.470,72.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=274 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=274 | Loss: 1.985 |  Acc: 55.998,89.488,99.922,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=274 | Loss: 4.484 |  Acc: 46.070,66.570,72.850,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=275 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=275 | Loss: 1.991 |  Acc: 56.114,88.820,99.918,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=275 | Loss: 4.480 |  Acc: 46.290,66.670,73.080,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=276 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=276 | Loss: 2.000 |  Acc: 56.014,89.126,99.906,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=276 | Loss: 4.490 |  Acc: 46.210,66.490,73.020,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=277 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=277 | Loss: 1.987 |  Acc: 55.944,89.086,99.908,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=277 | Loss: 4.484 |  Acc: 46.260,66.680,73.030,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=278 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=278 | Loss: 1.981 |  Acc: 56.690,88.684,99.928,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=278 | Loss: 4.492 |  Acc: 46.170,66.560,72.840,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=279 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=279 | Loss: 1.989 |  Acc: 56.078,89.010,99.914,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=279 | Loss: 4.491 |  Acc: 46.280,66.550,72.870,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=280 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=280 | Loss: 2.004 |  Acc: 55.568,89.304,99.898,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=280 | Loss: 4.505 |  Acc: 46.190,66.450,72.990,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=281 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=281 | Loss: 1.983 |  Acc: 56.282,89.400,99.906,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=281 | Loss: 4.476 |  Acc: 46.270,66.650,72.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=282 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=282 | Loss: 2.001 |  Acc: 55.872,89.168,99.906,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=282 | Loss: 4.480 |  Acc: 46.270,66.680,72.950,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=283 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=283 | Loss: 2.025 |  Acc: 55.434,88.792,99.888,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=283 | Loss: 4.487 |  Acc: 46.140,66.680,72.940,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=284 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=284 | Loss: 2.023 |  Acc: 55.650,88.670,99.912,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=284 | Loss: 4.491 |  Acc: 46.420,66.540,73.080,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=285 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=285 | Loss: 2.017 |  Acc: 55.814,88.726,99.892,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=285 | Loss: 4.500 |  Acc: 46.170,66.270,72.800,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=286 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=286 | Loss: 2.001 |  Acc: 56.060,88.736,99.914,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=286 | Loss: 4.486 |  Acc: 46.000,66.630,73.040,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=287 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=287 | Loss: 2.038 |  Acc: 55.156,88.836,99.912,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=287 | Loss: 4.490 |  Acc: 46.310,66.590,72.830,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=288 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=288 | Loss: 2.005 |  Acc: 55.888,88.762,99.914,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=288 | Loss: 4.484 |  Acc: 46.330,66.580,72.910,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=289 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=289 | Loss: 1.975 |  Acc: 56.218,89.214,99.896,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=289 | Loss: 4.485 |  Acc: 46.380,66.480,73.110,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=290 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=290 | Loss: 2.011 |  Acc: 56.006,88.778,99.906,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=290 | Loss: 4.493 |  Acc: 46.080,66.440,72.870,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=291 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=291 | Loss: 1.976 |  Acc: 56.148,89.308,99.902,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=291 | Loss: 4.488 |  Acc: 46.240,66.540,72.990,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=292 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=292 | Loss: 1.991 |  Acc: 56.178,89.104,99.902,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=292 | Loss: 4.499 |  Acc: 46.340,66.510,72.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=293 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=293 | Loss: 2.003 |  Acc: 55.934,88.498,99.872,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=293 | Loss: 4.496 |  Acc: 46.100,66.500,72.930,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=294 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=294 | Loss: 1.980 |  Acc: 56.366,88.830,99.906,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=294 | Loss: 4.493 |  Acc: 46.310,66.620,72.960,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=295 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=295 | Loss: 1.999 |  Acc: 55.916,89.152,99.906,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=295 | Loss: 4.496 |  Acc: 46.180,66.540,72.900,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=296 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=296 | Loss: 1.987 |  Acc: 56.312,88.846,99.902,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=296 | Loss: 4.489 |  Acc: 46.270,66.540,73.050,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=297 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=297 | Loss: 2.010 |  Acc: 55.800,88.828,99.890,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=297 | Loss: 4.484 |  Acc: 46.220,66.520,73.020,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=298 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=298 | Loss: 2.005 |  Acc: 55.810,89.026,99.916,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+Testing: Epoch=298 | Loss: 4.490 |  Acc: 46.410,66.580,72.940,% | Adaptive Acc:0.000% | clf_exit: nan nan nan 
+
+Training Setting: backend=modelE | dataset=cifar100 | adaptive=1 | batch_size=128 | epoch=299 | lr=1.0e-05 | circles=2 | dropout=0.50 | step_all=0 | step_clf=0 | vanilla=0 | ge=1 | fb=111
+Training: Epoch=299 | Loss: 1.998 |  Acc: 55.712,89.322,99.894,% | Adaptive Acc:89.560% | clf_exit: 0.422 0.474 0.104 
+Testing: Epoch=299 | Loss: 4.491 |  Acc: 46.220,66.560,73.090,% | Adaptive Acc:67.680% | clf_exit: 0.342 0.447 0.211 
+
+
+
 ==> Preparing data..
 Dataset: CIFAR100
 Files already downloaded and verified

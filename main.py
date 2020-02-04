@@ -148,12 +148,17 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
             inputs, targets = inputs.cuda(), targets.cuda()
             optimizer.zero_grad()
             #inputs, targets = Variable(inputs), Variable(targets)
-            outputs = model(inputs)
+            if backend == 'modelE':
+                outputs, errors = model(inputs)
+            else:
+                outputs = model(inputs)
 
             #loss = criterion(outputs, targets)
             loss = 0.0
             for j in range(len(outputs)):
                 loss += criterion(outputs[j], targets)
+            if backend == 'modelE':
+                loss += sum([torch.norm(errors[j]) for j in range(len(errors))]) / targets.shape[0]
 
             loss.backward()
             optimizer.step()
@@ -226,11 +231,16 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                 if use_cuda:
                     inputs, targets = inputs.cuda(), targets.cuda()
                 inputs, targets = Variable(inputs), Variable(targets)
-                outputs = model(inputs)
+                if backend == 'modelE':
+                    outputs, errors = model(inputs)
+                else:
+                    outputs = model(inputs)
                 #loss = criterion(outputs, targets)
                 loss = 0.0
                 for j in range(len(outputs)):
                     loss += criterion(outputs[j], targets)
+                if backend == 'modelE':
+                    loss += sum([torch.norm(errors[j]) for j in range(len(errors))]) / targets.shape[0]
             
                 test_loss += to_python_float(loss.data)
                 # multiple classifiers
