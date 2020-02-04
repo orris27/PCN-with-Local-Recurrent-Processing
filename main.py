@@ -27,6 +27,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     step_all, step_clf = args.step_all, args.step_clf
     vanilla = bool(args.vanilla)
     ge = bool(args.ge)
+    lmbda = args.lmbda
     fb = args.fb
     root = './'
     rep = 1
@@ -158,7 +159,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
             for j in range(len(outputs)):
                 loss += criterion(outputs[j], targets)
             if backend == 'modelE':
-                loss += sum([torch.norm(errors[j]) for j in range(len(errors))]) / targets.shape[0]
+                loss += lmbda * sum([torch.norm(errors[j]) for j in range(len(errors))]) / targets.shape[0]
 
             loss.backward()
             optimizer.step()
@@ -240,7 +241,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                 for j in range(len(outputs)):
                     loss += criterion(outputs[j], targets)
                 if backend == 'modelE':
-                    loss += sum([torch.norm(errors[j]) for j in range(len(errors))]) / targets.shape[0]
+                    loss += lmbda * sum([torch.norm(errors[j]) for j in range(len(errors))]) / targets.shape[0]
             
                 test_loss += to_python_float(loss.data)
                 # multiple classifiers
@@ -347,6 +348,7 @@ if __name__ == '__main__':
     parser.add_argument('--fb', type=str, default='1:1:1')
     parser.add_argument('--step_all', type=int, default=0) # 15
     parser.add_argument('--step_clf', type=int, default=0) # 10
+    parser.add_argument('--lmbda', type=float, default=0.0)
     parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
     parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelD', 'modelE'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
