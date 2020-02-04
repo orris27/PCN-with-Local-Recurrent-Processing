@@ -103,4 +103,5 @@ For PCN, "94.39 (94.77)" means the reported accuracy in paper is 94.39, while 94
 | T=1 (val no fb, dp0.3)                 | -     | -     | -             |                                 |
 | T=2 (val no fb, dp0.5)                 | -     | -     | -             |                                 |
 | T=2 (val no fb, dp0.5, ge, 32-64-64)   | 46.89 | 66.44 | 73.61         | 67.31(0.370 0.432 0.198, ts0.5) |
+| T=5(val no fb, dp0.5, ge, 32-64-64-bn) | 26.23 | 21.48 | 72.13         | 73.26(0.055 0.003 0.942, ts0.5) |
 
