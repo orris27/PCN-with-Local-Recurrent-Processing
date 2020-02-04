@@ -140,7 +140,8 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         total_adaptive = 0
         correct_adaptive = 0
         
-        training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d | dropout=%.2f | step_all=%d | step_clf=%d | vanilla=%d | ge=%d | fb=%s' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles, dropout, step_all, step_clf, vanilla, ge, fb.replace(':', ''))
+        #training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d | dropout=%.2f | step_all=%d | step_clf=%d | vanilla=%d | ge=%d | fb=%s' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles, dropout, step_all, step_clf, vanilla, ge, fb.replace(':', ''))
+        training_setting = str(args)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
