@@ -1,0 +1,82 @@
+==> Preparing data..
+Dataset: CIFAR100
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+PredNetBpD(
+  (classifiers): ModuleList(
+    (0): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (FFconv): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (linear): Linear(in_features=32, out_features=100, bias=True)
+      (bypass): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (1): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (FFconv): Conv2d(256, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (linear): Linear(in_features=64, out_features=100, bias=True)
+      (bypass): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (2): ClassifierModule(
+      (relu): ReLU(inplace=True)
+      (FFconv): Conv2d(512, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (linear): Linear(in_features=64, out_features=100, bias=True)
+      (bypass): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+  )
+  (PcConvs): ModuleList(
+    (0): PcConvBp(
+      (FFconv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (1): PcConvBp(
+      (FFconv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (2): PcConvBp(
+      (FFconv): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (3): PcConvBp(
+      (FFconv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (4): PcConvBp(
+      (FFconv): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (5): PcConvBp(
+      (FFconv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (6): PcConvBp(
+      (FFconv): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (7): PcConvBp(
+      (FFconv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (bypass): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+  )
+  (BNs): ModuleList(
+    (0): BatchNorm2d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (maxpool2d): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+
+Epoch: 0
