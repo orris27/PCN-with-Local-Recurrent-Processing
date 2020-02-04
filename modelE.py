@@ -81,6 +81,7 @@ class ClassifierModule(nn.Module):
             out = torch.cat([out_block, out_clf], dim=1)
 
         rep = self.relu(self.FFconv(out)) # (batch_size, 256 + 256, x, x)
+        rep_tmp = torch.clone(rep)
         if self.cls == 0 or (self.adaptive is True and self.training is False):
             pass
         else:
@@ -88,9 +89,10 @@ class ClassifierModule(nn.Module):
                 b0 = F.relu(self.b0[0] + 1.0).expand_as(rep)
                 for _ in range(self.cls):
                     rep = self.FFconv(self.relu(out - self.FBconv(rep))) * b0 + rep
+        error = rep - rep_tmp
 
         rep = F.max_pool2d(rep + self.bypass(out), 2)
-        return rep, self.linear(F.avg_pool2d(rep, rep.size(-1)).squeeze(-1).squeeze(-1))
+        return rep, self.linear(F.avg_pool2d(rep, rep.size(-1)).squeeze(-1).squeeze(-1)), error
        
         
 
@@ -151,6 +153,7 @@ class PredNetBpD(nn.Module):
 
     def forward(self, x):
         res = []
+        errors = []
         h = None
         for i in range(self.nlays):
             x = self.BNs[i](x)
@@ -164,11 +167,13 @@ class PredNetBpD(nn.Module):
                     x = gradient_rescale(x, 1.0 / (len(self.classifiers) - clf_id))
 
                 if self.vanilla is True or len(res) == 0:
-                    h, r = self.classifiers[clf_id](x, h) # hidden outputs, result outputs
+                    h, r, error = self.classifiers[clf_id](x, h) # hidden outputs, result outputs
                     res.append(r)
+                    errors.append(error)
                 else:
-                    h, r = self.classifiers[clf_id](x, h)
+                    h, r, error = self.classifiers[clf_id](x, h)
                     res.append(r)
+                    errors.append(error)
 
                 if self.ge is True:
                     x = gradient_rescale(x, (len(self.classifiers) - clf_id - 1))
@@ -176,5 +181,5 @@ class PredNetBpD(nn.Module):
                 if self.maxpool[i] is True:
                     x = self.maxpool2d(x)
 
-        return res
+        return res, errors
 
