@@ -46,12 +46,12 @@ device = torch.device('cpu')
 x = torch.randn(1, 3, 32, 32).to(device) # dummy inputs
 
 # PCN
-print('PCN')
+print('PCN-E')
 for num_classes in [10, 100]:
     print('num_classes:', num_classes)
     for circles in [0, 1, 2]:
         print('circles:', circles)
-        from prednet import PredNetBpD
+        from prednetE import PredNetBpD
         model = PredNetBpD(num_classes=num_classes, cls=circles)
 
         params = sum([w.numel() for name, w in model.named_parameters()])
@@ -60,6 +60,7 @@ for num_classes in [10, 100]:
         flops = count_flops(model)
         print('flops: %d | params: %d' % (flops, params))
 
+print(model)
 
 print('\n'*3)
 # Ours

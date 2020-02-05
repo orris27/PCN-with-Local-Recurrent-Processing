@@ -1,7 +1,9 @@
 # 4 Feb | lmbda 0.01 0.1
-python main.py --batch_size 128 --circles 5 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0.1 2>/dev/null
-python main.py --batch_size 128 --circles 1 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0.01 2>/dev/null
-python main.py --batch_size 128 --circles 5 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0.01 2>/dev/null
+python main.py --batch_size 128 --circles 1 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 0 --lmbda 0.01 2>/dev/null
+#python main.py --batch_size 128 --circles 5 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0.1 2>/dev/null
+#python main.py --batch_size 128 --circles 1 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0.01 2>/dev/null
+#python main.py --batch_size 128 --circles 5 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0.01 2>/dev/null
+
 # 3 Feb | cifar100 modelD
 #python main.py --batch_size 128 --circles 0 --backend modelE --dataset_name cifar100 --max_epoch 300 --step_all 0 --step_clf 0 --ge 1 --vanilla 1 >> vanilla.log
 #python main.py --batch_size 128 --circles 1 --backend modelE --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 >> cir1_adaptive_dropout0.5_ge.log
