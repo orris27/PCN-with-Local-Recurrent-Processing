@@ -1,4 +1,4 @@
-'''Train CIFAR10 with PyTorch.'''
+'''Train CIFAR100 with PyTorch.'''
 from __future__ import print_function
 import os
 import torch
@@ -8,7 +8,6 @@ import torch.backends.cudnn as cudnn
 import torchvision
 import torchvision.transforms as transforms
 import argparse
-from prednet import *
 #from utils import progress_bar
 from torch.autograd import Variable
 
@@ -17,10 +16,17 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
     best_acc = 0  # best test accuracy
     start_epoch = 0  # start from epoch 0 or last checkpoint epoch
     batch_size = args.batch_size
+    backend = args.backend
     root = './'
     rep = 1
     lr = 0.01
     circles = args.circles
+    if backend == 'prednet':
+        from prednet import PredNetBpD
+    elif backend == 'prednetE':
+        from prednetE import PredNetBpD
+    else:
+        raise ValueError
     
     models = {'PredNetBpD':PredNetBpD}
     modelname = model+'_'+str(circles)+'CLS_'+str(nesterov)+'Nes_'+str(weightDecay)+'WD_'+str(Tied)+'TIED_'+str(rep)+'REP'
@@ -172,5 +178,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--circles', type=int, default=1)
     parser.add_argument('--batch_size', type=int, default=128)
+    parser.add_argument('--backend', type=str, required=True, choices=['prednet', 'prednetE'])
     args = parser.parse_args()
     main_cifar(args)
