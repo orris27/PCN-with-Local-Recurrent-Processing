@@ -1,5 +1,6 @@
 # 5 Feb | prednetE
-python main_cifar.py --batch_size 128 --circles 0 --backend prednetE >> cir0.log
+python main.py --batch_size 128 --circles 1 --backend modelE --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0.01 >> cir1_dropout0.5_ge_lmbda0.01.log
+#python main_cifar.py --batch_size 128 --circles 0 --backend prednetE >> cir0.log
 
 
 
