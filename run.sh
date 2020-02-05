@@ -1,5 +1,5 @@
 # 5 Feb | prednetE
-python main_cifar.py --batch_size 128 --circles 0 --backend prednetE
+python main_cifar.py --batch_size 128 --circles 0 --backend prednetE >> cir0.log
 
 
 
