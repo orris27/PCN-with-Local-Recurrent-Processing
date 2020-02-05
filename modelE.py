@@ -49,7 +49,7 @@ class ClassifierModule(nn.Module):
     def __init__(self, in_channel_block, in_channel_clf, hidden_channel, num_classes, adaptive, cls, dropout):
         super(ClassifierModule, self).__init__()
         self.relu = nn.ReLU(inplace=True)
-        #self.BN = nn.BatchNorm2d(in_channel_block)
+        self.BN = nn.BatchNorm2d(hidden_channel)
         
         self.FFconv = nn.Conv2d(in_channel_block + in_channel_clf, hidden_channel, kernel_size=3, stride=1, padding=1, bias=False) 
 
@@ -91,7 +91,7 @@ class ClassifierModule(nn.Module):
                     rep = self.FFconv(self.relu(out - self.FBconv(rep))) * b0 + rep
         error = rep - rep_tmp
 
-        rep = F.max_pool2d(rep + self.bypass(out), 2)
+        rep = self.BN(F.max_pool2d(rep + self.bypass(out), 2))
         return rep, self.linear(F.avg_pool2d(rep, rep.size(-1)).squeeze(-1).squeeze(-1)), error
        
         
