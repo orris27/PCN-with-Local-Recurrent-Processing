@@ -105,6 +105,9 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     elif backend == 'modelE':
         from modelE import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
+    elif backend == 'modelE_dp2':
+        from modelE_dp2 import PredNetBpD
+        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     elif backend == 'modelF':
         from modelF import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
@@ -153,7 +156,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
             inputs, targets = inputs.cuda(), targets.cuda()
             optimizer.zero_grad()
             #inputs, targets = Variable(inputs), Variable(targets)
-            if backend in ['modelE', 'modelF']:
+            if backend in ['modelE', 'modelE_dp2', 'modelF']:
                 outputs, errors = model(inputs)
             else:
                 outputs = model(inputs)
@@ -162,7 +165,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
             loss = 0.0
             for j in range(len(outputs)):
                 loss += criterion(outputs[j], targets)
-            if backend in ['modelE', 'modelF']:
+            if backend in ['modelE', 'modelE_dp2', 'modelF']:
                 loss += lmbda * sum([torch.norm(errors[j]) for j in range(len(errors))]) / targets.shape[0]
 
             loss.backward()
@@ -239,7 +242,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                 if use_cuda:
                     inputs, targets = inputs.cuda(), targets.cuda()
                 inputs, targets = Variable(inputs), Variable(targets)
-                if backend in ['modelE', 'modelF']:
+                if backend in ['modelE', 'modelE_dp2', 'modelF']:
                     outputs, errors = model(inputs)
                 else:
                     outputs = model(inputs)
@@ -247,7 +250,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                 loss = 0.0
                 for j in range(len(outputs)):
                     loss += criterion(outputs[j], targets)
-                if backend in ['modelE', 'modelF']:
+                if backend in ['modelE', 'modelE_dp2', 'modelF']:
                     loss += lmbda * sum([torch.norm(errors[j]) for j in range(len(errors))]) / targets.shape[0]
             
                 test_loss += to_python_float(loss.data)
@@ -343,8 +346,31 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         train(epoch)
         test(epoch)
     os.makedirs('models/', exist_ok=True)
-    setting = '%s_%s_adaptive%d_circles%d_dropout%.2f_all%dclf%d_vanilla%d_ge%d_fb%s' % (backend, dataset_name, adaptive, circles, dropout, step_all, step_clf, vanilla, ge, fb.replace(':', ''))
+    setting = '%s_%s_adaptive%d_circles%d_dropout%.2f_all%dclf%d_vanilla%d_ge%d_fb%s_lmbda%.4f' % (backend, dataset_name, adaptive, circles, dropout, step_all, step_clf, vanilla, ge, fb.replace(':', ''), lmbda)
     torch.save(model, os.path.join('models', setting + '.pt'))
+
+
+    # Test different circles:
+    print('Evaluate with different circles:')
+
+    model.eval()
+    model.dropout = 1.0
+    model.adaptive = False
+    for cls in range(args.circles + 1):
+        # set cls
+        print('circles:', cls)
+        model.cls = cls
+        for name, child in model.named_children():
+            if name == 'classifiers':
+                for clf in child.children():
+                    #print(name, child)
+                    clf.cls = cls
+                    clf.dropout = 1.0
+                    clf.adaptive = False
+
+        test(max_epoch - 1)        
+
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -360,7 +386,7 @@ if __name__ == '__main__':
     parser.add_argument('--step_clf', type=int, default=0) # 10
     parser.add_argument('--lmbda', type=float, default=0.0)
     parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
-    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelD', 'modelE', 'modelF'])
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelD', 'modelE', 'modelE_dp2', 'modelF'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
     main_cifar(args)

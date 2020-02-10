@@ -1,8 +1,12 @@
 # 10 Feb
-python main_cifar.py --batch_size 128 --circles 0 --backend prednetF >> cir0.log
-python main_cifar.py --batch_size 128 --circles 1 --backend prednetF >> cir1.log
-python main_cifar.py --batch_size 128 --circles 2 --backend prednetF >> cir2.log
-python main_cifar.py --batch_size 128 --circles 5 --backend prednetF >> cir5.log
+python main.py --batch_size 128 --circles 5 --backend modelE_dp2 --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0 >> cir5_adaptive_dp2_ge.log
+
+
+# 10 Feb
+#python main_cifar.py --batch_size 128 --circles 0 --backend prednetF >> cir0.log
+#python main_cifar.py --batch_size 128 --circles 1 --backend prednetF >> cir1.log
+#python main_cifar.py --batch_size 128 --circles 2 --backend prednetF >> cir2.log
+#python main_cifar.py --batch_size 128 --circles 5 --backend prednetF >> cir5.log
 
 
 # 9 Feb
