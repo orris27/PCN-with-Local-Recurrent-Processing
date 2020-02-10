@@ -1,6 +1,23 @@
+# 10 Feb
+python main_cifar.py --batch_size 128 --circles 0 --backend prednetF >> cir0.log
+python main_cifar.py --batch_size 128 --circles 1 --backend prednetF >> cir1.log
+python main_cifar.py --batch_size 128 --circles 2 --backend prednetF >> cir2.log
+python main_cifar.py --batch_size 128 --circles 5 --backend prednetF >> cir5.log
+
+
+# 9 Feb
+#python main.py --batch_size 128 --circles 1 --backend modelF --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --lmbda 0 >> cir1_ge_F.log
+#python main.py --batch_size 128 --circles 2 --backend modelE --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --lmbda 0 >> cir2_ge.log
+#python main.py --batch_size 128 --circles 2 --backend modelF --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --lmbda 0 >> cir2_ge_F.log
+#python main.py --batch_size 128 --circles 5 --backend modelE --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --lmbda 0 >> cir5_ge.log
+#python main.py --batch_size 128 --circles 5 --backend modelF --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --lmbda 0 >> cir5_ge_F.log
+
+# 8 Feb
+#python main.py --batch_size 128 --circles 0 --backend modelE --dataset_name cifar100 --max_epoch 300 --step_all 0 --step_clf 0 --ge 1 --lmbda 0 >> cir0_ge.log
+#python main.py --batch_size 128 --circles 1 --backend modelF --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0 >> cir1_adaptive_dropout0.5_ge.log
+
 # 6 Feb | modelF
-python main.py --batch_size 128 --circles 1 --backend modelF --dataset_name cifar100 --adaptive 1 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0.01 >> cir1_adaptive_dropout0.5_ge_lmbda0.01.log
-python main.py --batch_size 128 --circles 1 --backend modelE --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --lmbda 0 >> cir1_ge.log
+#python main.py --batch_size 128 --circles 1 --backend modelE --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --lmbda 0 >> cir1_ge.log
 
 # 5 Feb | prednetE
 #python main.py --batch_size 128 --circles 1 --backend modelE --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 0.5 --step_all 0 --step_clf 0 --ge 1 --lmbda 0.01 >> cir1_dropout0.5_ge_lmbda0.01.log

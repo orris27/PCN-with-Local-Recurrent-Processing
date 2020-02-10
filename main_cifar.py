@@ -25,6 +25,8 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
         from prednet import PredNetBpD
     elif backend == 'prednetE':
         from prednetE import PredNetBpD
+    elif backend == 'prednetF':
+        from prednetF import PredNetBpD
     else:
         raise ValueError
     
@@ -178,6 +180,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--circles', type=int, default=1)
     parser.add_argument('--batch_size', type=int, default=128)
-    parser.add_argument('--backend', type=str, required=True, choices=['prednet', 'prednetE'])
+    parser.add_argument('--backend', type=str, required=True, choices=['prednet', 'prednetE', 'prednetF'])
     args = parser.parse_args()
     main_cifar(args)

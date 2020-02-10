@@ -37,6 +37,8 @@ class PcConvBp(nn.Module):
         self.FFconv = nn.Conv2d(inchan, outchan, kernel_size, stride, padding, bias=bias)
         self.relu = nn.ReLU(inplace=True)
         self.cls = cls # e.g.: 5
+        self.adaptive = adaptive
+        self.dropout = dropout
         if self.cls != 0:
             self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1,outchan,1,1))])
             self.FBconv = nn.ConvTranspose2d(outchan, inchan, kernel_size, stride, padding, bias=bias)
