@@ -90,32 +90,32 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     print('==> Building model..')
     
     if backend == 'modelA':
-        from modelA import PredNetBpD
+        from pcn.modelA import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles,Tied=Tied)
     elif backend == 'modelB':
-        from modelB import PredNetBpD
+        from pcn.modelB import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles,Tied=Tied)
     elif backend == 'modelC':
-        from modelC import PredNetBpD
+        from pcn.modelC import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     elif backend == 'modelC_dp2':
-        from modelC_dp2 import PredNetBpD
+        from pcn.modelC_dp2 import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     
     elif backend == 'modelC_h_dp2':
-        from modelC_h_dp2 import PredNetBpD
+        from pcn.modelC_h_dp2 import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     elif backend == 'modelD':
-        from modelD import PredNetBpD
+        from pcn.modelD import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     elif backend == 'modelE':
-        from modelE import PredNetBpD
+        from pcn.modelE import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     elif backend == 'modelE_dp2':
-        from modelE_dp2 import PredNetBpD
+        from pcn.modelE_dp2 import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     elif backend == 'modelF':
-        from modelF import PredNetBpD
+        from pcn.modelF import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     else:
         raise ValueError
@@ -353,6 +353,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         test(epoch)
     os.makedirs('models/', exist_ok=True)
     setting = '%s_%s_adaptive%d_circles%d_dropout%.2f_all%dclf%d_vanilla%d_ge%d_fb%s_lmbda%.4f' % (backend, dataset_name, adaptive, circles, dropout, step_all, step_clf, vanilla, ge, fb.replace(':', ''), lmbda)
+    print('model is save as %s'%(os.path.join('models', setting + '.pt')))
     torch.save(model, os.path.join('models', setting + '.pt'))
 
 
@@ -362,9 +363,10 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     model.eval()
     model.dropout = 1.0
     model.adaptive = False
+    statfile.write('\n')
     for cls in range(args.circles + 1):
         # set cls
-        print('circles:', cls)
+        statfile.write('circles: %d \n'%(cls))
         model.cls = cls
         for name, child in model.named_children():
             if name == 'classifiers':
@@ -376,6 +378,10 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
 
         test(max_epoch - 1)        
 
+    with open(logpath+'training_stats_'+modelname+'.txt', 'r') as statfile:
+        print('\n' * 5)
+        for line in statfile.readlines():
+            print(line.strip())
 
 
 if __name__ == '__main__':

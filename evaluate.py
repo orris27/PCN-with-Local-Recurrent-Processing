@@ -23,6 +23,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     dataset_name = args.dataset_name
     lmbda = args.lmbda
     threshold = args.threshold
+    flops = list(map(int, args.flops.split(':')))
     max_epoch = 100
     root = './'
     rep = 1
@@ -165,14 +166,17 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         for j in range(len(outputs)):
             acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
 
+        exit_percent = [(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))]
 
         if epoch + 1 == max_epoch:
-            clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+            clf_exit_str = ' '.join(['%.3f'%p for p in exit_percent])
         else:
             clf_exit_str = ''
 
-        statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %s%% | Adaptive Acc:%.3f%% | clf_exit: %s ' \
-                % (epoch, test_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str)
+        #print(flops, exit_percent)
+        adaptive_flops = sum([f * percent for f, percent in zip(flops, exit_percent)])
+        statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %s%% | Adaptive Acc:%.3f%% | clf_exit: %s | adaptive_flops: %f ' \
+                % (epoch, test_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str, adaptive_flops)
 
         #statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %.3f%% (%d/%d) | best_acc: %.3f' \
         #          % (epoch, test_loss/(batch_idx+1), 100.*correct/total, correct, total, best_acc)
@@ -206,11 +210,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--path', type=str, required=True)
 
+    parser.add_argument('--flops', type=str, default='0:0:0')
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--circles', type=int, default=1)
     parser.add_argument('--lmbda', type=float, default=0.0)
     parser.add_argument('--threshold', type=float, default=0.5)
-    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelD', 'modelE', 'modelF'])
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_h_dp2', 'modelD', 'modelE', 'modelF'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
     main_cifar(args)
