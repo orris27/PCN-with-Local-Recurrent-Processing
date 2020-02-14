@@ -98,7 +98,13 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     elif backend == 'modelC':
         from modelC import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
+    elif backend == 'modelC_dp2':
+        from modelC_dp2 import PredNetBpD
+        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     
+    elif backend == 'modelC_h_dp2':
+        from modelC_h_dp2 import PredNetBpD
+        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
     elif backend == 'modelD':
         from modelD import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
@@ -166,7 +172,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
             for j in range(len(outputs)):
                 loss += criterion(outputs[j], targets)
             if backend in ['modelE', 'modelE_dp2', 'modelF']:
-                loss += lmbda * sum([torch.norm(errors[j]) for j in range(len(errors))]) / targets.shape[0]
+                loss += lmbda * sum([torch.norm(errors[j]) for j in range(len(errors)) if errors[j] is not None]) / targets.shape[0]
 
             loss.backward()
             optimizer.step()
@@ -251,7 +257,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                 for j in range(len(outputs)):
                     loss += criterion(outputs[j], targets)
                 if backend in ['modelE', 'modelE_dp2', 'modelF']:
-                    loss += lmbda * sum([torch.norm(errors[j]) for j in range(len(errors))]) / targets.shape[0]
+                    loss += lmbda * sum([torch.norm(errors[j]) for j in range(len(errors)) if errors[j] is not None]) / targets.shape[0]
             
                 test_loss += to_python_float(loss.data)
                 # multiple classifiers
@@ -386,7 +392,7 @@ if __name__ == '__main__':
     parser.add_argument('--step_clf', type=int, default=0) # 10
     parser.add_argument('--lmbda', type=float, default=0.0)
     parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
-    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelD', 'modelE', 'modelE_dp2', 'modelF'])
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_dp2', 'modelC_h_dp2', 'modelD', 'modelE', 'modelE_dp2',  'modelF'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
     main_cifar(args)
