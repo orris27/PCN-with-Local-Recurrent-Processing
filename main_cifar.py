@@ -22,17 +22,18 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
     lr = 0.01
     circles = args.circles
     if backend == 'prednet':
-        from prednet import PredNetBpD
+        from pcn.prednet import PredNetBpD
     elif backend == 'prednetE':
-        from prednetE import PredNetBpD
+        from pcn.prednetE import PredNetBpD
     elif backend == 'prednet_h':
-        from prednet_h import PredNetBpD
+        from pcn.prednet_h import PredNetBpD
     elif backend == 'prednetF':
-        from prednetF import PredNetBpD
+        from pcn.prednetF import PredNetBpD
+    elif backend == 'resnet56':
+        from resnet.resnet_bl import resnet56
     else:
         raise ValueError
     
-    models = {'PredNetBpD':PredNetBpD}
     modelname = model+'_'+str(circles)+'CLS_'+str(nesterov)+'Nes_'+str(weightDecay)+'WD_'+str(Tied)+'TIED_'+str(rep)+'REP'
     
     # clearn folder
@@ -64,7 +65,12 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
     
     # Model
     print('==> Building model..')
-    net = models[model](num_classes=100,cls=circles,Tied=Tied)
+    if backend.startswith('prednet'):
+        net = PredNetBpD(num_classes=100,cls=circles, Tied=Tied)
+    elif backend.startswith('resnet'):
+        net = resnet56(num_classes=100)
+    else:
+        raise ValueError
 
     print(net)
        
@@ -182,6 +188,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--circles', type=int, default=1)
     parser.add_argument('--batch_size', type=int, default=128)
-    parser.add_argument('--backend', type=str, required=True, choices=['prednet', 'prednet_h', 'prednetE', 'prednetF'])
+    parser.add_argument('--backend', type=str, required=True, choices=['prednet', 'prednet_h', 'prednetE', 'prednetF', 'resnet56'])
     args = parser.parse_args()
     main_cifar(args)
