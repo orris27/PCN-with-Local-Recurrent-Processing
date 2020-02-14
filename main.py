@@ -101,7 +101,6 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     elif backend == 'modelC_dp2':
         from pcn.modelC_dp2 import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
-    
     elif backend == 'modelC_h_dp2':
         from pcn.modelC_h_dp2 import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
@@ -117,6 +116,9 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     elif backend == 'modelF':
         from pcn.modelF import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge, fb=fb)
+    elif backend == 'resnet56':
+        from resnet.resnet import resnet56
+        model = resnet56(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge)
     else:
         raise ValueError
 
@@ -144,24 +146,18 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         print('\nEpoch: %d' % epoch)
         model.train()
         train_loss = 0
-        #correct = 0
-        #total = 0
         corrects = np.zeros(100) # allocate large space 
         totals = np.zeros(100)
         exit_count = np.zeros(100)
         total_adaptive = 0
         correct_adaptive = 0
         
-        #training_setting = 'backend=%s | dataset=%s | adaptive=%d | batch_size=%d | epoch=%d | lr=%.1e | circles=%d | dropout=%.2f | step_all=%d | step_clf=%d | vanilla=%d | ge=%d | fb=%s' % (backend, dataset_name, adaptive, batch_size, epoch, optimizer.param_groups[0]['lr'], circles, dropout, step_all, step_clf, vanilla, ge, fb.replace(':', ''))
         training_setting = str(args)
         statfile.write('\nTraining Setting: '+training_setting+'\n')
         
         for batch_idx, (inputs, targets) in enumerate(trainloader):
-            #if use_cuda:
-            #    inputs, targets = inputs.cuda(), targets.cuda()
             inputs, targets = inputs.cuda(), targets.cuda()
             optimizer.zero_grad()
-            #inputs, targets = Variable(inputs), Variable(targets)
             if backend in ['modelE', 'modelE_dp2', 'modelF']:
                 outputs, errors = model(inputs)
             else:
@@ -210,10 +206,6 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
       
             if batch_idx % 20 == 0:
                 print('Batch: %d | Loss: %.3f | Acc: %s%% | Adaptive Acc: %.3f%% | clf_exit: %s'%(batch_idx, train_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str))
-            #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %s%%'
-            #    % (train_loss/(batch_idx+1), acc_str))
-            #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
-            #    % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))
 
         acc_str = ''
         for j in range(len(outputs)):
@@ -226,8 +218,6 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
 
         statstr = 'Training: Epoch=%d | Loss: %.3f |  Acc: %s%% | Adaptive Acc:%.3f%% | clf_exit: %s ' \
                 % (epoch, train_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str)
-        #statstr = 'Training: Epoch=%d | Loss: %.3f |  Acc: %.3f%% (%d/%d) | best acc: %.3f' \
-        #          % (epoch, train_loss/(batch_idx+1), 100.*correct/total, correct, total, best_acc)
         statfile.write(statstr+'\n')
     
     
@@ -287,16 +277,9 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                     correct_adaptive = 0
                     total_adaptive = 1e-5
 
-                #progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %s%%'
-                #    % (test_loss/(batch_idx+1), acc_str))
-
                 if batch_idx % 20 == 0:
-                    #print('Batch: %d | Loss: %.3f | Acc: %s%%'%(batch_idx, test_loss/(batch_idx+1), acc_str))
                     print('Batch: %d | Loss: %.3f | Acc: %s%% | Adaptive Acc: %.3f%% | clf_exit: %s'%(batch_idx, test_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str))
 
-
-                #progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
-                #    % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
 
 
         acc_str = ''
@@ -312,22 +295,8 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %s%% | Adaptive Acc:%.3f%% | clf_exit: %s ' \
                 % (epoch, test_loss/(batch_idx+1), acc_str, 100.*correct_adaptive / total_adaptive, clf_exit_str)
 
-        #statstr = 'Testing: Epoch=%d | Loss: %.3f |  Acc: %.3f%% (%d/%d) | best_acc: %.3f' \
-        #          % (epoch, test_loss/(batch_idx+1), 100.*correct/total, correct, total, best_acc)
         statfile.write(statstr+'\n')
         
-        # Save checkpoint.
-        #acc = 100.*correct/total
-        #state = {
-        #    'model': model.state_dict(),
-        #    'acc': acc,
-        #    'epoch': epoch,
-        #}
-        #torch.save(state, checkpointpath + modelname + '_last_ckpt.t7')
-        #if acc >= best_acc:
-            #print('Saving..')
-            #torch.save(state, checkpointpath + modelname + '_best_ckpt.t7')
-            #best_acc = acc
         
     # Set adaptive learning rates
     def decrease_learning_rate():
@@ -398,7 +367,7 @@ if __name__ == '__main__':
     parser.add_argument('--step_clf', type=int, default=0) # 10
     parser.add_argument('--lmbda', type=float, default=0.0)
     parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
-    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_dp2', 'modelC_h_dp2', 'modelD', 'modelE', 'modelE_dp2',  'modelF'])
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_dp2', 'modelC_h_dp2', 'modelD', 'modelE', 'modelE_dp2',  'modelF', 'resnet56'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
     main_cifar(args)

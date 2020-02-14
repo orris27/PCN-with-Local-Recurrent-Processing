@@ -52,7 +52,7 @@ for num_classes in [10, 100]:
     print('num_classes:', num_classes)
     for circles in [0, 1, 2]:
         print('circles:', circles)
-        from prednet import PredNetBpD
+        from pcn.prednet import PredNetBpD
         model = PredNetBpD(num_classes=num_classes, cls=circles)
 
         params = sum([w.numel() for name, w in model.named_parameters()])
@@ -71,7 +71,7 @@ for num_classes in [10, 100]:
     print('num_classes:', num_classes)
     for circles in [0, 1, 2]:
         print('circles:', circles)
-        from prednetE import PredNetBpD
+        from pcn.prednetE import PredNetBpD
         model = PredNetBpD(num_classes=num_classes, cls=circles)
 
         params = sum([w.numel() for name, w in model.named_parameters()])
@@ -90,9 +90,27 @@ for num_classes in [10, 100]:
     print('num_classes:', num_classes)
     for circles in [0, 1, 2]:
         print('circles:', circles)
-        from prednet_h import PredNetBpD
+        from pcn.prednet_h import PredNetBpD
         model = PredNetBpD(num_classes=num_classes, cls=circles).eval()
     
+
+        params = sum([w.numel() for name, w in model.named_parameters()])
+        y_predicted = model.forward(x)
+
+        flops = count_flops(model)
+        print('flops: %d | params: %d' % (flops, params))
+
+print(model)
+
+print('\n'*3)
+
+print('resnet_bl')
+for num_classes in [10, 100]:
+    print('num_classes:', num_classes)
+    for circles in [0]:
+        print('circles:', circles)
+        from resnet.resnet_bl import resnet56
+        model = resnet56(num_classes=num_classes).eval()
 
         params = sum([w.numel() for name, w in model.named_parameters()])
         y_predicted = model.forward(x)
@@ -110,15 +128,36 @@ print('\n'*3)
 
 
 
+
 # Ours
+#print('Ours')
+#f = []
+#for num_classes in [10, 100]:
+#    print('num_classes:', num_classes)
+#    for circles in [0, 1, 2]:
+#        print('circles:', circles)
+#        from modelC_h_dp2 import PredNetBpD
+#        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=1.0, adaptive=False, vanilla=False, ge=0, fb='1:1:1')
+#        model = model.eval()
+#
+#        params = sum([w.numel() for name, w in model.named_parameters()])
+#        y_predicted = model.forward(x)
+#
+#        flops = count_flops(model)
+#        f.append(flops)
+#        print('flops: %d | params: %d' % (flops, params))
+#    print(f[1] - f[0], f[2] - f[1])
+#print(model)
+
+
 print('Ours')
 f = []
 for num_classes in [10, 100]:
     print('num_classes:', num_classes)
     for circles in [0, 1, 2]:
         print('circles:', circles)
-        from modelC_h_dp2 import PredNetBpD
-        model = PredNetBpD(num_classes=num_classes,cls=circles, dropout=1.0, adaptive=False, vanilla=False, ge=0, fb='1:1:1')
+        from resnet.resnet import resnet56
+        model = resnet56(num_classes=num_classes,cls=circles, dropout=1.0, adaptive=False, vanilla=False, ge=0)
         model = model.eval()
 
         params = sum([w.numel() for name, w in model.named_parameters()])
