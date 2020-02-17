@@ -48,19 +48,20 @@ class LambdaLayer(nn.Module):
         return self.lambd(x)
 
 class ClassifierModule(nn.Module):
-    def __init__(self, in_channel_block, in_channel_clf, num_classes, adaptive, cls, dropout):
+    def __init__(self, in_channel_block, in_channel_clf, hidden_channel, num_classes, adaptive, cls, dropout):
         super(ClassifierModule, self).__init__()
         self.relu = nn.ReLU(inplace=True)
         #self.BN = nn.BatchNorm2d(in_channel_block)
-        self.linear = nn.Linear(in_channel_block + in_channel_clf, num_classes)
+        self.linear = nn.Linear(in_channel_block + in_channel_clf, hidden_channel)
         self.cls = cls # e.g.: 5
         if self.cls != 0:
-            self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1, num_classes))])
-            self.linear_bw = nn.Linear(num_classes, in_channel_block + in_channel_clf)
+            self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1, hidden_channel))])
+            self.linear_bw = nn.Linear(hidden_channel, in_channel_block + in_channel_clf)
         self.adaptive = adaptive
         self.dropout = dropout
-        self.BN1d = nn.BatchNorm1d(num_classes)
+        self.BN1d = nn.BatchNorm1d(hidden_channel)
         
+        self.linear2 = nn.Linear(hidden_channel, num_classes)
     
 
     def forward(self, x_block, x_clf):
@@ -94,7 +95,7 @@ class ClassifierModule(nn.Module):
 
         # no bypass
 
-        return rep
+        return self.linear2(self.relu(rep)), rep
 
 
 
@@ -140,6 +141,7 @@ class ResNet(nn.Module):
         self.dropout = dropout
         self.vanilla = vanilla
         self.ge = ge
+        self.clf_h = [32, 64, 64]
 
 
         self.in_planes = 16
@@ -154,9 +156,9 @@ class ResNet(nn.Module):
 
         #self.classifiers = []
         self.classifiers = nn.ModuleList()
-        self.classifiers.append(ClassifierModule(16, 0, num_classes, self.adaptive, self.cls, self.dropout))
-        self.classifiers.append(ClassifierModule(32, num_classes, num_classes, self.adaptive, self.cls, self.dropout))
-        self.classifiers.append(ClassifierModule(64, num_classes, num_classes, self.adaptive, self.cls, self.dropout))
+        self.classifiers.append(ClassifierModule(16, 0, self.clf_h[len(self.classifiers)], num_classes, self.adaptive, self.cls, self.dropout))
+        self.classifiers.append(ClassifierModule(32, self.clf_h[len(self.classifiers) - 1], self.clf_h[len(self.classifiers)], num_classes, self.adaptive, self.cls, self.dropout))
+        self.classifiers.append(ClassifierModule(64, self.clf_h[len(self.classifiers) - 1], self.clf_h[len(self.classifiers)], num_classes, self.adaptive, self.cls, self.dropout))
 
         #self.linear = nn.Linear(64, num_classes)
 
@@ -182,10 +184,10 @@ class ResNet(nn.Module):
                 out = gradient_rescale(out, 1.0 / (len(self.classifiers) - clf_id))
 
             if self.vanilla is True or len(res) == 0:
-                r = self.classifiers[clf_id](out, None) # representation, hidden outputs
+                r, h = self.classifiers[clf_id](out, None) # representation, hidden outputs
                 res.append(r)
             else:
-                r = self.classifiers[clf_id](out, res[-1])
+                r, h = self.classifiers[clf_id](out, h)
                 res.append(r)
 
             if self.ge is True:

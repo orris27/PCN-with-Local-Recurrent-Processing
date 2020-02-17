@@ -119,6 +119,12 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     elif backend == 'resnet56':
         from resnet.resnet import resnet56
         model = resnet56(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge)
+    elif backend == 'resnet56_h':
+        from resnet.resnet_h import resnet56
+        model = resnet56(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge)
+    elif backend == 'resnet56_dense':
+        from resnet.resnet_dense import resnet56
+        model = resnet56(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge)
     else:
         raise ValueError
 
@@ -323,7 +329,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     os.makedirs('models/', exist_ok=True)
     setting = '%s_%s_adaptive%d_circles%d_dropout%.2f_all%dclf%d_vanilla%d_ge%d_fb%s_lmbda%.4f' % (backend, dataset_name, adaptive, circles, dropout, step_all, step_clf, vanilla, ge, fb.replace(':', ''), lmbda)
     print('model is save as %s'%(os.path.join('models', setting + '.pt')))
-    torch.save(model, os.path.join('models', setting + '.pt'))
+    torch.save(model.state_dict(), os.path.join('models', setting + '.pt'))
 
 
     # Test different circles:
@@ -367,7 +373,7 @@ if __name__ == '__main__':
     parser.add_argument('--step_clf', type=int, default=0) # 10
     parser.add_argument('--lmbda', type=float, default=0.0)
     parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
-    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_dp2', 'modelC_h_dp2', 'modelD', 'modelE', 'modelE_dp2',  'modelF', 'resnet56'])
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_dp2', 'modelC_h_dp2', 'modelD', 'modelE', 'modelE_dp2',  'modelF', 'resnet56', 'resnet56_h', 'resnet56_dense'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
     main_cifar(args)

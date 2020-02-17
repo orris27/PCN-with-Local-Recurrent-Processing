@@ -61,8 +61,7 @@ for num_classes in [10, 100]:
         flops = count_flops(model)
         print('flops: %d | params: %d' % (flops, params))
 
-print(model)
-
+#print(model)
 print('\n'*3)
 
 
@@ -80,8 +79,7 @@ for num_classes in [10, 100]:
         flops = count_flops(model)
         print('flops: %d | params: %d' % (flops, params))
 
-print(model)
-
+#print(model)
 print('\n'*3)
 
 
@@ -100,8 +98,25 @@ for num_classes in [10, 100]:
         flops = count_flops(model)
         print('flops: %d | params: %d' % (flops, params))
 
-print(model)
+#print(model)
+print('\n'*3)
 
+
+print('resnet_h_bl')
+for num_classes in [10, 100]:
+    print('num_classes:', num_classes)
+    for circles in [0]:
+        print('circles:', circles)
+        from resnet.resnet_h_bl import resnet56
+        model = resnet56(num_classes=num_classes).eval()
+
+        params = sum([w.numel() for name, w in model.named_parameters()])
+        y_predicted = model.forward(x)
+
+        flops = count_flops(model)
+        print('flops: %d | params: %d' % (flops, params))
+
+#print(model)
 print('\n'*3)
 
 print('resnet_bl')
@@ -118,9 +133,28 @@ for num_classes in [10, 100]:
         flops = count_flops(model)
         print('flops: %d | params: %d' % (flops, params))
 
-print(model)
-
+#print(model)
 print('\n'*3)
+
+
+
+print('modelC_dp2_bl')
+for num_classes in [10, 100]:
+    print('num_classes:', num_classes)
+    for circles in [0]:
+        print('circles:', circles)
+        from pcn.modelC_dp2_bl import PredNetBpD
+        model = PredNetBpD(num_classes=num_classes).eval()
+
+        params = sum([w.numel() for name, w in model.named_parameters()])
+        y_predicted = model.forward(x)
+
+        flops = count_flops(model)
+        print('flops: %d | params: %d' % (flops, params))
+
+#print(model)
+print('\n'*3)
+
 
 
 

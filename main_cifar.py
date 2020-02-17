@@ -29,8 +29,12 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
         from pcn.prednet_h import PredNetBpD
     elif backend == 'prednetF':
         from pcn.prednetF import PredNetBpD
-    elif backend == 'resnet56':
+    elif backend == 'resnet56_bl':
         from resnet.resnet_bl import resnet56
+    elif backend == 'resnet56_h_bl':
+        from resnet.resnet_h_bl import resnet56
+    elif backend == 'modelC_dp2_bl':
+        from pcn.modelC_dp2_bl import PredNetBpD
     else:
         raise ValueError
     
@@ -69,6 +73,8 @@ def main_cifar(args, model='PredNetBpD', gpunum=1, Tied=False, weightDecay=1e-3,
         net = PredNetBpD(num_classes=100,cls=circles, Tied=Tied)
     elif backend.startswith('resnet'):
         net = resnet56(num_classes=100)
+    elif backend.startswith('modelC'):
+        net = PredNetBpD(num_classes=100)
     else:
         raise ValueError
 
@@ -188,6 +194,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--circles', type=int, default=1)
     parser.add_argument('--batch_size', type=int, default=128)
-    parser.add_argument('--backend', type=str, required=True, choices=['prednet', 'prednet_h', 'prednetE', 'prednetF', 'resnet56'])
+    parser.add_argument('--backend', type=str, required=True, choices=['prednet', 'prednet_h', 'prednetE', 'prednetF', 'resnet56_bl', 'resnet56_h_bl', 'modelC_dp2_bl'])
     args = parser.parse_args()
     main_cifar(args)

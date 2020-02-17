@@ -20,12 +20,13 @@ class LambdaLayer(nn.Module):
         return self.lambd(x)
 
 class ClassifierModule(nn.Module):
-    def __init__(self, in_channel_block, num_classes):
+    def __init__(self, in_channel_block, hidden_channel, num_classes):
         super(ClassifierModule, self).__init__()
         self.relu = nn.ReLU(inplace=True)
-        self.linear = nn.Linear(in_channel_block, num_classes)
-        self.BN1d = nn.BatchNorm1d(num_classes)
+        self.linear = nn.Linear(in_channel_block, hidden_channel)
+        self.BN1d = nn.BatchNorm1d(hidden_channel)
         
+        self.linear2 = nn.Linear(hidden_channel, num_classes)
     
 
     def forward(self, x_block):
@@ -40,7 +41,7 @@ class ClassifierModule(nn.Module):
 
         # no bypass
 
-        return rep
+        return self.linear2(self.relu(rep))
 
 
 
@@ -91,7 +92,7 @@ class ResNet(nn.Module):
         self.layers.append(self._make_layer(block, 64, num_blocks[2], stride=2))
 
         #self.classifiers = []
-        self.classifier = ClassifierModule(64, num_classes)
+        self.classifier = ClassifierModule(64, 64, num_classes)
 
         #self.linear = nn.Linear(64, num_classes)
 
