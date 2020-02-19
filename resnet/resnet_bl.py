@@ -1,3 +1,4 @@
+# https://github.com/akamaster/pytorch_resnet_cifar10/blob/master/resnet.py
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
