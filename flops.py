@@ -184,14 +184,34 @@ print('\n'*3)
 #print(model)
 
 
-print('Ours')
+#print('Ours')
+#f = []
+#for num_classes in [10, 100]:
+#    print('num_classes:', num_classes)
+#    for circles in [0, 1, 2]:
+#        print('circles:', circles)
+#        from resnet.resnet import resnet56
+#        model = resnet56(num_classes=num_classes,cls=circles, dropout=1.0, adaptive=False, vanilla=False, ge=0)
+#        model = model.eval()
+#
+#        params = sum([w.numel() for name, w in model.named_parameters()])
+#        y_predicted = model.forward(x)
+#
+#        flops = count_flops(model)
+#        f.append(flops)
+#        print('flops: %d | params: %d' % (flops, params))
+#    print(f[1] - f[0], f[2] - f[1])
+#print(model)
+
+
+print('modelG')
 f = []
 for num_classes in [10, 100]:
     print('num_classes:', num_classes)
     for circles in [0, 1, 2]:
         print('circles:', circles)
-        from resnet.resnet import resnet56
-        model = resnet56(num_classes=num_classes,cls=circles, dropout=1.0, adaptive=False, vanilla=False, ge=0)
+        from pcn.modelG import PredNetBpD
+        model = PredNetBpD(num_classes=num_classes,cls=circles, ge=False)
         model = model.eval()
 
         params = sum([w.numel() for name, w in model.named_parameters()])

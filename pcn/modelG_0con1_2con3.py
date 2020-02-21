@@ -47,15 +47,19 @@ class PcConvBp(nn.Module):
 
 
 class ClassifierModuleFirst(nn.Module):
-    def __init__(self, in_channel_block, num_classes, hidden_channel, score_layer=False):
+    def __init__(self, in_channel_block, num_classes, hidden_channel, cls, score_layer=False):
         super(ClassifierModuleFirst, self).__init__()
         self.relu = nn.ReLU(inplace=False)
         self.BN = nn.BatchNorm2d(in_channel_block)
 
         self.linear_h = nn.Linear(in_channel_block, hidden_channel)
         self.linear = nn.Linear(hidden_channel, num_classes)
-
+        self.cls = cls
+        if self.cls != 0:
+            self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1, hidden_channel))])
+            self.linear_bw = nn.Linear(hidden_channel, in_channel_block)
         self.BN1d = nn.BatchNorm1d(hidden_channel)
+        #self.BN1d = nn.BatchNorm1d(hidden_channel)
 
         self.score_layer = score_layer
         if self.score_layer is True:
@@ -66,7 +70,17 @@ class ClassifierModuleFirst(nn.Module):
         out_block = out_block.view(out_block.size(0), -1) # (batch_size, c_block)
 
         out = out_block
-        h = self.BN1d(self.linear_h(out))
+        #h = self.BN1d(self.linear_h(out))
+
+        rep = self.linear_h(out)
+        if self.cls == 0:
+            pass
+        else:
+            b0 = F.relu(self.b0[0] + 1.0).expand_as(rep)
+            for _ in range(self.cls):
+                rep = self.linear_h(self.relu(out - self.linear_bw(rep))) * b0 + rep
+        h = self.BN1d(rep)
+
 
         out = self.linear(self.relu(h))
         if self.score_layer is True:
@@ -125,19 +139,34 @@ class ClassifierModuleMiddle(nn.Module):
         return out, h, score
 
 class ClassifierModuleLast(nn.Module):
-    def __init__(self, in_channel_block, num_classes):
+    def __init__(self, in_channel_block, in_channel_clf, num_classes, cls):
         super(ClassifierModuleLast, self).__init__()
         self.relu = nn.ReLU(inplace=False)
         self.BN = nn.BatchNorm2d(in_channel_block)
+        self.cls = cls
+        if self.cls != 0:
+            self.b0 = nn.ParameterList([nn.Parameter(torch.zeros(1, num_classes))])
+            self.linear_bw = nn.Linear(num_classes, in_channel_block + in_channel_clf)
+        self.BN1d = nn.BatchNorm1d(num_classes)
 
-        self.linear = nn.Linear(in_channel_block, num_classes)
+        self.linear = nn.Linear(in_channel_block + in_channel_clf, num_classes)
 
-    def forward(self, x_block):
+    def forward(self, x_block, x_clf):
         out_block = F.avg_pool2d(self.relu(self.BN(x_block)), x_block.size(-1))
         out_block = out_block.view(out_block.size(0), -1) # (batch_size, c_block)
+        out_clf = x_clf # (batch_size, c_clf)
 
-        out = out_block
-        out = self.linear(out)
+        out = torch.cat([out_block, out_clf], dim=1)
+
+        #out = self.linear(out)
+        rep = self.linear(out)
+        if self.cls == 0:
+            pass
+        else:
+            b0 = F.relu(self.b0[0] + 1.0).expand_as(rep)
+            for _ in range(self.cls):
+                rep = self.linear(self.relu(out - self.linear_bw(rep))) * b0 + rep
+        out = self.BN1d(rep)
 
         return out
 
@@ -167,9 +196,9 @@ class PredNetBpD(nn.Module):
         for i in range(self.nlays):
             self.PcConvs.append(PcConvBp(self.ics[i], self.ocs[i]))
                 
-        self.classifiers.append(ClassifierModuleFirst(in_channel_block=128, num_classes=num_classes, hidden_channel=32, score_layer=self.score_layer))
+        self.classifiers.append(ClassifierModuleFirst(in_channel_block=128, num_classes=num_classes, hidden_channel=32, cls=self.cls, score_layer=self.score_layer))
         self.classifiers.append(ClassifierModuleMiddle(in_channel_block=256, in_channel_clf=32, num_classes=num_classes, cls=self.cls, hidden_channel=72, score_layer=self.score_layer))
-        self.classifiers.append(ClassifierModuleLast(in_channel_block=512, num_classes=num_classes))
+        self.classifiers.append(ClassifierModuleLast(in_channel_block=512, in_channel_clf=72, num_classes=num_classes, cls=self.cls))
 
                 
         self.BNs = nn.ModuleList([nn.BatchNorm2d(self.ics[i]) for i in range(self.nlays)])
@@ -201,7 +230,7 @@ class PredNetBpD(nn.Module):
                     res.append(r)
                     scores.append(score)
                 else: # last classifiers
-                    r = self.classifiers[clf_id](x)
+                    r = self.classifiers[clf_id](x, h)
                     res.append(r)
 
                 if self.ge is True:

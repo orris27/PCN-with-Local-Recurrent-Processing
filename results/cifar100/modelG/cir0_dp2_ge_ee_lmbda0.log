@@ -1,0 +1,1485 @@
+==> Preparing data..
+Dataset: CIFAR100
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+PredNetBpD(
+  (classifiers): ModuleList(
+    (0): ClassifierModuleFirst(
+      (relu): ReLU()
+      (BN): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear_h): Linear(in_features=128, out_features=32, bias=True)
+      (linear): Linear(in_features=32, out_features=100, bias=True)
+      (BN1d): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (score): Linear(in_features=32, out_features=1, bias=True)
+    )
+    (1): ClassifierModuleMiddle(
+      (relu): ReLU()
+      (BN): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear_h): Linear(in_features=288, out_features=72, bias=True)
+      (linear): Linear(in_features=72, out_features=100, bias=True)
+      (b0): ParameterList(  (0): Parameter containing: [torch.FloatTensor of size 1x72])
+      (linear_bw): Linear(in_features=72, out_features=288, bias=True)
+      (BN1d): BatchNorm1d(72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (score): Linear(in_features=72, out_features=1, bias=True)
+    )
+    (2): ClassifierModuleLast(
+      (relu): ReLU()
+      (BN): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (linear): Linear(in_features=512, out_features=100, bias=True)
+    )
+  )
+  (PcConvs): ModuleList(
+    (0): PcConvBp(
+      (FFconv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU()
+      (bypass): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (1): PcConvBp(
+      (FFconv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU()
+      (bypass): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (2): PcConvBp(
+      (FFconv): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU()
+      (bypass): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (3): PcConvBp(
+      (FFconv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU()
+      (bypass): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (4): PcConvBp(
+      (FFconv): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU()
+      (bypass): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (5): PcConvBp(
+      (FFconv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU()
+      (bypass): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (6): PcConvBp(
+      (FFconv): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU()
+      (bypass): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+    (7): PcConvBp(
+      (FFconv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (relu): ReLU()
+      (bypass): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+  )
+  (BNs): ModuleList(
+    (0): BatchNorm2d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (maxpool2d): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+
+Epoch: 0
+Batch: 0 | Loss: 13.886 | Acc: 0.000,0.000,0.781,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 13.456 | Acc: 0.781,1.749,3.943,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 13.050 | Acc: 1.010,1.791,5.278,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 12.696 | Acc: 1.268,2.280,6.698,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 12.449 | Acc: 1.427,2.585,7.388,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 12.260 | Acc: 1.477,2.715,8.114,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 12.091 | Acc: 1.517,2.686,8.742,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 11.958 | Acc: 1.529,2.687,9.386,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 11.835 | Acc: 1.572,2.732,9.831,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 11.708 | Acc: 1.588,2.745,10.385,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 11.589 | Acc: 1.586,2.787,10.887,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 11.478 | Acc: 1.612,2.793,11.372,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 11.384 | Acc: 1.605,2.781,11.754,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 11.286 | Acc: 1.664,2.727,12.267,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 11.181 | Acc: 1.702,2.686,12.778,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 11.095 | Acc: 1.716,2.673,13.206,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 11.001 | Acc: 1.733,2.655,13.678,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 10.910 | Acc: 1.766,2.671,14.184,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 10.817 | Acc: 1.777,2.679,14.710,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 10.731 | Acc: 1.763,2.655,15.215,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 9.394 | Acc: 3.125,1.562,25.781,% | Adaptive Acc: 25.781% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 9.617 | Acc: 1.897,1.674,22.470,% | Adaptive Acc: 22.470% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 9.586 | Acc: 1.905,1.905,21.837,% | Adaptive Acc: 21.837% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 9.616 | Acc: 2.036,2.126,20.978,% | Adaptive Acc: 20.978% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 1
+Batch: 0 | Loss: 9.632 | Acc: 2.344,0.781,20.312,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 8.976 | Acc: 2.269,1.823,24.070,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 8.854 | Acc: 2.229,2.210,25.553,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 8.815 | Acc: 2.024,2.254,26.076,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 8.782 | Acc: 1.987,2.035,26.128,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 8.741 | Acc: 1.988,2.081,26.408,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 8.701 | Acc: 1.905,2.085,26.614,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 8.682 | Acc: 1.812,2.117,26.590,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 8.642 | Acc: 1.786,2.145,26.878,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 8.588 | Acc: 1.778,2.180,27.197,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 8.539 | Acc: 1.776,2.169,27.480,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 8.494 | Acc: 1.775,2.135,27.779,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 8.442 | Acc: 1.760,2.172,28.034,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 8.399 | Acc: 1.745,2.179,28.385,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 8.362 | Acc: 1.779,2.135,28.639,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 8.332 | Acc: 1.799,2.089,28.821,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 8.301 | Acc: 1.782,2.064,29.038,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 8.258 | Acc: 1.773,2.057,29.351,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 8.222 | Acc: 1.746,2.036,29.590,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 8.182 | Acc: 1.766,2.040,29.876,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 7.236 | Acc: 0.781,0.781,35.938,% | Adaptive Acc: 35.938% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 7.681 | Acc: 1.190,1.823,33.817,% | Adaptive Acc: 33.817% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 7.730 | Acc: 1.696,1.658,33.460,% | Adaptive Acc: 33.460% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 7.722 | Acc: 1.588,1.742,33.350,% | Adaptive Acc: 33.350% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 2
+Batch: 0 | Loss: 7.180 | Acc: 3.125,1.562,34.375,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 7.311 | Acc: 2.158,1.786,35.491,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 7.242 | Acc: 1.944,1.867,36.490,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 7.178 | Acc: 2.011,1.908,36.808,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 7.167 | Acc: 1.919,1.861,36.796,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 7.167 | Acc: 1.934,1.818,36.796,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 7.165 | Acc: 1.911,1.750,36.693,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 7.174 | Acc: 1.873,1.740,36.702,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 7.143 | Acc: 1.820,1.737,36.961,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 7.152 | Acc: 1.761,1.696,36.995,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 7.112 | Acc: 1.769,1.691,37.255,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 7.088 | Acc: 1.782,1.729,37.542,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 7.055 | Acc: 1.780,1.715,37.795,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 7.035 | Acc: 1.781,1.721,37.958,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 6.998 | Acc: 1.738,1.721,38.203,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 6.978 | Acc: 1.729,1.729,38.349,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 6.955 | Acc: 1.733,1.743,38.491,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 6.937 | Acc: 1.753,1.746,38.593,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 6.917 | Acc: 1.742,1.751,38.649,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 6.888 | Acc: 1.741,1.747,38.872,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 6.462 | Acc: 3.125,0.781,44.531,% | Adaptive Acc: 44.531% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 6.569 | Acc: 1.488,1.339,42.411,% | Adaptive Acc: 42.411% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 6.543 | Acc: 1.905,1.524,42.340,% | Adaptive Acc: 42.340% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 6.563 | Acc: 1.883,1.562,41.816,% | Adaptive Acc: 41.816% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 3
+Batch: 0 | Loss: 5.466 | Acc: 6.250,2.344,55.469,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 6.262 | Acc: 1.897,2.195,45.052,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 6.116 | Acc: 1.696,2.058,45.236,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 6.147 | Acc: 1.575,1.934,44.416,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 6.143 | Acc: 1.572,1.977,44.416,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 6.126 | Acc: 1.516,2.019,44.516,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 6.119 | Acc: 1.530,1.905,44.551,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 6.093 | Acc: 1.590,1.895,44.758,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 6.089 | Acc: 1.606,1.878,44.735,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 6.065 | Acc: 1.619,1.886,44.950,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 6.065 | Acc: 1.609,1.846,44.986,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 6.055 | Acc: 1.608,1.835,44.973,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 6.045 | Acc: 1.621,1.854,45.021,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 6.030 | Acc: 1.631,1.844,45.181,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 6.021 | Acc: 1.621,1.879,45.318,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 6.005 | Acc: 1.607,1.882,45.471,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 5.992 | Acc: 1.587,1.928,45.556,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 5.972 | Acc: 1.565,1.936,45.736,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 5.951 | Acc: 1.541,1.939,45.929,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 5.928 | Acc: 1.556,1.921,46.122,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 5.416 | Acc: 3.125,0.781,55.469,% | Adaptive Acc: 55.469% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 5.961 | Acc: 1.674,1.265,46.838,% | Adaptive Acc: 46.838% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 6.002 | Acc: 2.115,1.772,46.189,% | Adaptive Acc: 46.189% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 5.950 | Acc: 2.177,1.780,46.401,% | Adaptive Acc: 46.401% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 4
+Batch: 0 | Loss: 5.459 | Acc: 2.344,1.562,49.219,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 5.369 | Acc: 1.935,2.046,49.740,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 5.389 | Acc: 1.734,2.115,49.524,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 5.361 | Acc: 1.562,1.960,50.333,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 5.432 | Acc: 1.456,1.977,50.068,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 5.435 | Acc: 1.454,1.942,50.224,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 5.431 | Acc: 1.401,1.943,50.400,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 5.388 | Acc: 1.413,1.928,50.687,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 5.374 | Acc: 1.417,1.922,50.796,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 5.351 | Acc: 1.480,1.964,50.967,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 5.345 | Acc: 1.461,1.936,51.003,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 5.342 | Acc: 1.481,1.930,51.075,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 5.337 | Acc: 1.446,1.929,51.161,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 5.328 | Acc: 1.428,1.964,51.179,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 5.320 | Acc: 1.451,1.946,51.237,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 5.303 | Acc: 1.487,1.949,51.407,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 5.289 | Acc: 1.472,1.954,51.502,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 5.270 | Acc: 1.469,1.941,51.583,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 5.265 | Acc: 1.448,1.930,51.621,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 5.264 | Acc: 1.462,1.925,51.601,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 5.141 | Acc: 1.562,1.562,57.812,% | Adaptive Acc: 57.812% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 5.220 | Acc: 1.600,1.525,52.716,% | Adaptive Acc: 52.716% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 5.309 | Acc: 1.886,1.658,52.058,% | Adaptive Acc: 52.058% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 5.298 | Acc: 1.793,1.652,51.767,% | Adaptive Acc: 51.767% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 5
+Batch: 0 | Loss: 4.643 | Acc: 2.344,0.781,55.469,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 4.890 | Acc: 1.190,1.339,53.981,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 4.815 | Acc: 1.334,1.677,55.259,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 4.728 | Acc: 1.281,1.562,56.019,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 4.671 | Acc: 1.360,1.746,56.491,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 4.681 | Acc: 1.392,1.756,56.482,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 4.685 | Acc: 1.485,1.827,56.379,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 4.695 | Acc: 1.490,1.812,56.361,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 4.692 | Acc: 1.461,1.820,56.279,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 4.682 | Acc: 1.459,1.813,56.461,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 4.688 | Acc: 1.434,1.811,56.336,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 4.698 | Acc: 1.446,1.824,56.310,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 4.688 | Acc: 1.433,1.832,56.376,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 4.693 | Acc: 1.422,1.826,56.340,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 4.680 | Acc: 1.449,1.854,56.439,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 4.680 | Acc: 1.448,1.866,56.375,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 4.678 | Acc: 1.446,1.867,56.386,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 4.671 | Acc: 1.425,1.856,56.447,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 4.665 | Acc: 1.439,1.887,56.497,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 4.658 | Acc: 1.452,1.899,56.570,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 4.557 | Acc: 3.125,2.344,59.375,% | Adaptive Acc: 59.375% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 4.908 | Acc: 1.562,1.414,54.799,% | Adaptive Acc: 54.799% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.944 | Acc: 1.982,1.620,54.097,% | Adaptive Acc: 54.097% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.942 | Acc: 2.036,1.614,53.906,% | Adaptive Acc: 53.906% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 6
+Batch: 0 | Loss: 3.925 | Acc: 0.781,1.562,64.062,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 4.341 | Acc: 1.339,2.195,60.268,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 4.243 | Acc: 1.372,2.058,60.709,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 4.176 | Acc: 1.396,1.947,61.014,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 4.195 | Acc: 1.360,1.939,60.928,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 4.201 | Acc: 1.354,1.988,60.999,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 4.174 | Acc: 1.337,2.014,61.060,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 4.171 | Acc: 1.346,2.028,61.192,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 4.187 | Acc: 1.368,1.994,61.054,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 4.178 | Acc: 1.351,1.990,61.127,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 4.168 | Acc: 1.333,1.947,61.217,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 4.181 | Acc: 1.372,1.990,61.012,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 4.191 | Acc: 1.368,1.990,60.863,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 4.189 | Acc: 1.386,2.000,60.881,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 4.187 | Acc: 1.387,1.968,60.849,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 4.184 | Acc: 1.389,1.931,60.844,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 4.184 | Acc: 1.402,1.903,60.884,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 4.174 | Acc: 1.379,1.918,61.020,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 4.178 | Acc: 1.392,1.900,60.968,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 4.182 | Acc: 1.396,1.880,60.907,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 4.716 | Acc: 3.906,0.781,58.594,% | Adaptive Acc: 58.594% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 4.699 | Acc: 1.600,1.339,56.734,% | Adaptive Acc: 56.734% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.834 | Acc: 1.848,1.505,55.450,% | Adaptive Acc: 55.450% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.833 | Acc: 1.793,1.575,55.277,% | Adaptive Acc: 55.277% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 7
+Batch: 0 | Loss: 4.455 | Acc: 0.781,2.344,61.719,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 3.835 | Acc: 1.674,2.009,63.653,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 3.816 | Acc: 1.620,1.963,63.796,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 3.807 | Acc: 1.524,1.998,63.755,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 3.774 | Acc: 1.447,2.035,64.226,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 3.758 | Acc: 1.361,1.957,64.256,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 3.762 | Acc: 1.395,1.976,64.308,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 3.779 | Acc: 1.457,2.006,63.968,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 3.778 | Acc: 1.398,1.975,64.029,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 3.780 | Acc: 1.394,1.903,64.084,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 3.794 | Acc: 1.368,1.835,63.938,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 3.794 | Acc: 1.396,1.838,63.942,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 3.798 | Acc: 1.394,1.819,63.842,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 3.809 | Acc: 1.371,1.793,63.769,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 3.811 | Acc: 1.351,1.774,63.712,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 3.810 | Acc: 1.329,1.768,63.764,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 3.815 | Acc: 1.324,1.777,63.671,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 3.817 | Acc: 1.299,1.785,63.611,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 3.828 | Acc: 1.296,1.779,63.578,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 3.832 | Acc: 1.284,1.774,63.587,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 4.109 | Acc: 0.781,0.781,63.281,% | Adaptive Acc: 63.281% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 4.479 | Acc: 1.302,1.339,58.482,% | Adaptive Acc: 58.482% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.563 | Acc: 1.734,1.372,58.251,% | Adaptive Acc: 58.251% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.542 | Acc: 1.780,1.409,58.197,% | Adaptive Acc: 58.197% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 8
+Batch: 0 | Loss: 3.390 | Acc: 0.781,0.781,70.312,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 3.373 | Acc: 1.451,1.786,68.378,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 3.401 | Acc: 1.334,1.620,67.569,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 3.435 | Acc: 1.332,1.562,67.264,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 3.452 | Acc: 1.302,1.630,66.937,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 3.464 | Acc: 1.207,1.740,66.692,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 3.466 | Acc: 1.233,1.788,66.606,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 3.480 | Acc: 1.236,1.817,66.434,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 3.491 | Acc: 1.252,1.781,66.309,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 3.493 | Acc: 1.260,1.718,66.380,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 3.497 | Acc: 1.267,1.749,66.414,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 3.495 | Acc: 1.262,1.753,66.413,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 3.497 | Acc: 1.235,1.712,66.465,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 3.499 | Acc: 1.266,1.712,66.409,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 3.502 | Acc: 1.268,1.765,66.367,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 3.504 | Acc: 1.241,1.742,66.331,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 3.511 | Acc: 1.246,1.762,66.248,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 3.513 | Acc: 1.233,1.739,66.221,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 3.510 | Acc: 1.216,1.755,66.244,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 3.506 | Acc: 1.210,1.747,66.310,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.735 | Acc: 2.344,0.781,63.281,% | Adaptive Acc: 63.281% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 4.264 | Acc: 1.376,1.488,61.570,% | Adaptive Acc: 61.570% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.284 | Acc: 1.677,1.467,61.033,% | Adaptive Acc: 61.033% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.289 | Acc: 1.678,1.422,60.733,% | Adaptive Acc: 60.733% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 9
+Batch: 0 | Loss: 3.245 | Acc: 0.000,0.781,68.750,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 3.181 | Acc: 1.153,1.786,69.196,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 3.124 | Acc: 1.010,2.058,69.989,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 3.085 | Acc: 1.025,1.806,70.453,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 3.113 | Acc: 1.080,1.746,70.216,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 3.104 | Acc: 1.106,1.717,70.158,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 3.114 | Acc: 1.123,1.724,69.886,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 3.158 | Acc: 1.125,1.646,69.515,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 3.149 | Acc: 1.150,1.660,69.551,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 3.163 | Acc: 1.127,1.722,69.445,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 3.186 | Acc: 1.166,1.710,69.244,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 3.210 | Acc: 1.167,1.718,68.969,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 3.223 | Acc: 1.170,1.708,68.737,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 3.211 | Acc: 1.191,1.718,68.930,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 3.205 | Acc: 1.221,1.718,69.050,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 3.212 | Acc: 1.215,1.710,69.004,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 3.220 | Acc: 1.212,1.696,68.933,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 3.224 | Acc: 1.205,1.705,68.924,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 3.221 | Acc: 1.210,1.688,68.884,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 3.217 | Acc: 1.241,1.696,68.906,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.810 | Acc: 0.781,0.000,64.062,% | Adaptive Acc: 64.062% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 4.088 | Acc: 1.376,1.004,63.281,% | Adaptive Acc: 63.281% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.149 | Acc: 1.543,1.277,61.852,% | Adaptive Acc: 61.852% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.192 | Acc: 1.460,1.255,61.322,% | Adaptive Acc: 61.322% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 10
+Batch: 0 | Loss: 3.327 | Acc: 0.781,2.344,69.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 2.901 | Acc: 1.376,1.600,71.652,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 2.873 | Acc: 1.410,1.810,72.313,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 2.853 | Acc: 1.294,1.678,72.208,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 2.884 | Acc: 1.264,1.688,72.020,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 2.875 | Acc: 1.253,1.717,72.153,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 2.867 | Acc: 1.207,1.679,72.069,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 2.875 | Acc: 1.225,1.596,72.180,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 2.886 | Acc: 1.233,1.635,72.103,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 2.897 | Acc: 1.200,1.645,71.974,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 2.916 | Acc: 1.209,1.675,71.863,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 2.925 | Acc: 1.205,1.633,71.797,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 2.923 | Acc: 1.186,1.611,71.800,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 2.940 | Acc: 1.194,1.625,71.651,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 2.936 | Acc: 1.218,1.624,71.636,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 2.944 | Acc: 1.215,1.625,71.566,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 2.949 | Acc: 1.217,1.640,71.459,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 2.950 | Acc: 1.244,1.631,71.440,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 2.955 | Acc: 1.240,1.630,71.386,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 2.963 | Acc: 1.239,1.591,71.360,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.991 | Acc: 0.781,0.000,65.625,% | Adaptive Acc: 65.625% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 4.091 | Acc: 1.488,1.116,62.426,% | Adaptive Acc: 62.426% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.128 | Acc: 1.696,1.124,61.795,% | Adaptive Acc: 61.795% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.154 | Acc: 1.665,1.101,61.885,% | Adaptive Acc: 61.885% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 11
+Batch: 0 | Loss: 3.537 | Acc: 1.562,3.906,64.844,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 2.637 | Acc: 1.525,1.414,74.368,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 2.686 | Acc: 1.315,1.524,73.876,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 2.682 | Acc: 1.358,1.422,74.065,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 2.661 | Acc: 1.312,1.399,74.180,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 2.645 | Acc: 1.191,1.330,74.312,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 2.663 | Acc: 1.227,1.369,74.070,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 2.675 | Acc: 1.219,1.335,73.853,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 2.679 | Acc: 1.184,1.315,73.850,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 2.678 | Acc: 1.239,1.334,73.761,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 2.686 | Acc: 1.279,1.322,73.737,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 2.701 | Acc: 1.276,1.333,73.590,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 2.713 | Acc: 1.280,1.316,73.457,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 2.721 | Acc: 1.269,1.347,73.423,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 2.732 | Acc: 1.243,1.335,73.296,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 2.741 | Acc: 1.256,1.355,73.245,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 2.739 | Acc: 1.258,1.341,73.287,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 2.751 | Acc: 1.260,1.359,73.204,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 2.757 | Acc: 1.273,1.363,73.102,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 2.763 | Acc: 1.288,1.380,73.019,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.819 | Acc: 0.781,0.781,70.312,% | Adaptive Acc: 70.312% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.809 | Acc: 1.228,1.228,65.588,% | Adaptive Acc: 65.588% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.832 | Acc: 1.582,1.334,64.939,% | Adaptive Acc: 64.939% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.838 | Acc: 1.422,1.383,64.908,% | Adaptive Acc: 64.908% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 12
+Batch: 0 | Loss: 2.292 | Acc: 1.562,1.562,78.125,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 2.412 | Acc: 1.525,1.079,76.339,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 2.391 | Acc: 1.372,1.315,76.315,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 2.421 | Acc: 1.319,1.383,75.909,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 2.421 | Acc: 1.418,1.331,76.013,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 2.437 | Acc: 1.385,1.269,75.766,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 2.439 | Acc: 1.401,1.272,75.859,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 2.447 | Acc: 1.385,1.335,75.870,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 2.465 | Acc: 1.349,1.334,75.694,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 2.477 | Acc: 1.342,1.342,75.596,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 2.487 | Acc: 1.325,1.341,75.571,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 2.493 | Acc: 1.322,1.329,75.414,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 2.505 | Acc: 1.352,1.313,75.334,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 2.503 | Acc: 1.368,1.323,75.305,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 2.517 | Acc: 1.404,1.318,75.161,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 2.521 | Acc: 1.389,1.331,75.127,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 2.529 | Acc: 1.370,1.312,75.056,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 2.534 | Acc: 1.361,1.320,75.014,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 2.544 | Acc: 1.342,1.316,74.948,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 2.546 | Acc: 1.316,1.321,74.936,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.470 | Acc: 1.562,0.781,69.531,% | Adaptive Acc: 69.531% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.780 | Acc: 0.818,1.265,65.774,% | Adaptive Acc: 65.774% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.813 | Acc: 1.220,1.296,65.015,% | Adaptive Acc: 65.015% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.790 | Acc: 1.191,1.153,65.061,% | Adaptive Acc: 65.061% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 13
+Batch: 0 | Loss: 2.368 | Acc: 1.562,4.688,74.219,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 2.121 | Acc: 1.228,1.637,79.799,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 2.155 | Acc: 1.353,1.696,79.497,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 2.171 | Acc: 1.242,1.524,78.829,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 2.192 | Acc: 1.264,1.456,78.704,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 2.179 | Acc: 1.261,1.416,79.092,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 2.178 | Acc: 1.285,1.349,79.081,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 2.196 | Acc: 1.280,1.319,78.801,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 2.227 | Acc: 1.315,1.325,78.508,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 2.245 | Acc: 1.291,1.342,78.319,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 2.271 | Acc: 1.267,1.283,77.942,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 2.285 | Acc: 1.276,1.273,77.775,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 2.293 | Acc: 1.261,1.293,77.700,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 2.299 | Acc: 1.236,1.314,77.625,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 2.307 | Acc: 1.229,1.307,77.552,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 2.314 | Acc: 1.228,1.308,77.455,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 2.330 | Acc: 1.229,1.295,77.263,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 2.337 | Acc: 1.219,1.290,77.135,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 2.347 | Acc: 1.221,1.279,77.019,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 2.361 | Acc: 1.216,1.273,76.835,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 4.017 | Acc: 0.781,0.000,68.750,% | Adaptive Acc: 68.750% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.994 | Acc: 1.228,0.967,64.695,% | Adaptive Acc: 64.695% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.036 | Acc: 1.429,1.181,63.548,% | Adaptive Acc: 63.548% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.006 | Acc: 1.294,1.076,63.653,% | Adaptive Acc: 63.653% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 14
+Batch: 0 | Loss: 1.946 | Acc: 2.344,0.781,78.906,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 2.040 | Acc: 1.674,1.376,80.097,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.942 | Acc: 1.601,1.410,80.869,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.993 | Acc: 1.588,1.306,80.085,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 2.004 | Acc: 1.543,1.331,79.929,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 2.040 | Acc: 1.423,1.261,79.610,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 2.054 | Acc: 1.420,1.220,79.545,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 2.093 | Acc: 1.369,1.219,79.189,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 2.091 | Acc: 1.349,1.228,79.251,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 2.088 | Acc: 1.373,1.265,79.312,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 2.107 | Acc: 1.337,1.244,79.120,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 2.108 | Acc: 1.347,1.258,79.147,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 2.111 | Acc: 1.339,1.258,79.156,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 2.124 | Acc: 1.323,1.227,79.098,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 2.136 | Acc: 1.321,1.243,78.981,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 2.141 | Acc: 1.326,1.248,78.919,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 2.157 | Acc: 1.324,1.244,78.785,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 2.163 | Acc: 1.308,1.228,78.684,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 2.177 | Acc: 1.322,1.223,78.556,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 2.180 | Acc: 1.316,1.220,78.539,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.978 | Acc: 1.562,0.000,63.281,% | Adaptive Acc: 63.281% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.880 | Acc: 1.302,1.190,65.848,% | Adaptive Acc: 65.848% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.933 | Acc: 1.429,1.239,65.187,% | Adaptive Acc: 65.187% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.919 | Acc: 1.396,1.217,65.292,% | Adaptive Acc: 65.292% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 15
+Batch: 0 | Loss: 1.569 | Acc: 2.344,3.906,84.375,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 1.837 | Acc: 1.116,1.190,81.436,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.837 | Acc: 1.220,1.220,81.441,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.878 | Acc: 1.294,1.153,81.135,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 1.905 | Acc: 1.273,1.157,80.883,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 1.941 | Acc: 1.245,1.238,80.693,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 1.946 | Acc: 1.214,1.272,80.714,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 1.936 | Acc: 1.241,1.252,80.884,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 1.954 | Acc: 1.237,1.271,80.551,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 1.966 | Acc: 1.213,1.252,80.451,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 1.974 | Acc: 1.224,1.263,80.333,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 1.984 | Acc: 1.230,1.280,80.179,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 2.000 | Acc: 1.235,1.264,80.038,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 2.014 | Acc: 1.248,1.296,79.945,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 2.023 | Acc: 1.268,1.290,79.838,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 2.033 | Acc: 1.272,1.308,79.742,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 2.042 | Acc: 1.268,1.290,79.673,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 2.051 | Acc: 1.272,1.269,79.596,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 2.056 | Acc: 1.275,1.249,79.536,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 2.066 | Acc: 1.267,1.251,79.419,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.245 | Acc: 0.000,0.781,70.312,% | Adaptive Acc: 70.312% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.673 | Acc: 0.818,0.856,67.671,% | Adaptive Acc: 67.671% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.745 | Acc: 1.105,0.953,67.073,% | Adaptive Acc: 67.073% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.743 | Acc: 1.089,1.037,66.919,% | Adaptive Acc: 66.919% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 16
+Batch: 0 | Loss: 1.833 | Acc: 0.781,1.562,82.812,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 1.861 | Acc: 1.190,1.451,81.696,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.797 | Acc: 1.429,1.372,82.450,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.795 | Acc: 1.460,1.383,82.364,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 1.791 | Acc: 1.350,1.321,82.465,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 1.797 | Acc: 1.338,1.377,82.372,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 1.799 | Acc: 1.427,1.298,82.528,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 1.812 | Acc: 1.380,1.297,82.342,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 1.825 | Acc: 1.388,1.262,82.196,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 1.840 | Acc: 1.407,1.247,82.040,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 1.838 | Acc: 1.368,1.224,82.066,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 1.845 | Acc: 1.347,1.216,82.003,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 1.855 | Acc: 1.384,1.219,81.859,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 1.870 | Acc: 1.377,1.209,81.711,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 1.872 | Acc: 1.390,1.187,81.678,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.878 | Acc: 1.368,1.217,81.577,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.886 | Acc: 1.358,1.227,81.479,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.891 | Acc: 1.354,1.228,81.429,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.894 | Acc: 1.363,1.240,81.395,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.900 | Acc: 1.362,1.245,81.373,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.266 | Acc: 0.781,0.781,72.656,% | Adaptive Acc: 72.656% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.693 | Acc: 0.967,0.967,66.629,% | Adaptive Acc: 66.629% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.829 | Acc: 1.200,1.067,65.892,% | Adaptive Acc: 65.892% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.835 | Acc: 1.127,1.127,65.894,% | Adaptive Acc: 65.894% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 17
+Batch: 0 | Loss: 1.574 | Acc: 0.781,0.781,85.156,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 1.702 | Acc: 1.414,1.302,83.185,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.607 | Acc: 1.296,1.391,84.032,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.596 | Acc: 1.332,1.242,84.388,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 1.601 | Acc: 1.331,1.225,84.491,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 1.603 | Acc: 1.439,1.269,84.530,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 1.610 | Acc: 1.388,1.285,84.427,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 1.622 | Acc: 1.357,1.241,84.176,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 1.637 | Acc: 1.354,1.228,83.929,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 1.660 | Acc: 1.342,1.243,83.710,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 1.672 | Acc: 1.333,1.248,83.602,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 1.687 | Acc: 1.347,1.244,83.477,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 1.702 | Acc: 1.336,1.248,83.257,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 1.713 | Acc: 1.341,1.242,83.133,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 1.722 | Acc: 1.329,1.232,83.052,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.731 | Acc: 1.313,1.225,82.979,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.746 | Acc: 1.305,1.224,82.830,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.754 | Acc: 1.297,1.239,82.709,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.765 | Acc: 1.266,1.251,82.574,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.772 | Acc: 1.259,1.236,82.530,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.550 | Acc: 1.562,0.781,67.969,% | Adaptive Acc: 67.969% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.763 | Acc: 1.116,1.116,67.374,% | Adaptive Acc: 67.374% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.811 | Acc: 1.181,1.239,66.711,% | Adaptive Acc: 66.711% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.792 | Acc: 1.127,1.153,66.829,% | Adaptive Acc: 66.829% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 18
+Batch: 0 | Loss: 2.205 | Acc: 1.562,0.781,80.469,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 1.637 | Acc: 1.265,1.265,83.891,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.561 | Acc: 1.296,1.086,84.756,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.541 | Acc: 1.255,1.101,84.695,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 1.569 | Acc: 1.225,1.157,84.394,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 1.559 | Acc: 1.269,1.214,84.599,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 1.572 | Acc: 1.291,1.207,84.446,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 1.583 | Acc: 1.297,1.274,84.320,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 1.586 | Acc: 1.286,1.237,84.215,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 1.594 | Acc: 1.273,1.260,84.138,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 1.604 | Acc: 1.244,1.201,84.056,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 1.613 | Acc: 1.255,1.191,83.937,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 1.628 | Acc: 1.225,1.183,83.808,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 1.642 | Acc: 1.245,1.185,83.684,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 1.652 | Acc: 1.234,1.193,83.555,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.651 | Acc: 1.241,1.184,83.591,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.653 | Acc: 1.241,1.178,83.572,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.659 | Acc: 1.223,1.180,83.495,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.670 | Acc: 1.240,1.160,83.364,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.684 | Acc: 1.243,1.163,83.210,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.382 | Acc: 1.562,0.781,69.531,% | Adaptive Acc: 69.531% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.706 | Acc: 1.228,1.265,66.667,% | Adaptive Acc: 66.667% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.742 | Acc: 1.410,1.258,66.559,% | Adaptive Acc: 66.559% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.736 | Acc: 1.332,1.217,66.496,% | Adaptive Acc: 66.496% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 19
+Batch: 0 | Loss: 1.501 | Acc: 3.125,0.781,89.062,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 1.432 | Acc: 1.488,1.265,86.384,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.442 | Acc: 1.220,1.239,86.223,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.453 | Acc: 1.178,1.217,85.822,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 1.473 | Acc: 1.138,1.128,85.426,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 1.478 | Acc: 1.137,1.091,85.350,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 1.482 | Acc: 1.149,1.104,85.337,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 1.476 | Acc: 1.114,1.141,85.422,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 1.477 | Acc: 1.145,1.126,85.467,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 1.484 | Acc: 1.144,1.114,85.320,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 1.486 | Acc: 1.158,1.092,85.269,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 1.501 | Acc: 1.156,1.089,85.132,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 1.511 | Acc: 1.167,1.079,84.962,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 1.528 | Acc: 1.176,1.081,84.776,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 1.533 | Acc: 1.173,1.093,84.639,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.543 | Acc: 1.160,1.098,84.533,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.548 | Acc: 1.161,1.093,84.514,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.559 | Acc: 1.171,1.104,84.391,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.558 | Acc: 1.164,1.102,84.412,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.564 | Acc: 1.140,1.107,84.363,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.243 | Acc: 2.344,0.000,71.094,% | Adaptive Acc: 71.094% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.738 | Acc: 1.079,0.967,67.857,% | Adaptive Acc: 67.857% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.817 | Acc: 1.277,0.972,66.978,% | Adaptive Acc: 66.978% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.864 | Acc: 1.204,0.935,66.573,% | Adaptive Acc: 66.573% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 20
+Batch: 0 | Loss: 1.688 | Acc: 0.000,0.781,80.469,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 1.339 | Acc: 1.116,1.042,87.314,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.332 | Acc: 1.410,1.162,87.214,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.306 | Acc: 1.537,1.242,87.615,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 1.330 | Acc: 1.466,1.196,87.211,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 1.347 | Acc: 1.392,1.214,87.144,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 1.345 | Acc: 1.414,1.201,87.171,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 1.341 | Acc: 1.441,1.175,87.195,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 1.333 | Acc: 1.422,1.194,87.180,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 1.342 | Acc: 1.398,1.200,87.021,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 1.359 | Acc: 1.341,1.220,86.804,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 1.379 | Acc: 1.326,1.202,86.507,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 1.394 | Acc: 1.316,1.219,86.356,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 1.405 | Acc: 1.317,1.221,86.216,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 1.414 | Acc: 1.315,1.204,86.090,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.414 | Acc: 1.308,1.204,86.091,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.419 | Acc: 1.307,1.193,86.030,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.427 | Acc: 1.306,1.198,85.940,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.429 | Acc: 1.301,1.199,85.892,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.439 | Acc: 1.304,1.214,85.751,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.197 | Acc: 0.781,0.000,72.656,% | Adaptive Acc: 72.656% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.768 | Acc: 0.930,1.116,67.262,% | Adaptive Acc: 67.262% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.845 | Acc: 1.162,1.067,67.321,% | Adaptive Acc: 67.321% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.851 | Acc: 1.101,1.076,67.098,% | Adaptive Acc: 67.098% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 21
+Batch: 0 | Loss: 1.315 | Acc: 2.344,0.781,89.062,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 1.288 | Acc: 1.228,1.116,87.612,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.223 | Acc: 1.162,1.181,88.110,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.220 | Acc: 1.127,1.230,87.961,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 1.222 | Acc: 1.206,1.321,87.992,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 1.216 | Acc: 1.176,1.253,87.995,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 1.220 | Acc: 1.214,1.246,87.842,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 1.236 | Acc: 1.274,1.241,87.705,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 1.252 | Acc: 1.315,1.247,87.626,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 1.265 | Acc: 1.347,1.234,87.444,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 1.275 | Acc: 1.337,1.197,87.251,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 1.290 | Acc: 1.347,1.237,87.097,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 1.301 | Acc: 1.332,1.255,86.942,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 1.307 | Acc: 1.317,1.257,86.910,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 1.318 | Acc: 1.323,1.246,86.819,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.330 | Acc: 1.303,1.246,86.708,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.339 | Acc: 1.290,1.244,86.558,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.347 | Acc: 1.285,1.239,86.494,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.357 | Acc: 1.281,1.249,86.323,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.366 | Acc: 1.265,1.253,86.243,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.568 | Acc: 1.562,0.000,70.312,% | Adaptive Acc: 70.312% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.838 | Acc: 1.079,0.930,67.597,% | Adaptive Acc: 67.597% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.869 | Acc: 1.258,1.105,67.302,% | Adaptive Acc: 67.302% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.879 | Acc: 1.165,1.140,66.867,% | Adaptive Acc: 66.867% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 22
+Batch: 0 | Loss: 1.343 | Acc: 0.781,0.781,82.812,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 1.245 | Acc: 1.116,1.265,87.723,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.187 | Acc: 1.239,1.448,88.281,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.184 | Acc: 1.319,1.332,88.307,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 1.190 | Acc: 1.408,1.389,88.320,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 1.186 | Acc: 1.423,1.338,88.382,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 1.200 | Acc: 1.369,1.285,88.230,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 1.206 | Acc: 1.357,1.208,88.176,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 1.207 | Acc: 1.344,1.203,88.179,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 1.208 | Acc: 1.329,1.191,88.122,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 1.217 | Acc: 1.298,1.162,87.963,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 1.227 | Acc: 1.276,1.170,87.836,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 1.224 | Acc: 1.303,1.173,87.866,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 1.234 | Acc: 1.278,1.194,87.722,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 1.245 | Acc: 1.259,1.201,87.631,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.249 | Acc: 1.238,1.191,87.534,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.256 | Acc: 1.253,1.200,87.485,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.266 | Acc: 1.244,1.187,87.360,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.275 | Acc: 1.240,1.175,87.268,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.291 | Acc: 1.239,1.175,87.088,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.775 | Acc: 0.781,0.000,71.094,% | Adaptive Acc: 71.094% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.751 | Acc: 0.967,0.930,67.485,% | Adaptive Acc: 67.485% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.869 | Acc: 1.220,1.086,67.264,% | Adaptive Acc: 67.264% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.871 | Acc: 1.165,1.153,67.021,% | Adaptive Acc: 67.021% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 23
+Batch: 0 | Loss: 1.092 | Acc: 2.344,1.562,87.500,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 1.131 | Acc: 1.488,1.079,89.174,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.085 | Acc: 1.505,1.220,89.691,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.094 | Acc: 1.434,1.178,89.716,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 1.093 | Acc: 1.389,1.186,89.574,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 1.093 | Acc: 1.354,1.176,89.449,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 1.091 | Acc: 1.324,1.188,89.573,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 1.106 | Acc: 1.324,1.158,89.373,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 1.113 | Acc: 1.334,1.140,89.261,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 1.130 | Acc: 1.368,1.127,89.024,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 1.141 | Acc: 1.333,1.135,88.923,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 1.152 | Acc: 1.333,1.114,88.865,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 1.156 | Acc: 1.310,1.122,88.832,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 1.155 | Acc: 1.323,1.114,88.832,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 1.163 | Acc: 1.304,1.123,88.740,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.173 | Acc: 1.329,1.108,88.577,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.181 | Acc: 1.295,1.103,88.454,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.191 | Acc: 1.317,1.093,88.336,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.203 | Acc: 1.298,1.115,88.214,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.214 | Acc: 1.306,1.124,88.050,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.545 | Acc: 1.562,0.000,71.875,% | Adaptive Acc: 71.875% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.799 | Acc: 1.079,1.004,68.676,% | Adaptive Acc: 68.676% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.882 | Acc: 1.277,1.124,67.473,% | Adaptive Acc: 67.473% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.868 | Acc: 1.191,1.127,67.188,% | Adaptive Acc: 67.188% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 24
+Batch: 0 | Loss: 1.505 | Acc: 1.562,3.125,85.156,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 1.101 | Acc: 1.376,1.042,89.509,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 1.081 | Acc: 1.220,1.143,89.615,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 1.066 | Acc: 1.268,1.153,89.882,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 1.049 | Acc: 1.283,1.196,89.959,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 1.037 | Acc: 1.214,1.222,90.130,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 1.033 | Acc: 1.240,1.265,90.173,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 1.031 | Acc: 1.230,1.269,90.143,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 1.039 | Acc: 1.276,1.247,90.023,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 1.051 | Acc: 1.260,1.265,89.865,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 1.055 | Acc: 1.271,1.255,89.871,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 1.058 | Acc: 1.276,1.230,89.791,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 1.069 | Acc: 1.274,1.222,89.588,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 1.075 | Acc: 1.260,1.239,89.476,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 1.089 | Acc: 1.259,1.232,89.299,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.099 | Acc: 1.261,1.230,89.231,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.104 | Acc: 1.275,1.229,89.143,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.112 | Acc: 1.281,1.201,89.042,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.121 | Acc: 1.290,1.190,88.959,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.132 | Acc: 1.290,1.185,88.831,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.642 | Acc: 1.562,0.000,72.656,% | Adaptive Acc: 72.656% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.700 | Acc: 0.967,0.930,69.048,% | Adaptive Acc: 69.048% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.797 | Acc: 1.143,1.048,67.988,% | Adaptive Acc: 67.988% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.800 | Acc: 1.101,1.076,67.956,% | Adaptive Acc: 67.956% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 25
+Batch: 0 | Loss: 0.895 | Acc: 1.562,2.344,92.969,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.938 | Acc: 1.339,1.376,91.629,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.968 | Acc: 1.296,1.239,91.139,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.964 | Acc: 1.242,1.178,91.022,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.958 | Acc: 1.167,1.225,91.069,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.946 | Acc: 1.191,1.269,91.213,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.950 | Acc: 1.233,1.240,91.064,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.951 | Acc: 1.252,1.247,90.996,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.965 | Acc: 1.257,1.266,90.819,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.974 | Acc: 1.269,1.239,90.716,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.980 | Acc: 1.283,1.275,90.621,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.988 | Acc: 1.301,1.273,90.462,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.995 | Acc: 1.287,1.261,90.333,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 1.002 | Acc: 1.242,1.281,90.275,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 1.009 | Acc: 1.223,1.259,90.208,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.021 | Acc: 1.228,1.248,90.077,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.034 | Acc: 1.234,1.249,89.900,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.056 | Acc: 1.217,1.244,89.674,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.071 | Acc: 1.216,1.240,89.489,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.079 | Acc: 1.245,1.218,89.399,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.710 | Acc: 1.562,0.000,71.094,% | Adaptive Acc: 71.094% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.810 | Acc: 1.190,1.116,68.787,% | Adaptive Acc: 68.787% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.869 | Acc: 1.277,1.258,67.988,% | Adaptive Acc: 67.988% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.893 | Acc: 1.178,1.178,67.546,% | Adaptive Acc: 67.546% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 26
+Batch: 0 | Loss: 1.002 | Acc: 3.125,1.562,88.281,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.999 | Acc: 1.525,1.042,90.625,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.945 | Acc: 1.505,0.972,91.139,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.940 | Acc: 1.396,1.101,91.060,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.943 | Acc: 1.321,1.051,90.914,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.945 | Acc: 1.269,1.044,90.865,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.948 | Acc: 1.253,1.065,90.890,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.947 | Acc: 1.269,1.086,90.930,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.955 | Acc: 1.262,1.092,90.853,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.966 | Acc: 1.282,1.114,90.694,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.973 | Acc: 1.224,1.092,90.578,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.973 | Acc: 1.205,1.117,90.636,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.980 | Acc: 1.183,1.141,90.547,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.985 | Acc: 1.161,1.137,90.538,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.994 | Acc: 1.170,1.145,90.400,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 1.001 | Acc: 1.197,1.137,90.321,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 1.009 | Acc: 1.193,1.132,90.226,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 1.019 | Acc: 1.201,1.150,90.123,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 1.028 | Acc: 1.218,1.169,90.006,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 1.042 | Acc: 1.228,1.173,89.858,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.395 | Acc: 1.562,0.781,75.000,% | Adaptive Acc: 75.000% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.897 | Acc: 1.004,0.893,68.899,% | Adaptive Acc: 68.899% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.995 | Acc: 1.181,1.067,67.950,% | Adaptive Acc: 67.950% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.998 | Acc: 1.140,1.127,67.533,% | Adaptive Acc: 67.533% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 27
+Batch: 0 | Loss: 0.813 | Acc: 1.562,0.781,94.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.927 | Acc: 1.600,1.228,91.592,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.919 | Acc: 1.543,1.048,91.749,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.896 | Acc: 1.562,1.127,91.637,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.896 | Acc: 1.437,1.186,91.628,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.896 | Acc: 1.361,1.160,91.553,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.888 | Acc: 1.304,1.233,91.697,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.873 | Acc: 1.274,1.230,91.855,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.875 | Acc: 1.315,1.223,91.833,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.884 | Acc: 1.312,1.226,91.700,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.895 | Acc: 1.298,1.217,91.542,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.905 | Acc: 1.283,1.213,91.396,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.913 | Acc: 1.300,1.177,91.351,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.920 | Acc: 1.320,1.158,91.194,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.930 | Acc: 1.335,1.148,91.070,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.938 | Acc: 1.313,1.165,90.996,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.943 | Acc: 1.283,1.158,90.963,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.950 | Acc: 1.276,1.189,90.866,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.960 | Acc: 1.270,1.201,90.748,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.970 | Acc: 1.249,1.208,90.635,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.301 | Acc: 0.781,0.000,71.875,% | Adaptive Acc: 71.875% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.756 | Acc: 1.004,0.893,69.271,% | Adaptive Acc: 69.271% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.812 | Acc: 1.124,1.124,68.350,% | Adaptive Acc: 68.350% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.827 | Acc: 1.101,1.127,68.110,% | Adaptive Acc: 68.110% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 28
+Batch: 0 | Loss: 0.732 | Acc: 1.562,1.562,93.750,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.907 | Acc: 1.265,1.042,90.737,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.836 | Acc: 1.239,1.086,91.673,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.826 | Acc: 1.230,1.165,91.752,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.822 | Acc: 1.273,1.215,92.033,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.820 | Acc: 1.300,1.222,92.203,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.821 | Acc: 1.201,1.253,92.246,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.828 | Acc: 1.241,1.308,92.204,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.827 | Acc: 1.262,1.291,92.246,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.831 | Acc: 1.269,1.308,92.166,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.836 | Acc: 1.294,1.310,92.098,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.848 | Acc: 1.326,1.322,91.947,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.858 | Acc: 1.313,1.345,91.805,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.868 | Acc: 1.341,1.317,91.667,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.882 | Acc: 1.348,1.321,91.540,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.894 | Acc: 1.321,1.311,91.404,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.906 | Acc: 1.329,1.295,91.258,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.913 | Acc: 1.301,1.294,91.113,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.923 | Acc: 1.277,1.268,91.004,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.934 | Acc: 1.271,1.288,90.904,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.549 | Acc: 0.781,0.000,70.312,% | Adaptive Acc: 70.312% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.883 | Acc: 0.930,1.004,68.564,% | Adaptive Acc: 68.564% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.889 | Acc: 1.105,1.200,68.502,% | Adaptive Acc: 68.502% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.908 | Acc: 1.025,1.101,68.122,% | Adaptive Acc: 68.122% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 29
+Batch: 0 | Loss: 1.073 | Acc: 1.562,3.125,89.062,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.869 | Acc: 0.781,1.302,91.443,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.842 | Acc: 1.029,1.410,91.864,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.815 | Acc: 1.063,1.370,92.175,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.797 | Acc: 1.119,1.399,92.274,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.804 | Acc: 1.083,1.269,92.304,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.807 | Acc: 1.156,1.317,92.278,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.818 | Acc: 1.230,1.297,92.199,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.825 | Acc: 1.237,1.305,92.154,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.835 | Acc: 1.222,1.316,92.015,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.845 | Acc: 1.232,1.329,91.958,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.851 | Acc: 1.202,1.343,91.859,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.855 | Acc: 1.206,1.339,91.818,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.867 | Acc: 1.221,1.326,91.685,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.875 | Acc: 1.226,1.343,91.590,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.886 | Acc: 1.248,1.350,91.471,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.894 | Acc: 1.239,1.339,91.375,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.904 | Acc: 1.233,1.338,91.266,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.916 | Acc: 1.225,1.337,91.118,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.922 | Acc: 1.243,1.331,91.047,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.733 | Acc: 1.562,0.000,71.094,% | Adaptive Acc: 71.094% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.854 | Acc: 1.153,0.967,67.597,% | Adaptive Acc: 67.597% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.914 | Acc: 1.220,1.124,67.931,% | Adaptive Acc: 67.931% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.947 | Acc: 1.153,1.127,67.853,% | Adaptive Acc: 67.853% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 30
+Batch: 0 | Loss: 0.523 | Acc: 1.562,2.344,95.312,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.819 | Acc: 1.153,1.265,92.188,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.822 | Acc: 1.315,1.296,92.073,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.816 | Acc: 1.396,1.255,92.341,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.804 | Acc: 1.370,1.244,92.544,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.812 | Acc: 1.323,1.377,92.373,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.811 | Acc: 1.349,1.317,92.368,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.808 | Acc: 1.369,1.302,92.315,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.806 | Acc: 1.402,1.300,92.338,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.808 | Acc: 1.360,1.308,92.356,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.824 | Acc: 1.372,1.290,92.191,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.826 | Acc: 1.357,1.273,92.209,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.832 | Acc: 1.349,1.258,92.090,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.845 | Acc: 1.332,1.269,91.987,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.853 | Acc: 1.321,1.265,91.907,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.861 | Acc: 1.316,1.280,91.806,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.867 | Acc: 1.309,1.268,91.747,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.877 | Acc: 1.299,1.267,91.665,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.883 | Acc: 1.281,1.262,91.564,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.891 | Acc: 1.286,1.245,91.468,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.579 | Acc: 0.000,0.000,71.875,% | Adaptive Acc: 71.875% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.742 | Acc: 1.116,1.004,69.122,% | Adaptive Acc: 69.122% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.770 | Acc: 1.181,1.010,69.074,% | Adaptive Acc: 69.074% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.801 | Acc: 1.063,0.961,68.455,% | Adaptive Acc: 68.455% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 31
+Batch: 0 | Loss: 0.774 | Acc: 1.562,2.344,92.188,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.716 | Acc: 1.265,1.116,93.899,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.744 | Acc: 1.239,1.315,93.350,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.744 | Acc: 1.268,1.242,93.315,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.726 | Acc: 1.321,1.321,93.461,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.719 | Acc: 1.292,1.323,93.510,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.723 | Acc: 1.311,1.356,93.485,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.726 | Acc: 1.330,1.369,93.445,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.733 | Acc: 1.354,1.368,93.318,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.741 | Acc: 1.347,1.364,93.172,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.748 | Acc: 1.380,1.345,93.120,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.755 | Acc: 1.365,1.329,92.997,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.766 | Acc: 1.371,1.310,92.878,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.782 | Acc: 1.356,1.320,92.675,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.793 | Acc: 1.337,1.318,92.574,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.800 | Acc: 1.324,1.316,92.546,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.809 | Acc: 1.322,1.322,92.390,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.818 | Acc: 1.315,1.313,92.286,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.825 | Acc: 1.307,1.292,92.203,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.832 | Acc: 1.306,1.302,92.126,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.682 | Acc: 0.781,0.000,71.094,% | Adaptive Acc: 71.094% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.682 | Acc: 0.967,0.856,70.052,% | Adaptive Acc: 70.052% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.760 | Acc: 1.124,0.972,68.864,% | Adaptive Acc: 68.864% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.817 | Acc: 1.076,0.999,68.340,% | Adaptive Acc: 68.340% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 32
+Batch: 0 | Loss: 0.665 | Acc: 0.781,1.562,94.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.748 | Acc: 1.674,1.190,93.155,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.740 | Acc: 1.448,1.277,93.216,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.701 | Acc: 1.409,1.294,93.852,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.710 | Acc: 1.399,1.264,93.866,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.709 | Acc: 1.346,1.261,93.688,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.711 | Acc: 1.330,1.317,93.601,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.719 | Acc: 1.313,1.302,93.462,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.720 | Acc: 1.349,1.252,93.459,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.724 | Acc: 1.360,1.243,93.487,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.730 | Acc: 1.329,1.213,93.389,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.742 | Acc: 1.333,1.237,93.206,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.750 | Acc: 1.316,1.232,93.063,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.759 | Acc: 1.314,1.248,92.963,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.772 | Acc: 1.307,1.243,92.807,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.784 | Acc: 1.326,1.230,92.642,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.789 | Acc: 1.343,1.229,92.596,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.796 | Acc: 1.322,1.237,92.524,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.810 | Acc: 1.303,1.221,92.371,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.820 | Acc: 1.296,1.234,92.231,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.375 | Acc: 0.000,0.000,70.312,% | Adaptive Acc: 70.312% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.740 | Acc: 0.893,1.004,68.118,% | Adaptive Acc: 68.118% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.819 | Acc: 1.048,1.048,67.702,% | Adaptive Acc: 67.702% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.842 | Acc: 0.973,1.012,67.866,% | Adaptive Acc: 67.866% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 33
+Batch: 0 | Loss: 0.707 | Acc: 0.000,0.781,95.312,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.763 | Acc: 0.744,1.302,92.560,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.756 | Acc: 0.857,1.258,92.683,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.755 | Acc: 0.948,1.204,92.841,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.745 | Acc: 0.984,1.312,93.142,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.741 | Acc: 1.044,1.214,93.085,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.738 | Acc: 1.111,1.214,93.221,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.738 | Acc: 1.186,1.252,93.163,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.742 | Acc: 1.213,1.237,93.076,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.743 | Acc: 1.265,1.222,93.085,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.742 | Acc: 1.252,1.236,93.167,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.747 | Acc: 1.241,1.255,93.103,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.760 | Acc: 1.216,1.232,92.995,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.760 | Acc: 1.203,1.215,92.960,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.764 | Acc: 1.207,1.212,92.896,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.770 | Acc: 1.217,1.212,92.836,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.774 | Acc: 1.224,1.183,92.779,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.781 | Acc: 1.235,1.187,92.680,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.790 | Acc: 1.242,1.205,92.579,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.796 | Acc: 1.257,1.228,92.501,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.363 | Acc: 0.781,0.000,70.312,% | Adaptive Acc: 70.312% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.680 | Acc: 1.079,1.190,68.750,% | Adaptive Acc: 68.750% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.778 | Acc: 1.143,1.315,68.636,% | Adaptive Acc: 68.636% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.809 | Acc: 1.012,1.294,68.391,% | Adaptive Acc: 68.391% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 34
+Batch: 0 | Loss: 0.606 | Acc: 3.906,3.125,96.094,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.653 | Acc: 1.414,1.339,94.196,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.672 | Acc: 1.296,1.239,93.826,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.671 | Acc: 1.165,1.089,93.814,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.670 | Acc: 1.167,1.244,93.731,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.677 | Acc: 1.168,1.284,93.626,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.670 | Acc: 1.149,1.227,93.782,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.677 | Acc: 1.213,1.258,93.661,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.682 | Acc: 1.276,1.252,93.648,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.683 | Acc: 1.312,1.217,93.664,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.688 | Acc: 1.322,1.201,93.633,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.687 | Acc: 1.347,1.198,93.655,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.691 | Acc: 1.332,1.180,93.643,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.697 | Acc: 1.329,1.188,93.564,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.704 | Acc: 1.321,1.193,93.455,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.709 | Acc: 1.308,1.202,93.400,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.715 | Acc: 1.300,1.188,93.331,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.722 | Acc: 1.290,1.162,93.276,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.731 | Acc: 1.305,1.169,93.157,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.739 | Acc: 1.298,1.185,93.061,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.509 | Acc: 0.000,0.000,72.656,% | Adaptive Acc: 72.656% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.878 | Acc: 0.967,1.042,68.638,% | Adaptive Acc: 68.638% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.902 | Acc: 1.124,1.029,68.178,% | Adaptive Acc: 68.178% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.916 | Acc: 1.025,0.986,68.084,% | Adaptive Acc: 68.084% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 35
+Batch: 0 | Loss: 0.437 | Acc: 0.781,0.781,97.656,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.640 | Acc: 1.153,1.488,94.271,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.672 | Acc: 1.315,1.448,93.979,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.693 | Acc: 1.306,1.345,93.801,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.688 | Acc: 1.350,1.321,93.837,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.679 | Acc: 1.307,1.354,93.827,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.674 | Acc: 1.291,1.317,93.905,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.675 | Acc: 1.302,1.324,93.894,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.675 | Acc: 1.305,1.334,93.896,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.679 | Acc: 1.269,1.342,93.884,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.684 | Acc: 1.275,1.306,93.769,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.682 | Acc: 1.251,1.290,93.789,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.684 | Acc: 1.229,1.261,93.750,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.693 | Acc: 1.227,1.248,93.654,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.700 | Acc: 1.234,1.232,93.561,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.705 | Acc: 1.246,1.210,93.483,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.714 | Acc: 1.261,1.202,93.353,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.724 | Acc: 1.246,1.214,93.257,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.736 | Acc: 1.244,1.218,93.114,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.744 | Acc: 1.228,1.226,93.024,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.355 | Acc: 0.781,0.000,71.875,% | Adaptive Acc: 71.875% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.754 | Acc: 1.004,1.079,69.531,% | Adaptive Acc: 69.531% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.767 | Acc: 1.162,1.296,69.131,% | Adaptive Acc: 69.131% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.780 | Acc: 1.101,1.242,68.724,% | Adaptive Acc: 68.724% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 36
+Batch: 0 | Loss: 0.527 | Acc: 0.000,0.781,97.656,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.647 | Acc: 1.302,1.153,94.382,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.658 | Acc: 1.410,1.181,93.921,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.664 | Acc: 1.255,1.165,93.865,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.663 | Acc: 1.399,1.100,93.924,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.671 | Acc: 1.292,1.129,93.804,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.680 | Acc: 1.349,1.136,93.634,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.680 | Acc: 1.324,1.136,93.611,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.682 | Acc: 1.334,1.145,93.619,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.686 | Acc: 1.321,1.196,93.612,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.688 | Acc: 1.318,1.279,93.595,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.694 | Acc: 1.315,1.255,93.527,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.707 | Acc: 1.319,1.222,93.374,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.715 | Acc: 1.293,1.224,93.289,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.724 | Acc: 1.287,1.243,93.208,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.732 | Acc: 1.290,1.217,93.132,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.741 | Acc: 1.290,1.210,92.966,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.750 | Acc: 1.301,1.189,92.843,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.759 | Acc: 1.303,1.203,92.735,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.768 | Acc: 1.300,1.208,92.608,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.968 | Acc: 0.781,0.000,72.656,% | Adaptive Acc: 72.656% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.903 | Acc: 1.116,0.893,69.010,% | Adaptive Acc: 69.010% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.967 | Acc: 1.239,0.953,68.369,% | Adaptive Acc: 68.369% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.965 | Acc: 1.127,0.961,68.315,% | Adaptive Acc: 68.315% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 37
+Batch: 0 | Loss: 0.686 | Acc: 1.562,0.781,94.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.686 | Acc: 1.079,1.376,94.048,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.666 | Acc: 1.181,1.334,94.131,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.648 | Acc: 1.204,1.396,94.352,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.636 | Acc: 1.215,1.399,94.483,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.643 | Acc: 1.238,1.361,94.307,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.644 | Acc: 1.214,1.388,94.338,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.654 | Acc: 1.247,1.407,94.249,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.653 | Acc: 1.208,1.339,94.260,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.657 | Acc: 1.243,1.316,94.238,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.658 | Acc: 1.213,1.279,94.248,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.660 | Acc: 1.216,1.283,94.213,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.662 | Acc: 1.271,1.251,94.197,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.668 | Acc: 1.275,1.227,94.139,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.671 | Acc: 1.265,1.223,94.111,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.674 | Acc: 1.256,1.235,94.054,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.682 | Acc: 1.241,1.229,93.950,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.691 | Acc: 1.228,1.233,93.823,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.701 | Acc: 1.240,1.260,93.689,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.708 | Acc: 1.232,1.269,93.627,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 4.479 | Acc: 0.000,0.000,67.969,% | Adaptive Acc: 67.969% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 4.037 | Acc: 1.116,1.079,68.155,% | Adaptive Acc: 68.155% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.034 | Acc: 1.239,1.200,67.835,% | Adaptive Acc: 67.835% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.112 | Acc: 1.140,1.140,67.649,% | Adaptive Acc: 67.649% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 38
+Batch: 0 | Loss: 0.720 | Acc: 3.125,2.344,96.094,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.638 | Acc: 1.153,1.376,94.234,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.652 | Acc: 1.181,1.315,94.207,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.655 | Acc: 1.217,1.370,94.160,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.645 | Acc: 1.196,1.292,94.271,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.635 | Acc: 1.191,1.253,94.338,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.639 | Acc: 1.194,1.272,94.221,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.643 | Acc: 1.158,1.297,94.227,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.653 | Acc: 1.155,1.286,94.085,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.658 | Acc: 1.157,1.278,94.009,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.657 | Acc: 1.154,1.306,94.022,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.657 | Acc: 1.156,1.304,94.012,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.659 | Acc: 1.167,1.332,94.000,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.660 | Acc: 1.155,1.335,94.010,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.666 | Acc: 1.182,1.346,93.975,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.678 | Acc: 1.202,1.306,93.836,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.683 | Acc: 1.185,1.312,93.791,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.691 | Acc: 1.210,1.306,93.674,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.698 | Acc: 1.223,1.301,93.544,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.708 | Acc: 1.224,1.304,93.410,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 4.319 | Acc: 1.562,0.000,68.750,% | Adaptive Acc: 68.750% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.921 | Acc: 1.042,1.042,69.085,% | Adaptive Acc: 69.085% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.969 | Acc: 1.181,1.277,68.369,% | Adaptive Acc: 68.369% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.990 | Acc: 1.037,1.217,67.918,% | Adaptive Acc: 67.918% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 39
+Batch: 0 | Loss: 0.743 | Acc: 1.562,0.000,94.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.665 | Acc: 1.265,1.414,93.862,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.628 | Acc: 1.334,1.315,94.303,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.628 | Acc: 1.306,1.294,94.378,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.643 | Acc: 1.341,1.360,94.203,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.634 | Acc: 1.261,1.439,94.315,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.629 | Acc: 1.220,1.466,94.331,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.626 | Acc: 1.285,1.369,94.420,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.626 | Acc: 1.300,1.344,94.439,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.629 | Acc: 1.325,1.329,94.359,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.632 | Acc: 1.353,1.353,94.341,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.633 | Acc: 1.354,1.361,94.323,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.634 | Acc: 1.339,1.368,94.337,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.645 | Acc: 1.320,1.377,94.196,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.659 | Acc: 1.343,1.396,94.025,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.668 | Acc: 1.326,1.409,93.926,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.678 | Acc: 1.322,1.380,93.845,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.686 | Acc: 1.317,1.379,93.750,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.698 | Acc: 1.303,1.383,93.611,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.707 | Acc: 1.314,1.372,93.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 4.050 | Acc: 1.562,0.781,71.875,% | Adaptive Acc: 71.875% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.965 | Acc: 1.190,1.116,68.638,% | Adaptive Acc: 68.638% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.083 | Acc: 1.334,1.277,67.588,% | Adaptive Acc: 67.588% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.131 | Acc: 1.217,1.217,67.469,% | Adaptive Acc: 67.469% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 40
+Batch: 0 | Loss: 0.924 | Acc: 0.781,0.781,91.406,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.665 | Acc: 1.153,1.376,93.415,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.656 | Acc: 1.220,1.467,93.540,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.652 | Acc: 1.204,1.396,93.609,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.648 | Acc: 1.196,1.495,93.760,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.642 | Acc: 1.183,1.462,93.943,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.638 | Acc: 1.246,1.414,94.060,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.640 | Acc: 1.291,1.418,94.127,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.648 | Acc: 1.320,1.412,94.031,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.652 | Acc: 1.286,1.398,94.013,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.656 | Acc: 1.267,1.364,93.975,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.665 | Acc: 1.262,1.372,93.884,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.665 | Acc: 1.251,1.345,93.919,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.670 | Acc: 1.236,1.335,93.816,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.675 | Acc: 1.237,1.376,93.758,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.678 | Acc: 1.246,1.376,93.703,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.688 | Acc: 1.278,1.370,93.572,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.695 | Acc: 1.262,1.370,93.489,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.706 | Acc: 1.264,1.389,93.358,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.716 | Acc: 1.261,1.392,93.237,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.382 | Acc: 0.781,0.000,73.438,% | Adaptive Acc: 73.438% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.882 | Acc: 1.116,1.265,68.824,% | Adaptive Acc: 68.824% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.930 | Acc: 1.239,1.391,68.388,% | Adaptive Acc: 68.388% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.942 | Acc: 1.165,1.345,68.199,% | Adaptive Acc: 68.199% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 41
+Batch: 0 | Loss: 0.609 | Acc: 2.344,3.125,94.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.642 | Acc: 1.451,1.488,94.420,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.625 | Acc: 1.372,1.372,94.417,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.617 | Acc: 1.294,1.281,94.480,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.617 | Acc: 1.264,1.292,94.416,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.611 | Acc: 1.230,1.408,94.485,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.616 | Acc: 1.227,1.395,94.473,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.613 | Acc: 1.213,1.402,94.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.616 | Acc: 1.237,1.431,94.526,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.620 | Acc: 1.239,1.424,94.492,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.625 | Acc: 1.263,1.391,94.454,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.628 | Acc: 1.251,1.403,94.475,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.635 | Acc: 1.248,1.413,94.330,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.639 | Acc: 1.272,1.395,94.316,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.647 | Acc: 1.290,1.401,94.237,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.651 | Acc: 1.282,1.402,94.189,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.655 | Acc: 1.249,1.416,94.139,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.665 | Acc: 1.251,1.420,94.041,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.672 | Acc: 1.264,1.400,93.971,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.679 | Acc: 1.263,1.390,93.891,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.881 | Acc: 0.781,0.000,67.969,% | Adaptive Acc: 67.969% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.649 | Acc: 0.967,1.190,69.829,% | Adaptive Acc: 69.829% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.714 | Acc: 1.200,1.296,69.284,% | Adaptive Acc: 69.284% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.773 | Acc: 1.127,1.268,68.827,% | Adaptive Acc: 68.827% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 42
+Batch: 0 | Loss: 0.654 | Acc: 0.000,0.000,93.750,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.617 | Acc: 1.339,1.228,94.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.603 | Acc: 1.162,1.239,94.646,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.596 | Acc: 1.230,1.358,94.749,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.586 | Acc: 1.283,1.389,94.888,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.577 | Acc: 1.222,1.369,94.933,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.579 | Acc: 1.175,1.362,94.932,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.590 | Acc: 1.152,1.380,94.819,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.594 | Acc: 1.208,1.378,94.764,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.599 | Acc: 1.209,1.373,94.700,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.603 | Acc: 1.220,1.391,94.640,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.609 | Acc: 1.241,1.407,94.556,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.617 | Acc: 1.255,1.371,94.489,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.626 | Acc: 1.257,1.371,94.412,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.633 | Acc: 1.251,1.382,94.320,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.642 | Acc: 1.235,1.425,94.178,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.648 | Acc: 1.239,1.404,94.135,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.653 | Acc: 1.235,1.407,94.117,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.656 | Acc: 1.231,1.400,94.094,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.661 | Acc: 1.222,1.405,94.008,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.994 | Acc: 0.781,0.000,71.875,% | Adaptive Acc: 71.875% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.764 | Acc: 1.004,1.228,70.052,% | Adaptive Acc: 70.052% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.862 | Acc: 1.258,1.296,69.017,% | Adaptive Acc: 69.017% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.936 | Acc: 1.127,1.268,68.353,% | Adaptive Acc: 68.353% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 43
+Batch: 0 | Loss: 0.649 | Acc: 0.000,2.344,91.406,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.608 | Acc: 1.376,1.376,94.308,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.569 | Acc: 1.181,1.429,94.912,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.567 | Acc: 1.127,1.332,94.954,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.578 | Acc: 1.090,1.312,94.878,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.577 | Acc: 1.075,1.361,94.864,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.578 | Acc: 1.078,1.343,94.809,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.570 | Acc: 1.191,1.369,94.941,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.571 | Acc: 1.199,1.368,94.983,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.574 | Acc: 1.204,1.398,94.972,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.576 | Acc: 1.263,1.399,94.963,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.582 | Acc: 1.262,1.446,94.867,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.586 | Acc: 1.277,1.430,94.804,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.594 | Acc: 1.272,1.443,94.750,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.597 | Acc: 1.287,1.429,94.731,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.606 | Acc: 1.319,1.422,94.632,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.616 | Acc: 1.287,1.424,94.500,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.619 | Acc: 1.283,1.416,94.437,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.627 | Acc: 1.283,1.437,94.362,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.637 | Acc: 1.282,1.425,94.232,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 4.090 | Acc: 0.781,0.000,69.531,% | Adaptive Acc: 69.531% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.997 | Acc: 1.228,1.153,67.746,% | Adaptive Acc: 67.746% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.027 | Acc: 1.315,1.220,67.245,% | Adaptive Acc: 67.245% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.037 | Acc: 1.140,1.217,67.392,% | Adaptive Acc: 67.392% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 44
+Batch: 0 | Loss: 0.634 | Acc: 0.781,0.781,93.750,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.596 | Acc: 1.190,1.451,94.717,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.562 | Acc: 1.181,1.296,94.950,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.558 | Acc: 1.127,1.306,94.980,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.577 | Acc: 1.215,1.331,94.705,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.575 | Acc: 1.191,1.369,94.717,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.571 | Acc: 1.259,1.375,94.809,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.572 | Acc: 1.313,1.402,94.814,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.575 | Acc: 1.281,1.407,94.798,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.579 | Acc: 1.247,1.386,94.708,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.579 | Acc: 1.236,1.380,94.745,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.588 | Acc: 1.237,1.428,94.669,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.596 | Acc: 1.271,1.468,94.622,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.602 | Acc: 1.281,1.473,94.564,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.606 | Acc: 1.284,1.471,94.495,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.611 | Acc: 1.282,1.472,94.479,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.614 | Acc: 1.300,1.468,94.439,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.621 | Acc: 1.281,1.457,94.332,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.630 | Acc: 1.311,1.463,94.226,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.640 | Acc: 1.282,1.454,94.127,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.768 | Acc: 1.562,0.000,71.094,% | Adaptive Acc: 71.094% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.905 | Acc: 1.116,1.116,68.713,% | Adaptive Acc: 68.713% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.014 | Acc: 1.277,1.258,67.912,% | Adaptive Acc: 67.912% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.042 | Acc: 1.153,1.230,67.661,% | Adaptive Acc: 67.661% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 45
+Batch: 0 | Loss: 0.608 | Acc: 0.781,1.562,96.094,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.608 | Acc: 1.488,1.749,94.420,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.615 | Acc: 1.448,1.601,94.379,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.594 | Acc: 1.345,1.575,94.685,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.578 | Acc: 1.235,1.630,94.907,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.580 | Acc: 1.261,1.609,94.833,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.590 | Acc: 1.265,1.569,94.783,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.592 | Acc: 1.247,1.551,94.725,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.598 | Acc: 1.271,1.499,94.691,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.602 | Acc: 1.252,1.554,94.631,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.606 | Acc: 1.248,1.547,94.632,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.609 | Acc: 1.287,1.513,94.542,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.611 | Acc: 1.277,1.524,94.560,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.613 | Acc: 1.245,1.527,94.522,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.619 | Acc: 1.243,1.501,94.451,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.626 | Acc: 1.256,1.508,94.342,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.636 | Acc: 1.266,1.492,94.222,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.644 | Acc: 1.233,1.521,94.112,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.650 | Acc: 1.234,1.502,94.044,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.661 | Acc: 1.239,1.478,93.928,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.973 | Acc: 1.562,0.000,67.969,% | Adaptive Acc: 67.969% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 4.014 | Acc: 1.116,1.265,67.969,% | Adaptive Acc: 67.969% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.053 | Acc: 1.220,1.391,67.778,% | Adaptive Acc: 67.778% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.094 | Acc: 1.076,1.345,67.469,% | Adaptive Acc: 67.469% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 46
+Batch: 0 | Loss: 0.587 | Acc: 3.125,0.781,96.875,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.673 | Acc: 0.967,1.451,94.420,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.602 | Acc: 1.181,1.372,94.931,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.611 | Acc: 1.127,1.383,94.749,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.603 | Acc: 1.080,1.437,94.898,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.602 | Acc: 1.129,1.361,94.879,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.604 | Acc: 1.188,1.408,94.802,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.602 | Acc: 1.230,1.418,94.797,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.607 | Acc: 1.257,1.480,94.725,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.607 | Acc: 1.260,1.528,94.734,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.618 | Acc: 1.279,1.543,94.590,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.622 | Acc: 1.258,1.524,94.485,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.626 | Acc: 1.271,1.540,94.434,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.630 | Acc: 1.272,1.539,94.379,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.639 | Acc: 1.265,1.529,94.259,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.648 | Acc: 1.267,1.505,94.134,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.651 | Acc: 1.278,1.480,94.096,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.657 | Acc: 1.267,1.475,94.018,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.662 | Acc: 1.273,1.482,93.979,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.669 | Acc: 1.261,1.491,93.875,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.595 | Acc: 1.562,0.000,71.094,% | Adaptive Acc: 71.094% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.713 | Acc: 1.079,1.153,69.345,% | Adaptive Acc: 69.345% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.819 | Acc: 1.143,1.277,68.617,% | Adaptive Acc: 68.617% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.895 | Acc: 1.012,1.242,68.161,% | Adaptive Acc: 68.161% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 47
+Batch: 0 | Loss: 0.673 | Acc: 0.000,3.906,94.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.544 | Acc: 0.930,1.711,95.164,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.573 | Acc: 0.972,1.658,94.855,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.568 | Acc: 1.037,1.588,95.044,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.573 | Acc: 1.090,1.591,95.091,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.572 | Acc: 1.106,1.508,95.057,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.573 | Acc: 1.130,1.537,95.041,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.566 | Acc: 1.169,1.601,95.130,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.569 | Acc: 1.174,1.596,95.080,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.564 | Acc: 1.200,1.614,95.170,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.564 | Acc: 1.193,1.594,95.157,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.567 | Acc: 1.195,1.552,95.097,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.568 | Acc: 1.177,1.543,95.076,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.570 | Acc: 1.173,1.548,95.049,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.578 | Acc: 1.170,1.499,94.948,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.589 | Acc: 1.173,1.490,94.809,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.598 | Acc: 1.193,1.487,94.685,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.604 | Acc: 1.205,1.489,94.644,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.610 | Acc: 1.214,1.489,94.572,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.616 | Acc: 1.224,1.472,94.511,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.745 | Acc: 0.781,0.000,70.312,% | Adaptive Acc: 70.312% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.812 | Acc: 1.116,1.339,69.494,% | Adaptive Acc: 69.494% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.902 | Acc: 1.220,1.467,68.197,% | Adaptive Acc: 68.197% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.974 | Acc: 1.114,1.434,67.713,% | Adaptive Acc: 67.713% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 48
+Batch: 0 | Loss: 0.616 | Acc: 0.781,3.125,93.750,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.578 | Acc: 1.004,1.525,94.792,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.609 | Acc: 1.048,1.448,94.322,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.597 | Acc: 1.089,1.460,94.442,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.570 | Acc: 1.080,1.485,94.859,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.565 | Acc: 1.114,1.477,95.011,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.568 | Acc: 1.175,1.491,94.919,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.567 | Acc: 1.147,1.496,94.975,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.567 | Acc: 1.145,1.465,95.041,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.570 | Acc: 1.140,1.480,94.993,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.575 | Acc: 1.158,1.477,94.947,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.572 | Acc: 1.181,1.485,94.970,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.578 | Acc: 1.199,1.481,94.901,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.583 | Acc: 1.209,1.494,94.861,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.587 | Acc: 1.223,1.496,94.820,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.587 | Acc: 1.228,1.485,94.822,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.589 | Acc: 1.234,1.485,94.831,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.594 | Acc: 1.221,1.496,94.779,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.597 | Acc: 1.210,1.500,94.739,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.605 | Acc: 1.216,1.485,94.613,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.791 | Acc: 1.562,0.000,71.875,% | Adaptive Acc: 71.875% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.892 | Acc: 1.079,1.079,68.676,% | Adaptive Acc: 68.676% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.921 | Acc: 1.162,1.200,68.464,% | Adaptive Acc: 68.464% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.962 | Acc: 1.076,1.165,68.302,% | Adaptive Acc: 68.302% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 49
+Batch: 0 | Loss: 0.451 | Acc: 0.000,2.344,96.875,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.513 | Acc: 1.376,1.600,96.057,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.505 | Acc: 1.334,1.467,95.884,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.506 | Acc: 1.358,1.396,95.761,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.510 | Acc: 1.302,1.466,95.718,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.516 | Acc: 1.330,1.400,95.661,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.518 | Acc: 1.285,1.459,95.642,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.519 | Acc: 1.285,1.518,95.656,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.523 | Acc: 1.276,1.548,95.541,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.531 | Acc: 1.252,1.511,95.416,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.538 | Acc: 1.232,1.516,95.355,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.546 | Acc: 1.234,1.485,95.217,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.556 | Acc: 1.203,1.494,95.108,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.569 | Acc: 1.224,1.524,94.935,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.577 | Acc: 1.243,1.507,94.865,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.587 | Acc: 1.251,1.513,94.716,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.596 | Acc: 1.251,1.507,94.646,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.603 | Acc: 1.276,1.491,94.540,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.609 | Acc: 1.285,1.482,94.501,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.613 | Acc: 1.280,1.489,94.453,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.695 | Acc: 1.562,0.000,72.656,% | Adaptive Acc: 72.656% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.742 | Acc: 1.228,1.116,69.048,% | Adaptive Acc: 69.048% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 3.787 | Acc: 1.391,1.220,68.750,% | Adaptive Acc: 68.750% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 3.860 | Acc: 1.165,1.255,68.468,% | Adaptive Acc: 68.468% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 50
+Batch: 0 | Loss: 0.383 | Acc: 0.781,1.562,97.656,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.529 | Acc: 1.414,1.302,95.610,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.534 | Acc: 1.353,1.429,95.560,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.512 | Acc: 1.319,1.460,95.761,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.510 | Acc: 1.350,1.370,95.824,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.512 | Acc: 1.284,1.315,95.831,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.518 | Acc: 1.311,1.349,95.739,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.524 | Acc: 1.263,1.374,95.617,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.524 | Acc: 1.291,1.354,95.594,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.530 | Acc: 1.286,1.347,95.520,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.536 | Acc: 1.294,1.360,95.437,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.541 | Acc: 1.266,1.393,95.348,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.546 | Acc: 1.248,1.413,95.241,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.554 | Acc: 1.254,1.395,95.160,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.563 | Acc: 1.257,1.404,95.057,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.574 | Acc: 1.277,1.383,94.931,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.581 | Acc: 1.283,1.395,94.862,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.592 | Acc: 1.285,1.407,94.721,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.602 | Acc: 1.283,1.430,94.594,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.610 | Acc: 1.294,1.442,94.517,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 4.295 | Acc: 1.562,0.000,71.875,% | Adaptive Acc: 71.875% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.950 | Acc: 1.339,1.339,68.192,% | Adaptive Acc: 68.192% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.023 | Acc: 1.448,1.448,67.969,% | Adaptive Acc: 67.969% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.107 | Acc: 1.242,1.447,67.354,% | Adaptive Acc: 67.354% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 51
+Batch: 0 | Loss: 0.699 | Acc: 1.562,1.562,94.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.631 | Acc: 1.190,1.823,94.010,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.597 | Acc: 1.200,1.582,94.493,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.582 | Acc: 1.089,1.511,94.659,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.573 | Acc: 1.186,1.466,94.888,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.575 | Acc: 1.145,1.477,94.864,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.578 | Acc: 1.149,1.466,94.854,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.579 | Acc: 1.169,1.457,94.825,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.588 | Acc: 1.199,1.393,94.745,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.584 | Acc: 1.196,1.455,94.760,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.587 | Acc: 1.205,1.504,94.687,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.593 | Acc: 1.195,1.506,94.634,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.603 | Acc: 1.183,1.511,94.518,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.611 | Acc: 1.197,1.539,94.447,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.618 | Acc: 1.193,1.529,94.373,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.624 | Acc: 1.202,1.482,94.355,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.634 | Acc: 1.207,1.455,94.239,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.639 | Acc: 1.217,1.462,94.178,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.650 | Acc: 1.231,1.450,94.070,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.655 | Acc: 1.245,1.442,93.988,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 3.633 | Acc: 1.562,0.000,72.656,% | Adaptive Acc: 72.656% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.997 | Acc: 1.265,1.153,68.638,% | Adaptive Acc: 68.638% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.010 | Acc: 1.372,1.258,68.693,% | Adaptive Acc: 68.693% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.045 | Acc: 1.204,1.306,68.135,% | Adaptive Acc: 68.135% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 52
+Batch: 0 | Loss: 0.668 | Acc: 0.781,0.000,93.750,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.557 | Acc: 1.339,1.042,95.164,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.544 | Acc: 1.239,1.143,95.408,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.539 | Acc: 1.345,1.242,95.402,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.537 | Acc: 1.360,1.235,95.351,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.542 | Acc: 1.408,1.361,95.243,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.534 | Acc: 1.337,1.395,95.319,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.540 | Acc: 1.324,1.418,95.224,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.548 | Acc: 1.378,1.422,95.104,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.554 | Acc: 1.351,1.446,95.036,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.561 | Acc: 1.341,1.485,94.974,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.566 | Acc: 1.326,1.492,94.931,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.565 | Acc: 1.310,1.481,94.979,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.567 | Acc: 1.275,1.473,94.986,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.567 | Acc: 1.296,1.479,94.987,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.572 | Acc: 1.298,1.482,94.921,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.577 | Acc: 1.312,1.507,94.862,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.580 | Acc: 1.294,1.501,94.831,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.584 | Acc: 1.277,1.487,94.797,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.591 | Acc: 1.263,1.480,94.722,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 0 | Loss: 4.054 | Acc: 0.781,0.000,71.875,% | Adaptive Acc: 71.875% | clf_exit: 0.000 0.000 1.000
+Batch: 20 | Loss: 3.912 | Acc: 1.265,1.042,69.866,% | Adaptive Acc: 69.866% | clf_exit: 0.000 0.000 1.000
+Batch: 40 | Loss: 4.028 | Acc: 1.353,1.239,68.941,% | Adaptive Acc: 68.941% | clf_exit: 0.000 0.000 1.000
+Batch: 60 | Loss: 4.046 | Acc: 1.178,1.268,68.417,% | Adaptive Acc: 68.417% | clf_exit: 0.000 0.000 1.000
+
+Epoch: 53
+Batch: 0 | Loss: 0.544 | Acc: 0.781,1.562,94.531,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 20 | Loss: 0.519 | Acc: 1.451,1.190,95.201,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 40 | Loss: 0.513 | Acc: 1.315,1.524,95.465,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 60 | Loss: 0.531 | Acc: 1.153,1.614,95.441,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 80 | Loss: 0.538 | Acc: 1.244,1.553,95.264,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 100 | Loss: 0.533 | Acc: 1.222,1.555,95.343,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 120 | Loss: 0.532 | Acc: 1.246,1.498,95.384,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 140 | Loss: 0.530 | Acc: 1.219,1.502,95.484,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 160 | Loss: 0.531 | Acc: 1.218,1.558,95.414,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 180 | Loss: 0.537 | Acc: 1.239,1.506,95.321,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 200 | Loss: 0.543 | Acc: 1.232,1.528,95.266,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 220 | Loss: 0.546 | Acc: 1.255,1.513,95.224,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 240 | Loss: 0.548 | Acc: 1.245,1.537,95.176,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 260 | Loss: 0.551 | Acc: 1.230,1.524,95.151,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 280 | Loss: 0.555 | Acc: 1.207,1.493,95.154,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 300 | Loss: 0.559 | Acc: 1.217,1.492,95.131,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 320 | Loss: 0.564 | Acc: 1.239,1.482,95.064,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 340 | Loss: 0.569 | Acc: 1.233,1.508,95.017,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 360 | Loss: 0.576 | Acc: 1.240,1.506,94.934,% | Adaptive Acc: 0.000% | clf_exit: 
+Batch: 380 | Loss: 0.583 | Acc: 1.230,1.507,94.816,% | Adaptive Acc: 0.000% | clf_exit: 

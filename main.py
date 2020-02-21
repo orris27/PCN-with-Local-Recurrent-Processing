@@ -13,6 +13,8 @@ import torch.nn.functional as F
 #from utils import progress_bar
 from torch.autograd import Variable
 
+from utils import KDLoss, ee_loss
+
 def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     use_cuda = True # torch.cuda.is_available()
     best_acc = 0  # best test accuracy
@@ -27,6 +29,15 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     step_all, step_clf = args.step_all, args.step_clf
     vanilla = bool(args.vanilla)
     ge = bool(args.ge)
+
+
+    # Knowledge Distillation
+    loss_type = args.loss_type
+    T = args.T
+    gamma = args.gamma
+    lmbda_e = args.lmbda_e
+    flops_str = args.flops_str
+
     lmbda = args.lmbda
     fb = args.fb
     root = './'
@@ -125,6 +136,18 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     elif backend == 'resnet56_dense':
         from resnet.resnet_dense import resnet56
         model = resnet56(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge)
+    elif backend == 'resnet56_h12':
+        from resnet.resnet_h12 import resnet56
+        model = resnet56(num_classes=num_classes,cls=circles, dropout=dropout, adaptive=adaptive, vanilla=vanilla, ge=ge)
+    elif backend == 'modelG':
+        from pcn.modelG import PredNetBpD
+        model = PredNetBpD(num_classes=num_classes,cls=circles, ge=ge, score_layer=(True if loss_type == 'early_exit' else False))
+    elif backend == 'modelG_2con3':
+        from pcn.modelG_2con3 import PredNetBpD
+        model = PredNetBpD(num_classes=num_classes,cls=circles, ge=ge, score_layer=(True if loss_type == 'early_exit' else False))
+    elif backend == 'modelG_0con1_2con3':
+        from pcn.modelG_0con1_2con3 import PredNetBpD
+        model = PredNetBpD(num_classes=num_classes,cls=circles, ge=ge, score_layer=(True if loss_type == 'early_exit' else False))
     else:
         raise ValueError
 
@@ -133,6 +156,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     
     # Define objective function
     criterion = nn.CrossEntropyLoss()
+    kd_loss = KDLoss(T, gamma, 3)
     optimizer = optim.SGD(model.parameters(), momentum=0.9, lr=lr, weight_decay=weightDecay, nesterov=nesterov)
       
     # Parallel computing
@@ -147,7 +171,9 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
         else:
             return t[0]
    
-   # Training
+    
+    
+    # Training
     def train(epoch):
         print('\nEpoch: %d' % epoch)
         model.train()
@@ -166,15 +192,22 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
             optimizer.zero_grad()
             if backend in ['modelE', 'modelE_dp2', 'modelF']:
                 outputs, errors = model(inputs)
+            elif backend in ['modelG', 'modelG_2con3', 'modelG_0con1_2con3']:
+                outputs, scores = model(inputs) # outputs: a list of (B, num_classes); a list of scores: (B, 1)
             else:
                 outputs = model(inputs)
 
-            #loss = criterion(outputs, targets)
-            loss = 0.0
-            for j in range(len(outputs)):
-                loss += criterion(outputs[j], targets)
-            if backend in ['modelE', 'modelE_dp2', 'modelF']:
-                loss += lmbda * sum([torch.norm(errors[j]) for j in range(len(errors)) if errors[j] is not None]) / targets.shape[0]
+            if loss_type == 'cross_entropy':
+                loss = 0.0
+                for j in range(len(outputs)):
+                    loss += criterion(outputs[j], targets)
+            elif loss_type == 'knowledge_distillation': # knowledge distillation
+                loss = kd_loss.loss_fn_kd(outputs, targets, outputs[-1])
+            elif loss_type == 'early_exit':
+                loss = ee_loss(outputs, targets, scores, list(map(float, flops_str.split(':'))), lmbda_e)
+            else:
+                raise ValueError
+
 
             loss.backward()
             optimizer.step()
@@ -246,14 +279,25 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                 inputs, targets = Variable(inputs), Variable(targets)
                 if backend in ['modelE', 'modelE_dp2', 'modelF']:
                     outputs, errors = model(inputs)
+                elif backend in ['modelG', 'modelG_2con3', 'modelG_0con1_2con3']:
+                    outputs, scores = model(inputs) # outputs: a list of (B, num_classes); a list of scores: (B, 1)
                 else:
                     outputs = model(inputs)
-                #loss = criterion(outputs, targets)
-                loss = 0.0
-                for j in range(len(outputs)):
-                    loss += criterion(outputs[j], targets)
-                if backend in ['modelE', 'modelE_dp2', 'modelF']:
-                    loss += lmbda * sum([torch.norm(errors[j]) for j in range(len(errors)) if errors[j] is not None]) / targets.shape[0]
+
+                if loss_type == 'cross_entropy':
+                    loss = 0.0
+                    for j in range(len(outputs)):
+                        loss += criterion(outputs[j], targets)
+                elif loss_type == 'knowledge_distillation': # knowledge distillation
+                    loss = kd_loss.loss_fn_kd(outputs, targets, outputs[-1])
+                elif loss_type == 'early_exit':
+                    loss = ee_loss(outputs, targets, scores, list(map(int, flops_str.split(':'))), lmbda_e)
+                else:
+                    raise ValueError
+
+
+
+
             
                 test_loss += to_python_float(loss.data)
                 # multiple classifiers
@@ -266,18 +310,32 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                     acc_str += '%.3f,'%(100.*corrects[j]/totals[j])
 
                 # adaptive classifiers
-                if epoch + 1 == max_epoch:
-                    predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
-                    for i in range(targets.shape[0]):
-                        for j in range(len(outputs)):
-                            confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
-                            if confidence > threshold or j + 1 == len(outputs):
-                                predicted_adaptive[i] = idx
-                                exit_count[j] += 1
-                                break
-                    total_adaptive += targets.size(0)
-                    correct_adaptive += predicted_adaptive.eq(targets.data).float().cpu().sum()
-                    clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+                if epoch + 1 == max_epoch or loss_type == 'early_exit':
+                    if loss_type == 'early_exit':
+                        predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
+                        for i in range(targets.shape[0]):
+                            for j in range(len(outputs)):
+                                if j + 1 == len(outputs) or scores[j][i] > 0.5:
+                                #if j + 1 == len(outputs) or torch.distributions.Bernoulli(scores[j][i]).sample() == 1:
+                                    _, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
+                                    predicted_adaptive[i] = idx
+                                    exit_count[j] += 1
+                                    break
+                        total_adaptive += targets.size(0)
+                        correct_adaptive += predicted_adaptive.eq(targets.data).float().cpu().sum()
+                        clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
+                    else:
+                        predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
+                        for i in range(targets.shape[0]):
+                            for j in range(len(outputs)):
+                                confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
+                                if confidence > threshold or j + 1 == len(outputs):
+                                    predicted_adaptive[i] = idx
+                                    exit_count[j] += 1
+                                    break
+                        total_adaptive += targets.size(0)
+                        correct_adaptive += predicted_adaptive.eq(targets.data).float().cpu().sum()
+                        clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
                 else:
                     clf_exit_str = ''
                     correct_adaptive = 0
@@ -371,9 +429,20 @@ if __name__ == '__main__':
     parser.add_argument('--fb', type=str, default='1:1:1')
     parser.add_argument('--step_all', type=int, default=0) # 15
     parser.add_argument('--step_clf', type=int, default=0) # 10
+
+    parser.add_argument('--loss_type', type=str, default='cross_entropy', choices=['cross_entropy', 'knowledge_distillation', 'early_exit'])
+    parser.add_argument('--T', type=float, default=3.0)
+    parser.add_argument('--gamma', type=float, default=0.9)
+    parser.add_argument('--lmbda_e', type=float, default=0.9, help='lmbda for early exit')
+    parser.add_argument('--flops_str', type=str, default='') # e.g.: modelG: 21321:12312:1232
+    
+
+
+
+
     parser.add_argument('--lmbda', type=float, default=0.0)
     parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
-    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_dp2', 'modelC_h_dp2', 'modelD', 'modelE', 'modelE_dp2',  'modelF', 'resnet56', 'resnet56_h', 'resnet56_dense'])
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_dp2', 'modelC_h_dp2', 'modelD', 'modelE', 'modelE_dp2',  'modelF', 'resnet56', 'resnet56_h', 'resnet56_dense', 'resnet56_h12', 'modelG', 'modelG_2con3', 'modelG_0con1_2con3'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
     main_cifar(args)
