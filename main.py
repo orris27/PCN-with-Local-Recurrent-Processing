@@ -28,6 +28,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     dropout = args.dropout
     step_all, step_clf = args.step_all, args.step_clf
     vanilla = bool(args.vanilla)
+    attention = args.attention
     ge = bool(args.ge)
 
 
@@ -148,6 +149,18 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     elif backend == 'modelG_0con1_2con3':
         from pcn.modelG_0con1_2con3 import PredNetBpD
         model = PredNetBpD(num_classes=num_classes,cls=circles, ge=ge, score_layer=(True if loss_type == 'early_exit' else False))
+    elif backend == 'resnet56_2con3':
+        from resnet.resnet_2con3 import resnet56
+        model = resnet56(num_classes=num_classes,cls=circles, ge=ge)
+    elif backend == 'resnet56_2con3_se':
+        from resnet.resnet_2con3_se import resnet56
+        model = resnet56(num_classes=num_classes,cls=circles, ge=ge)
+    elif backend == 'resnet56_2con3_att':
+        from resnet.resnet_2con3_att import resnet56
+        model = resnet56(num_classes=num_classes,cls=circles, ge=ge, attention=attention)
+    elif backend == 'resnet56_2con3_att3':
+        from resnet.resnet_2con3_att3 import resnet56
+        model = resnet56(num_classes=num_classes,cls=circles, ge=ge, attention_1=attention)
     else:
         raise ValueError
 
@@ -436,13 +449,14 @@ if __name__ == '__main__':
     parser.add_argument('--lmbda_e', type=float, default=0.9, help='lmbda for early exit')
     parser.add_argument('--flops_str', type=str, default='') # e.g.: modelG: 21321:12312:1232
     
+    parser.add_argument('--attention', type=str, choices=['no', 'se', 'scan', 'yes'], default='no')
 
 
 
 
     parser.add_argument('--lmbda', type=float, default=0.0)
     parser.add_argument('--vanilla', type=int, default=0, help='no feed input from the previous classifiers') 
-    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_dp2', 'modelC_h_dp2', 'modelD', 'modelE', 'modelE_dp2',  'modelF', 'resnet56', 'resnet56_h', 'resnet56_dense', 'resnet56_h12', 'modelG', 'modelG_2con3', 'modelG_0con1_2con3'])
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_dp2', 'modelC_h_dp2', 'modelD', 'modelE', 'modelE_dp2',  'modelF', 'resnet56', 'resnet56_h', 'resnet56_dense', 'resnet56_h12', 'modelG', 'modelG_2con3', 'modelG_0con1_2con3', 'resnet56_2con3', 'resnet56_2con3_se', 'resnet56_2con3_att', 'resnet56_2con3_att2', 'resnet56_2con3_att3'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
     main_cifar(args)
