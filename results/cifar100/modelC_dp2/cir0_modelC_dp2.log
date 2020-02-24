@@ -21708,3 +21708,1203 @@ Epoch: 299
 940 1000 Loss: 1.102 | Acc: 75.675% (7121/9410)
 960 1000 Loss: 1.102 | Acc: 75.682% (7273/9610)
 980 1000 Loss: 1.101 | Acc: 75.657% (7422/9810)
+
+Training Setting: PCN origin | batch_size=128 | epoch=0 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=0 | Loss: 3.560 |  Acc: 17.636% (8818/50000) | best acc: 0.000
+Testing: Epoch=0 | Loss: 3.110 |  Acc: 24.790% (2479/10000) | best_acc: 0.000
+
+Training Setting: PCN origin | batch_size=128 | epoch=1 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=1 | Loss: 2.780 |  Acc: 32.700% (16350/50000) | best acc: 24.790
+Testing: Epoch=1 | Loss: 2.594 |  Acc: 35.340% (3534/10000) | best_acc: 24.790
+
+Training Setting: PCN origin | batch_size=128 | epoch=2 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=2 | Loss: 2.331 |  Acc: 41.794% (20897/50000) | best acc: 35.340
+Testing: Epoch=2 | Loss: 2.181 |  Acc: 43.870% (4387/10000) | best_acc: 35.340
+
+Training Setting: PCN origin | batch_size=128 | epoch=3 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=3 | Loss: 2.019 |  Acc: 48.464% (24232/50000) | best acc: 43.870
+Testing: Epoch=3 | Loss: 1.965 |  Acc: 48.620% (4862/10000) | best_acc: 43.870
+
+Training Setting: PCN origin | batch_size=128 | epoch=4 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=4 | Loss: 1.797 |  Acc: 53.258% (26629/50000) | best acc: 48.620
+Testing: Epoch=4 | Loss: 1.734 |  Acc: 54.520% (5452/10000) | best_acc: 48.620
+
+Training Setting: PCN origin | batch_size=128 | epoch=5 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=5 | Loss: 1.608 |  Acc: 57.592% (28796/50000) | best acc: 54.520
+Testing: Epoch=5 | Loss: 1.639 |  Acc: 56.800% (5680/10000) | best_acc: 54.520
+
+Training Setting: PCN origin | batch_size=128 | epoch=6 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=6 | Loss: 1.471 |  Acc: 60.952% (30476/50000) | best acc: 56.800
+Testing: Epoch=6 | Loss: 1.572 |  Acc: 57.390% (5739/10000) | best_acc: 56.800
+
+Training Setting: PCN origin | batch_size=128 | epoch=7 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=7 | Loss: 1.343 |  Acc: 63.880% (31940/50000) | best acc: 57.390
+Testing: Epoch=7 | Loss: 1.477 |  Acc: 60.240% (6024/10000) | best_acc: 57.390
+
+Training Setting: PCN origin | batch_size=128 | epoch=8 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=8 | Loss: 1.239 |  Acc: 66.522% (33261/50000) | best acc: 60.240
+Testing: Epoch=8 | Loss: 1.438 |  Acc: 61.600% (6160/10000) | best_acc: 60.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=9 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=9 | Loss: 1.146 |  Acc: 68.630% (34315/50000) | best acc: 61.600
+Testing: Epoch=9 | Loss: 1.374 |  Acc: 63.120% (6312/10000) | best_acc: 61.600
+
+Training Setting: PCN origin | batch_size=128 | epoch=10 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=10 | Loss: 1.056 |  Acc: 71.146% (35573/50000) | best acc: 63.120
+Testing: Epoch=10 | Loss: 1.344 |  Acc: 64.050% (6405/10000) | best_acc: 63.120
+
+Training Setting: PCN origin | batch_size=128 | epoch=11 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=11 | Loss: 0.986 |  Acc: 72.738% (36369/50000) | best acc: 64.050
+Testing: Epoch=11 | Loss: 1.283 |  Acc: 65.130% (6513/10000) | best_acc: 64.050
+
+Training Setting: PCN origin | batch_size=128 | epoch=12 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=12 | Loss: 0.907 |  Acc: 75.000% (37500/50000) | best acc: 65.130
+Testing: Epoch=12 | Loss: 1.352 |  Acc: 64.620% (6462/10000) | best_acc: 65.130
+
+Training Setting: PCN origin | batch_size=128 | epoch=13 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=13 | Loss: 0.839 |  Acc: 76.664% (38332/50000) | best acc: 65.130
+Testing: Epoch=13 | Loss: 1.303 |  Acc: 65.940% (6594/10000) | best_acc: 65.130
+
+Training Setting: PCN origin | batch_size=128 | epoch=14 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=14 | Loss: 0.769 |  Acc: 78.856% (39428/50000) | best acc: 65.940
+Testing: Epoch=14 | Loss: 1.315 |  Acc: 66.000% (6600/10000) | best_acc: 65.940
+
+Training Setting: PCN origin | batch_size=128 | epoch=15 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=15 | Loss: 0.718 |  Acc: 80.084% (40042/50000) | best acc: 66.000
+Testing: Epoch=15 | Loss: 1.255 |  Acc: 67.020% (6702/10000) | best_acc: 66.000
+
+Training Setting: PCN origin | batch_size=128 | epoch=16 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=16 | Loss: 0.663 |  Acc: 81.888% (40944/50000) | best acc: 67.020
+Testing: Epoch=16 | Loss: 1.267 |  Acc: 67.320% (6732/10000) | best_acc: 67.020
+
+Training Setting: PCN origin | batch_size=128 | epoch=17 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=17 | Loss: 0.614 |  Acc: 83.252% (41626/50000) | best acc: 67.320
+Testing: Epoch=17 | Loss: 1.331 |  Acc: 65.800% (6580/10000) | best_acc: 67.320
+
+Training Setting: PCN origin | batch_size=128 | epoch=18 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=18 | Loss: 0.573 |  Acc: 84.506% (42253/50000) | best acc: 67.320
+Testing: Epoch=18 | Loss: 1.348 |  Acc: 66.210% (6621/10000) | best_acc: 67.320
+
+Training Setting: PCN origin | batch_size=128 | epoch=19 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=19 | Loss: 0.532 |  Acc: 85.806% (42903/50000) | best acc: 67.320
+Testing: Epoch=19 | Loss: 1.293 |  Acc: 67.880% (6788/10000) | best_acc: 67.320
+
+Training Setting: PCN origin | batch_size=128 | epoch=20 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=20 | Loss: 0.491 |  Acc: 87.026% (43513/50000) | best acc: 67.880
+Testing: Epoch=20 | Loss: 1.315 |  Acc: 66.760% (6676/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=21 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=21 | Loss: 0.474 |  Acc: 87.580% (43790/50000) | best acc: 67.880
+Testing: Epoch=21 | Loss: 1.295 |  Acc: 67.750% (6775/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=22 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=22 | Loss: 0.436 |  Acc: 88.602% (44301/50000) | best acc: 67.880
+Testing: Epoch=22 | Loss: 1.349 |  Acc: 66.740% (6674/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=23 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=23 | Loss: 0.411 |  Acc: 89.420% (44710/50000) | best acc: 67.880
+Testing: Epoch=23 | Loss: 1.336 |  Acc: 66.670% (6667/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=24 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=24 | Loss: 0.395 |  Acc: 89.918% (44959/50000) | best acc: 67.880
+Testing: Epoch=24 | Loss: 1.304 |  Acc: 67.570% (6757/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=25 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=25 | Loss: 0.370 |  Acc: 90.670% (45335/50000) | best acc: 67.880
+Testing: Epoch=25 | Loss: 1.335 |  Acc: 67.810% (6781/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=26 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=26 | Loss: 0.356 |  Acc: 91.082% (45541/50000) | best acc: 67.880
+Testing: Epoch=26 | Loss: 1.341 |  Acc: 67.730% (6773/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=27 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=27 | Loss: 0.345 |  Acc: 91.526% (45763/50000) | best acc: 67.880
+Testing: Epoch=27 | Loss: 1.374 |  Acc: 67.230% (6723/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=28 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=28 | Loss: 0.327 |  Acc: 91.964% (45982/50000) | best acc: 67.880
+Testing: Epoch=28 | Loss: 1.412 |  Acc: 66.890% (6689/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=29 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=29 | Loss: 0.312 |  Acc: 92.532% (46266/50000) | best acc: 67.880
+Testing: Epoch=29 | Loss: 1.346 |  Acc: 67.630% (6763/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=30 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=30 | Loss: 0.308 |  Acc: 92.636% (46318/50000) | best acc: 67.880
+Testing: Epoch=30 | Loss: 1.380 |  Acc: 67.300% (6730/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=31 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=31 | Loss: 0.298 |  Acc: 92.992% (46496/50000) | best acc: 67.880
+Testing: Epoch=31 | Loss: 1.394 |  Acc: 66.730% (6673/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=32 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=32 | Loss: 0.298 |  Acc: 92.954% (46477/50000) | best acc: 67.880
+Testing: Epoch=32 | Loss: 1.385 |  Acc: 67.070% (6707/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=33 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=33 | Loss: 0.290 |  Acc: 93.168% (46584/50000) | best acc: 67.880
+Testing: Epoch=33 | Loss: 1.408 |  Acc: 67.340% (6734/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=34 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=34 | Loss: 0.285 |  Acc: 93.400% (46700/50000) | best acc: 67.880
+Testing: Epoch=34 | Loss: 1.393 |  Acc: 67.410% (6741/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=35 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=35 | Loss: 0.283 |  Acc: 93.432% (46716/50000) | best acc: 67.880
+Testing: Epoch=35 | Loss: 1.372 |  Acc: 67.990% (6799/10000) | best_acc: 67.880
+
+Training Setting: PCN origin | batch_size=128 | epoch=36 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=36 | Loss: 0.275 |  Acc: 93.634% (46817/50000) | best acc: 67.990
+Testing: Epoch=36 | Loss: 1.381 |  Acc: 67.470% (6747/10000) | best_acc: 67.990
+
+Training Setting: PCN origin | batch_size=128 | epoch=37 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=37 | Loss: 0.270 |  Acc: 93.842% (46921/50000) | best acc: 67.990
+Testing: Epoch=37 | Loss: 1.394 |  Acc: 67.710% (6771/10000) | best_acc: 67.990
+
+Training Setting: PCN origin | batch_size=128 | epoch=38 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=38 | Loss: 0.267 |  Acc: 93.946% (46973/50000) | best acc: 67.990
+Testing: Epoch=38 | Loss: 1.365 |  Acc: 68.270% (6827/10000) | best_acc: 67.990
+
+Training Setting: PCN origin | batch_size=128 | epoch=39 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=39 | Loss: 0.264 |  Acc: 94.084% (47042/50000) | best acc: 68.270
+Testing: Epoch=39 | Loss: 1.401 |  Acc: 67.270% (6727/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=40 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=40 | Loss: 0.257 |  Acc: 94.264% (47132/50000) | best acc: 68.270
+Testing: Epoch=40 | Loss: 1.388 |  Acc: 68.190% (6819/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=41 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=41 | Loss: 0.259 |  Acc: 94.306% (47153/50000) | best acc: 68.270
+Testing: Epoch=41 | Loss: 1.414 |  Acc: 67.530% (6753/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=42 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=42 | Loss: 0.254 |  Acc: 94.364% (47182/50000) | best acc: 68.270
+Testing: Epoch=42 | Loss: 1.386 |  Acc: 67.800% (6780/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=43 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=43 | Loss: 0.259 |  Acc: 94.226% (47113/50000) | best acc: 68.270
+Testing: Epoch=43 | Loss: 1.384 |  Acc: 67.860% (6786/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=44 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=44 | Loss: 0.257 |  Acc: 94.200% (47100/50000) | best acc: 68.270
+Testing: Epoch=44 | Loss: 1.400 |  Acc: 67.490% (6749/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=45 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=45 | Loss: 0.251 |  Acc: 94.532% (47266/50000) | best acc: 68.270
+Testing: Epoch=45 | Loss: 1.401 |  Acc: 67.340% (6734/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=46 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=46 | Loss: 0.252 |  Acc: 94.476% (47238/50000) | best acc: 68.270
+Testing: Epoch=46 | Loss: 1.347 |  Acc: 68.050% (6805/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=47 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=47 | Loss: 0.254 |  Acc: 94.174% (47087/50000) | best acc: 68.270
+Testing: Epoch=47 | Loss: 1.379 |  Acc: 67.550% (6755/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=48 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=48 | Loss: 0.249 |  Acc: 94.560% (47280/50000) | best acc: 68.270
+Testing: Epoch=48 | Loss: 1.402 |  Acc: 67.670% (6767/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=49 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=49 | Loss: 0.245 |  Acc: 94.618% (47309/50000) | best acc: 68.270
+Testing: Epoch=49 | Loss: 1.413 |  Acc: 67.520% (6752/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=50 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=50 | Loss: 0.248 |  Acc: 94.554% (47277/50000) | best acc: 68.270
+Testing: Epoch=50 | Loss: 1.392 |  Acc: 67.080% (6708/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=51 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=51 | Loss: 0.240 |  Acc: 94.768% (47384/50000) | best acc: 68.270
+Testing: Epoch=51 | Loss: 1.383 |  Acc: 67.970% (6797/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=52 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=52 | Loss: 0.240 |  Acc: 94.820% (47410/50000) | best acc: 68.270
+Testing: Epoch=52 | Loss: 1.439 |  Acc: 67.070% (6707/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=53 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=53 | Loss: 0.242 |  Acc: 94.732% (47366/50000) | best acc: 68.270
+Testing: Epoch=53 | Loss: 1.377 |  Acc: 67.850% (6785/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=54 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=54 | Loss: 0.243 |  Acc: 94.694% (47347/50000) | best acc: 68.270
+Testing: Epoch=54 | Loss: 1.450 |  Acc: 66.860% (6686/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=55 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=55 | Loss: 0.240 |  Acc: 94.580% (47290/50000) | best acc: 68.270
+Testing: Epoch=55 | Loss: 1.415 |  Acc: 67.610% (6761/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=56 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=56 | Loss: 0.239 |  Acc: 94.716% (47358/50000) | best acc: 68.270
+Testing: Epoch=56 | Loss: 1.436 |  Acc: 67.070% (6707/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=57 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=57 | Loss: 0.236 |  Acc: 94.980% (47490/50000) | best acc: 68.270
+Testing: Epoch=57 | Loss: 1.410 |  Acc: 67.960% (6796/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=58 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=58 | Loss: 0.245 |  Acc: 94.642% (47321/50000) | best acc: 68.270
+Testing: Epoch=58 | Loss: 1.402 |  Acc: 67.390% (6739/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=59 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=59 | Loss: 0.235 |  Acc: 94.910% (47455/50000) | best acc: 68.270
+Testing: Epoch=59 | Loss: 1.406 |  Acc: 67.960% (6796/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=60 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=60 | Loss: 0.232 |  Acc: 94.920% (47460/50000) | best acc: 68.270
+Testing: Epoch=60 | Loss: 1.380 |  Acc: 68.220% (6822/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=61 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=61 | Loss: 0.218 |  Acc: 95.556% (47778/50000) | best acc: 68.270
+Testing: Epoch=61 | Loss: 1.373 |  Acc: 68.400% (6840/10000) | best_acc: 68.270
+
+Training Setting: PCN origin | batch_size=128 | epoch=62 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=62 | Loss: 0.219 |  Acc: 95.404% (47702/50000) | best acc: 68.400
+Testing: Epoch=62 | Loss: 1.365 |  Acc: 68.750% (6875/10000) | best_acc: 68.400
+
+Training Setting: PCN origin | batch_size=128 | epoch=63 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=63 | Loss: 0.226 |  Acc: 95.178% (47589/50000) | best acc: 68.750
+Testing: Epoch=63 | Loss: 1.409 |  Acc: 67.070% (6707/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=64 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=64 | Loss: 0.225 |  Acc: 95.284% (47642/50000) | best acc: 68.750
+Testing: Epoch=64 | Loss: 1.416 |  Acc: 68.540% (6854/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=65 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=65 | Loss: 0.218 |  Acc: 95.512% (47756/50000) | best acc: 68.750
+Testing: Epoch=65 | Loss: 1.402 |  Acc: 67.550% (6755/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=66 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=66 | Loss: 0.226 |  Acc: 95.206% (47603/50000) | best acc: 68.750
+Testing: Epoch=66 | Loss: 1.386 |  Acc: 67.560% (6756/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=67 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=67 | Loss: 0.236 |  Acc: 94.936% (47468/50000) | best acc: 68.750
+Testing: Epoch=67 | Loss: 1.412 |  Acc: 67.530% (6753/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=68 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=68 | Loss: 0.228 |  Acc: 95.050% (47525/50000) | best acc: 68.750
+Testing: Epoch=68 | Loss: 1.409 |  Acc: 67.850% (6785/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=69 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=69 | Loss: 0.227 |  Acc: 95.104% (47552/50000) | best acc: 68.750
+Testing: Epoch=69 | Loss: 1.425 |  Acc: 67.820% (6782/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=70 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=70 | Loss: 0.226 |  Acc: 95.110% (47555/50000) | best acc: 68.750
+Testing: Epoch=70 | Loss: 1.419 |  Acc: 67.170% (6717/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=71 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=71 | Loss: 0.232 |  Acc: 95.046% (47523/50000) | best acc: 68.750
+Testing: Epoch=71 | Loss: 1.404 |  Acc: 67.690% (6769/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=72 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=72 | Loss: 0.230 |  Acc: 94.994% (47497/50000) | best acc: 68.750
+Testing: Epoch=72 | Loss: 1.473 |  Acc: 67.310% (6731/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=73 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=73 | Loss: 0.224 |  Acc: 95.230% (47615/50000) | best acc: 68.750
+Testing: Epoch=73 | Loss: 1.376 |  Acc: 68.390% (6839/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=74 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=74 | Loss: 0.220 |  Acc: 95.360% (47680/50000) | best acc: 68.750
+Testing: Epoch=74 | Loss: 1.437 |  Acc: 67.400% (6740/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=75 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=75 | Loss: 0.216 |  Acc: 95.436% (47718/50000) | best acc: 68.750
+Testing: Epoch=75 | Loss: 1.388 |  Acc: 68.270% (6827/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=76 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=76 | Loss: 0.219 |  Acc: 95.368% (47684/50000) | best acc: 68.750
+Testing: Epoch=76 | Loss: 1.413 |  Acc: 67.850% (6785/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=77 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=77 | Loss: 0.216 |  Acc: 95.476% (47738/50000) | best acc: 68.750
+Testing: Epoch=77 | Loss: 1.398 |  Acc: 68.740% (6874/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=78 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=78 | Loss: 0.218 |  Acc: 95.356% (47678/50000) | best acc: 68.750
+Testing: Epoch=78 | Loss: 1.403 |  Acc: 68.320% (6832/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=79 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=79 | Loss: 0.210 |  Acc: 95.826% (47913/50000) | best acc: 68.750
+Testing: Epoch=79 | Loss: 1.386 |  Acc: 68.770% (6877/10000) | best_acc: 68.750
+
+Training Setting: PCN origin | batch_size=128 | epoch=80 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=80 | Loss: 0.217 |  Acc: 95.476% (47738/50000) | best acc: 68.770
+Testing: Epoch=80 | Loss: 1.374 |  Acc: 68.850% (6885/10000) | best_acc: 68.770
+
+Training Setting: PCN origin | batch_size=128 | epoch=81 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=81 | Loss: 0.219 |  Acc: 95.372% (47686/50000) | best acc: 68.850
+Testing: Epoch=81 | Loss: 1.360 |  Acc: 68.730% (6873/10000) | best_acc: 68.850
+
+Training Setting: PCN origin | batch_size=128 | epoch=82 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=82 | Loss: 0.204 |  Acc: 95.870% (47935/50000) | best acc: 68.850
+Testing: Epoch=82 | Loss: 1.361 |  Acc: 69.170% (6917/10000) | best_acc: 68.850
+
+Training Setting: PCN origin | batch_size=128 | epoch=83 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=83 | Loss: 0.220 |  Acc: 95.334% (47667/50000) | best acc: 69.170
+Testing: Epoch=83 | Loss: 1.463 |  Acc: 67.230% (6723/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=84 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=84 | Loss: 0.221 |  Acc: 95.248% (47624/50000) | best acc: 69.170
+Testing: Epoch=84 | Loss: 1.428 |  Acc: 67.540% (6754/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=85 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=85 | Loss: 0.218 |  Acc: 95.396% (47698/50000) | best acc: 69.170
+Testing: Epoch=85 | Loss: 1.395 |  Acc: 68.020% (6802/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=86 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=86 | Loss: 0.226 |  Acc: 95.030% (47515/50000) | best acc: 69.170
+Testing: Epoch=86 | Loss: 1.411 |  Acc: 67.870% (6787/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=87 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=87 | Loss: 0.223 |  Acc: 95.240% (47620/50000) | best acc: 69.170
+Testing: Epoch=87 | Loss: 1.408 |  Acc: 68.260% (6826/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=88 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=88 | Loss: 0.211 |  Acc: 95.602% (47801/50000) | best acc: 69.170
+Testing: Epoch=88 | Loss: 1.408 |  Acc: 67.930% (6793/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=89 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=89 | Loss: 0.218 |  Acc: 95.252% (47626/50000) | best acc: 69.170
+Testing: Epoch=89 | Loss: 1.381 |  Acc: 68.310% (6831/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=90 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=90 | Loss: 0.215 |  Acc: 95.442% (47721/50000) | best acc: 69.170
+Testing: Epoch=90 | Loss: 1.394 |  Acc: 68.240% (6824/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=91 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=91 | Loss: 0.205 |  Acc: 95.736% (47868/50000) | best acc: 69.170
+Testing: Epoch=91 | Loss: 1.450 |  Acc: 67.630% (6763/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=92 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=92 | Loss: 0.211 |  Acc: 95.550% (47775/50000) | best acc: 69.170
+Testing: Epoch=92 | Loss: 1.425 |  Acc: 67.110% (6711/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=93 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=93 | Loss: 0.205 |  Acc: 95.692% (47846/50000) | best acc: 69.170
+Testing: Epoch=93 | Loss: 1.424 |  Acc: 68.330% (6833/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=94 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=94 | Loss: 0.214 |  Acc: 95.530% (47765/50000) | best acc: 69.170
+Testing: Epoch=94 | Loss: 1.413 |  Acc: 67.640% (6764/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=95 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=95 | Loss: 0.212 |  Acc: 95.506% (47753/50000) | best acc: 69.170
+Testing: Epoch=95 | Loss: 1.410 |  Acc: 68.320% (6832/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=96 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=96 | Loss: 0.213 |  Acc: 95.520% (47760/50000) | best acc: 69.170
+Testing: Epoch=96 | Loss: 1.441 |  Acc: 67.830% (6783/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=97 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=97 | Loss: 0.212 |  Acc: 95.500% (47750/50000) | best acc: 69.170
+Testing: Epoch=97 | Loss: 1.469 |  Acc: 66.740% (6674/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=98 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=98 | Loss: 0.221 |  Acc: 95.180% (47590/50000) | best acc: 69.170
+Testing: Epoch=98 | Loss: 1.453 |  Acc: 67.080% (6708/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=99 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=99 | Loss: 0.215 |  Acc: 95.524% (47762/50000) | best acc: 69.170
+Testing: Epoch=99 | Loss: 1.472 |  Acc: 67.430% (6743/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=100 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=100 | Loss: 0.213 |  Acc: 95.512% (47756/50000) | best acc: 69.170
+Testing: Epoch=100 | Loss: 1.420 |  Acc: 67.510% (6751/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=101 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=101 | Loss: 0.211 |  Acc: 95.546% (47773/50000) | best acc: 69.170
+Testing: Epoch=101 | Loss: 1.453 |  Acc: 67.550% (6755/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=102 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=102 | Loss: 0.209 |  Acc: 95.552% (47776/50000) | best acc: 69.170
+Testing: Epoch=102 | Loss: 1.381 |  Acc: 68.180% (6818/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=103 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=103 | Loss: 0.202 |  Acc: 95.752% (47876/50000) | best acc: 69.170
+Testing: Epoch=103 | Loss: 1.410 |  Acc: 67.970% (6797/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=104 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=104 | Loss: 0.210 |  Acc: 95.650% (47825/50000) | best acc: 69.170
+Testing: Epoch=104 | Loss: 1.400 |  Acc: 68.490% (6849/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=105 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=105 | Loss: 0.204 |  Acc: 95.792% (47896/50000) | best acc: 69.170
+Testing: Epoch=105 | Loss: 1.379 |  Acc: 68.570% (6857/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=106 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=106 | Loss: 0.211 |  Acc: 95.490% (47745/50000) | best acc: 69.170
+Testing: Epoch=106 | Loss: 1.473 |  Acc: 67.800% (6780/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=107 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=107 | Loss: 0.222 |  Acc: 95.160% (47580/50000) | best acc: 69.170
+Testing: Epoch=107 | Loss: 1.390 |  Acc: 69.050% (6905/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=108 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=108 | Loss: 0.216 |  Acc: 95.412% (47706/50000) | best acc: 69.170
+Testing: Epoch=108 | Loss: 1.381 |  Acc: 68.650% (6865/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=109 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=109 | Loss: 0.208 |  Acc: 95.714% (47857/50000) | best acc: 69.170
+Testing: Epoch=109 | Loss: 1.454 |  Acc: 67.410% (6741/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=110 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=110 | Loss: 0.205 |  Acc: 95.812% (47906/50000) | best acc: 69.170
+Testing: Epoch=110 | Loss: 1.393 |  Acc: 68.270% (6827/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=111 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=111 | Loss: 0.201 |  Acc: 95.818% (47909/50000) | best acc: 69.170
+Testing: Epoch=111 | Loss: 1.353 |  Acc: 69.000% (6900/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=112 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=112 | Loss: 0.207 |  Acc: 95.752% (47876/50000) | best acc: 69.170
+Testing: Epoch=112 | Loss: 1.428 |  Acc: 67.650% (6765/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=113 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=113 | Loss: 0.207 |  Acc: 95.534% (47767/50000) | best acc: 69.170
+Testing: Epoch=113 | Loss: 1.441 |  Acc: 67.100% (6710/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=114 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=114 | Loss: 0.212 |  Acc: 95.506% (47753/50000) | best acc: 69.170
+Testing: Epoch=114 | Loss: 1.386 |  Acc: 68.120% (6812/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=115 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=115 | Loss: 0.216 |  Acc: 95.450% (47725/50000) | best acc: 69.170
+Testing: Epoch=115 | Loss: 1.393 |  Acc: 68.090% (6809/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=116 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=116 | Loss: 0.199 |  Acc: 96.022% (48011/50000) | best acc: 69.170
+Testing: Epoch=116 | Loss: 1.346 |  Acc: 68.950% (6895/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=117 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=117 | Loss: 0.205 |  Acc: 95.676% (47838/50000) | best acc: 69.170
+Testing: Epoch=117 | Loss: 1.371 |  Acc: 69.240% (6924/10000) | best_acc: 69.170
+
+Training Setting: PCN origin | batch_size=128 | epoch=118 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=118 | Loss: 0.199 |  Acc: 95.996% (47998/50000) | best acc: 69.240
+Testing: Epoch=118 | Loss: 1.373 |  Acc: 68.530% (6853/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=119 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=119 | Loss: 0.200 |  Acc: 95.918% (47959/50000) | best acc: 69.240
+Testing: Epoch=119 | Loss: 1.437 |  Acc: 67.280% (6728/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=120 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=120 | Loss: 0.209 |  Acc: 95.510% (47755/50000) | best acc: 69.240
+Testing: Epoch=120 | Loss: 1.387 |  Acc: 68.200% (6820/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=121 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=121 | Loss: 0.204 |  Acc: 95.770% (47885/50000) | best acc: 69.240
+Testing: Epoch=121 | Loss: 1.455 |  Acc: 67.490% (6749/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=122 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=122 | Loss: 0.200 |  Acc: 95.836% (47918/50000) | best acc: 69.240
+Testing: Epoch=122 | Loss: 1.415 |  Acc: 67.650% (6765/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=123 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=123 | Loss: 0.209 |  Acc: 95.504% (47752/50000) | best acc: 69.240
+Testing: Epoch=123 | Loss: 1.432 |  Acc: 67.060% (6706/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=124 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=124 | Loss: 0.209 |  Acc: 95.670% (47835/50000) | best acc: 69.240
+Testing: Epoch=124 | Loss: 1.429 |  Acc: 68.400% (6840/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=125 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=125 | Loss: 0.202 |  Acc: 95.678% (47839/50000) | best acc: 69.240
+Testing: Epoch=125 | Loss: 1.405 |  Acc: 68.450% (6845/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=126 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=126 | Loss: 0.201 |  Acc: 95.860% (47930/50000) | best acc: 69.240
+Testing: Epoch=126 | Loss: 1.421 |  Acc: 68.230% (6823/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=127 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=127 | Loss: 0.203 |  Acc: 95.704% (47852/50000) | best acc: 69.240
+Testing: Epoch=127 | Loss: 1.405 |  Acc: 68.030% (6803/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=128 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=128 | Loss: 0.202 |  Acc: 95.800% (47900/50000) | best acc: 69.240
+Testing: Epoch=128 | Loss: 1.457 |  Acc: 67.500% (6750/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=129 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=129 | Loss: 0.210 |  Acc: 95.596% (47798/50000) | best acc: 69.240
+Testing: Epoch=129 | Loss: 1.373 |  Acc: 68.840% (6884/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=130 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=130 | Loss: 0.210 |  Acc: 95.528% (47764/50000) | best acc: 69.240
+Testing: Epoch=130 | Loss: 1.394 |  Acc: 68.770% (6877/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=131 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=131 | Loss: 0.210 |  Acc: 95.570% (47785/50000) | best acc: 69.240
+Testing: Epoch=131 | Loss: 1.447 |  Acc: 67.250% (6725/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=132 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=132 | Loss: 0.208 |  Acc: 95.652% (47826/50000) | best acc: 69.240
+Testing: Epoch=132 | Loss: 1.397 |  Acc: 68.420% (6842/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=133 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=133 | Loss: 0.192 |  Acc: 96.058% (48029/50000) | best acc: 69.240
+Testing: Epoch=133 | Loss: 1.366 |  Acc: 68.800% (6880/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=134 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=134 | Loss: 0.204 |  Acc: 95.776% (47888/50000) | best acc: 69.240
+Testing: Epoch=134 | Loss: 1.424 |  Acc: 67.890% (6789/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=135 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=135 | Loss: 0.201 |  Acc: 95.792% (47896/50000) | best acc: 69.240
+Testing: Epoch=135 | Loss: 1.373 |  Acc: 68.620% (6862/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=136 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=136 | Loss: 0.217 |  Acc: 95.244% (47622/50000) | best acc: 69.240
+Testing: Epoch=136 | Loss: 1.434 |  Acc: 67.870% (6787/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=137 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=137 | Loss: 0.205 |  Acc: 95.788% (47894/50000) | best acc: 69.240
+Testing: Epoch=137 | Loss: 1.391 |  Acc: 68.450% (6845/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=138 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=138 | Loss: 0.203 |  Acc: 95.728% (47864/50000) | best acc: 69.240
+Testing: Epoch=138 | Loss: 1.413 |  Acc: 68.090% (6809/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=139 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=139 | Loss: 0.205 |  Acc: 95.652% (47826/50000) | best acc: 69.240
+Testing: Epoch=139 | Loss: 1.392 |  Acc: 67.960% (6796/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=140 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=140 | Loss: 0.191 |  Acc: 96.104% (48052/50000) | best acc: 69.240
+Testing: Epoch=140 | Loss: 1.364 |  Acc: 68.850% (6885/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=141 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=141 | Loss: 0.205 |  Acc: 95.698% (47849/50000) | best acc: 69.240
+Testing: Epoch=141 | Loss: 1.386 |  Acc: 68.770% (6877/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=142 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=142 | Loss: 0.201 |  Acc: 95.816% (47908/50000) | best acc: 69.240
+Testing: Epoch=142 | Loss: 1.438 |  Acc: 67.880% (6788/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=143 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=143 | Loss: 0.200 |  Acc: 95.954% (47977/50000) | best acc: 69.240
+Testing: Epoch=143 | Loss: 1.444 |  Acc: 68.080% (6808/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=144 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=144 | Loss: 0.200 |  Acc: 95.766% (47883/50000) | best acc: 69.240
+Testing: Epoch=144 | Loss: 1.386 |  Acc: 68.960% (6896/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=145 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=145 | Loss: 0.201 |  Acc: 95.716% (47858/50000) | best acc: 69.240
+Testing: Epoch=145 | Loss: 1.396 |  Acc: 68.870% (6887/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=146 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=146 | Loss: 0.204 |  Acc: 95.610% (47805/50000) | best acc: 69.240
+Testing: Epoch=146 | Loss: 1.419 |  Acc: 68.860% (6886/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=147 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=147 | Loss: 0.194 |  Acc: 96.008% (48004/50000) | best acc: 69.240
+Testing: Epoch=147 | Loss: 1.372 |  Acc: 69.120% (6912/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=148 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=148 | Loss: 0.211 |  Acc: 95.490% (47745/50000) | best acc: 69.240
+Testing: Epoch=148 | Loss: 1.386 |  Acc: 68.590% (6859/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=149 | lr=1.0e-02 | circles=0 | CIFAR100
+Training: Epoch=149 | Loss: 0.201 |  Acc: 95.826% (47913/50000) | best acc: 69.240
+Testing: Epoch=149 | Loss: 1.415 |  Acc: 68.500% (6850/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=150 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=150 | Loss: 0.109 |  Acc: 98.218% (49109/50000) | best acc: 69.240
+Testing: Epoch=150 | Loss: 1.169 |  Acc: 73.020% (7302/10000) | best_acc: 69.240
+
+Training Setting: PCN origin | batch_size=128 | epoch=151 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=151 | Loss: 0.072 |  Acc: 99.260% (49630/50000) | best acc: 73.020
+Testing: Epoch=151 | Loss: 1.147 |  Acc: 73.580% (7358/10000) | best_acc: 73.020
+
+Training Setting: PCN origin | batch_size=128 | epoch=152 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=152 | Loss: 0.062 |  Acc: 99.356% (49678/50000) | best acc: 73.580
+Testing: Epoch=152 | Loss: 1.146 |  Acc: 73.860% (7386/10000) | best_acc: 73.580
+
+Training Setting: PCN origin | batch_size=128 | epoch=153 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=153 | Loss: 0.055 |  Acc: 99.548% (49774/50000) | best acc: 73.860
+Testing: Epoch=153 | Loss: 1.142 |  Acc: 73.670% (7367/10000) | best_acc: 73.860
+
+Training Setting: PCN origin | batch_size=128 | epoch=154 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=154 | Loss: 0.051 |  Acc: 99.598% (49799/50000) | best acc: 73.860
+Testing: Epoch=154 | Loss: 1.136 |  Acc: 74.120% (7412/10000) | best_acc: 73.860
+
+Training Setting: PCN origin | batch_size=128 | epoch=155 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=155 | Loss: 0.049 |  Acc: 99.658% (49829/50000) | best acc: 74.120
+Testing: Epoch=155 | Loss: 1.134 |  Acc: 74.320% (7432/10000) | best_acc: 74.120
+
+Training Setting: PCN origin | batch_size=128 | epoch=156 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=156 | Loss: 0.045 |  Acc: 99.692% (49846/50000) | best acc: 74.320
+Testing: Epoch=156 | Loss: 1.129 |  Acc: 74.500% (7450/10000) | best_acc: 74.320
+
+Training Setting: PCN origin | batch_size=128 | epoch=157 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=157 | Loss: 0.044 |  Acc: 99.704% (49852/50000) | best acc: 74.500
+Testing: Epoch=157 | Loss: 1.132 |  Acc: 74.200% (7420/10000) | best_acc: 74.500
+
+Training Setting: PCN origin | batch_size=128 | epoch=158 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=158 | Loss: 0.042 |  Acc: 99.748% (49874/50000) | best acc: 74.500
+Testing: Epoch=158 | Loss: 1.131 |  Acc: 74.700% (7470/10000) | best_acc: 74.500
+
+Training Setting: PCN origin | batch_size=128 | epoch=159 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=159 | Loss: 0.041 |  Acc: 99.772% (49886/50000) | best acc: 74.700
+Testing: Epoch=159 | Loss: 1.128 |  Acc: 74.520% (7452/10000) | best_acc: 74.700
+
+Training Setting: PCN origin | batch_size=128 | epoch=160 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=160 | Loss: 0.040 |  Acc: 99.780% (49890/50000) | best acc: 74.700
+Testing: Epoch=160 | Loss: 1.129 |  Acc: 74.530% (7453/10000) | best_acc: 74.700
+
+Training Setting: PCN origin | batch_size=128 | epoch=161 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=161 | Loss: 0.040 |  Acc: 99.780% (49890/50000) | best acc: 74.700
+Testing: Epoch=161 | Loss: 1.130 |  Acc: 74.760% (7476/10000) | best_acc: 74.700
+
+Training Setting: PCN origin | batch_size=128 | epoch=162 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=162 | Loss: 0.039 |  Acc: 99.808% (49904/50000) | best acc: 74.760
+Testing: Epoch=162 | Loss: 1.129 |  Acc: 74.600% (7460/10000) | best_acc: 74.760
+
+Training Setting: PCN origin | batch_size=128 | epoch=163 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=163 | Loss: 0.038 |  Acc: 99.806% (49903/50000) | best acc: 74.760
+Testing: Epoch=163 | Loss: 1.125 |  Acc: 74.850% (7485/10000) | best_acc: 74.760
+
+Training Setting: PCN origin | batch_size=128 | epoch=164 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=164 | Loss: 0.037 |  Acc: 99.824% (49912/50000) | best acc: 74.850
+Testing: Epoch=164 | Loss: 1.128 |  Acc: 74.700% (7470/10000) | best_acc: 74.850
+
+Training Setting: PCN origin | batch_size=128 | epoch=165 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=165 | Loss: 0.038 |  Acc: 99.806% (49903/50000) | best acc: 74.850
+Testing: Epoch=165 | Loss: 1.129 |  Acc: 74.650% (7465/10000) | best_acc: 74.850
+
+Training Setting: PCN origin | batch_size=128 | epoch=166 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=166 | Loss: 0.035 |  Acc: 99.850% (49925/50000) | best acc: 74.850
+Testing: Epoch=166 | Loss: 1.123 |  Acc: 74.990% (7499/10000) | best_acc: 74.850
+
+Training Setting: PCN origin | batch_size=128 | epoch=167 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=167 | Loss: 0.035 |  Acc: 99.854% (49927/50000) | best acc: 74.990
+Testing: Epoch=167 | Loss: 1.117 |  Acc: 74.970% (7497/10000) | best_acc: 74.990
+
+Training Setting: PCN origin | batch_size=128 | epoch=168 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=168 | Loss: 0.035 |  Acc: 99.866% (49933/50000) | best acc: 74.990
+Testing: Epoch=168 | Loss: 1.114 |  Acc: 74.800% (7480/10000) | best_acc: 74.990
+
+Training Setting: PCN origin | batch_size=128 | epoch=169 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=169 | Loss: 0.034 |  Acc: 99.878% (49939/50000) | best acc: 74.990
+Testing: Epoch=169 | Loss: 1.111 |  Acc: 75.210% (7521/10000) | best_acc: 74.990
+
+Training Setting: PCN origin | batch_size=128 | epoch=170 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=170 | Loss: 0.034 |  Acc: 99.912% (49956/50000) | best acc: 75.210
+Testing: Epoch=170 | Loss: 1.122 |  Acc: 74.890% (7489/10000) | best_acc: 75.210
+
+Training Setting: PCN origin | batch_size=128 | epoch=171 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=171 | Loss: 0.034 |  Acc: 99.854% (49927/50000) | best acc: 75.210
+Testing: Epoch=171 | Loss: 1.118 |  Acc: 75.010% (7501/10000) | best_acc: 75.210
+
+Training Setting: PCN origin | batch_size=128 | epoch=172 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=172 | Loss: 0.034 |  Acc: 99.868% (49934/50000) | best acc: 75.210
+Testing: Epoch=172 | Loss: 1.117 |  Acc: 75.040% (7504/10000) | best_acc: 75.210
+
+Training Setting: PCN origin | batch_size=128 | epoch=173 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=173 | Loss: 0.034 |  Acc: 99.856% (49928/50000) | best acc: 75.210
+Testing: Epoch=173 | Loss: 1.121 |  Acc: 75.230% (7523/10000) | best_acc: 75.210
+
+Training Setting: PCN origin | batch_size=128 | epoch=174 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=174 | Loss: 0.033 |  Acc: 99.902% (49951/50000) | best acc: 75.230
+Testing: Epoch=174 | Loss: 1.115 |  Acc: 75.370% (7537/10000) | best_acc: 75.230
+
+Training Setting: PCN origin | batch_size=128 | epoch=175 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=175 | Loss: 0.032 |  Acc: 99.890% (49945/50000) | best acc: 75.370
+Testing: Epoch=175 | Loss: 1.120 |  Acc: 74.920% (7492/10000) | best_acc: 75.370
+
+Training Setting: PCN origin | batch_size=128 | epoch=176 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=176 | Loss: 0.033 |  Acc: 99.878% (49939/50000) | best acc: 75.370
+Testing: Epoch=176 | Loss: 1.121 |  Acc: 74.870% (7487/10000) | best_acc: 75.370
+
+Training Setting: PCN origin | batch_size=128 | epoch=177 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=177 | Loss: 0.032 |  Acc: 99.900% (49950/50000) | best acc: 75.370
+Testing: Epoch=177 | Loss: 1.119 |  Acc: 75.040% (7504/10000) | best_acc: 75.370
+
+Training Setting: PCN origin | batch_size=128 | epoch=178 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=178 | Loss: 0.034 |  Acc: 99.904% (49952/50000) | best acc: 75.370
+Testing: Epoch=178 | Loss: 1.114 |  Acc: 74.900% (7490/10000) | best_acc: 75.370
+
+Training Setting: PCN origin | batch_size=128 | epoch=179 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=179 | Loss: 0.033 |  Acc: 99.894% (49947/50000) | best acc: 75.370
+Testing: Epoch=179 | Loss: 1.115 |  Acc: 75.330% (7533/10000) | best_acc: 75.370
+
+Training Setting: PCN origin | batch_size=128 | epoch=180 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=180 | Loss: 0.032 |  Acc: 99.902% (49951/50000) | best acc: 75.370
+Testing: Epoch=180 | Loss: 1.121 |  Acc: 74.900% (7490/10000) | best_acc: 75.370
+
+Training Setting: PCN origin | batch_size=128 | epoch=181 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=181 | Loss: 0.032 |  Acc: 99.910% (49955/50000) | best acc: 75.370
+Testing: Epoch=181 | Loss: 1.112 |  Acc: 75.440% (7544/10000) | best_acc: 75.370
+
+Training Setting: PCN origin | batch_size=128 | epoch=182 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=182 | Loss: 0.032 |  Acc: 99.936% (49968/50000) | best acc: 75.440
+Testing: Epoch=182 | Loss: 1.108 |  Acc: 75.370% (7537/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=183 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=183 | Loss: 0.032 |  Acc: 99.902% (49951/50000) | best acc: 75.440
+Testing: Epoch=183 | Loss: 1.113 |  Acc: 75.300% (7530/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=184 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=184 | Loss: 0.032 |  Acc: 99.918% (49959/50000) | best acc: 75.440
+Testing: Epoch=184 | Loss: 1.112 |  Acc: 75.090% (7509/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=185 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=185 | Loss: 0.032 |  Acc: 99.918% (49959/50000) | best acc: 75.440
+Testing: Epoch=185 | Loss: 1.118 |  Acc: 75.240% (7524/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=186 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=186 | Loss: 0.032 |  Acc: 99.908% (49954/50000) | best acc: 75.440
+Testing: Epoch=186 | Loss: 1.119 |  Acc: 74.950% (7495/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=187 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=187 | Loss: 0.032 |  Acc: 99.912% (49956/50000) | best acc: 75.440
+Testing: Epoch=187 | Loss: 1.113 |  Acc: 75.240% (7524/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=188 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=188 | Loss: 0.032 |  Acc: 99.930% (49965/50000) | best acc: 75.440
+Testing: Epoch=188 | Loss: 1.100 |  Acc: 75.270% (7527/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=189 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=189 | Loss: 0.032 |  Acc: 99.922% (49961/50000) | best acc: 75.440
+Testing: Epoch=189 | Loss: 1.110 |  Acc: 75.190% (7519/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=190 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=190 | Loss: 0.032 |  Acc: 99.892% (49946/50000) | best acc: 75.440
+Testing: Epoch=190 | Loss: 1.108 |  Acc: 75.180% (7518/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=191 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=191 | Loss: 0.031 |  Acc: 99.934% (49967/50000) | best acc: 75.440
+Testing: Epoch=191 | Loss: 1.108 |  Acc: 75.240% (7524/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=192 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=192 | Loss: 0.031 |  Acc: 99.930% (49965/50000) | best acc: 75.440
+Testing: Epoch=192 | Loss: 1.103 |  Acc: 75.330% (7533/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=193 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=193 | Loss: 0.032 |  Acc: 99.922% (49961/50000) | best acc: 75.440
+Testing: Epoch=193 | Loss: 1.112 |  Acc: 75.240% (7524/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=194 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=194 | Loss: 0.032 |  Acc: 99.896% (49948/50000) | best acc: 75.440
+Testing: Epoch=194 | Loss: 1.108 |  Acc: 75.480% (7548/10000) | best_acc: 75.440
+
+Training Setting: PCN origin | batch_size=128 | epoch=195 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=195 | Loss: 0.031 |  Acc: 99.928% (49964/50000) | best acc: 75.480
+Testing: Epoch=195 | Loss: 1.103 |  Acc: 75.670% (7567/10000) | best_acc: 75.480
+
+Training Setting: PCN origin | batch_size=128 | epoch=196 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=196 | Loss: 0.032 |  Acc: 99.928% (49964/50000) | best acc: 75.670
+Testing: Epoch=196 | Loss: 1.113 |  Acc: 75.480% (7548/10000) | best_acc: 75.670
+
+Training Setting: PCN origin | batch_size=128 | epoch=197 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=197 | Loss: 0.032 |  Acc: 99.914% (49957/50000) | best acc: 75.670
+Testing: Epoch=197 | Loss: 1.107 |  Acc: 75.620% (7562/10000) | best_acc: 75.670
+
+Training Setting: PCN origin | batch_size=128 | epoch=198 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=198 | Loss: 0.032 |  Acc: 99.920% (49960/50000) | best acc: 75.670
+Testing: Epoch=198 | Loss: 1.110 |  Acc: 75.290% (7529/10000) | best_acc: 75.670
+
+Training Setting: PCN origin | batch_size=128 | epoch=199 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=199 | Loss: 0.031 |  Acc: 99.934% (49967/50000) | best acc: 75.670
+Testing: Epoch=199 | Loss: 1.110 |  Acc: 75.520% (7552/10000) | best_acc: 75.670
+
+Training Setting: PCN origin | batch_size=128 | epoch=200 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=200 | Loss: 0.031 |  Acc: 99.936% (49968/50000) | best acc: 75.670
+Testing: Epoch=200 | Loss: 1.104 |  Acc: 75.500% (7550/10000) | best_acc: 75.670
+
+Training Setting: PCN origin | batch_size=128 | epoch=201 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=201 | Loss: 0.032 |  Acc: 99.916% (49958/50000) | best acc: 75.670
+Testing: Epoch=201 | Loss: 1.105 |  Acc: 75.530% (7553/10000) | best_acc: 75.670
+
+Training Setting: PCN origin | batch_size=128 | epoch=202 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=202 | Loss: 0.031 |  Acc: 99.924% (49962/50000) | best acc: 75.670
+Testing: Epoch=202 | Loss: 1.101 |  Acc: 75.550% (7555/10000) | best_acc: 75.670
+
+Training Setting: PCN origin | batch_size=128 | epoch=203 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=203 | Loss: 0.031 |  Acc: 99.926% (49963/50000) | best acc: 75.670
+Testing: Epoch=203 | Loss: 1.105 |  Acc: 75.710% (7571/10000) | best_acc: 75.670
+
+Training Setting: PCN origin | batch_size=128 | epoch=204 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=204 | Loss: 0.031 |  Acc: 99.948% (49974/50000) | best acc: 75.710
+Testing: Epoch=204 | Loss: 1.104 |  Acc: 75.510% (7551/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=205 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=205 | Loss: 0.032 |  Acc: 99.928% (49964/50000) | best acc: 75.710
+Testing: Epoch=205 | Loss: 1.112 |  Acc: 75.090% (7509/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=206 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=206 | Loss: 0.032 |  Acc: 99.928% (49964/50000) | best acc: 75.710
+Testing: Epoch=206 | Loss: 1.104 |  Acc: 75.480% (7548/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=207 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=207 | Loss: 0.032 |  Acc: 99.924% (49962/50000) | best acc: 75.710
+Testing: Epoch=207 | Loss: 1.108 |  Acc: 75.460% (7546/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=208 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=208 | Loss: 0.031 |  Acc: 99.910% (49955/50000) | best acc: 75.710
+Testing: Epoch=208 | Loss: 1.101 |  Acc: 75.530% (7553/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=209 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=209 | Loss: 0.032 |  Acc: 99.932% (49966/50000) | best acc: 75.710
+Testing: Epoch=209 | Loss: 1.104 |  Acc: 75.490% (7549/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=210 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=210 | Loss: 0.033 |  Acc: 99.914% (49957/50000) | best acc: 75.710
+Testing: Epoch=210 | Loss: 1.108 |  Acc: 75.480% (7548/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=211 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=211 | Loss: 0.031 |  Acc: 99.942% (49971/50000) | best acc: 75.710
+Testing: Epoch=211 | Loss: 1.105 |  Acc: 75.470% (7547/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=212 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=212 | Loss: 0.032 |  Acc: 99.932% (49966/50000) | best acc: 75.710
+Testing: Epoch=212 | Loss: 1.108 |  Acc: 75.600% (7560/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=213 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=213 | Loss: 0.032 |  Acc: 99.916% (49958/50000) | best acc: 75.710
+Testing: Epoch=213 | Loss: 1.107 |  Acc: 75.590% (7559/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=214 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=214 | Loss: 0.032 |  Acc: 99.922% (49961/50000) | best acc: 75.710
+Testing: Epoch=214 | Loss: 1.101 |  Acc: 75.340% (7534/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=215 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=215 | Loss: 0.032 |  Acc: 99.924% (49962/50000) | best acc: 75.710
+Testing: Epoch=215 | Loss: 1.106 |  Acc: 75.780% (7578/10000) | best_acc: 75.710
+
+Training Setting: PCN origin | batch_size=128 | epoch=216 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=216 | Loss: 0.032 |  Acc: 99.934% (49967/50000) | best acc: 75.780
+Testing: Epoch=216 | Loss: 1.113 |  Acc: 75.520% (7552/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=217 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=217 | Loss: 0.032 |  Acc: 99.920% (49960/50000) | best acc: 75.780
+Testing: Epoch=217 | Loss: 1.112 |  Acc: 75.770% (7577/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=218 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=218 | Loss: 0.032 |  Acc: 99.934% (49967/50000) | best acc: 75.780
+Testing: Epoch=218 | Loss: 1.116 |  Acc: 75.040% (7504/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=219 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=219 | Loss: 0.032 |  Acc: 99.940% (49970/50000) | best acc: 75.780
+Testing: Epoch=219 | Loss: 1.107 |  Acc: 75.470% (7547/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=220 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=220 | Loss: 0.032 |  Acc: 99.942% (49971/50000) | best acc: 75.780
+Testing: Epoch=220 | Loss: 1.106 |  Acc: 75.370% (7537/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=221 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=221 | Loss: 0.032 |  Acc: 99.936% (49968/50000) | best acc: 75.780
+Testing: Epoch=221 | Loss: 1.100 |  Acc: 75.590% (7559/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=222 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=222 | Loss: 0.032 |  Acc: 99.948% (49974/50000) | best acc: 75.780
+Testing: Epoch=222 | Loss: 1.103 |  Acc: 75.590% (7559/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=223 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=223 | Loss: 0.033 |  Acc: 99.926% (49963/50000) | best acc: 75.780
+Testing: Epoch=223 | Loss: 1.101 |  Acc: 75.530% (7553/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=224 | lr=1.0e-03 | circles=0 | CIFAR100
+Training: Epoch=224 | Loss: 0.032 |  Acc: 99.928% (49964/50000) | best acc: 75.780
+Testing: Epoch=224 | Loss: 1.101 |  Acc: 75.630% (7563/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=225 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=225 | Loss: 0.031 |  Acc: 99.952% (49976/50000) | best acc: 75.780
+Testing: Epoch=225 | Loss: 1.099 |  Acc: 75.770% (7577/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=226 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=226 | Loss: 0.032 |  Acc: 99.964% (49982/50000) | best acc: 75.780
+Testing: Epoch=226 | Loss: 1.104 |  Acc: 75.400% (7540/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=227 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=227 | Loss: 0.031 |  Acc: 99.966% (49983/50000) | best acc: 75.780
+Testing: Epoch=227 | Loss: 1.101 |  Acc: 75.620% (7562/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=228 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=228 | Loss: 0.032 |  Acc: 99.934% (49967/50000) | best acc: 75.780
+Testing: Epoch=228 | Loss: 1.102 |  Acc: 75.530% (7553/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=229 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=229 | Loss: 0.032 |  Acc: 99.966% (49983/50000) | best acc: 75.780
+Testing: Epoch=229 | Loss: 1.097 |  Acc: 75.530% (7553/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=230 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=230 | Loss: 0.032 |  Acc: 99.930% (49965/50000) | best acc: 75.780
+Testing: Epoch=230 | Loss: 1.101 |  Acc: 75.830% (7583/10000) | best_acc: 75.780
+
+Training Setting: PCN origin | batch_size=128 | epoch=231 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=231 | Loss: 0.032 |  Acc: 99.956% (49978/50000) | best acc: 75.830
+Testing: Epoch=231 | Loss: 1.103 |  Acc: 75.280% (7528/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=232 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=232 | Loss: 0.031 |  Acc: 99.938% (49969/50000) | best acc: 75.830
+Testing: Epoch=232 | Loss: 1.106 |  Acc: 75.550% (7555/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=233 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=233 | Loss: 0.031 |  Acc: 99.944% (49972/50000) | best acc: 75.830
+Testing: Epoch=233 | Loss: 1.101 |  Acc: 75.560% (7556/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=234 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=234 | Loss: 0.031 |  Acc: 99.944% (49972/50000) | best acc: 75.830
+Testing: Epoch=234 | Loss: 1.100 |  Acc: 75.600% (7560/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=235 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=235 | Loss: 0.031 |  Acc: 99.944% (49972/50000) | best acc: 75.830
+Testing: Epoch=235 | Loss: 1.104 |  Acc: 75.530% (7553/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=236 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=236 | Loss: 0.031 |  Acc: 99.962% (49981/50000) | best acc: 75.830
+Testing: Epoch=236 | Loss: 1.098 |  Acc: 75.650% (7565/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=237 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=237 | Loss: 0.031 |  Acc: 99.952% (49976/50000) | best acc: 75.830
+Testing: Epoch=237 | Loss: 1.102 |  Acc: 75.620% (7562/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=238 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=238 | Loss: 0.031 |  Acc: 99.940% (49970/50000) | best acc: 75.830
+Testing: Epoch=238 | Loss: 1.100 |  Acc: 75.620% (7562/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=239 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=239 | Loss: 0.031 |  Acc: 99.928% (49964/50000) | best acc: 75.830
+Testing: Epoch=239 | Loss: 1.103 |  Acc: 75.730% (7573/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=240 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=240 | Loss: 0.031 |  Acc: 99.954% (49977/50000) | best acc: 75.830
+Testing: Epoch=240 | Loss: 1.103 |  Acc: 75.590% (7559/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=241 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=241 | Loss: 0.030 |  Acc: 99.946% (49973/50000) | best acc: 75.830
+Testing: Epoch=241 | Loss: 1.105 |  Acc: 75.570% (7557/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=242 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=242 | Loss: 0.030 |  Acc: 99.960% (49980/50000) | best acc: 75.830
+Testing: Epoch=242 | Loss: 1.093 |  Acc: 75.810% (7581/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=243 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=243 | Loss: 0.032 |  Acc: 99.946% (49973/50000) | best acc: 75.830
+Testing: Epoch=243 | Loss: 1.100 |  Acc: 75.680% (7568/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=244 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=244 | Loss: 0.031 |  Acc: 99.946% (49973/50000) | best acc: 75.830
+Testing: Epoch=244 | Loss: 1.099 |  Acc: 75.670% (7567/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=245 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=245 | Loss: 0.031 |  Acc: 99.954% (49977/50000) | best acc: 75.830
+Testing: Epoch=245 | Loss: 1.101 |  Acc: 75.710% (7571/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=246 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=246 | Loss: 0.031 |  Acc: 99.952% (49976/50000) | best acc: 75.830
+Testing: Epoch=246 | Loss: 1.101 |  Acc: 75.620% (7562/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=247 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=247 | Loss: 0.031 |  Acc: 99.946% (49973/50000) | best acc: 75.830
+Testing: Epoch=247 | Loss: 1.098 |  Acc: 75.770% (7577/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=248 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=248 | Loss: 0.031 |  Acc: 99.956% (49978/50000) | best acc: 75.830
+Testing: Epoch=248 | Loss: 1.101 |  Acc: 75.550% (7555/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=249 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=249 | Loss: 0.030 |  Acc: 99.964% (49982/50000) | best acc: 75.830
+Testing: Epoch=249 | Loss: 1.096 |  Acc: 75.750% (7575/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=250 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=250 | Loss: 0.030 |  Acc: 99.950% (49975/50000) | best acc: 75.830
+Testing: Epoch=250 | Loss: 1.095 |  Acc: 75.890% (7589/10000) | best_acc: 75.830
+
+Training Setting: PCN origin | batch_size=128 | epoch=251 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=251 | Loss: 0.031 |  Acc: 99.954% (49977/50000) | best acc: 75.890
+Testing: Epoch=251 | Loss: 1.102 |  Acc: 75.550% (7555/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=252 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=252 | Loss: 0.031 |  Acc: 99.958% (49979/50000) | best acc: 75.890
+Testing: Epoch=252 | Loss: 1.101 |  Acc: 75.520% (7552/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=253 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=253 | Loss: 0.030 |  Acc: 99.956% (49978/50000) | best acc: 75.890
+Testing: Epoch=253 | Loss: 1.104 |  Acc: 75.540% (7554/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=254 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=254 | Loss: 0.030 |  Acc: 99.938% (49969/50000) | best acc: 75.890
+Testing: Epoch=254 | Loss: 1.104 |  Acc: 75.470% (7547/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=255 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=255 | Loss: 0.031 |  Acc: 99.972% (49986/50000) | best acc: 75.890
+Testing: Epoch=255 | Loss: 1.098 |  Acc: 75.750% (7575/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=256 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=256 | Loss: 0.031 |  Acc: 99.964% (49982/50000) | best acc: 75.890
+Testing: Epoch=256 | Loss: 1.100 |  Acc: 75.630% (7563/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=257 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=257 | Loss: 0.031 |  Acc: 99.948% (49974/50000) | best acc: 75.890
+Testing: Epoch=257 | Loss: 1.102 |  Acc: 75.840% (7584/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=258 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=258 | Loss: 0.031 |  Acc: 99.960% (49980/50000) | best acc: 75.890
+Testing: Epoch=258 | Loss: 1.099 |  Acc: 75.810% (7581/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=259 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=259 | Loss: 0.031 |  Acc: 99.952% (49976/50000) | best acc: 75.890
+Testing: Epoch=259 | Loss: 1.104 |  Acc: 75.620% (7562/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=260 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=260 | Loss: 0.030 |  Acc: 99.964% (49982/50000) | best acc: 75.890
+Testing: Epoch=260 | Loss: 1.103 |  Acc: 75.840% (7584/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=261 | lr=1.0e-04 | circles=0 | CIFAR100
+Training: Epoch=261 | Loss: 0.030 |  Acc: 99.952% (49976/50000) | best acc: 75.890
+Testing: Epoch=261 | Loss: 1.103 |  Acc: 75.720% (7572/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=262 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=262 | Loss: 0.030 |  Acc: 99.962% (49981/50000) | best acc: 75.890
+Testing: Epoch=262 | Loss: 1.103 |  Acc: 75.570% (7557/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=263 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=263 | Loss: 0.030 |  Acc: 99.964% (49982/50000) | best acc: 75.890
+Testing: Epoch=263 | Loss: 1.099 |  Acc: 75.710% (7571/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=264 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=264 | Loss: 0.030 |  Acc: 99.964% (49982/50000) | best acc: 75.890
+Testing: Epoch=264 | Loss: 1.105 |  Acc: 75.510% (7551/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=265 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=265 | Loss: 0.031 |  Acc: 99.944% (49972/50000) | best acc: 75.890
+Testing: Epoch=265 | Loss: 1.098 |  Acc: 75.370% (7537/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=266 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=266 | Loss: 0.030 |  Acc: 99.956% (49978/50000) | best acc: 75.890
+Testing: Epoch=266 | Loss: 1.103 |  Acc: 75.340% (7534/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=267 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=267 | Loss: 0.031 |  Acc: 99.958% (49979/50000) | best acc: 75.890
+Testing: Epoch=267 | Loss: 1.097 |  Acc: 75.740% (7574/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=268 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=268 | Loss: 0.030 |  Acc: 99.944% (49972/50000) | best acc: 75.890
+Testing: Epoch=268 | Loss: 1.099 |  Acc: 75.860% (7586/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=269 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=269 | Loss: 0.031 |  Acc: 99.944% (49972/50000) | best acc: 75.890
+Testing: Epoch=269 | Loss: 1.102 |  Acc: 75.500% (7550/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=270 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=270 | Loss: 0.031 |  Acc: 99.940% (49970/50000) | best acc: 75.890
+Testing: Epoch=270 | Loss: 1.106 |  Acc: 75.540% (7554/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=271 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=271 | Loss: 0.030 |  Acc: 99.968% (49984/50000) | best acc: 75.890
+Testing: Epoch=271 | Loss: 1.103 |  Acc: 75.390% (7539/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=272 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=272 | Loss: 0.030 |  Acc: 99.958% (49979/50000) | best acc: 75.890
+Testing: Epoch=272 | Loss: 1.095 |  Acc: 75.640% (7564/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=273 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=273 | Loss: 0.030 |  Acc: 99.956% (49978/50000) | best acc: 75.890
+Testing: Epoch=273 | Loss: 1.101 |  Acc: 75.550% (7555/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=274 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=274 | Loss: 0.031 |  Acc: 99.940% (49970/50000) | best acc: 75.890
+Testing: Epoch=274 | Loss: 1.102 |  Acc: 75.810% (7581/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=275 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=275 | Loss: 0.031 |  Acc: 99.946% (49973/50000) | best acc: 75.890
+Testing: Epoch=275 | Loss: 1.099 |  Acc: 75.410% (7541/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=276 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=276 | Loss: 0.031 |  Acc: 99.946% (49973/50000) | best acc: 75.890
+Testing: Epoch=276 | Loss: 1.104 |  Acc: 75.450% (7545/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=277 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=277 | Loss: 0.031 |  Acc: 99.960% (49980/50000) | best acc: 75.890
+Testing: Epoch=277 | Loss: 1.100 |  Acc: 75.560% (7556/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=278 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=278 | Loss: 0.031 |  Acc: 99.960% (49980/50000) | best acc: 75.890
+Testing: Epoch=278 | Loss: 1.095 |  Acc: 76.010% (7601/10000) | best_acc: 75.890
+
+Training Setting: PCN origin | batch_size=128 | epoch=279 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=279 | Loss: 0.030 |  Acc: 99.946% (49973/50000) | best acc: 76.010
+Testing: Epoch=279 | Loss: 1.099 |  Acc: 75.550% (7555/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=280 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=280 | Loss: 0.031 |  Acc: 99.932% (49966/50000) | best acc: 76.010
+Testing: Epoch=280 | Loss: 1.099 |  Acc: 75.530% (7553/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=281 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=281 | Loss: 0.030 |  Acc: 99.948% (49974/50000) | best acc: 76.010
+Testing: Epoch=281 | Loss: 1.103 |  Acc: 75.650% (7565/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=282 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=282 | Loss: 0.031 |  Acc: 99.948% (49974/50000) | best acc: 76.010
+Testing: Epoch=282 | Loss: 1.101 |  Acc: 75.590% (7559/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=283 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=283 | Loss: 0.030 |  Acc: 99.954% (49977/50000) | best acc: 76.010
+Testing: Epoch=283 | Loss: 1.105 |  Acc: 75.610% (7561/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=284 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=284 | Loss: 0.031 |  Acc: 99.960% (49980/50000) | best acc: 76.010
+Testing: Epoch=284 | Loss: 1.104 |  Acc: 75.680% (7568/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=285 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=285 | Loss: 0.031 |  Acc: 99.956% (49978/50000) | best acc: 76.010
+Testing: Epoch=285 | Loss: 1.101 |  Acc: 75.510% (7551/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=286 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=286 | Loss: 0.030 |  Acc: 99.962% (49981/50000) | best acc: 76.010
+Testing: Epoch=286 | Loss: 1.106 |  Acc: 75.530% (7553/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=287 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=287 | Loss: 0.030 |  Acc: 99.946% (49973/50000) | best acc: 76.010
+Testing: Epoch=287 | Loss: 1.104 |  Acc: 75.550% (7555/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=288 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=288 | Loss: 0.031 |  Acc: 99.940% (49970/50000) | best acc: 76.010
+Testing: Epoch=288 | Loss: 1.100 |  Acc: 75.660% (7566/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=289 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=289 | Loss: 0.030 |  Acc: 99.954% (49977/50000) | best acc: 76.010
+Testing: Epoch=289 | Loss: 1.096 |  Acc: 75.600% (7560/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=290 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=290 | Loss: 0.030 |  Acc: 99.954% (49977/50000) | best acc: 76.010
+Testing: Epoch=290 | Loss: 1.100 |  Acc: 75.690% (7569/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=291 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=291 | Loss: 0.030 |  Acc: 99.954% (49977/50000) | best acc: 76.010
+Testing: Epoch=291 | Loss: 1.102 |  Acc: 75.720% (7572/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=292 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=292 | Loss: 0.031 |  Acc: 99.940% (49970/50000) | best acc: 76.010
+Testing: Epoch=292 | Loss: 1.098 |  Acc: 75.620% (7562/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=293 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=293 | Loss: 0.030 |  Acc: 99.960% (49980/50000) | best acc: 76.010
+Testing: Epoch=293 | Loss: 1.102 |  Acc: 75.570% (7557/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=294 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=294 | Loss: 0.030 |  Acc: 99.966% (49983/50000) | best acc: 76.010
+Testing: Epoch=294 | Loss: 1.101 |  Acc: 75.790% (7579/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=295 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=295 | Loss: 0.030 |  Acc: 99.948% (49974/50000) | best acc: 76.010
+Testing: Epoch=295 | Loss: 1.097 |  Acc: 75.500% (7550/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=296 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=296 | Loss: 0.030 |  Acc: 99.950% (49975/50000) | best acc: 76.010
+Testing: Epoch=296 | Loss: 1.101 |  Acc: 75.840% (7584/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=297 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=297 | Loss: 0.031 |  Acc: 99.948% (49974/50000) | best acc: 76.010
+Testing: Epoch=297 | Loss: 1.105 |  Acc: 75.540% (7554/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=298 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=298 | Loss: 0.031 |  Acc: 99.954% (49977/50000) | best acc: 76.010
+Testing: Epoch=298 | Loss: 1.101 |  Acc: 75.580% (7558/10000) | best_acc: 76.010
+
+Training Setting: PCN origin | batch_size=128 | epoch=299 | lr=1.0e-05 | circles=0 | CIFAR100
+Training: Epoch=299 | Loss: 0.031 |  Acc: 99.954% (49977/50000) | best acc: 76.010
+Testing: Epoch=299 | Loss: 1.099 |  Acc: 75.630% (7563/10000) | best_acc: 76.010

@@ -1,3 +1,9 @@
+debug.log
+checkpoint/
+tmp.sh
+nus.sh
+std*
+pytorch*
 models/
 log/
 # Compiled python modules.

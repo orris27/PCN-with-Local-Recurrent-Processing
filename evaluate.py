@@ -3,6 +3,7 @@ from __future__ import print_function
 import time
 import os
 import numpy as np
+import random
 import argparse
 import torch
 import torch.nn as nn
@@ -23,6 +24,7 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     dataset_name = args.dataset_name
     lmbda = args.lmbda
     threshold = args.threshold
+    mode = args.mode
     flops = list(map(int, args.flops.split(':')))
     max_epoch = 100
     root = './'
@@ -74,8 +76,11 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     print('==> Building model..')
     
 
-    model = torch.load(args.path)
-    #print(model)
+    #model = torch.load(args.path)
+    from pcn.modelC_dp2 import PredNetBpD
+    model = PredNetBpD(num_classes=100,cls=5, dropout=1.0, adaptive=False, vanilla=False, ge=1, fb='1:1:1')
+    model.load_state_dict(torch.load(args.path))
+    print(model)
        
     
     # Define objective function
@@ -136,12 +141,27 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                 if epoch + 1 == max_epoch:
                     predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
                     for i in range(targets.shape[0]):
-                        for j in range(len(outputs)):
+                        if mode == 'threshold':
+                            for j in range(len(outputs)):
+                                confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
+                                if confidence > threshold or j + 1 == len(outputs):
+                                    predicted_adaptive[i] = idx
+                                    exit_count[j] += 1
+                                    break
+                        elif mode == 'random':
+                            j = random.randint(0, 2)
+                            #val = random.random()
+                            #if val < 0.167:
+                            #    j = 0
+                            #elif val < 0.167 + 0.341:
+                            #    j = 1
+                            #else:
+                            #    j = 2
                             confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
-                            if confidence > threshold or j + 1 == len(outputs):
-                                predicted_adaptive[i] = idx
-                                exit_count[j] += 1
-                                break
+                            predicted_adaptive[i] = idx
+                            exit_count[j] += 1
+                        else:
+                             raise ValueError
                     total_adaptive += targets.size(0)
                     correct_adaptive += predicted_adaptive.eq(targets.data).float().cpu().sum()
                     clf_exit_str = ' '.join(['%.3f' %(exit_count[i] / sum(exit_count[:len(outputs)])) for i in range(len(outputs))])
@@ -215,7 +235,8 @@ if __name__ == '__main__':
     parser.add_argument('--circles', type=int, default=1)
     parser.add_argument('--lmbda', type=float, default=0.0)
     parser.add_argument('--threshold', type=float, default=0.5)
-    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_h_dp2', 'modelD', 'modelE', 'modelF'])
+    parser.add_argument('--mode', type=str, required=True, choices=['threshold', 'random'])
+    parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_h_dp2', 'modelD', 'modelE', 'modelF', 'modelC_dp2'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
     main_cifar(args)
