@@ -1,19 +1,25 @@
+# 24 Feb
+#python main.py --batch_size 128 --circles 5 --backend modelG_2con3 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type knowledge_distillation --T 3.0 --gamma 0.8  > results/cifar100/modelG/2con3/cir5_ge_kd_T3.0_lmbda0.8.log
+python main.py --batch_size 128 --circles 5 --backend resnet56_2con3_conv --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type knowledge_distillation --attention no --T 2.0 --gamma 0.5 > results/cifar100/resnet/2con3/cir5_ge_2con3_conv_T2.0_gamma0.5.log
+#python main.py --batch_size 128 --circles 0 --backend resnet56_2con3_conv --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type knowledge_distillation --attention no --T 2.0 --gamma 0.5 > results/cifar100/resnet/2con3/cir0_ge_2con3_conv_T2.0_gamma0.5.log
+#python main.py --batch_size 128 --circles 0 --backend resnet56_2con3_conv --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention no > results/cifar100/resnet/2con3/cir0_ge_2con3_conv.log
+
 # 23 Feb
-python main.py --batch_size 128 --circles 0 --backend resnet56_2con3_att --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir0_ge_2con3_scan.log
-python main.py --batch_size 128 --circles 5 --backend resnet56_2con3_att --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir5_ge_2con3_scan.log
-python main.py --batch_size 128 --circles 2 --backend resnet56_2con3_att --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir2_ge_2con3_scan.log
-python main.py --batch_size 128 --circles 8 --backend resnet56_2con3_att --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir8_ge_2con3_scan.log
-
-#python main.py --batch_size 128 --circles 0 --backend resnet56_2con3_att2 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention yes > results/cifar100/resnet/2con3/cir0_ge_2con3_att2.log
-python main.py --batch_size 128 --circles 5 --backend resnet56_2con3_att2 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention yes > results/cifar100/resnet/2con3/cir5_ge_2con3_att2.log
-python main.py --batch_size 128 --circles 2 --backend resnet56_2con3_att2 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention yes > results/cifar100/resnet/2con3/cir2_ge_2con3_att2.log
-python main.py --batch_size 128 --circles 8 --backend resnet56_2con3_att2 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention yes > results/cifar100/resnet/2con3/cir8_ge_2con3_att2.log
-
-python main.py --batch_size 128 --circles 0 --backend resnet56_2con3_att3 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention se > results/cifar100/resnet/2con3/cir0_ge_2con3_att3.log
-python main.py --batch_size 128 --circles 5 --backend resnet56_2con3_att3 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention se > results/cifar100/resnet/2con3/cir5_ge_2con3_att3.log
-
-python main.py --batch_size 128 --circles 0 --backend resnet56_2con3_att3 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir0_ge_2con3_att3.log
-python main.py --batch_size 128 --circles 5 --backend resnet56_2con3_att3 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir5_ge_2con3_att3.log
+#python main.py --batch_size 128 --circles 0 --backend resnet56_2con3_att --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir0_ge_2con3_scan.log
+#python main.py --batch_size 128 --circles 5 --backend resnet56_2con3_att --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir5_ge_2con3_scan.log
+#python main.py --batch_size 128 --circles 2 --backend resnet56_2con3_att --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir2_ge_2con3_scan.log
+#python main.py --batch_size 128 --circles 8 --backend resnet56_2con3_att --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir8_ge_2con3_scan.log
+#
+##python main.py --batch_size 128 --circles 0 --backend resnet56_2con3_att2 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention yes > results/cifar100/resnet/2con3/cir0_ge_2con3_att2.log
+#python main.py --batch_size 128 --circles 5 --backend resnet56_2con3_att2 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention yes > results/cifar100/resnet/2con3/cir5_ge_2con3_att2.log
+#python main.py --batch_size 128 --circles 2 --backend resnet56_2con3_att2 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention yes > results/cifar100/resnet/2con3/cir2_ge_2con3_att2.log
+#python main.py --batch_size 128 --circles 8 --backend resnet56_2con3_att2 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention yes > results/cifar100/resnet/2con3/cir8_ge_2con3_att2.log
+#
+#python main.py --batch_size 128 --circles 0 --backend resnet56_2con3_att3 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention se > results/cifar100/resnet/2con3/cir0_ge_2con3_att3.log
+#python main.py --batch_size 128 --circles 5 --backend resnet56_2con3_att3 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention se > results/cifar100/resnet/2con3/cir5_ge_2con3_att3.log
+#
+#python main.py --batch_size 128 --circles 0 --backend resnet56_2con3_att3 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir0_ge_2con3_att3.log
+#python main.py --batch_size 128 --circles 5 --backend resnet56_2con3_att3 --dataset_name cifar100 --adaptive 0 --max_epoch 300 --dropout 1.0 --step_all 0 --step_clf 0 --ge 1 --loss_type cross_entropy --attention scan > results/cifar100/resnet/2con3/cir5_ge_2con3_att3.log
 
 
 

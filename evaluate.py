@@ -101,17 +101,15 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
    
     # Testing
     def test(epoch):
-        #nonlocal best_acc
         model.eval()
         test_loss = 0
-        #correct = 0
-        #total = 0
         corrects = np.zeros(100) # allocate large space 
         totals = np.zeros(100)
         exit_count = np.zeros(100)
         total_adaptive = 0
         correct_adaptive = 0
         with torch.no_grad():
+            results = []
             for batch_idx, (inputs, targets) in enumerate(testloader):
                 if use_cuda:
                     inputs, targets = inputs.cuda(), targets.cuda()
@@ -120,7 +118,6 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                     outputs, errors = model(inputs)
                 else:
                     outputs = model(inputs)
-                #loss = criterion(outputs, targets)
                 loss = 0.0
                 for j in range(len(outputs)):
                     loss += criterion(outputs[j], targets)
@@ -142,21 +139,33 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
                     predicted_adaptive = torch.zeros(targets.shape[0]).long().to(targets.device)
                     for i in range(targets.shape[0]):
                         if mode == 'threshold':
+                            #info = [targets[i].item()] # [true_idx, (class_idx1, confidence1), (class_idx2, confidence2), ...]
+                            
                             for j in range(len(outputs)):
                                 confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
+                                # exp
+                                #info.append((idx.item(), confidence.item()))
+                            
                                 if confidence > threshold or j + 1 == len(outputs):
                                     predicted_adaptive[i] = idx
                                     exit_count[j] += 1
                                     break
+                            #results.append(info)
+                        elif mode == 'first_classifier':
+                            confidence, _ = torch.topk(F.softmax(outputs[0][i]), k=1)
+                            if confidence > 0.8:
+                                j = 0
+                            elif confidence > 0.6:
+                                j = 1
+                            else:
+                                j = 2
+                            
+                            confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
+                            predicted_adaptive[i] = idx
+                            exit_count[j] += 1
+                            
                         elif mode == 'random':
                             j = random.randint(0, 2)
-                            #val = random.random()
-                            #if val < 0.167:
-                            #    j = 0
-                            #elif val < 0.167 + 0.341:
-                            #    j = 1
-                            #else:
-                            #    j = 2
                             confidence, idx = torch.topk(F.softmax(outputs[j][i]), k=1)
                             predicted_adaptive[i] = idx
                             exit_count[j] += 1
@@ -180,6 +189,11 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
 
                 #progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
                 #    % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
+
+
+        import pickle 
+        with open('results.pkl', 'wb') as f:
+            pickle.dump(results, f)
 
 
         acc_str = ''
@@ -206,21 +220,39 @@ def main_cifar(args, gpunum=1, Tied=False, weightDecay=1e-3, nesterov=False):
     model.eval()
     model.dropout = 1.0
     model.adaptive = False
-    for cls in range(args.circles + 1):
-        # set cls
-        print('circles:', cls)
-        model.cls = cls
-        for name, child in model.named_children():
-            if name == 'classifiers':
-                for clf in child.children():
-                    #print(name, child)
-                    clf.cls = cls
-                    clf.dropout = 1.0
-                    clf.adaptive = False
 
-        start = time.time()
-        test(max_epoch - 1)
-        print('Time: ', time.time() - start)
+    print('circles:', args.circles)
+    model.cls = args.circles
+    for name, child in model.named_children():
+        if name == 'classifiers':
+            for clf in child.children():
+                #print(name, child)
+                clf.cls = model.cls
+                clf.dropout = 1.0
+                clf.adaptive = False
+
+    start = time.time()
+    test(max_epoch - 1)
+    print('Time: ', time.time() - start)
+
+ 
+
+
+#    for cls in range(args.circles + 1):
+#        # set cls
+#        print('circles:', cls)
+#        model.cls = cls
+#        for name, child in model.named_children():
+#            if name == 'classifiers':
+#                for clf in child.children():
+#                    #print(name, child)
+#                    clf.cls = cls
+#                    clf.dropout = 1.0
+#                    clf.adaptive = False
+#
+#        start = time.time()
+#        test(max_epoch - 1)
+#        print('Time: ', time.time() - start)
 
         
 
@@ -235,7 +267,7 @@ if __name__ == '__main__':
     parser.add_argument('--circles', type=int, default=1)
     parser.add_argument('--lmbda', type=float, default=0.0)
     parser.add_argument('--threshold', type=float, default=0.5)
-    parser.add_argument('--mode', type=str, required=True, choices=['threshold', 'random'])
+    parser.add_argument('--mode', type=str, required=True, choices=['threshold', 'random', 'first_classifier'])
     parser.add_argument('--backend', type=str, required=True, choices=['modelA', 'modelB', 'modelC', 'modelC_h_dp2', 'modelD', 'modelE', 'modelF', 'modelC_dp2'])
     parser.add_argument('--dataset_name', type=str, required=True, choices=['cifar10', 'cifar100'])
     args = parser.parse_args()
